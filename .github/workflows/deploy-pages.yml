@@ -19,8 +19,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      SITE_ORIGIN: https://tokenpls.github.io/clash.md
-      DOCS_BASE: /clash.md/
+      SITE_ORIGIN: https://clash.md
+      DOCS_BASE: /
     steps:
       - name: Check out repository
         uses: actions/checkout@v7

@@ -24,8 +24,8 @@ npm run docs:preview
 ## Deployment
 
 VitePress source lives on `main`. Every push to `main` is built and deployed to
-GitHub Pages by `.github/workflows/deploy-pages.yml`. The `clash.md` custom
-domain will be connected after its approval is complete.
+GitHub Pages by `.github/workflows/deploy-pages.yml`. The production site is
+available at `https://clash.md`.
 
 ## Content
 
