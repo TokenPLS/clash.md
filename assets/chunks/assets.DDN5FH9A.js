@@ -1,0 +1,1 @@
+var e=`/clash.md/brand/clash-app-icon.svg`,t=`/clash.md/screenshots/iphone-home.webp`,n=`/clash.md/screenshots/ipad-home.webp`;export{t as n,e as r,n as t};

@@ -1,0 +1,16 @@
+{
+  "name": "Clash",
+  "short_name": "Clash",
+  "description": "Documentation and legal information for Clash.",
+  "start_url": "/clash.md/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/clash.md/brand/clash-app-icon.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ]
+}
