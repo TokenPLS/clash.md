@@ -1,0 +1,9 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <title>App Store</title>
+  <rect width="64" height="64" rx="14" fill="#0A84FF"/>
+  <g fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="5.5">
+    <path d="M21 47 38 17"/>
+    <path d="m28 17 17 30"/>
+    <path d="M16 39h32"/>
+  </g>
+</svg>

@@ -1,0 +1,367 @@
+:root {
+  --vp-c-brand-1: #007aff;
+  --vp-c-brand-2: #006ee6;
+  --vp-c-brand-3: #005fc7;
+  --vp-c-brand-soft: rgba(0, 122, 255, 0.12);
+  --vp-c-bg: #ffffff;
+  --vp-c-bg-alt: #f7f7f8;
+  --vp-c-bg-elv: #ffffff;
+  --vp-c-bg-soft: #f5f5f7;
+  --vp-c-text-1: #1d1d1f;
+  --vp-c-text-2: #515154;
+  --vp-c-text-3: #76767a;
+  --vp-c-divider: #e5e5e7;
+  --vp-c-border: #dedee2;
+  --vp-font-family-base:
+    -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial,
+    sans-serif;
+  --vp-font-family-mono:
+    "SFMono-Regular", "SF Mono", Menlo, Monaco, Consolas, monospace;
+}
+
+html {
+  background: #ffffff;
+  color-scheme: light;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a:focus-visible,
+button:focus-visible {
+  border-radius: 4px;
+  outline: 3px solid rgba(0, 122, 255, 0.3);
+  outline-offset: 3px;
+}
+
+.VPNav,
+.VPNavBar {
+  background: rgba(255, 255, 255, 0.94) !important;
+}
+
+.VPNavBar {
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.VPNavBarTitle .logo {
+  border-radius: 7px;
+}
+
+.VPNavBarTitle .title {
+  font-weight: 680;
+  letter-spacing: -0.02em;
+}
+
+.VPDoc h1,
+.VPDoc h2,
+.VPDoc h3 {
+  letter-spacing: -0.025em;
+}
+
+.VPDoc p,
+.VPDoc li {
+  line-height: 1.72;
+}
+
+a[href="https://apps.apple.com/app/id6794257189"]::before {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  margin-right: 7px;
+  background: url("/brand/app-store.svg") center / contain no-repeat;
+  content: "";
+  vertical-align: -4px;
+}
+
+.VPNavBarMenuLink[href="https://apps.apple.com/app/id6794257189"] {
+  display: inline-flex;
+  align-items: center;
+}
+
+.VPNavBarMenuLink[href="https://apps.apple.com/app/id6794257189"]::before {
+  width: 18px;
+  height: 18px;
+  margin-right: 6px;
+  vertical-align: 0;
+}
+
+.VPMenu a[href^="https://github.com/TokenPLS/"]::before,
+.VPNavScreen a[href^="https://github.com/TokenPLS/"]::before,
+.community-link-list a[data-community="github"]::before,
+.VPMenu a[href="https://t.me/clashbyhako"]::before,
+.VPNavScreen a[href="https://t.me/clashbyhako"]::before,
+.community-link-list a[data-community="telegram"]::before {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  background: currentColor;
+  content: "";
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+}
+
+.VPMenu a[href^="https://github.com/TokenPLS/"]::before,
+.VPNavScreen a[href^="https://github.com/TokenPLS/"]::before,
+.community-link-list a[data-community="github"]::before {
+  mask-image: url("/brand/github.svg");
+}
+
+.VPMenu a[href="https://t.me/clashbyhako"]::before,
+.VPNavScreen a[href="https://t.me/clashbyhako"]::before,
+.community-link-list a[data-community="telegram"]::before {
+  background: #229ed9;
+  mask-image: url("/brand/telegram.svg");
+}
+
+.VPMenu a[href^="https://github.com/TokenPLS/"],
+.VPNavScreen a[href^="https://github.com/TokenPLS/"],
+.VPMenu a[href="https://t.me/clashbyhako"],
+.VPNavScreen a[href="https://t.me/clashbyhako"] {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.clash-home .VPDoc .container {
+  max-width: 1056px;
+}
+
+.clash-home .VPDoc .content {
+  max-width: 896px;
+}
+
+.clash-home .VPDoc {
+  padding-top: 64px;
+}
+
+.clash-product-lockup {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin: 0 0 32px;
+}
+
+.clash-product-lockup h1 {
+  margin: 0;
+  font-size: clamp(46px, 8vw, 64px);
+  line-height: 1;
+  letter-spacing: -0.055em;
+}
+
+.clash-product-identity {
+  min-width: 0;
+}
+
+.clash-product-identity p {
+  margin: 10px 0 0;
+  color: var(--vp-c-text-2);
+  font-size: 19px;
+  font-weight: 650;
+  line-height: 1.35;
+}
+
+.clash-home .VPDoc h2 {
+  margin-top: 56px;
+}
+
+.clash-app-icon {
+  display: block;
+  flex: 0 0 auto;
+  width: 104px;
+  height: 104px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 23%;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.clash-home blockquote {
+  margin: 28px 0;
+  padding: 2px 0 2px 20px;
+  border-left: 3px solid var(--vp-c-brand-1);
+  color: var(--vp-c-text-2);
+}
+
+.home-download-row {
+  margin-top: 30px;
+}
+
+.home-download {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 16px;
+  border-radius: 10px;
+  background: #1d1d1f;
+  color: #ffffff !important;
+  font-weight: 620;
+  text-decoration: none !important;
+  transition:
+    background-color 160ms ease,
+    transform 160ms ease;
+}
+
+.home-download:hover {
+  background: #353538;
+  transform: translateY(-1px);
+}
+
+.home-download::before {
+  vertical-align: 0 !important;
+}
+
+.home-link-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 24px;
+  border-top: 1px solid var(--vp-c-divider);
+}
+
+.home-link-list a {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 4px;
+  padding: 15px 16px 15px 0;
+  border-bottom: 1px solid var(--vp-c-divider);
+  color: var(--vp-c-text-1);
+  text-decoration: none;
+}
+
+.home-link-list a:nth-child(even) {
+  padding-right: 0;
+  padding-left: 20px;
+  border-left: 1px solid var(--vp-c-divider);
+}
+
+.home-link-list a:hover strong {
+  color: var(--vp-c-brand-1);
+}
+
+.home-link-list strong {
+  font-size: 16px;
+  font-weight: 640;
+  transition: color 160ms ease;
+}
+
+.home-link-list span {
+  overflow: hidden;
+  color: var(--vp-c-text-3);
+  font-size: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.community-link-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0;
+}
+
+.community-link-list a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 0 12px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 9px;
+  color: var(--vp-c-text-1);
+  font-size: 14px;
+  font-weight: 580;
+  text-decoration: none;
+  transition:
+    border-color 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.community-link-list a:hover {
+  border-color: var(--vp-c-brand-1);
+  color: var(--vp-c-brand-1);
+  transform: translateY(-1px);
+}
+
+.clash-screenshots {
+  display: grid;
+  grid-template-columns: minmax(0, 0.62fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 32px;
+  margin-top: 24px;
+}
+
+.clash-screenshot {
+  margin: 0;
+}
+
+.clash-screenshot img {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 18px;
+  background: #f5f5f7;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.08);
+}
+
+.clash-screenshot figcaption {
+  margin-top: 10px;
+  color: var(--vp-c-text-3);
+  font-size: 13px;
+  text-align: center;
+}
+
+.clash-home .VPDoc table {
+  display: table;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .clash-home .VPDoc {
+    padding-top: 36px;
+  }
+
+  .clash-app-icon {
+    width: 84px;
+    height: 84px;
+  }
+
+  .clash-product-lockup {
+    gap: 18px;
+    margin-bottom: 28px;
+  }
+
+  .clash-product-lockup h1 {
+    font-size: clamp(44px, 14vw, 56px);
+  }
+
+  .clash-product-identity p {
+    margin-top: 7px;
+    font-size: 15px;
+  }
+
+  .clash-screenshots {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .home-link-list {
+    grid-template-columns: 1fr;
+  }
+
+  .home-link-list a:nth-child(even) {
+    padding-right: 16px;
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .clash-screenshot--iphone {
+    width: min(78%, 360px);
+    margin-inline: auto;
+  }
+}

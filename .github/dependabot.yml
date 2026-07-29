@@ -1,0 +1,16 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      vitepress:
+        patterns:
+          - vitepress
+          - vite
+          - vue
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly

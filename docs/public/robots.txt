@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tokenpls.github.io/clash.md/sitemap.xml
