@@ -12,6 +12,11 @@
   --vp-c-text-3: #76767a;
   --vp-c-divider: #e5e5e7;
   --vp-c-border: #dedee2;
+  --clash-nav-bg: rgba(255, 255, 255, 0.94);
+  --clash-primary-bg: #1d1d1f;
+  --clash-primary-bg-hover: #353538;
+  --clash-primary-text: #ffffff;
+  --clash-media-shadow: rgba(0, 0, 0, 0.08);
   --vp-font-family-base:
     -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial,
     sans-serif;
@@ -19,9 +24,34 @@
     "SFMono-Regular", "SF Mono", Menlo, Monaco, Consolas, monospace;
 }
 
+.dark {
+  --vp-c-brand-1: #0a84ff;
+  --vp-c-brand-2: #409cff;
+  --vp-c-brand-3: #64b0ff;
+  --vp-c-brand-soft: rgba(10, 132, 255, 0.18);
+  --vp-c-bg: #000000;
+  --vp-c-bg-alt: #111113;
+  --vp-c-bg-elv: #1c1c1e;
+  --vp-c-bg-soft: #1c1c1e;
+  --vp-c-text-1: #f5f5f7;
+  --vp-c-text-2: #c7c7cc;
+  --vp-c-text-3: #8e8e93;
+  --vp-c-divider: #2c2c2e;
+  --vp-c-border: #38383a;
+  --clash-nav-bg: rgba(0, 0, 0, 0.88);
+  --clash-primary-bg: #f5f5f7;
+  --clash-primary-bg-hover: #ffffff;
+  --clash-primary-text: #1d1d1f;
+  --clash-media-shadow: rgba(0, 0, 0, 0.42);
+}
+
 html {
-  background: #ffffff;
-  color-scheme: light;
+  background: var(--vp-c-bg);
+  color-scheme: light dark;
+}
+
+html.dark {
+  color-scheme: dark;
 }
 
 body {
@@ -38,7 +68,7 @@ button:focus-visible {
 
 .VPNav,
 .VPNavBar {
-  background: rgba(255, 255, 255, 0.94) !important;
+  background: var(--clash-nav-bg) !important;
 }
 
 .VPNavBar {
@@ -197,8 +227,8 @@ a[href="https://apps.apple.com/app/id6794257189"]::before {
   min-height: 44px;
   padding: 0 16px;
   border-radius: 10px;
-  background: #1d1d1f;
-  color: #ffffff !important;
+  background: var(--clash-primary-bg);
+  color: var(--clash-primary-text) !important;
   font-weight: 620;
   text-decoration: none !important;
   transition:
@@ -207,7 +237,7 @@ a[href="https://apps.apple.com/app/id6794257189"]::before {
 }
 
 .home-download:hover {
-  background: #353538;
+  background: var(--clash-primary-bg-hover);
   transform: translateY(-1px);
 }
 
@@ -305,8 +335,8 @@ a[href="https://apps.apple.com/app/id6794257189"]::before {
   width: 100%;
   border: 1px solid var(--vp-c-divider);
   border-radius: 18px;
-  background: #f5f5f7;
-  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.08);
+  background: var(--vp-c-bg-soft);
+  box-shadow: 0 18px 50px var(--clash-media-shadow);
 }
 
 .clash-screenshot figcaption {

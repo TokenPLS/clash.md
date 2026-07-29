@@ -48,7 +48,7 @@ export default defineConfig({
   base: siteBase,
   cleanUrls: true,
   lastUpdated: true,
-  appearance: false,
+  appearance: 'force-auto',
   markdown: {
     config(md) {
       const cjkEnd = /[\p{Script=Han}\u3000-\u303f\uff00-\uff65]$/u
@@ -252,7 +252,20 @@ export default defineConfig({
   },
   head: [
     ['meta', { name: 'theme-color', content: '#ffffff' }],
-    ['meta', { name: 'color-scheme', content: 'light' }],
+    [
+      'script',
+      {},
+      `(() => {
+        const media = window.matchMedia('(prefers-color-scheme: dark)')
+        const themeColor = document.querySelector('meta[name="theme-color"]')
+        const updateThemeColor = () => {
+          themeColor?.setAttribute('content', media.matches ? '#000000' : '#ffffff')
+        }
+        updateThemeColor()
+        media.addEventListener('change', updateThemeColor)
+      })()`
+    ],
+    ['meta', { name: 'color-scheme', content: 'light dark' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:site_name', content: 'Clash' }],
     ['meta', { property: 'og:image', content: `${siteOrigin}/brand/clash-app-icon.png` }],
@@ -265,8 +278,34 @@ export default defineConfig({
     ],
     ['meta', { name: 'twitter:card', content: 'summary' }],
     ['meta', { name: 'twitter:image', content: `${siteOrigin}/brand/clash-app-icon.png` }],
-    ['link', { rel: 'icon', href: publicAsset('/favicon.ico?v=2'), sizes: 'any' }],
-    ['link', { rel: 'icon', href: publicAsset('/favicon.svg?v=2'), type: 'image/svg+xml' }],
+    ['link', { rel: 'icon', href: publicAsset('/favicon.ico?v=3'), sizes: 'any' }],
+    ['link', { rel: 'icon', href: publicAsset('/favicon.svg?v=3'), type: 'image/svg+xml' }],
+    [
+      'link',
+      {
+        rel: 'icon',
+        href: publicAsset('/favicon-32x32.png?v=3'),
+        type: 'image/png',
+        sizes: '32x32'
+      }
+    ],
+    [
+      'link',
+      {
+        rel: 'icon',
+        href: publicAsset('/favicon-64x64.png?v=3'),
+        type: 'image/png',
+        sizes: '64x64'
+      }
+    ],
+    [
+      'link',
+      {
+        rel: 'apple-touch-icon',
+        href: publicAsset('/apple-touch-icon.png?v=3'),
+        sizes: '180x180'
+      }
+    ],
     ['link', { rel: 'manifest', href: publicAsset('/site.webmanifest') }]
   ],
   locales: {
