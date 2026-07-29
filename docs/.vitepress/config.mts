@@ -265,7 +265,8 @@ export default defineConfig({
     ],
     ['meta', { name: 'twitter:card', content: 'summary' }],
     ['meta', { name: 'twitter:image', content: `${siteOrigin}/brand/clash-app-icon.png` }],
-    ['link', { rel: 'icon', href: publicAsset('/favicon.svg'), type: 'image/svg+xml' }],
+    ['link', { rel: 'icon', href: publicAsset('/favicon.ico?v=2'), sizes: 'any' }],
+    ['link', { rel: 'icon', href: publicAsset('/favicon.svg?v=2'), type: 'image/svg+xml' }],
     ['link', { rel: 'manifest', href: publicAsset('/site.webmanifest') }]
   ],
   locales: {
