@@ -3,7 +3,7 @@
 The public documentation and legal-policy site for Clash, built with
 [VitePress](https://vitepress.dev/).
 
-Current site: <https://tokenpls.github.io/clash.md/>
+Current site: <https://clash.md/>
 
 ## Local development
 
