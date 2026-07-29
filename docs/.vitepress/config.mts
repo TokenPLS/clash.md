@@ -399,7 +399,7 @@ export default defineConfig({
       label: '简体中文',
       lang: 'zh-CN',
       link: '/zh/',
-      description: '由 Hako 驱动、为 Apple 平台原生打造的规则分流网络工具。',
+      description: '由 Hako 驱动、为 Apple 平台原生打造的基于规则的网络代理工具。',
       themeConfig: {
         nav: [
           {

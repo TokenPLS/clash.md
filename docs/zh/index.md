@@ -35,7 +35,7 @@ pageClass: clash-home
   <img class="clash-app-icon" src="/brand/clash-app-icon.svg" alt="Clash App 图标">
   <div class="clash-product-identity">
     <h1>Clash</h1>
-    <p>规则分流网络工具 · 由 Hako 驱动</p>
+    <p>基于规则的网络代理工具 · 由 Hako 驱动</p>
   </div>
 </div>
 
