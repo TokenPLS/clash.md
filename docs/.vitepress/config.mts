@@ -316,9 +316,20 @@ export default defineConfig({
         nav: [
           {
             text: 'Download',
-            link: 'https://apps.apple.com/app/id6794257189',
-            target: '_blank',
-            rel: 'noopener noreferrer'
+            items: [
+              {
+                text: 'TestFlight beta',
+                link: 'https://testflight.apple.com/join/QJWrVrxT',
+                target: '_blank',
+                rel: 'noopener noreferrer'
+              },
+              {
+                text: 'App Store',
+                link: 'https://apps.apple.com/app/id6794257189',
+                target: '_blank',
+                rel: 'noopener noreferrer'
+              }
+            ]
           },
           { text: 'Guide', link: '/guide/' },
           { text: 'Privacy', link: '/privacy' },
@@ -404,9 +415,20 @@ export default defineConfig({
         nav: [
           {
             text: '下载',
-            link: 'https://apps.apple.com/app/id6794257189',
-            target: '_blank',
-            rel: 'noopener noreferrer'
+            items: [
+              {
+                text: 'TestFlight 测试版',
+                link: 'https://testflight.apple.com/join/QJWrVrxT',
+                target: '_blank',
+                rel: 'noopener noreferrer'
+              },
+              {
+                text: 'App Store',
+                link: 'https://apps.apple.com/app/id6794257189',
+                target: '_blank',
+                rel: 'noopener noreferrer'
+              }
+            ]
           },
           { text: '使用指南', link: '/zh/guide/' },
           { text: '隐私政策', link: '/zh/privacy' },

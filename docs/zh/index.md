@@ -20,7 +20,7 @@ jsonLd:
     - iOS
     - iPadOS
   url: https://clash.md/zh/
-  downloadUrl: https://apps.apple.com/app/id6794257189
+  downloadUrl: https://testflight.apple.com/join/QJWrVrxT
   codeRepository:
     - https://github.com/TokenPLS/Hako-Client
     - https://github.com/TokenPLS/Hako
@@ -54,7 +54,8 @@ Clash 支持 21 类常见出站协议，让你可以自由选择协议、订阅�
 来说，安全是一项可以被验证的事实。
 
 <div class="home-download-row">
-  <a class="home-download" href="https://apps.apple.com/app/id6794257189" target="_blank" rel="noopener noreferrer">前往 App Store 下载</a>
+  <a class="home-download" href="https://testflight.apple.com/join/QJWrVrxT" target="_blank" rel="noopener noreferrer">通过 TestFlight 安装</a>
+  <a class="home-download home-download--secondary" href="https://apps.apple.com/app/id6794257189" target="_blank" rel="noopener noreferrer">前往 App Store</a>
 </div>
 
 <div class="home-link-list">
@@ -104,6 +105,6 @@ Clash 支持 21 类常见出站协议，让你可以自由选择协议、订阅�
 
 | 平台 | 状态 |
 | --- | --- |
-| iPhone 与 iPad | 正在准备 App Store 上架 |
+| iPhone 与 iPad | TestFlight 测试版开放 · 正在准备 App Store 上架 |
 | macOS | 开发中 |
 | tvOS | 开发中 |

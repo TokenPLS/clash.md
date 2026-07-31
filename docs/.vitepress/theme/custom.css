@@ -95,7 +95,8 @@ button:focus-visible {
   line-height: 1.72;
 }
 
-a[href="https://apps.apple.com/app/id6794257189"]::before {
+a[href="https://apps.apple.com/app/id6794257189"]::before,
+a[href="https://testflight.apple.com/join/QJWrVrxT"]::before {
   display: inline-block;
   width: 19px;
   height: 19px;
@@ -218,6 +219,9 @@ a[href="https://apps.apple.com/app/id6794257189"]::before {
 }
 
 .home-download-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   margin-top: 30px;
 }
 
@@ -239,6 +243,18 @@ a[href="https://apps.apple.com/app/id6794257189"]::before {
 .home-download:hover {
   background: var(--clash-primary-bg-hover);
   transform: translateY(-1px);
+}
+
+.home-download--secondary {
+  border: 1px solid var(--vp-c-border);
+  background: var(--vp-c-bg);
+  color: var(--vp-c-text-1) !important;
+}
+
+.home-download--secondary:hover {
+  border-color: var(--vp-c-brand-1);
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1) !important;
 }
 
 .home-download::before {

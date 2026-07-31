@@ -20,7 +20,7 @@ jsonLd:
     - iOS
     - iPadOS
   url: https://clash.md/
-  downloadUrl: https://apps.apple.com/app/id6794257189
+  downloadUrl: https://testflight.apple.com/join/QJWrVrxT
   codeRepository:
     - https://github.com/TokenPLS/Hako-Client
     - https://github.com/TokenPLS/Hako
@@ -57,7 +57,8 @@ core are fully open source, so anyone can inspect, discuss, and independently
 audit them. Security becomes a verifiable property.
 
 <div class="home-download-row">
-  <a class="home-download" href="https://apps.apple.com/app/id6794257189" target="_blank" rel="noopener noreferrer">Download on the App Store</a>
+  <a class="home-download" href="https://testflight.apple.com/join/QJWrVrxT" target="_blank" rel="noopener noreferrer">Join the TestFlight beta</a>
+  <a class="home-download home-download--secondary" href="https://apps.apple.com/app/id6794257189" target="_blank" rel="noopener noreferrer">View on the App Store</a>
 </div>
 
 <div class="home-link-list">
@@ -107,6 +108,6 @@ the Telegram channel is open for release updates and community conversations.
 
 | Platform | Status |
 | --- | --- |
-| iPhone and iPad | Preparing for App Store |
+| iPhone and iPad | TestFlight beta available · Preparing for App Store |
 | macOS | In development |
 | tvOS | In development |
