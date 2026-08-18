@@ -91,8 +91,8 @@ pageClass: hako-product-page
     </article>
     <article>
       <span>03</span>
-      <h3>不代管订阅与凭据</h3>
-      <p>Hako 不主动拉取或保存订阅 URL 与凭据，只接收客户端准备好的运行配置，并按你的规则处理连接。</p>
+      <h3>配置由客户端管理</h3>
+      <p>Hako 不下载或保存配置地址与凭据。客户端准备运行配置，Hako 只负责执行其中的规则。</p>
     </article>
   </div>
 </section>

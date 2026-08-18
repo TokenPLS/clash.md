@@ -105,8 +105,8 @@ iPhone、iPad 与 Mac 可以直接读取 mihomo YAML，也可以添加返回 mih
 的 HTTPS 配置地址。Apple TV 通过配置地址获取配置。
 
 来自其他客户端的配置是否能直接使用，取决于配置格式、协议及参数。请参阅
-[完整兼容性说明](/zh/guide/compatibility)；单独的第三方“订阅”一词只用于
-说明外部服务提供的格式，不代表 Clash 提供或销售订阅服务。
+[完整兼容性说明](/zh/guide/compatibility)。配置由用户自行提供；Clash 不提供
+服务器、线路或网络服务。
 
 ## 支持的协议
 

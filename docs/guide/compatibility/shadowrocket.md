@@ -1,6 +1,6 @@
 ---
 title: Is Clash compatible with Shadowrocket?
-description: How to move Shadowrocket subscriptions, QR codes, node parameters, rules and module needs to Clash for iOS.
+description: How to move Shadowrocket remote profiles, QR codes, node parameters, rules, and module needs to Clash for iOS.
 head:
   - - link
     - rel: canonical
@@ -11,28 +11,28 @@ head:
       href: https://clash.md/zh/guide/compatibility/shadowrocket
   - - script
     - type: application/ld+json
-    - '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I use a Shadowrocket subscription in Clash?","acceptedAnswer":{"@type":"Answer","text":"Yes when the provider returns mihomo YAML from an HTTPS subscription URL. Change the subscription User-Agent when necessary."}},{"@type":"Question","name":"How do I use ss:// and other Shadowrocket node parameters in Clash?","acceptedAnswer":{"@type":"Answer","text":"Organize standalone link or Base64 list parameters as mihomo YAML, or enter them in the node editor. A QR code can add an HTTPS subscription URL."}},{"@type":"Question","name":"How do I move Shadowrocket rules and modules?","acceptedAnswer":{"@type":"Answer","text":"Recreate the original rules, modules, rewrites and script needs with mihomo configuration, Clash rules and matching features."}}]}'
+    - '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I use a Shadowrocket remote profile in Clash?","acceptedAnswer":{"@type":"Answer","text":"Yes when the provider returns mihomo YAML from an HTTPS profile URL. Change the Profile User-Agent when necessary."}},{"@type":"Question","name":"How do I use ss:// and other Shadowrocket node parameters in Clash?","acceptedAnswer":{"@type":"Answer","text":"Organize standalone link or Base64 list parameters as mihomo YAML, or enter them in the node editor. A QR code can add an HTTPS profile URL."}},{"@type":"Question","name":"How do I move Shadowrocket rules and modules?","acceptedAnswer":{"@type":"Answer","text":"Recreate the original rules, modules, rewrites and script needs with mihomo configuration, Clash rules and matching features."}}]}'
 ---
 
 # Is Clash compatible with Shadowrocket?
 
-**Subscriptions and common nodes continue to work, while the original routing experience can be recreated in Clash.**
+**Remote profiles and common nodes continue to work, while the original routing experience can be recreated in Clash.**
 
-If you already use a provider subscription in Shadowrocket and the provider
-returns mihomo YAML from an HTTPS URL, you can usually add the same subscription
+If you already use a provider profile URL in Shadowrocket and the provider
+returns mihomo YAML from an HTTPS URL, you can usually add the same profile
 URL to Clash. The same server can be used when its protocol and parameters match.
 
-## How do I import a Shadowrocket subscription?
+## How do I import a Shadowrocket remote profile?
 
-1. Copy the active subscription URL from Shadowrocket.
+1. Copy the active profile URL from Shadowrocket.
 2. Add it as a remote configuration in Clash.
 3. Update the profile and check its nodes and policy groups.
-4. When the provider offers multiple formats, change the subscription User-Agent and select Clash / mihomo output.
+4. When the provider offers multiple formats, change the Profile User-Agent and select Clash / mihomo output.
 5. Test latency, choose a node and connect.
 
 ## How to use share links and QR codes
 
-QR codes offer a quick way to add an HTTPS subscription URL that returns mihomo
+QR codes offer a quick way to add an HTTPS profile URL that returns mihomo
 YAML. For `ss://`, `ssr://`, `vmess://`, `vless://`, `trojan://`,
 `hysteria2://`, `tuic://`, `anytls://` and Base64 node lists, organize the
 server, port, credentials, TLS and transport parameters as mihomo YAML, or add

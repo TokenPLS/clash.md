@@ -45,7 +45,7 @@ pageClass: clash-platform-page
   <div class="platform-feature-grid">
     <article><span>01</span><h3>一滑就连</h3><p>从控制中心、快捷指令或 Siri 启动 Clash，常用操作不必先打开 App。</p></article>
     <article><span>02</span><h3>换网络也省心</h3><p>从家里 Wi-Fi 到移动网络，按你设定的条件自动连接或断开。</p></article>
-    <article><span>03</span><h3>现成配置直接用</h3><p>导入已有订阅或配置，更新、切换和调整都在一个地方完成。</p></article>
+    <article><span>03</span><h3>现成配置直接用</h3><p>添加已有配置地址或 YAML 文件，更新、切换和调整都在一个地方完成。</p></article>
     <article><span>04</span><h3>哪里不对，看得见</h3><p>哪个请求走了哪条线路、为什么这样走，打开连接记录就能找到答案。</p></article>
     <article><span>05</span><h3>测速与排查都在这里</h3><p>节点延迟、DNS、网页连通与路由问题，不用再切换一堆工具。</p></article>
     <article><span>06</span><h3>小屏轻快，大屏清楚</h3><p>iPhone 上随手操作，iPad 上充分利用空间，能力不缩水。</p></article>

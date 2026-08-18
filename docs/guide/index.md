@@ -1,6 +1,6 @@
 ---
 title: Getting started
-description: Add your own Clash or mihomo profile on iPhone, iPad, Mac, or Apple TV, choose a route, and connect.
+description: Add your own Clash or mihomo configuration or profile URL on iPhone, iPad, Mac, or Apple TV, choose a route, and connect.
 keywords:
   - Clash guide
   - import Clash profile on iPhone
@@ -11,11 +11,11 @@ jsonLd:
   "@context": https://schema.org
   "@type": HowTo
   name: How to use Clash on Apple platforms
-  description: Add your own Clash or mihomo profile, choose a route, and connect.
+  description: Add your own Clash or mihomo configuration or profile URL, choose a route, and connect.
   inLanguage: en-US
   supply:
     - "@type": HowToSupply
-      name: A working Clash or mihomo profile or profile URL
+      name: A working Clash or mihomo configuration or profile URL
   step:
     - "@type": HowToStep
       position: 1
@@ -36,8 +36,9 @@ jsonLd:
 
 # Getting started
 
-Clash does not include servers or proxy lines. Bring a Clash / mihomo profile
-you choose and trust, then add it, choose a route, and connect.
+Clash does not include servers or proxy lines. Bring a Clash / mihomo
+configuration or profile URL you choose and trust, then add it, choose a route,
+and connect.
 
 ::: tip Profiles may contain credentials
 Treat profile files, profile URLs, and backups as sensitive. When asking for
@@ -116,8 +117,8 @@ that return mihomo YAML. Apple TV retrieves its profile from a URL.
 
 Whether material from another client works directly depends on its format,
 protocols, and parameters. See the [complete compatibility guide](/guide/compatibility).
-The word “subscription” is used there only for a format provided by an external
-service; Clash does not provide or sell a subscription service.
+Profiles and configurations are supplied by you. Clash does not provide servers,
+proxy lines, or a network service.
 
 ## Supported protocols
 

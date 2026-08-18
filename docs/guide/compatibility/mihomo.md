@@ -1,6 +1,6 @@
 ---
 title: Clash compatibility with mihomo, Clash Verge Rev, FlClash, Clash Nyanpasu, ClashMi and OpenClash
-description: Migrate mihomo YAML and subscriptions from Clash Verge Rev, FlClash, Clash Nyanpasu, ClashMi, OpenClash or ShellCrash to Clash for iPhone and iPad.
+description: Migrate mihomo YAML, profile URLs, nodes, and rules from Clash Verge Rev, FlClash, Clash Nyanpasu, ClashMi, OpenClash, or ShellCrash to Clash for iPhone and iPad.
 head:
   - - link
     - rel: canonical
@@ -11,14 +11,14 @@ head:
       href: https://clash.md/zh/guide/compatibility/mihomo
   - - script
     - type: application/ld+json
-    - '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which mihomo client configurations work with Clash?","acceptedAnswer":{"@type":"Answer","text":"Standard mihomo YAML configurations and subscriptions that return mihomo YAML can be imported directly, including configurations used by Clash Verge Rev, FlClash, Clash Nyanpasu, ClashMi, OpenClash and ShellCrash."}},{"@type":"Question","name":"Can I use a Clash Verge Rev subscription in Clash for iOS?","acceptedAnswer":{"@type":"Answer","text":"Yes. Add the same mihomo subscription URL to Clash. When the panel offers multiple formats, change the subscription User-Agent to select Clash / mihomo output."}},{"@type":"Question","name":"How do I use an OpenClash configuration in Clash for iOS?","acceptedAnswer":{"@type":"Answer","text":"Import the standard mihomo YAML directly and recreate the matching experience with Clash rules and iOS settings. OpenWrt plugin settings continue to be managed by the router."}}]}'
+    - '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which mihomo client configurations work with Clash?","acceptedAnswer":{"@type":"Answer","text":"Standard mihomo YAML configurations and remote profiles that return mihomo YAML can be imported directly, including configurations used by Clash Verge Rev, FlClash, Clash Nyanpasu, ClashMi, OpenClash and ShellCrash."}},{"@type":"Question","name":"Can I use a Clash Verge Rev profile URL in Clash for iOS?","acceptedAnswer":{"@type":"Answer","text":"Yes. Add the same mihomo profile URL to Clash. When the panel offers multiple formats, change the Profile User-Agent to select Clash / mihomo output."}},{"@type":"Question","name":"How do I use an OpenClash configuration in Clash for iOS?","acceptedAnswer":{"@type":"Answer","text":"Import the standard mihomo YAML directly and recreate the matching experience with Clash rules and iOS settings. OpenWrt plugin settings continue to be managed by the router."}}]}'
 ---
 
 # Full compatibility with mihomo clients
 
-A **standard mihomo YAML configuration**, or a subscription that returns mihomo YAML, can be imported directly into Clash. Nodes, policy groups, rules, providers and supported configuration fields continue to work, saving the step of recreating every node.
+A **standard mihomo YAML configuration**, or a remote profile URL that returns mihomo YAML, can be imported directly into Clash. Nodes, policy groups, rules, providers and supported configuration fields continue to work, saving the step of recreating every node.
 
-“Full compatibility” here means mihomo configuration and subscription compatibility. Interface preferences, system proxy, TUN and backup settings can be configured for your preferred workflow in Clash for iOS.
+“Full compatibility” here means the mihomo configuration itself can be reused. Interface preferences, system proxy, TUN and backup settings can be configured for your preferred workflow in Clash for iOS.
 
 ## Popular mihomo clients
 
@@ -26,10 +26,10 @@ These are representative community projects:
 
 | Client | Common platforms | Moving to Clash |
 | --- | --- | --- |
-| [Clash Verge Rev](https://github.com/clash-verge-rev/clash-verge-rev) | Windows, macOS, Linux | Import the mihomo YAML or add the same subscription |
-| [FlClash](https://github.com/chen08209/FlClash) | Windows, macOS, Linux, Android | Import the mihomo YAML or add the same subscription |
-| [Clash Nyanpasu](https://github.com/libnyanpasu/clash-nyanpasu) | Windows, macOS, Linux | Import the mihomo YAML or add the same subscription |
-| [ClashMi](https://github.com/KaringX/clashmi) | iOS, macOS, Android, Windows, Linux | Import the mihomo YAML or add the same subscription |
+| [Clash Verge Rev](https://github.com/clash-verge-rev/clash-verge-rev) | Windows, macOS, Linux | Import the mihomo YAML or add the same profile URL |
+| [FlClash](https://github.com/chen08209/FlClash) | Windows, macOS, Linux, Android | Import the mihomo YAML or add the same profile URL |
+| [Clash Nyanpasu](https://github.com/libnyanpasu/clash-nyanpasu) | Windows, macOS, Linux | Import the mihomo YAML or add the same profile URL |
+| [ClashMi](https://github.com/KaringX/clashmi) | iOS, macOS, Android, Windows, Linux | Import the mihomo YAML or add the same profile URL |
 | [OpenClash](https://github.com/vernesong/OpenClash) | OpenWrt | Import standard mihomo YAML; keep plugin settings managed by OpenWrt |
 | [ShellCrash](https://github.com/juewuy/ShellCrash) | Routers and shell environments | Import standard mihomo YAML; keep installation and service settings in the original environment |
 
@@ -38,7 +38,7 @@ See the mihomo documentation for the broader [third-party tools and clients list
 ## What moves directly?
 
 - mihomo YAML configuration files;
-- subscription URLs that return mihomo YAML;
+- profile URLs that return mihomo YAML;
 - nodes and proxy providers;
 - policy groups and health checks;
 - routing rules and rule providers;
@@ -48,13 +48,13 @@ See the mihomo documentation for the broader [third-party tools and clients list
 
 Nodes, policy groups and rules move with mihomo YAML. Platform settings such as themes, window layouts, keyboard shortcuts, system proxy, TUN, launch at login, WebDAV backups and router plugins stay managed by their platform, with matching preferences available in Clash for iOS.
 
-If the original client uses Merge, Mixin, overrides or scripts to generate its final configuration, export the generated standard mihomo YAML or use the original subscription URL.
+If the original client uses Merge, Mixin, overrides or scripts to generate its final configuration, export the generated standard mihomo YAML or use the original profile URL.
 
 ## Fastest migration path
 
-1. Find the active subscription URL in the original client.
+1. Find the active profile URL in the original client.
 2. Add that URL to Clash.
-3. When the panel offers multiple formats, change the subscription User-Agent and select Clash / mihomo output.
+3. When the panel offers multiple formats, change the Profile User-Agent and select Clash / mihomo output.
 4. Update the profile and confirm that groups, rules and nodes are present.
 5. Test latency, choose a node and connect.
 

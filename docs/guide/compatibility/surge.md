@@ -1,6 +1,6 @@
 ---
 title: Is Clash compatible with Surge?
-description: How to move Surge subscriptions, Snell, Shadowsocks, Trojan, WireGuard nodes and routing policies to Clash for iOS.
+description: How to move Surge profiles, Snell, Shadowsocks, Trojan, WireGuard nodes and routing policies to Clash for iOS.
 head:
   - - link
     - rel: canonical
@@ -11,7 +11,7 @@ head:
       href: https://clash.md/zh/guide/compatibility/surge
   - - script
     - type: application/ld+json
-    - '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I move a Surge profile to Clash?","acceptedAnswer":{"@type":"Answer","text":"Organize nodes and routing policies as mihomo YAML, or add a Clash / mihomo subscription from the provider. Recreate modules, scripts and rewrites with the corresponding Clash rules and features."}},{"@type":"Question","name":"Does Clash support Surge Snell nodes?","acceptedAnswer":{"@type":"Answer","text":"Yes. Add a Snell node through mihomo YAML, a compatible subscription or the node editor."}}]}'
+    - '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I move a Surge profile to Clash?","acceptedAnswer":{"@type":"Answer","text":"Organize nodes and routing policies as mihomo YAML, or add a provider profile URL that returns Clash / mihomo YAML. Recreate modules, scripts and rewrites with the corresponding Clash rules and features."}},{"@type":"Question","name":"Does Clash support Surge Snell nodes?","acceptedAnswer":{"@type":"Answer","text":"Yes. Add a Snell node through mihomo YAML, a compatible profile URL, or the node editor."}}]}'
 ---
 
 # Is Clash compatible with Surge?
@@ -30,13 +30,13 @@ Clash supports Snell and multiple protocols shared by both products, including:
 - WireGuard;
 - Snell.
 
-Snell is normally added through mihomo YAML, a compatible subscription that
+Snell is normally added through mihomo YAML, a compatible profile URL that
 returns mihomo YAML, or the node editor. Other nodes can be recreated from their
 server and protocol parameters.
 
 ## How to migrate
 
-1. Prefer a mihomo / Clash subscription from the provider.
+1. Prefer a provider profile URL that returns mihomo / Clash YAML.
 2. If only a Surge profile is available, recreate the required nodes from their parameters.
 3. Rewrite Surge policy groups and rules as mihomo YAML.
 4. Use Clash rules and matching features to recreate the needs expressed by modules, scripts and rewrites.

@@ -11,13 +11,13 @@ head:
       href: https://clash.md/zh/guide/protocols
   - - script
     - type: application/ld+json
-    - '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which proxy protocols does Clash support?","acceptedAnswer":{"@type":"Answer","text":"Clash supports 23 configurable proxy protocol families: HTTP, SOCKS, Shadowsocks, ShadowsocksR, Snell, VMess, VLESS, Trojan, AnyTLS, Mieru, Sudoku, Hysteria, Hysteria2, TUIC, ShadowQUIC, GOST Relay, WireGuard, Tailscale, ZeroTier, SSH, MASQUE, TrustTunnel and OpenVPN. Hako 1.19.30 recognizes 27 outbound types in total; DIRECT, DNS, REJECT and REMATCH are routing or control outbounds rather than server protocols."}},{"@type":"Question","name":"How do I use ss:// and other share links with Clash?","acceptedAnswer":{"@type":"Answer","text":"Convert standalone share links or Base64 node lists to mihomo YAML, or enter the server, port, credentials and protocol parameters in the node editor. The Profile importer accepts HTTPS subscription URLs and complete mihomo YAML."}},{"@type":"Question","name":"How do I move a configuration from another app?","acceptedAnswer":{"@type":"Answer","text":"Prefer a provider-supplied mihomo YAML subscription. Nodes from sing-box, Surge, or Quantumult X can also be recreated in Clash from their protocol parameters."}},{"@type":"Question","name":"What do I need to start using Clash?","acceptedAnswer":{"@type":"Answer","text":"Bring a server configuration or HTTPS subscription that you choose and trust, then import it into Clash."}}]}'
+    - '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which proxy protocols does Clash support?","acceptedAnswer":{"@type":"Answer","text":"Clash supports 23 configurable proxy protocol families: HTTP, SOCKS, Shadowsocks, ShadowsocksR, Snell, VMess, VLESS, Trojan, AnyTLS, Mieru, Sudoku, Hysteria, Hysteria2, TUIC, ShadowQUIC, GOST Relay, WireGuard, Tailscale, ZeroTier, SSH, MASQUE, TrustTunnel and OpenVPN. Hako 1.19.30 recognizes 27 outbound types in total; DIRECT, DNS, REJECT and REMATCH are routing or control outbounds rather than server protocols."}},{"@type":"Question","name":"How do I use ss:// and other share links with Clash?","acceptedAnswer":{"@type":"Answer","text":"Convert standalone share links or Base64 node lists to mihomo YAML, or enter the server, port, credentials and protocol parameters in the node editor. The Profile importer accepts HTTPS profile URLs and complete mihomo YAML."}},{"@type":"Question","name":"How do I move a configuration from another app?","acceptedAnswer":{"@type":"Answer","text":"Prefer a provider profile URL that returns mihomo YAML. Nodes from sing-box, Surge, or Quantumult X can also be recreated in Clash from their protocol parameters."}},{"@type":"Question","name":"What do I need to start using Clash?","acceptedAnswer":{"@type":"Answer","text":"Bring a mihomo configuration or HTTPS profile URL that you choose and trust, then import it into Clash."}}]}'
 ---
 
 # Supported proxy protocols in Clash
 
 Clash supports **23 outbound protocol families** across Apple platforms. Configure
-them through mihomo YAML, an HTTPS subscription that returns mihomo YAML, or the
+them through mihomo YAML, an HTTPS profile URL that returns mihomo YAML, or the
 node editor.
 
 Hako 1.19.30 recognizes 27 outbound types in total. This page lists the 23
@@ -28,38 +28,38 @@ are routing or control outbounds rather than server protocols.
 
 | Protocol | Available import paths |
 | --- | --- |
-| HTTP | mihomo YAML · subscription · manual node |
-| SOCKS | mihomo YAML · subscription · manual node |
-| Shadowsocks | mihomo YAML · compatible subscription · manual node |
-| ShadowsocksR | mihomo YAML · compatible subscription · manual node |
-| Snell | mihomo YAML · subscription · manual node |
-| VMess | mihomo YAML · compatible subscription · manual node |
-| VLESS | mihomo YAML · compatible subscription · manual node |
-| Trojan | mihomo YAML · compatible subscription · manual node |
-| AnyTLS | mihomo YAML · compatible subscription · manual node |
-| Mieru | mihomo YAML · subscription · manual node |
-| Sudoku | mihomo YAML · subscription · manual node |
-| Hysteria | mihomo YAML · subscription · manual node |
-| Hysteria2 | mihomo YAML · compatible subscription · manual node |
-| TUIC | mihomo YAML · compatible subscription · manual node |
-| ShadowQUIC | mihomo YAML · subscription · manual node |
-| GOST Relay | mihomo YAML · subscription · manual node |
-| WireGuard | mihomo YAML · subscription · manual node |
+| HTTP | mihomo YAML · profile URL · manual node |
+| SOCKS | mihomo YAML · profile URL · manual node |
+| Shadowsocks | mihomo YAML · compatible profile URL · manual node |
+| ShadowsocksR | mihomo YAML · compatible profile URL · manual node |
+| Snell | mihomo YAML · profile URL · manual node |
+| VMess | mihomo YAML · compatible profile URL · manual node |
+| VLESS | mihomo YAML · compatible profile URL · manual node |
+| Trojan | mihomo YAML · compatible profile URL · manual node |
+| AnyTLS | mihomo YAML · compatible profile URL · manual node |
+| Mieru | mihomo YAML · profile URL · manual node |
+| Sudoku | mihomo YAML · profile URL · manual node |
+| Hysteria | mihomo YAML · profile URL · manual node |
+| Hysteria2 | mihomo YAML · compatible profile URL · manual node |
+| TUIC | mihomo YAML · compatible profile URL · manual node |
+| ShadowQUIC | mihomo YAML · profile URL · manual node |
+| GOST Relay | mihomo YAML · profile URL · manual node |
+| WireGuard | mihomo YAML · profile URL · manual node |
 | Tailscale | mihomo YAML · manual node |
 | ZeroTier | mihomo YAML · manual node |
-| SSH | mihomo YAML · subscription · manual node |
-| MASQUE | mihomo YAML · subscription · manual node |
-| TrustTunnel | mihomo YAML · subscription · manual node |
-| OpenVPN | mihomo YAML · subscription · manual node |
+| SSH | mihomo YAML · profile URL · manual node |
+| MASQUE | mihomo YAML · profile URL · manual node |
+| TrustTunnel | mihomo YAML · profile URL · manual node |
+| OpenVPN | mihomo YAML · profile URL · manual node |
 
 ## Configuration paths
 
 Clash accepts these Profile sources:
 
-- an HTTPS subscription URL whose response is valid mihomo YAML;
+- an HTTPS profile URL whose response is valid mihomo YAML;
 - a `.yaml` or `.yml` configuration file;
 - complete mihomo YAML from the clipboard;
-- a QR code containing an HTTPS subscription URL.
+- a QR code containing an HTTPS profile URL.
 
 For standalone node links such as `ss://`, `ssr://`, and `vmess://`, or a
 Base64 node list, convert the source to mihomo YAML or recreate the node from
@@ -68,7 +68,7 @@ its server, port, credentials, and protocol parameters in the node editor.
 ## Move nodes from another app
 
 Clash uses mihomo YAML as its configuration format. When moving from sing-box
-JSON, a Surge profile, or Quantumult X, prefer a mihomo subscription or recreate
+JSON, a Surge profile, or Quantumult X, prefer a profile URL that returns mihomo YAML or recreate
 the node in Clash from its protocol parameters.
 
 For recommended migration paths by app, read the
@@ -86,7 +86,7 @@ For recommended migration paths by app, read the
 
 ### Does Clash support ShadowsocksR?
 
-Yes. ShadowsocksR is available through mihomo YAML, a compatible subscription
+Yes. ShadowsocksR is available through mihomo YAML, a compatible profile URL
 that returns mihomo YAML, or by entering the parameters from an `ssr://` link
 in the node editor.
 
@@ -97,7 +97,7 @@ routes and other required fields must be configured correctly.
 
 ### Does Clash support Hysteria2, TUIC and AnyTLS?
 
-Yes. All three are supported through mihomo YAML, compatible subscriptions that
+Yes. All three are supported through mihomo YAML, compatible profile URLs that
 return mihomo YAML, or manual node entry.
 
 ### Does Clash support Snell for Surge servers?

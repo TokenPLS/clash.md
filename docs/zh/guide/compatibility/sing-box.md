@@ -1,6 +1,6 @@
 ---
 title: Clash 与 sing-box 兼容吗？
-description: 说明如何把 sing-box JSON 配置、订阅、VLESS、Trojan、Hysteria2、TUIC、AnyTLS 节点迁移到 Clash iOS。
+description: 说明如何把 sing-box JSON 配置及 VLESS、Trojan、Hysteria2、TUIC、AnyTLS 节点迁移到 Clash iOS。
 head:
   - - link
     - rel: canonical
@@ -11,7 +11,7 @@ head:
       href: https://clash.md/guide/compatibility/sing-box
   - - script
     - type: application/ld+json
-    - '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"如何把 sing-box JSON 配置迁移到 Clash？","acceptedAnswer":{"@type":"Answer","text":"Clash 使用 mihomo YAML。优先获取 mihomo 格式订阅，或根据 sing-box 节点与路由参数重新建立 YAML。"}},{"@type":"Question","name":"sing-box 节点可以在 Clash 中使用吗？","acceptedAnswer":{"@type":"Answer","text":"可以，只要节点使用 Clash 支持的协议、传输方式、TLS、认证方式与参数。常见的 VLESS、Trojan、Hysteria2、TUIC 与 AnyTLS 均受支持。"}}]}'
+    - '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"如何把 sing-box JSON 配置迁移到 Clash？","acceptedAnswer":{"@type":"Answer","text":"Clash 使用 mihomo YAML。优先获取返回 mihomo YAML 的配置地址，或根据 sing-box 节点与路由参数重新建立 YAML。"}},{"@type":"Question","name":"sing-box 节点可以在 Clash 中使用吗？","acceptedAnswer":{"@type":"Answer","text":"可以，只要节点使用 Clash 支持的协议、传输方式、TLS、认证方式与参数。常见的 VLESS、Trojan、Hysteria2、TUIC 与 AnyTLS 均受支持。"}}]}'
 ---
 
 # Clash 与 sing-box 兼容吗？
@@ -37,7 +37,7 @@ head:
 
 ## 怎么迁移最省事？
 
-1. 优先向服务商获取 mihomo / Clash 格式的订阅。
+1. 优先向服务商获取返回 mihomo / Clash YAML 的配置地址。
 2. 如果只有 `ss://`、`vless://`、`trojan://` 等分享链接，请先转换成
    mihomo YAML，或在 Clash 的节点编辑器中按链接参数重新添加。
 3. 单节点分享链接可以作为参数来源，整理成 YAML 或手动填写。

@@ -1,6 +1,6 @@
 ---
 title: Is Clash compatible with sing-box?
-description: How to move sing-box JSON configurations, subscriptions and VLESS, Trojan, Hysteria2, TUIC or AnyTLS nodes to Clash for iOS.
+description: How to move sing-box JSON configurations and VLESS, Trojan, Hysteria2, TUIC, or AnyTLS nodes to Clash for iOS.
 head:
   - - link
     - rel: canonical
@@ -11,7 +11,7 @@ head:
       href: https://clash.md/zh/guide/compatibility/sing-box
   - - script
     - type: application/ld+json
-    - '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I move a sing-box JSON configuration to Clash?","acceptedAnswer":{"@type":"Answer","text":"Clash uses mihomo YAML. Prefer a mihomo subscription or recreate the required nodes and routing intent from the sing-box configuration."}},{"@type":"Question","name":"Can sing-box nodes work in Clash?","acceptedAnswer":{"@type":"Answer","text":"Yes when the protocol, transport, TLS, authentication and parameters are supported by Clash. Common VLESS, Trojan, Hysteria2, TUIC and AnyTLS nodes are supported."}}]}'
+    - '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I move a sing-box JSON configuration to Clash?","acceptedAnswer":{"@type":"Answer","text":"Clash uses mihomo YAML. Prefer a provider profile URL that returns mihomo YAML, or recreate the required nodes and routing intent from the sing-box configuration."}},{"@type":"Question","name":"Can sing-box nodes work in Clash?","acceptedAnswer":{"@type":"Answer","text":"Yes when the protocol, transport, TLS, authentication and parameters are supported by Clash. Common VLESS, Trojan, Hysteria2, TUIC and AnyTLS nodes are supported."}}]}'
 ---
 
 # Is Clash compatible with sing-box?
@@ -37,7 +37,7 @@ See the [complete protocol list](/guide/protocols).
 
 ## Fastest migration path
 
-1. Prefer a mihomo / Clash subscription from the provider.
+1. Prefer a provider profile URL that returns mihomo / Clash YAML.
 2. If only an `ss://`, `vless://`, or similar share link is available, convert it
    to mihomo YAML first or recreate the node from its parameters in Clash.
 3. Use a standalone node link as a parameter source for YAML or manual entry.

@@ -91,8 +91,8 @@ pageClass: hako-product-page
     </article>
     <article>
       <span>03</span>
-      <h3>No subscription custody</h3>
-      <p>Hako does not fetch or persist subscription URLs and credentials. It receives a prepared runtime configuration from the client and follows your rules.</p>
+      <h3>Profiles stay with the client</h3>
+      <p>Hako never downloads or stores profile URLs or credentials. The client prepares the runtime configuration; Hako applies its rules.</p>
     </article>
   </div>
 </section>

@@ -1,6 +1,6 @@
 ---
 title: Clash 与 Shadowrocket（小火箭）兼容吗？
-description: 说明如何把 Shadowrocket 小火箭的订阅、二维码、节点参数、规则与模块需求迁移到 Clash iOS。
+description: 说明如何把 Shadowrocket 小火箭的远程配置、二维码、节点参数、规则与模块需求迁移到 Clash iOS。
 head:
   - - link
     - rel: canonical
@@ -11,28 +11,28 @@ head:
       href: https://clash.md/guide/compatibility/shadowrocket
   - - script
     - type: application/ld+json
-    - '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Shadowrocket 小火箭的订阅可以用于 Clash 吗？","acceptedAnswer":{"@type":"Answer","text":"服务商通过 HTTPS 订阅地址返回 mihomo YAML 时，可以直接添加到 Clash；必要时可切换订阅 User-Agent。"}},{"@type":"Question","name":"如何在 Clash 中使用小火箭的 ss:// 等节点参数？","acceptedAnswer":{"@type":"Answer","text":"把单节点分享链接或 Base64 列表中的参数整理为 mihomo YAML，或在节点编辑器中添加；二维码可用于添加 HTTPS 订阅地址。"}},{"@type":"Question","name":"如何迁移 Shadowrocket 的规则和模块？","acceptedAnswer":{"@type":"Answer","text":"使用 mihomo 配置、Clash 规则与对应功能重新建立原有规则、模块、重写和脚本需求。"}}]}'
+    - '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Shadowrocket 小火箭的远程配置可以用于 Clash 吗？","acceptedAnswer":{"@type":"Answer","text":"服务商通过 HTTPS 配置地址返回 mihomo YAML 时，可以直接添加到 Clash；必要时可切换 Profile User-Agent。"}},{"@type":"Question","name":"如何在 Clash 中使用小火箭的 ss:// 等节点参数？","acceptedAnswer":{"@type":"Answer","text":"把单节点分享链接或 Base64 列表中的参数整理为 mihomo YAML，或在节点编辑器中添加；二维码可用于添加 HTTPS 配置地址。"}},{"@type":"Question","name":"如何迁移 Shadowrocket 的规则和模块？","acceptedAnswer":{"@type":"Answer","text":"使用 mihomo 配置、Clash 规则与对应功能重新建立原有规则、模块、重写和脚本需求。"}}]}'
 ---
 
 # Clash 与 Shadowrocket（小火箭）兼容吗？
 
-**订阅和常见节点可以继续使用，原有分流需求也能在 Clash 中重新建立。**
+**远程配置和常见节点可以继续使用，原有分流需求也能在 Clash 中重新建立。**
 
-如果你已经在 Shadowrocket 中使用某个服务商订阅，并且服务商能够通过
-HTTPS 地址返回 mihomo YAML，通常可以把同一个订阅 URL 添加到 Clash。
+如果你已经在 Shadowrocket 中使用某个服务商配置地址，并且服务商能够通过
+该 HTTPS 地址返回 mihomo YAML，通常可以把同一个地址添加到 Clash。
 节点协议与参数对应后，同一台服务器可以直接使用。
 
-## 小火箭订阅怎么导入 Clash？
+## 小火箭远程配置怎么导入 Clash？
 
-1. 复制 Shadowrocket 中正在使用的订阅 URL。
+1. 复制 Shadowrocket 中正在使用的配置地址。
 2. 在 Clash 中添加远程配置。
 3. 更新配置并检查节点与策略组。
-4. 服务商提供多种格式时，在配置设置中切换订阅 User-Agent，选择 Clash / mihomo 输出。
+4. 服务商提供多种格式时，在 Profile 设置中切换 Profile User-Agent，选择 Clash / mihomo 输出。
 5. 测试延迟，选择节点并连接。
 
 ## 如何使用分享链接和二维码？
 
-二维码可以快速添加返回 mihomo YAML 的 HTTPS 订阅地址。对于 `ss://`、
+二维码可以快速添加返回 mihomo YAML 的 HTTPS 配置地址。对于 `ss://`、
 `ssr://`、`vmess://`、`vless://`、`trojan://`、`hysteria2://`、
 `tuic://`、`anytls://` 等单节点链接，以及 Base64 节点列表，可以把其中
 的服务器、端口、凭据、TLS 和传输参数整理为 mihomo YAML，或在节点编辑器

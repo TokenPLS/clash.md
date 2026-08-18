@@ -66,7 +66,7 @@ pageClass: clash-platform-page
     <article>
       <span>03</span>
       <h3>Bring the profiles you have</h3>
-      <p>Import an existing subscription or profile, then update, switch, and adjust it in one place.</p>
+      <p>Add an existing Profile URL or YAML configuration, then update, switch, and adjust it in one place.</p>
     </article>
     <article>
       <span>04</span>

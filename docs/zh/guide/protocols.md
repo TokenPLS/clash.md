@@ -11,13 +11,13 @@ head:
       href: https://clash.md/guide/protocols
   - - script
     - type: application/ld+json
-    - '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Clash 支持哪些代理协议？","acceptedAnswer":{"@type":"Answer","text":"Clash 支持 23 类可配置代理协议：HTTP、SOCKS、Shadowsocks、ShadowsocksR、Snell、VMess、VLESS、Trojan、AnyTLS、Mieru、Sudoku、Hysteria、Hysteria2、TUIC、ShadowQUIC、GOST Relay、WireGuard、Tailscale、ZeroTier、SSH、MASQUE、TrustTunnel 与 OpenVPN。Hako 1.19.30 共识别 27 类出站类型；DIRECT、DNS、REJECT 与 REMATCH 属于路由或控制出站，不按服务器协议计入。"}},{"@type":"Question","name":"如何在 Clash 中使用 ss:// 等分享链接？","acceptedAnswer":{"@type":"Answer","text":"可以把单节点分享链接或 Base64 节点列表整理为 mihomo YAML，或根据链接里的服务器、端口、凭据和协议参数在节点编辑器中添加。Profile 导入入口接受 HTTPS 订阅地址与完整 mihomo YAML。"}},{"@type":"Question","name":"如何迁移其他 App 的配置？","acceptedAnswer":{"@type":"Answer","text":"优先选择服务商提供的 mihomo YAML；来自 sing-box、Surge 或 Quantumult X 的节点可以根据协议参数在 Clash 中重新添加。"}},{"@type":"Question","name":"开始使用 Clash 需要什么？","acceptedAnswer":{"@type":"Answer","text":"准备一份你选择并信任的服务器配置或 HTTPS 订阅，即可导入 Clash。"}}]}'
+    - '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Clash 支持哪些代理协议？","acceptedAnswer":{"@type":"Answer","text":"Clash 支持 23 类可配置代理协议：HTTP、SOCKS、Shadowsocks、ShadowsocksR、Snell、VMess、VLESS、Trojan、AnyTLS、Mieru、Sudoku、Hysteria、Hysteria2、TUIC、ShadowQUIC、GOST Relay、WireGuard、Tailscale、ZeroTier、SSH、MASQUE、TrustTunnel 与 OpenVPN。Hako 1.19.30 共识别 27 类出站类型；DIRECT、DNS、REJECT 与 REMATCH 属于路由或控制出站，不按服务器协议计入。"}},{"@type":"Question","name":"如何在 Clash 中使用 ss:// 等分享链接？","acceptedAnswer":{"@type":"Answer","text":"可以把单节点分享链接或 Base64 节点列表整理为 mihomo YAML，或根据链接里的服务器、端口、凭据和协议参数在节点编辑器中添加。Profile 导入入口接受 HTTPS 配置地址与完整 mihomo YAML。"}},{"@type":"Question","name":"如何迁移其他 App 的配置？","acceptedAnswer":{"@type":"Answer","text":"优先使用返回 mihomo YAML 的配置地址；来自 sing-box、Surge 或 Quantumult X 的节点也可以根据协议参数在 Clash 中重新添加。"}},{"@type":"Question","name":"开始使用 Clash 需要什么？","acceptedAnswer":{"@type":"Answer","text":"准备一份你选择并信任的 mihomo 配置或 HTTPS 配置地址，即可导入 Clash。"}}]}'
 ---
 
 # Clash 支持的代理协议
 
 Clash 的 Apple 平台版本支持 **23 类出站协议**。可以通过 mihomo YAML、
-返回 mihomo YAML 的 HTTPS 订阅，或节点编辑器进行配置。
+返回 mihomo YAML 的 HTTPS 配置地址，或节点编辑器进行配置。
 
 Hako 1.19.30 共识别 27 类出站类型。本页列出其中 23 类可配置代理协议；
 `DIRECT`、`DNS`、`REJECT` 与 `REMATCH` 属于路由或控制出站，不按服务器协议
@@ -27,38 +27,38 @@ Hako 1.19.30 共识别 27 类出站类型。本页列出其中 23 类可配置�
 
 | 协议 | 可用导入方式 |
 | --- | --- |
-| HTTP | mihomo YAML · 订阅 · 手动添加 |
-| SOCKS | mihomo YAML · 订阅 · 手动添加 |
-| Shadowsocks | mihomo YAML · 兼容订阅 · 手动添加 |
-| ShadowsocksR | mihomo YAML · 兼容订阅 · 手动添加 |
-| Snell | mihomo YAML · 订阅 · 手动添加 |
-| VMess | mihomo YAML · 兼容订阅 · 手动添加 |
-| VLESS | mihomo YAML · 兼容订阅 · 手动添加 |
-| Trojan | mihomo YAML · 兼容订阅 · 手动添加 |
-| AnyTLS | mihomo YAML · 兼容订阅 · 手动添加 |
-| Mieru | mihomo YAML · 订阅 · 手动添加 |
-| Sudoku | mihomo YAML · 订阅 · 手动添加 |
-| Hysteria | mihomo YAML · 订阅 · 手动添加 |
-| Hysteria2 | mihomo YAML · 兼容订阅 · 手动添加 |
-| TUIC | mihomo YAML · 兼容订阅 · 手动添加 |
-| ShadowQUIC | mihomo YAML · 订阅 · 手动添加 |
-| GOST Relay | mihomo YAML · 订阅 · 手动添加 |
-| WireGuard | mihomo YAML · 订阅 · 手动添加 |
+| HTTP | mihomo YAML · 配置地址 · 手动添加 |
+| SOCKS | mihomo YAML · 配置地址 · 手动添加 |
+| Shadowsocks | mihomo YAML · 兼容配置地址 · 手动添加 |
+| ShadowsocksR | mihomo YAML · 兼容配置地址 · 手动添加 |
+| Snell | mihomo YAML · 配置地址 · 手动添加 |
+| VMess | mihomo YAML · 兼容配置地址 · 手动添加 |
+| VLESS | mihomo YAML · 兼容配置地址 · 手动添加 |
+| Trojan | mihomo YAML · 兼容配置地址 · 手动添加 |
+| AnyTLS | mihomo YAML · 兼容配置地址 · 手动添加 |
+| Mieru | mihomo YAML · 配置地址 · 手动添加 |
+| Sudoku | mihomo YAML · 配置地址 · 手动添加 |
+| Hysteria | mihomo YAML · 配置地址 · 手动添加 |
+| Hysteria2 | mihomo YAML · 兼容配置地址 · 手动添加 |
+| TUIC | mihomo YAML · 兼容配置地址 · 手动添加 |
+| ShadowQUIC | mihomo YAML · 配置地址 · 手动添加 |
+| GOST Relay | mihomo YAML · 配置地址 · 手动添加 |
+| WireGuard | mihomo YAML · 配置地址 · 手动添加 |
 | Tailscale | mihomo YAML · 手动添加 |
 | ZeroTier | mihomo YAML · 手动添加 |
-| SSH | mihomo YAML · 订阅 · 手动添加 |
-| MASQUE | mihomo YAML · 订阅 · 手动添加 |
-| TrustTunnel | mihomo YAML · 订阅 · 手动添加 |
-| OpenVPN | mihomo YAML · 订阅 · 手动添加 |
+| SSH | mihomo YAML · 配置地址 · 手动添加 |
+| MASQUE | mihomo YAML · 配置地址 · 手动添加 |
+| TrustTunnel | mihomo YAML · 配置地址 · 手动添加 |
+| OpenVPN | mihomo YAML · 配置地址 · 手动添加 |
 
 ## 配置方式
 
 Clash 添加 Profile 时接受：
 
-- HTTPS 订阅地址，且返回内容必须是有效的 mihomo YAML；
+- HTTPS 配置地址，且返回内容必须是有效的 mihomo YAML；
 - `.yaml` 或 `.yml` 配置文件；
 - 剪贴板中的完整 mihomo YAML；
-- 包含 HTTPS 订阅地址的二维码。
+- 包含 HTTPS 配置地址的二维码。
 
 对于 `ss://`、`ssr://`、`vmess://` 等单节点分享链接，以及 Base64 节点
 列表，可以先整理为 mihomo YAML，或在节点编辑器中按服务器、端口、凭据
@@ -67,7 +67,7 @@ Clash 添加 Profile 时接受：
 ## 从其他 App 迁移节点
 
 Clash 以 mihomo YAML 作为配置格式。迁移 sing-box JSON、Surge Profile 或
-Quantumult X 配置时，优先获取 mihomo 订阅，或根据原节点的协议参数在
+Quantumult X 配置时，优先获取返回 mihomo YAML 的配置地址，或根据原节点的协议参数在
 Clash 中重新添加。
 
 各品牌的推荐迁移方式请参阅[兼容性说明](/zh/guide/compatibility)。
@@ -83,7 +83,7 @@ Clash 中重新添加。
 
 ### Clash 支持 ShadowsocksR 吗？
 
-支持。可以通过 mihomo YAML、返回 mihomo YAML 的兼容订阅，或根据
+支持。可以通过 mihomo YAML、返回 mihomo YAML 的兼容配置地址，或根据
 `ssr://` 链接中的参数在节点编辑器添加。
 
 ### Clash 支持 WireGuard、OpenVPN 与 Tailscale 吗？
@@ -93,7 +93,7 @@ Clash 中重新添加。
 
 ### Clash 支持 Hysteria2、TUIC 与 AnyTLS 吗？
 
-支持。三者均可通过 mihomo YAML、返回 mihomo YAML 的兼容订阅，或节点
+支持。三者均可通过 mihomo YAML、返回 mihomo YAML 的兼容配置地址，或节点
 编辑器添加。
 
 ### Clash 支持 Surge 使用的 Snell 服务器吗？
