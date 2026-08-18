@@ -610,7 +610,8 @@ a[href="https://testflight.apple.com/join/QJWrVrxT"]::before {
   background: linear-gradient(
     90deg,
     var(--vp-c-brand-1) -38%,
-    var(--vp-c-text-1) 82%
+    #5e5ce6 18%,
+    #bf5af2 105%
   );
   background-clip: text;
   -webkit-background-clip: text;
