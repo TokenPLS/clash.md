@@ -1,9 +1,9 @@
 ---
 title: Privacy model
-description: "Clash for iOS uses a local-first privacy model: profiles, logs and diagnostics stay on the device, and network requests serve features you configure or start."
+description: "Clash uses a local-first privacy model across Apple platforms: profiles, logs and diagnostics stay on the device, and network requests serve features you configure or start."
 keywords:
   - Clash privacy
-  - iOS proxy privacy
+  - Apple platform proxy privacy
   - VPN data collection
   - on-device processing
   - NetworkExtension privacy
@@ -22,7 +22,7 @@ jsonLd:
 
 # Privacy model
 
-Clash is an on-device client. You configure the subscriptions, servers, and
+Clash is an on-device client. You configure the profile URLs, servers, and
 network services you choose, while its account-free architecture keeps the
 experience local-first.
 
@@ -30,17 +30,20 @@ experience local-first.
 
 Profiles, settings, connection history, logs, and diagnostics are handled
 locally. Sensitive local proxy-sharing credentials are stored in the device
-Keychain. Profiles are stored in the app container with iOS data protection.
+Keychain. Profiles are stored in the app container with the corresponding
+Apple platform's data protection.
 
 ## At your direction
 
 Clash makes external requests only to provide features you configure or start,
 including:
 
-- subscription, provider, proxy, and DNS servers named by your configuration;
+- remote-profile, provider, proxy, and DNS servers named by your configuration;
 - resource-update sources shown in the app;
-- network-quality, STUN, and latency-test endpoints you select;
-- your iCloud account when you explicitly create an iCloud backup.
+- network-quality, STUN, and latency-test endpoints you select on platforms
+  that provide those features;
+- your iCloud account when you explicitly create a backup on a platform that
+  supports iCloud Drive backup.
 
 Those services receive the network information needed to perform the operation,
 such as your IP address. Data travels directly to the services you choose, with
@@ -49,7 +52,14 @@ the developer outside that path.
 ## Under your control
 
 You can disconnect, remove profiles, disable configured updates, delete local
-data, remove iCloud backups, and decide whether to export any diagnostic
-information.
+data, remove iCloud backups where supported, and decide whether to export any
+diagnostic information.
+
+## Verifiable by design
+
+The [Clash client](https://github.com/TokenPLS/Hako-Client) and
+[Hako core](https://github.com/TokenPLS/Hako) source are public for inspection.
+The privacy model can be checked against the code the client and core actually
+execute instead of treated only as a promise.
 
 The [Privacy Policy](/privacy) is the authoritative legal description.

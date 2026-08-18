@@ -48,7 +48,7 @@ export default defineConfig({
   base: siteBase,
   cleanUrls: true,
   lastUpdated: true,
-  appearance: 'force-auto',
+  appearance: true,
   markdown: {
     config(md) {
       const cjkEnd = /[\p{Script=Han}\u3000-\u303f\uff00-\uff65]$/u
@@ -181,6 +181,10 @@ export default defineConfig({
               ? isChinese
                 ? '兼容性说明'
                 : 'Compatibility'
+              : part === 'platforms'
+                ? isChinese
+                  ? '平台'
+                  : 'Platforms'
               : part
         const itemRoute =
           part === 'guide' ? `${accumulatedRoute}/` : accumulatedRoute
@@ -313,24 +317,13 @@ export default defineConfig({
       label: 'English',
       lang: 'en-US',
       themeConfig: {
+        darkModeSwitchLabel: 'Appearance',
+        lightModeSwitchTitle: 'Switch to light mode',
+        darkModeSwitchTitle: 'Switch to dark mode',
         nav: [
-          {
-            text: 'Download',
-            items: [
-              {
-                text: 'TestFlight beta',
-                link: 'https://testflight.apple.com/join/QJWrVrxT',
-                target: '_blank',
-                rel: 'noopener noreferrer'
-              },
-              {
-                text: 'App Store',
-                link: 'https://apps.apple.com/app/id6794257189',
-                target: '_blank',
-                rel: 'noopener noreferrer'
-              }
-            ]
-          },
+          { text: 'iOS', link: '/platforms/ios' },
+          { text: 'macOS', link: '/platforms/macos' },
+          { text: 'tvOS', link: '/platforms/tvos' },
           { text: 'Guide', link: '/guide/' },
           { text: 'Privacy', link: '/privacy' },
           { text: 'Terms', link: '/terms' },
@@ -412,24 +405,13 @@ export default defineConfig({
       link: '/zh/',
       description: '由 Hako 驱动、为 Apple 平台原生打造的基于规则的网络代理工具。',
       themeConfig: {
+        darkModeSwitchLabel: '外观',
+        lightModeSwitchTitle: '切换到浅色模式',
+        darkModeSwitchTitle: '切换到深色模式',
         nav: [
-          {
-            text: '下载',
-            items: [
-              {
-                text: 'TestFlight 测试版',
-                link: 'https://testflight.apple.com/join/QJWrVrxT',
-                target: '_blank',
-                rel: 'noopener noreferrer'
-              },
-              {
-                text: 'App Store',
-                link: 'https://apps.apple.com/app/id6794257189',
-                target: '_blank',
-                rel: 'noopener noreferrer'
-              }
-            ]
-          },
+          { text: 'iOS', link: '/zh/platforms/ios' },
+          { text: 'macOS', link: '/zh/platforms/macos' },
+          { text: 'tvOS', link: '/zh/platforms/tvos' },
           { text: '使用指南', link: '/zh/guide/' },
           { text: '隐私政策', link: '/zh/privacy' },
           { text: '使用条款', link: '/zh/terms' },

@@ -1,6 +1,6 @@
 ---
 title: Terms of Use
-description: Clash Terms of Use covering bring-your-own servers and subscriptions, lawful use, external services, LAN sharing, warranties, liability, and Apple's Standard EULA.
+description: Clash Terms of Use covering bring-your-own profiles and servers, lawful use, external services, LAN sharing, warranties, liability, and Apple's Standard EULA.
 keywords:
   - Clash Terms of Use
   - Clash EULA
@@ -10,7 +10,7 @@ jsonLd:
   "@context": https://schema.org
   "@type": WebPage
   name: Clash Terms of Use
-  description: Supplementary terms for using Clash with servers, subscriptions, and configurations you provide.
+  description: Supplementary terms for using Clash with servers and profiles you provide.
   url: https://clash.md/terms
   inLanguage: en-US
   about:
@@ -26,7 +26,7 @@ jsonLd:
 
 # Terms of Use
 
-**Last updated: 29 July 2026**
+**Last updated: 18 August 2026**
 
 These Terms supplement the
 [Apple Standard End User License Agreement](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/),
@@ -41,15 +41,16 @@ Clash is published by, and “we” and “Developer” in these Terms mean,
 Clash is a network utility for Apple platforms, built on the Hako core. It
 routes traffic on your device according to a configuration you supply.
 
-**Clash provides no proxy service.** It ships with no servers, subscriptions,
-or accounts. Everything it connects to is something you configured or a
-feature endpoint disclosed in the [Privacy Policy](/privacy).
+**Clash provides no proxy service.** It ships with no servers, proxy lines, or
+accounts and does not sell network access. Everything it connects to is
+something you configured or a feature endpoint disclosed in the
+[Privacy Policy](/privacy).
 
 ## Your responsibilities
 
 - **Lawful use.** You are responsible for ensuring that your use of Clash
   complies with laws that apply to you and the terms of any service you use.
-- **Your services.** You choose the servers, subscriptions, DNS services, and
+- **Your services.** You choose the servers, profile URLs, DNS services, and
   rule sources. We do not operate or endorse them and are not responsible for
   their availability, security, content, or data practices.
 - **Your configuration.** Clash stores your configuration as supplied,
@@ -57,17 +58,17 @@ feature endpoint disclosed in the [Privacy Policy](/privacy).
   your device, configuration files, exported diagnostics, and backups.
 - **Third-party terms.** You must comply with applicable third-party terms,
   including those of your network provider, configured services, Apple, and
-  iCloud.
+  iCloud when you use a corresponding feature.
 
 You must not use Clash to violate law, infringe another person's rights,
 interfere with networks or services, or gain unauthorized access.
 
 ## Sharing on your local network
 
-If you enable LAN proxy sharing, Clash listens on your local network and
-accepts connections that provide the username and password you set. Choose a
-strong password and use sharing only on networks you trust. Sharing stops when
-the VPN stops.
+On platforms that provide LAN proxy sharing, enabling it makes Clash listen on
+your local network and accept connections that provide the username and
+password you set. Choose a strong password and use sharing only on networks
+you trust. Sharing stops when the VPN stops.
 
 ## External services
 
@@ -97,11 +98,21 @@ the use of or inability to use Clash, including loss of data, connectivity, or
 access to a third-party service. This limitation does not apply where liability
 cannot legally be limited.
 
-## Open-source components
+## Open-source software
 
-Clash includes open-source software, each component under its own license. The
-Acknowledgements page in the app lists those components. Nothing in these
-Terms overrides their licenses.
+The [Clash client](https://github.com/TokenPLS/Hako-Client) and
+[Hako core](https://github.com/TokenPLS/Hako) source are publicly available
+under the licenses identified in their repositories. The Acknowledgements page
+in the app lists other open-source components and their licenses. Nothing in
+these Terms overrides or limits rights granted by an open-source license.
+
+## Third-party names
+
+Apple, iPhone, iPad, Mac, macOS, Apple TV, tvOS, and iCloud are trademarks of
+Apple Inc. mihomo and the names of third-party clients or services mentioned in
+compatibility documentation belong to their respective owners. Those names
+identify platforms, configuration formats, or protocol compatibility and do
+not imply sponsorship, affiliation, or endorsement unless expressly stated.
 
 ## Changes to these Terms
 

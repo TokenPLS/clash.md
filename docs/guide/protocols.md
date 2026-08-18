@@ -1,6 +1,6 @@
 ---
-title: Supported proxy protocols in Clash for iPhone and iPad
-description: The complete list of 21 outbound protocol families supported by Clash, including Shadowsocks, VMess, VLESS, Trojan, Hysteria2, TUIC, WireGuard and OpenVPN.
+title: Supported proxy protocols in Clash
+description: The complete list of 23 outbound protocol families supported by Clash on Apple platforms, including Shadowsocks, VMess, VLESS, Trojan, Hysteria2, TUIC, WireGuard and OpenVPN.
 head:
   - - meta
     - name: keywords
@@ -14,12 +14,12 @@ head:
       href: https://clash.md/zh/guide/protocols
   - - script
     - type: application/ld+json
-    - '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which proxy protocols does Clash support?","acceptedAnswer":{"@type":"Answer","text":"Clash supports 21 outbound protocol families: HTTP, SOCKS, Shadowsocks, ShadowsocksR, Snell, VMess, VLESS, Trojan, AnyTLS, Mieru, Sudoku, Hysteria, Hysteria2, TUIC, ShadowQUIC, WireGuard, Tailscale, SSH, MASQUE, TrustTunnel and OpenVPN."}},{"@type":"Question","name":"How do I use ss:// and other share links with Clash?","acceptedAnswer":{"@type":"Answer","text":"Convert standalone share links or Base64 node lists to mihomo YAML, or enter the server, port, credentials and protocol parameters in the node editor. The Profile importer accepts HTTPS subscription URLs and complete mihomo YAML."}},{"@type":"Question","name":"How do I move a configuration from another app?","acceptedAnswer":{"@type":"Answer","text":"Prefer a provider-supplied mihomo YAML subscription. Nodes from sing-box, Surge, or Quantumult X can also be recreated in Clash from their protocol parameters."}},{"@type":"Question","name":"What do I need to start using Clash?","acceptedAnswer":{"@type":"Answer","text":"Bring a server configuration or HTTPS subscription that you choose and trust, then import it into Clash."}}]}'
+    - '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which proxy protocols does Clash support?","acceptedAnswer":{"@type":"Answer","text":"Clash supports 23 outbound protocol families: HTTP, SOCKS, Shadowsocks, ShadowsocksR, Snell, VMess, VLESS, Trojan, AnyTLS, Mieru, Sudoku, Hysteria, Hysteria2, TUIC, ShadowQUIC, GOST Relay, WireGuard, Tailscale, ZeroTier, SSH, MASQUE, TrustTunnel and OpenVPN."}},{"@type":"Question","name":"How do I use ss:// and other share links with Clash?","acceptedAnswer":{"@type":"Answer","text":"Convert standalone share links or Base64 node lists to mihomo YAML, or enter the server, port, credentials and protocol parameters in the node editor. The Profile importer accepts HTTPS subscription URLs and complete mihomo YAML."}},{"@type":"Question","name":"How do I move a configuration from another app?","acceptedAnswer":{"@type":"Answer","text":"Prefer a provider-supplied mihomo YAML subscription. Nodes from sing-box, Surge, or Quantumult X can also be recreated in Clash from their protocol parameters."}},{"@type":"Question","name":"What do I need to start using Clash?","acceptedAnswer":{"@type":"Answer","text":"Bring a server configuration or HTTPS subscription that you choose and trust, then import it into Clash."}}]}'
 ---
 
 # Supported proxy protocols in Clash
 
-Clash for iPhone and iPad supports **21 outbound protocol families**. Configure
+Clash supports **23 outbound protocol families** across Apple platforms. Configure
 them through mihomo YAML, an HTTPS subscription that returns mihomo YAML, or the
 node editor.
 
@@ -42,8 +42,10 @@ node editor.
 | Hysteria2 | mihomo YAML · compatible subscription · manual node |
 | TUIC | mihomo YAML · compatible subscription · manual node |
 | ShadowQUIC | mihomo YAML · subscription · manual node |
+| GOST Relay | mihomo YAML · subscription · manual node |
 | WireGuard | mihomo YAML · subscription · manual node |
 | Tailscale | mihomo YAML · manual node |
+| ZeroTier | mihomo YAML · manual node |
 | SSH | mihomo YAML · subscription · manual node |
 | MASQUE | mihomo YAML · subscription · manual node |
 | TrustTunnel | mihomo YAML · subscription · manual node |
@@ -51,7 +53,7 @@ node editor.
 
 ## Configuration paths
 
-The current iOS client accepts these Profile sources:
+Clash accepts these Profile sources:
 
 - an HTTPS subscription URL whose response is valid mihomo YAML;
 - a `.yaml` or `.yml` configuration file;
@@ -102,7 +104,6 @@ return mihomo YAML, or manual node entry.
 Yes. Configure a compatible Snell server in Clash, then recreate its policy
 groups and rules in mihomo YAML.
 
-### Are these protocols available on both iPhone and iPad?
+### Are these protocols available on every supported Apple platform?
 
-Yes. Clash is a universal iOS/iPadOS app and uses the same Hako data plane on
-both device families.
+Yes. Clash uses the same Hako data plane on iPhone, iPad, Mac, and Apple TV.
