@@ -65,7 +65,7 @@ pageClass: clash-home
 <section class="product-hero">
   <div class="product-hero-copy">
     <p class="product-eyebrow">基于规则的网络代理工具 · 由 Hako 驱动</p>
-    <h1><span class="product-hero-title-main">Clash，经典回归</span><span class="product-hero-title-sub">这次是 Apple 原生</span></h1>
+    <h1><span class="product-hero-title-main"><span class="product-hero-title-brand">Clash</span><span class="product-hero-title-rest">，经典回归</span></span><span class="product-hero-title-sub">这次是 Apple 原生</span></h1>
     <p class="product-lede"><span class="product-lede-hook">还是原来的配置，还是熟悉的规则。</span><span class="product-lede-proof">基于 mihomo，原生客户端开源，Hako 发行版公开可查。</span></p>
     <div class="product-actions">
       <a class="product-action product-action--primary" href="https://apps.apple.com/app/id6794257189" target="_blank" rel="noopener noreferrer">前往 App Store</a>

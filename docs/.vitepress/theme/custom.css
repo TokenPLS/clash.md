@@ -581,12 +581,28 @@ a[href="https://testflight.apple.com/join/QJWrVrxT"]::before {
   letter-spacing: -0.055em;
 }
 
-.product-hero h1 span {
+.product-hero h1 > span {
   display: block;
 }
 
 .product-hero-title-main {
+  white-space: nowrap;
+}
+
+.product-hero-title-brand {
+  color: var(--vp-c-brand-1);
+}
+
+.product-hero-title-rest {
   color: var(--vp-c-text-1);
+  background: linear-gradient(
+    90deg,
+    var(--vp-c-brand-1) 0%,
+    var(--vp-c-text-1) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .product-hero-title-sub {
