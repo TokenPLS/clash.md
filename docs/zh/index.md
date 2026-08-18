@@ -45,7 +45,7 @@ pageClass: clash-home
     <p class="product-platform-line">iPhone <span>·</span> iPad <span>·</span> Mac <span>·</span> Apple TV</p>
   </div>
   <div class="product-hero-visual">
-    <img class="product-device-lockup" src="/screenshots/hero/apple-device-lockup-zh.webp" alt="运行在 Apple TV、Mac、iPad 与 iPhone 上的 Clash" width="2800" height="1200" fetchpriority="high">
+    <img class="product-device-lockup" src="/screenshots/hero/apple-device-lockup-en.webp" alt="运行在 Apple TV、Mac、iPad 与 iPhone 上的 Clash 英文界面" width="2800" height="1200" fetchpriority="high">
   </div>
 </section>
 
