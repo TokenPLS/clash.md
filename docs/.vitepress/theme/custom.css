@@ -595,6 +595,15 @@ a[href="https://testflight.apple.com/join/QJWrVrxT"]::before {
 
 .product-hero-title-rest {
   color: var(--vp-c-text-1);
+  background: linear-gradient(
+    90deg,
+    var(--vp-c-brand-1) -38%,
+    #5856d6 18%,
+    #af52de 105%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .dark .product-hero-title-rest {
