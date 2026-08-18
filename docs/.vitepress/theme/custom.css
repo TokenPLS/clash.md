@@ -595,10 +595,13 @@ a[href="https://testflight.apple.com/join/QJWrVrxT"]::before {
 
 .product-hero-title-rest {
   color: var(--vp-c-text-1);
+}
+
+.dark .product-hero-title-rest {
   background: linear-gradient(
     90deg,
-    var(--vp-c-brand-1) 0%,
-    var(--vp-c-text-1) 100%
+    var(--vp-c-brand-1) -38%,
+    var(--vp-c-text-1) 82%
   );
   background-clip: text;
   -webkit-background-clip: text;
