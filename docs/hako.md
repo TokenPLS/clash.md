@@ -108,7 +108,7 @@ pageClass: hako-product-page
     <article><strong>16.49<small> GB</small></strong><span>30-minute pressure run</span><p>0 disconnects · 0 packet loss · 0 crashes</p></article>
     <article><strong>39.6<small> MiB</small></strong><span>400 concurrent connections</span><p>Within a 50 MiB test budget</p></article>
   </div>
-  <p class="hako-benchmark-note">These figures come from a controlled run on the stated device, network, and build. Actual performance varies with device, route, and configuration.</p>
+  <p class="hako-benchmark-note">Speed tests cannot exceed the available bandwidth of the test network. These figures come from a controlled run on the stated device, network, and build; actual performance varies with device, route, and configuration.</p>
 </section>
 
 <section class="hako-section hako-trust" aria-labelledby="hako-trust-title">

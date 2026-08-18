@@ -108,7 +108,7 @@ pageClass: hako-product-page
     <article><strong>16.49<small> GB</small></strong><span>30 分钟压力测试</span><p>0 掉线 · 0 丢包 · 0 崩溃</p></article>
     <article><strong>39.6<small> MiB</small></strong><span>400 条并发连接</span><p>保持在 50 MiB 测试预算内</p></article>
   </div>
-  <p class="hako-benchmark-note">这些数字来自指定设备、网络与构建下的受控测试；实际表现会随设备、线路与配置变化。</p>
+  <p class="hako-benchmark-note">测速结果受测试网络本身的带宽上限约束。这些数字来自指定设备、网络与构建下的受控测试；实际表现会随设备、线路与配置变化。</p>
 </section>
 
 <section class="hako-section hako-trust" aria-labelledby="hako-trust-title">
