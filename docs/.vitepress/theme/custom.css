@@ -1647,3 +1647,577 @@ a[href="https://testflight.apple.com/join/QJWrVrxT"]::before {
     font-size: 16px;
   }
 }
+
+/* Hako product page */
+.hako-product-page .VPDoc {
+  padding: 0 !important;
+}
+
+.hako-product-page .VPDoc .container,
+.hako-product-page .VPDoc .content,
+.hako-product-page .VPDoc .content-container,
+.hako-product-page .VPDoc .main {
+  width: 100%;
+  max-width: none !important;
+  margin: 0;
+  padding: 0;
+}
+
+.hako-product-page .VPDocFooter {
+  box-sizing: border-box;
+  width: min(100%, 1320px);
+  margin-inline: auto;
+  padding-inline: 28px;
+}
+
+.hako-hero,
+.hako-section,
+.hako-cta {
+  box-sizing: border-box;
+  width: min(100%, 1320px);
+  margin-inline: auto;
+}
+
+.hako-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(360px, 0.8fr);
+  gap: 72px;
+  align-items: center;
+  padding: 92px 28px 112px;
+}
+
+.hako-hero-copy {
+  max-width: 760px;
+}
+
+.hako-hero .product-eyebrow {
+  margin: 0 0 22px !important;
+}
+
+.hako-hero h1 {
+  display: grid;
+  gap: 0.2em;
+  margin: 0;
+  border: 0;
+  font-size: clamp(58px, 6.1vw, 86px);
+  line-height: 1.01;
+  letter-spacing: -0.045em;
+}
+
+.hako-hero h1 span {
+  display: block;
+  white-space: nowrap;
+}
+
+:lang(zh) .hako-hero h1 {
+  font-size: clamp(52px, 5.7vw, 80px);
+  letter-spacing: -0.03em;
+}
+
+.hako-hero h1 span:last-child {
+  color: var(--vp-c-text-3);
+}
+
+.hako-hero-lede {
+  max-width: 690px;
+  margin: 34px 0 0 !important;
+  color: var(--vp-c-text-2);
+  font-size: 19px;
+  line-height: 1.7 !important;
+}
+
+.hako-hero .product-actions {
+  justify-content: flex-start;
+  margin-top: 34px;
+}
+
+.hako-release-panel {
+  position: relative;
+  display: flex;
+  min-height: 420px;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 42px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 38px;
+  background:
+    radial-gradient(circle at 78% 16%, rgba(0, 132, 255, 0.52), transparent 34%),
+    linear-gradient(145deg, #162334, #090b0f 68%);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.22);
+  color: #f5f5f7;
+}
+
+.hako-release-panel::before,
+.hako-release-panel::after {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 50%;
+  content: "";
+}
+
+.hako-release-panel::before {
+  top: -92px;
+  right: -82px;
+  width: 290px;
+  height: 290px;
+}
+
+.hako-release-panel::after {
+  top: -24px;
+  right: -16px;
+  width: 154px;
+  height: 154px;
+}
+
+.hako-release-panel > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hako-release-panel .hako-logo {
+  display: block;
+  width: 112px;
+  height: 112px;
+  margin: 0 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 25px;
+  box-shadow: 0 18px 40px rgba(10, 32, 108, 0.42);
+}
+
+.hako-release-panel > p {
+  margin: 0 0 12px !important;
+  color: #2997ff;
+  font-size: 14px;
+  font-weight: 760;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.hako-release-panel > strong {
+  font-size: clamp(30px, 3vw, 42px);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  white-space: nowrap;
+}
+
+.hako-release-panel > span {
+  margin-top: 12px;
+  color: rgba(245, 245, 247, 0.58);
+  font-size: 14px;
+}
+
+.hako-public-release {
+  display: grid;
+  gap: 7px;
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.hako-public-release span {
+  color: rgba(245, 245, 247, 0.48);
+  font-size: 11px;
+  font-weight: 720;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hako-public-release a {
+  width: fit-content;
+  color: #f5f5f7 !important;
+  font-size: 14px;
+  font-weight: 680;
+  text-decoration: none !important;
+}
+
+.hako-public-release a:hover {
+  color: #2997ff !important;
+}
+
+.hako-platform-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 30px;
+}
+
+.hako-platform-chips span {
+  padding: 7px 11px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.07);
+  color: rgba(245, 245, 247, 0.78);
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.hako-section {
+  padding: 104px 28px;
+}
+
+.hako-section-heading {
+  max-width: 920px;
+  margin-bottom: 58px;
+}
+
+.hako-section-heading .section-kicker,
+.hako-cta .section-kicker {
+  margin: 0 0 20px !important;
+}
+
+.hako-section-heading h2,
+.hako-cta h2 {
+  margin: 0;
+  border: 0;
+  font-size: clamp(46px, 5.2vw, 70px);
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+}
+
+:lang(zh) .hako-section-heading h2,
+:lang(zh) .hako-cta h2 {
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+}
+
+.hako-section-heading > p:last-child,
+.hako-cta > p:not(.section-kicker) {
+  max-width: 760px;
+  margin: 30px 0 0 !important;
+  color: var(--vp-c-text-2);
+  font-size: 18px;
+  line-height: 1.7 !important;
+}
+
+.hako-principle-grid,
+.hako-release-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.hako-principle-grid article {
+  min-height: 270px;
+  padding: 32px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 26px;
+  background: var(--vp-c-bg-soft);
+}
+
+.hako-principle-grid article > span,
+.hako-capability-grid article > span,
+.hako-release-facts article > span {
+  color: var(--vp-c-brand-1);
+  font-size: 12px;
+  font-weight: 760;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hako-principle-grid h3,
+.hako-capability-grid h3 {
+  margin: 38px 0 0;
+  font-size: 24px;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+}
+
+.hako-principle-grid p,
+.hako-capability-grid p,
+.hako-release-facts p {
+  margin: 16px 0 0 !important;
+  color: var(--vp-c-text-2);
+  font-size: 15px;
+  line-height: 1.65 !important;
+}
+
+.hako-principle-grid code {
+  overflow-wrap: anywhere;
+}
+
+.hako-benchmarks {
+  padding-inline: 56px;
+  border-radius: 42px;
+  background:
+    radial-gradient(circle at 88% 8%, rgba(0, 122, 255, 0.25), transparent 34%),
+    #090b0f;
+  color: #f5f5f7;
+}
+
+.hako-section-heading--light h2 {
+  color: #f5f5f7;
+}
+
+.hako-section-heading--light .section-kicker {
+  color: #2997ff;
+}
+
+.hako-metric-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.hako-metric-grid article {
+  display: flex;
+  min-height: 220px;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.hako-metric-grid strong {
+  color: #f5f5f7;
+  font-size: clamp(42px, 5vw, 66px);
+  line-height: 1;
+  letter-spacing: -0.055em;
+}
+
+.hako-metric-grid strong small {
+  color: rgba(245, 245, 247, 0.62);
+  font-size: 0.36em;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+.hako-metric-grid article > span {
+  margin-top: 24px;
+  color: #f5f5f7;
+  font-size: 15px;
+  font-weight: 690;
+}
+
+.hako-metric-grid p {
+  margin: 8px 0 0 !important;
+  color: rgba(245, 245, 247, 0.52);
+  font-size: 13px;
+}
+
+.hako-benchmark-note {
+  max-width: 800px;
+  margin: 28px 0 0 !important;
+  color: rgba(245, 245, 247, 0.48);
+  font-size: 13px;
+  line-height: 1.6 !important;
+}
+
+.hako-trust {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
+  gap: 72px;
+  align-items: start;
+}
+
+.hako-trust .hako-section-heading {
+  margin: 0;
+}
+
+.hako-release-facts {
+  grid-template-columns: 1fr;
+}
+
+.hako-release-facts article {
+  padding: 24px 26px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 20px;
+  background: color-mix(in srgb, var(--vp-c-bg-soft) 88%, transparent);
+}
+
+.hako-release-facts strong {
+  display: block;
+  margin-top: 10px;
+  font-size: 26px;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+}
+
+.hako-release-facts p {
+  margin-top: 10px !important;
+  font-size: 13px;
+}
+
+.hako-capabilities {
+  padding-inline: 56px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 42px;
+  background: var(--vp-c-bg-soft);
+}
+
+.hako-capability-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.hako-capability-grid article {
+  min-height: 245px;
+  padding: 28px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 22px;
+  background: var(--vp-c-bg);
+}
+
+.hako-capability-grid h3 {
+  margin-top: 34px;
+  font-size: 21px;
+}
+
+.hako-cta {
+  margin-block: 104px 88px;
+  padding: 78px 56px;
+  border-radius: 38px;
+  background:
+    radial-gradient(circle at 92% 14%, rgba(0, 122, 255, 0.18), transparent 34%),
+    var(--vp-c-bg-soft);
+  text-align: center;
+}
+
+.hako-cta > p:not(.section-kicker) {
+  margin-inline: auto !important;
+}
+
+.hako-cta-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 34px;
+}
+
+.hako-cta-links a {
+  padding: 13px 18px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 999px;
+  background: var(--vp-c-bg);
+  color: var(--vp-c-text-1) !important;
+  font-size: 14px;
+  font-weight: 680;
+  text-decoration: none !important;
+  transition:
+    border-color 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.hako-cta-links a:hover {
+  border-color: var(--vp-c-brand-1);
+  color: var(--vp-c-brand-1) !important;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 960px) {
+  .hako-hero {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .hako-release-panel {
+    min-height: 340px;
+  }
+
+  .hako-principle-grid,
+  .hako-capability-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hako-trust {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hako-product-page .VPDocFooter {
+    padding-inline: 16px;
+  }
+
+  .hako-hero {
+    gap: 36px;
+    padding: 48px 16px 68px;
+  }
+
+  .hako-hero h1,
+  :lang(zh) .hako-hero h1 {
+    font-size: clamp(36px, 11.3vw, 48px);
+  }
+
+  .hako-hero-lede {
+    margin-top: 28px !important;
+    font-size: 16px;
+  }
+
+  .hako-hero .product-actions {
+    display: grid;
+  }
+
+  .hako-release-panel {
+    min-height: 300px;
+    padding: 28px;
+    border-radius: 28px;
+  }
+
+  .hako-release-panel .hako-logo {
+    width: 86px;
+    height: 86px;
+    border-radius: 20px;
+  }
+
+  .hako-section {
+    padding: 72px 16px;
+  }
+
+  .hako-section-heading {
+    margin-bottom: 38px;
+  }
+
+  .hako-section-heading h2,
+  .hako-cta h2 {
+    font-size: clamp(36px, 10vw, 46px);
+  }
+
+  .hako-section-heading > p:last-child,
+  .hako-cta > p:not(.section-kicker) {
+    margin-top: 24px !important;
+    font-size: 16px;
+  }
+
+  .hako-principle-grid,
+  .hako-capability-grid,
+  .hako-metric-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hako-principle-grid article,
+  .hako-capability-grid article {
+    min-height: 220px;
+    padding: 26px;
+  }
+
+  .hako-benchmarks,
+  .hako-capabilities {
+    width: auto;
+    margin-inline: 16px;
+    padding-inline: 22px;
+    border-radius: 28px;
+  }
+
+  .hako-metric-grid article {
+    min-height: 190px;
+    padding: 24px;
+  }
+
+  .hako-cta {
+    width: auto;
+    margin: 72px 16px 76px;
+    padding: 58px 24px;
+    border-radius: 28px;
+  }
+
+  .hako-cta-links {
+    display: grid;
+  }
+}
