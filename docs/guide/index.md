@@ -124,7 +124,8 @@ service; Clash does not provide or sell a subscription service.
 Clash currently supports 23 outbound protocol families, including HTTP, SOCKS,
 Shadowsocks, VMess, VLESS, Trojan, Hysteria2, TUIC, WireGuard, MASQUE,
 TrustTunnel, and OpenVPN. See the [supported protocol list](/guide/protocols)
-for the complete range and configuration methods.
+for the complete range, the distinction between protocol and control outbounds,
+and configuration methods.
 
 ## Privacy and support
 

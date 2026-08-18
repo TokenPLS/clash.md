@@ -101,6 +101,13 @@ export default defineConfig({
     const canonicalUrl = `${siteOrigin}${route}`
     const englishUrl = `${siteOrigin}${englishRoute}`
     const chineseUrl = `${siteOrigin}${chineseRoute}`
+    const socialImage = `${siteOrigin}/og-clash.png`
+    const socialImageAlt = isChinese
+      ? 'Clash 原生运行在 Apple TV、Mac、iPad 与 iPhone 上'
+      : 'Clash running natively on Apple TV, Mac, iPad, and iPhone'
+    const openGraphType = englishRoute.startsWith('/guide/')
+      ? 'article'
+      : 'website'
     const tags: HeadConfig[] = [
       [
         'meta',
@@ -112,13 +119,7 @@ export default defineConfig({
       ['meta', { property: 'og:title', content: title }],
       ['meta', { property: 'og:description', content: description }],
       ['meta', { property: 'og:url', content: canonicalUrl }],
-      [
-        'meta',
-        {
-          property: 'og:type',
-          content: route === '/' || route === '/zh/' ? 'website' : 'article'
-        }
-      ],
+      ['meta', { property: 'og:type', content: openGraphType }],
       [
         'meta',
         {
@@ -133,21 +134,19 @@ export default defineConfig({
           content: isChinese ? 'en_US' : 'zh_CN'
         }
       ],
+      ['meta', { property: 'og:image', content: socialImage }],
+      ['meta', { property: 'og:image:secure_url', content: socialImage }],
+      ['meta', { property: 'og:image:type', content: 'image/png' }],
+      ['meta', { property: 'og:image:width', content: '1200' }],
+      ['meta', { property: 'og:image:height', content: '630' }],
+      ['meta', { property: 'og:image:alt', content: socialImageAlt }],
+      ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
       ['meta', { name: 'twitter:title', content: title }],
-      ['meta', { name: 'twitter:description', content: description }]
+      ['meta', { name: 'twitter:description', content: description }],
+      ['meta', { name: 'twitter:image', content: socialImage }],
+      ['meta', { name: 'twitter:image:alt', content: socialImageAlt }]
     ]
 
-    if (pageData.frontmatter.keywords) {
-      tags.push([
-        'meta',
-        {
-          name: 'keywords',
-          content: Array.isArray(pageData.frontmatter.keywords)
-            ? pageData.frontmatter.keywords.join(',')
-            : pageData.frontmatter.keywords
-        }
-      ])
-    }
     if (pageData.frontmatter.jsonLd) {
       tags.push([
         'script',
@@ -171,6 +170,12 @@ export default defineConfig({
       contentParts.forEach((part, index) => {
         accumulatedRoute += `/${part}`
         const isLast = index === contentParts.length - 1
+
+        // Platform detail pages are linked directly from the primary
+        // navigation. There is no public /platforms index page, so don't
+        // advertise a non-existent intermediate breadcrumb.
+        if (part === 'platforms' && !isLast) return
+
         const name = isLast
           ? pageData.title
           : part === 'guide'
@@ -242,7 +247,7 @@ export default defineConfig({
       ])
     }
 
-    if (pageData.lastUpdated && route !== '/' && route !== '/zh/') {
+    if (pageData.lastUpdated && openGraphType === 'article') {
       tags.push([
         'meta',
         {
@@ -270,18 +275,7 @@ export default defineConfig({
       })()`
     ],
     ['meta', { name: 'color-scheme', content: 'light dark' }],
-    ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:site_name', content: 'Clash' }],
-    ['meta', { property: 'og:image', content: `${siteOrigin}/brand/clash-app-icon.png` }],
-    [
-      'meta',
-      {
-        property: 'og:description',
-        content: 'A native rule-based proxy utility for Apple platforms, powered by Hako.'
-      }
-    ],
-    ['meta', { name: 'twitter:card', content: 'summary' }],
-    ['meta', { name: 'twitter:image', content: `${siteOrigin}/brand/clash-app-icon.png` }],
     ['link', { rel: 'icon', href: publicAsset('/favicon.ico?v=3'), sizes: 'any' }],
     ['link', { rel: 'icon', href: publicAsset('/favicon.svg?v=3'), type: 'image/svg+xml' }],
     [

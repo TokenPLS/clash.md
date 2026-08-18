@@ -1,7 +1,7 @@
 ---
 layout: doc
-title: Hako
-description: Hako 是驱动 Clash 的 Apple 代理内核。当前产品内核基于 mihomo 1.19.30，开源 SDK 与版本状态公开可查。
+title: Hako Apple 代理内核
+description: Hako 是驱动 Clash、面向 Apple NetworkExtension 调校的 mihomo 代理内核，公开提供源码、SDK 发行版、构建信息与真机实测。
 keywords:
   - Hako内核
   - mihomo Apple内核
@@ -10,19 +10,43 @@ keywords:
   - Hako xcframework
 jsonLd:
   "@context": https://schema.org
-  "@type": SoftwareSourceCode
-  name: Hako
-  description: 驱动 Clash、面向 Apple NetworkExtension 调校的 mihomo 分叉内核，提供公开的开源 SDK 发行版。
-  codeRepository: https://github.com/TokenPLS/Hako
-  license: https://www.gnu.org/licenses/gpl-3.0.html
-  programmingLanguage: Go
-  runtimePlatform:
-    - iOS
-    - iPadOS
-    - macOS
-    - tvOS
-  isBasedOn: https://github.com/MetaCubeX/mihomo
-  inLanguage: zh-CN
+  "@graph":
+    - "@type": WebPage
+      "@id": https://clash.md/zh/hako#webpage
+      url: https://clash.md/zh/hako
+      name: Hako Apple 代理内核
+      description: Hako 是驱动 Clash、面向 Apple NetworkExtension 调校的 mihomo 代理内核，公开提供源码、SDK 发行版、构建信息与真机实测。
+      inLanguage: zh-CN
+      isPartOf:
+        "@id": https://clash.md/#website
+      mainEntity:
+        "@id": https://clash.md/#hako
+      publisher:
+        "@id": https://clash.md/#organization
+      primaryImageOfPage:
+        "@type": ImageObject
+        contentUrl: https://clash.md/brand/hako-logo.png
+    - "@type": SoftwareSourceCode
+      "@id": https://clash.md/#hako
+      name: Hako
+      description: 驱动 Clash、面向 Apple NetworkExtension 调校的 mihomo 代理内核，公开提供源码与 SDK 发行版。
+      url: https://clash.md/zh/hako
+      image: https://clash.md/brand/hako-logo.png
+      codeRepository: https://github.com/TokenPLS/Hako
+      sameAs: https://github.com/TokenPLS/Hako
+      license: https://www.gnu.org/licenses/gpl-3.0.html
+      programmingLanguage: Go
+      runtimePlatform:
+        - iOS
+        - iPadOS
+        - macOS
+        - tvOS
+      isBasedOn: https://github.com/MetaCubeX/mihomo
+      isPartOf:
+        "@id": https://clash.md/#app
+      publisher:
+        "@id": https://clash.md/#organization
+      inLanguage: zh-CN
 sidebar: false
 aside: false
 outline: false

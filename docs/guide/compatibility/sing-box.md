@@ -2,9 +2,6 @@
 title: Is Clash compatible with sing-box?
 description: How to move sing-box JSON configurations, subscriptions and VLESS, Trojan, Hysteria2, TUIC or AnyTLS nodes to Clash for iOS.
 head:
-  - - meta
-    - name: keywords
-      content: sing-box iOS,sing-box to Clash,sing-box JSON,mihomo YAML,Hysteria2 iOS,TUIC iOS,AnyTLS iOS
   - - link
     - rel: canonical
       href: https://clash.md/guide/compatibility/sing-box

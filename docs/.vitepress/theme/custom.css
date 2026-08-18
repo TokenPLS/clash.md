@@ -691,6 +691,18 @@ a[href="https://testflight.apple.com/join/QJWrVrxT"]::before {
   margin: 0;
 }
 
+.product-device-lockup--dark {
+  display: none;
+}
+
+.dark .product-device-lockup--light {
+  display: none;
+}
+
+.dark .product-device-lockup--dark {
+  display: block;
+}
+
 .platform-stage {
   padding: 90px 38px 128px;
 }

@@ -1,8 +1,8 @@
 ---
 layout: doc
-title: Clash
-titleTemplate: Clash
-description: Clash 经典回归，这次是 Apple 原生。基于 mihomo、客户端与 Hako 内核完整开源的规则分流网络工具。
+title: Clash Apple 原生客户端
+titleTemplate: Clash Apple 原生客户端
+description: Clash 是面向 iPhone、iPad、Mac 与 Apple TV 的原生规则分流工具，基于 mihomo，客户端开源，Hako 源码与 SDK 发行版公开可查。
 keywords:
   - Clash Apple全平台
   - Clash iOS
@@ -12,21 +12,50 @@ keywords:
   - mihomo Apple客户端
 jsonLd:
   "@context": https://schema.org
-  "@type": SoftwareApplication
-  name: Clash
-  description: Clash 经典回归，这次是 Apple 原生。基于 mihomo、客户端与 Hako 内核完整开源的规则分流网络工具。
-  applicationCategory: UtilitiesApplication
-  operatingSystem:
-    - iOS
-    - iPadOS
-    - macOS
-    - tvOS
-  url: https://clash.md/zh/
-  downloadUrl: https://apps.apple.com/app/id6794257189
-  codeRepository:
-    - https://github.com/TokenPLS/Hako-Client
-    - https://github.com/TokenPLS/Hako
-  inLanguage: zh-CN
+  "@graph":
+    - "@type": Organization
+      "@id": https://clash.md/#organization
+      name: Clash & Hako Team
+      url: https://clash.md/
+      logo: https://clash.md/brand/clash-app-icon.png
+      sameAs:
+        - https://github.com/TokenPLS
+        - https://t.me/clashbyhako
+    - "@type": WebSite
+      "@id": https://clash.md/#website
+      url: https://clash.md/
+      name: Clash
+      alternateName: Clash Apple 原生客户端
+      publisher:
+        "@id": https://clash.md/#organization
+      about:
+        "@id": https://clash.md/#app
+      inLanguage:
+        - en-US
+        - zh-CN
+    - "@type": SoftwareApplication
+      "@id": https://clash.md/#app
+      name: Clash
+      description: Clash 是面向 iPhone、iPad、Mac 与 Apple TV 的原生规则分流工具，基于 mihomo，客户端开源，Hako 源码与 SDK 发行版公开可查。
+      applicationCategory: UtilitiesApplication
+      operatingSystem:
+        - iOS
+        - iPadOS
+        - macOS
+        - tvOS
+      url: https://clash.md/
+      downloadUrl: https://apps.apple.com/app/id6794257189
+      softwareHelp: https://clash.md/zh/guide/
+      image: https://clash.md/og-clash.png
+      screenshot:
+        - https://clash.md/screenshots/hero/apple-product-lockup-light.webp
+        - https://clash.md/screenshots/hero/apple-product-lockup-dark.webp
+      codeRepository:
+        - https://github.com/TokenPLS/Hako-Client
+        - https://github.com/TokenPLS/Hako
+      publisher:
+        "@id": https://clash.md/#organization
+      inLanguage: zh-CN
 sidebar: false
 aside: false
 outline: false
@@ -37,15 +66,16 @@ pageClass: clash-home
   <div class="product-hero-copy">
     <p class="product-eyebrow">基于规则的网络代理工具 · 由 Hako 驱动</p>
     <h1><span class="product-hero-title-main">Clash，经典回归</span><span class="product-hero-title-sub">这次是 Apple 原生</span></h1>
-    <p class="product-lede"><span class="product-lede-hook">还是原来的配置，还是熟悉的规则。</span><span class="product-lede-proof">基于 mihomo，内核与客户端完整开源。</span></p>
+    <p class="product-lede"><span class="product-lede-hook">还是原来的配置，还是熟悉的规则。</span><span class="product-lede-proof">基于 mihomo，原生客户端开源，Hako 发行版公开可查。</span></p>
     <div class="product-actions">
       <a class="product-action product-action--primary" href="https://apps.apple.com/app/id6794257189" target="_blank" rel="noopener noreferrer">前往 App Store</a>
       <a class="product-action product-action--secondary" href="https://testflight.apple.com/join/QJWrVrxT" target="_blank" rel="noopener noreferrer">加入 TestFlight</a>
     </div>
     <p class="product-platform-line">iPhone <span>·</span> iPad <span>·</span> Mac <span>·</span> Apple TV</p>
   </div>
-  <div class="product-hero-visual">
-    <img class="product-device-lockup" src="/screenshots/hero/apple-device-lockup-en.webp" alt="运行在 Apple TV、Mac、iPad 与 iPhone 上的 Clash 英文界面" width="2800" height="1200" fetchpriority="high">
+  <div class="product-hero-visual" role="img" aria-label="运行在 Apple TV、Mac、iPad 与 iPhone 上的 Clash 英文界面">
+    <img class="product-device-lockup product-device-lockup--light" src="/screenshots/hero/apple-product-lockup-light.webp" alt="" width="1730" height="650" fetchpriority="high" aria-hidden="true">
+    <img class="product-device-lockup product-device-lockup--dark" src="/screenshots/hero/apple-product-lockup-dark.webp" alt="" width="1731" height="650" fetchpriority="high" aria-hidden="true">
   </div>
 </section>
 
@@ -53,11 +83,11 @@ pageClass: clash-home
   <div class="open-source-proof-copy">
     <p class="section-kicker">向经典致敬 · 向开源致敬</p>
     <h2 id="open-source-proof-title"><span>保护隐私的工具，</span><span>不该要求你盲目信任。</span></h2>
-    <p>代理客户端能接触你的配置、DNS 与每一次经过它的连接，它最不应该是一个黑盒。你不必只听我们保证“什么都没做”：Clash 原生客户端与 Hako 内核全部开源，任何人都能检查它实际做了什么。</p>
+    <p>代理客户端能接触你的配置、DNS 与每一次经过它的连接，它最不应该是一个黑盒。你不必只听我们保证“什么都没做”：Clash 原生客户端开源，Hako 也持续发布可供检查的源码与 SDK 发行版。</p>
   </div>
   <div class="open-source-proof-links">
     <a href="https://github.com/TokenPLS/Hako-Client" target="_blank" rel="noopener noreferrer"><span>原生客户端</span><strong>TokenPLS/Hako-Client ↗</strong></a>
-    <a href="/zh/hako"><span>驱动 Clash 的开源内核</span><strong>了解 Hako →</strong></a>
+    <a href="/zh/hako"><span>驱动 Clash 的 Hako 内核</span><strong>了解 Hako →</strong></a>
     <a href="/zh/guide/privacy-model"><span>隐私模型</span><strong>看看我们不收集什么 →</strong></a>
   </div>
 </section>
@@ -66,7 +96,7 @@ pageClass: clash-home
   <div class="platform-stage-heading">
     <p class="section-kicker">配置不变 · 规则不变</p>
     <h2 id="platform-stage-title">换了屏幕，不用换习惯。</h2>
-    <p>同一个开源内核，同一套配置逻辑。从 iPhone、iPad、Mac 到 Apple TV，改变的只是交互方式——每个平台都原生。</p>
+    <p>同一个 Hako 内核，同一套配置逻辑。从 iPhone、iPad、Mac 到 Apple TV，改变的只是交互方式——每个平台都原生。</p>
   </div>
   <div class="platform-stage-grid">
     <article class="platform-preview platform-preview--mobile">

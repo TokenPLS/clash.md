@@ -2,9 +2,6 @@
 title: Clash compatibility with mihomo, Clash Verge Rev, FlClash, Clash Nyanpasu, ClashMi and OpenClash
 description: Migrate mihomo YAML and subscriptions from Clash Verge Rev, FlClash, Clash Nyanpasu, ClashMi, OpenClash or ShellCrash to Clash for iPhone and iPad.
 head:
-  - - meta
-    - name: keywords
-      content: mihomo iOS,Clash Verge Rev iOS,FlClash subscription,Clash Nyanpasu config,ClashMi config,OpenClash subscription,ShellCrash config
   - - link
     - rel: canonical
       href: https://clash.md/guide/compatibility/mihomo

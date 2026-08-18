@@ -2,9 +2,6 @@
 title: Clash 与 Loon 兼容吗？
 description: 说明如何把 Loon 的订阅、节点、配置、插件、复写和脚本需求迁移到 Clash iOS。
 head:
-  - - meta
-    - name: keywords
-      content: Loon转Clash,Loon订阅,Loon节点,Loon配置,Clash iOS,小火箭替代
   - - link
     - rel: canonical
       href: https://clash.md/zh/guide/compatibility/loon

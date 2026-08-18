@@ -8,6 +8,25 @@ keywords:
   - Clash iOS
   - mihomo iOS client
   - rule-based proxy iPhone
+jsonLd:
+  "@context": https://schema.org
+  "@type": WebPage
+  "@id": https://clash.md/platforms/ios#webpage
+  url: https://clash.md/platforms/ios
+  name: Clash for iPhone and iPad
+  description: From home to the road, Clash keeps connections under control on iPhone and iPad—with quick access, automatic network changes, and clear answers when something goes wrong.
+  inLanguage: en-US
+  isPartOf:
+    "@id": https://clash.md/#website
+  about:
+    "@id": https://clash.md/#app
+  mainEntity:
+    "@id": https://clash.md/#app
+  publisher:
+    "@id": https://clash.md/#organization
+  primaryImageOfPage:
+    "@type": ImageObject
+    contentUrl: https://clash.md/screenshots/platforms/ios/device-ipad.webp
 sidebar: false
 aside: false
 outline: false
@@ -106,6 +125,6 @@ pageClass: clash-platform-page
 <section class="platform-privacy-callout">
   <p class="section-kicker">Security and privacy</p>
   <h2>Your configuration is not our business.</h2>
-  <p>No account, analytics, advertising, tracking, or automatic diagnostics upload. Both the client and core are open source, so anyone can inspect what they actually do instead of relying on promises.</p>
+  <p>No account, analytics, advertising, tracking, or automatic diagnostics upload. The native client is open source, and Hako publishes source and SDK releases anyone can inspect instead of relying on promises.</p>
   <a href="/guide/privacy-model">Read the privacy model →</a>
 </section>

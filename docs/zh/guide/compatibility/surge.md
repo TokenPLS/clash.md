@@ -2,9 +2,6 @@
 title: Clash 与 Surge 兼容吗？
 description: 说明如何把 Surge Profile 中的订阅、Snell、Shadowsocks、Trojan、WireGuard 等节点与分流策略迁移到 Clash iOS。
 head:
-  - - meta
-    - name: keywords
-      content: Surge转Clash,Surge iOS,Surge Profile,Snell iOS,Surge订阅,Clash iOS
   - - link
     - rel: canonical
       href: https://clash.md/zh/guide/compatibility/surge

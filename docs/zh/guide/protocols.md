@@ -2,9 +2,6 @@
 title: Clash 支持的代理协议
 description: Clash Apple 平台版本支持的 23 类出站协议完整清单，包括 Shadowsocks、VMess、VLESS、Trojan、Hysteria2、TUIC、WireGuard 与 OpenVPN。
 head:
-  - - meta
-    - name: keywords
-      content: Clash支持协议,Clash iOS Shadowsocks,VMess,VLESS,Trojan,Hysteria2,TUIC,WireGuard,OpenVPN,AnyTLS,Snell
   - - link
     - rel: canonical
       href: https://clash.md/zh/guide/protocols
@@ -14,13 +11,17 @@ head:
       href: https://clash.md/guide/protocols
   - - script
     - type: application/ld+json
-    - '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Clash 支持哪些代理协议？","acceptedAnswer":{"@type":"Answer","text":"Clash 支持 23 类出站协议：HTTP、SOCKS、Shadowsocks、ShadowsocksR、Snell、VMess、VLESS、Trojan、AnyTLS、Mieru、Sudoku、Hysteria、Hysteria2、TUIC、ShadowQUIC、GOST Relay、WireGuard、Tailscale、ZeroTier、SSH、MASQUE、TrustTunnel 与 OpenVPN。"}},{"@type":"Question","name":"如何在 Clash 中使用 ss:// 等分享链接？","acceptedAnswer":{"@type":"Answer","text":"可以把单节点分享链接或 Base64 节点列表整理为 mihomo YAML，或根据链接里的服务器、端口、凭据和协议参数在节点编辑器中添加。Profile 导入入口接受 HTTPS 订阅地址与完整 mihomo YAML。"}},{"@type":"Question","name":"如何迁移其他 App 的配置？","acceptedAnswer":{"@type":"Answer","text":"优先选择服务商提供的 mihomo YAML；来自 sing-box、Surge 或 Quantumult X 的节点可以根据协议参数在 Clash 中重新添加。"}},{"@type":"Question","name":"开始使用 Clash 需要什么？","acceptedAnswer":{"@type":"Answer","text":"准备一份你选择并信任的服务器配置或 HTTPS 订阅，即可导入 Clash。"}}]}'
+    - '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Clash 支持哪些代理协议？","acceptedAnswer":{"@type":"Answer","text":"Clash 支持 23 类可配置代理协议：HTTP、SOCKS、Shadowsocks、ShadowsocksR、Snell、VMess、VLESS、Trojan、AnyTLS、Mieru、Sudoku、Hysteria、Hysteria2、TUIC、ShadowQUIC、GOST Relay、WireGuard、Tailscale、ZeroTier、SSH、MASQUE、TrustTunnel 与 OpenVPN。Hako 1.19.30 共识别 27 类出站类型；DIRECT、DNS、REJECT 与 REMATCH 属于路由或控制出站，不按服务器协议计入。"}},{"@type":"Question","name":"如何在 Clash 中使用 ss:// 等分享链接？","acceptedAnswer":{"@type":"Answer","text":"可以把单节点分享链接或 Base64 节点列表整理为 mihomo YAML，或根据链接里的服务器、端口、凭据和协议参数在节点编辑器中添加。Profile 导入入口接受 HTTPS 订阅地址与完整 mihomo YAML。"}},{"@type":"Question","name":"如何迁移其他 App 的配置？","acceptedAnswer":{"@type":"Answer","text":"优先选择服务商提供的 mihomo YAML；来自 sing-box、Surge 或 Quantumult X 的节点可以根据协议参数在 Clash 中重新添加。"}},{"@type":"Question","name":"开始使用 Clash 需要什么？","acceptedAnswer":{"@type":"Answer","text":"准备一份你选择并信任的服务器配置或 HTTPS 订阅，即可导入 Clash。"}}]}'
 ---
 
 # Clash 支持的代理协议
 
 Clash 的 Apple 平台版本支持 **23 类出站协议**。可以通过 mihomo YAML、
 返回 mihomo YAML 的 HTTPS 订阅，或节点编辑器进行配置。
+
+Hako 1.19.30 共识别 27 类出站类型。本页列出其中 23 类可配置代理协议；
+`DIRECT`、`DNS`、`REJECT` 与 `REMATCH` 属于路由或控制出站，不按服务器协议
+计入。
 
 ## 完整协议清单
 

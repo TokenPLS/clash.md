@@ -1,12 +1,31 @@
 ---
 layout: doc
 title: Clash for Mac
-description: Clash for Mac shows where every app connects, keeps everyday controls in the menu bar, and helps you fix the wrong route without guessing.
+description: Clash for Mac keeps browsers, downloads, and development tools on the routes you choose, with menu bar controls and clear diagnostics when a connection goes wrong.
 keywords:
   - Clash for Mac
   - Clash macOS
   - mihomo Mac client
   - rule-based proxy macOS
+jsonLd:
+  "@context": https://schema.org
+  "@type": WebPage
+  "@id": https://clash.md/platforms/macos#webpage
+  url: https://clash.md/platforms/macos
+  name: Clash for Mac
+  description: Clash for Mac keeps browsers, downloads, and development tools on the routes you choose, with menu bar controls and clear diagnostics when a connection goes wrong.
+  inLanguage: en-US
+  isPartOf:
+    "@id": https://clash.md/#website
+  about:
+    "@id": https://clash.md/#app
+  mainEntity:
+    "@id": https://clash.md/#app
+  publisher:
+    "@id": https://clash.md/#organization
+  primaryImageOfPage:
+    "@type": ImageObject
+    contentUrl: https://clash.md/screenshots/platforms/macos/device-mac-en.webp
 sidebar: false
 aside: false
 outline: false
@@ -33,7 +52,7 @@ pageClass: clash-platform-page
   </div>
   <div class="platform-feature-grid">
     <article><span>01</span><h3>At hand in the menu bar</h3><p>Connect, disconnect, switch modes, and check speed without interrupting your work.</p></article>
-    <article><span>02</span><h3>Choose the route for each app</h3><p>Handle browsers, download tools, and development environments the way each one needs.</p></article>
+    <article><span>02</span><h3>Different tools, different routes</h3><p>Route browsers, download tools, and development environments by process name, executable path, or UID.</p></article>
     <article><span>03</span><h3>See the problem immediately</h3><p>Connections, requests, and matched rules stay together, so there is less guesswork and retrying.</p></article>
     <article><span>04</span><h3>Make routine actions automatic</h3><p>Put connect, disconnect, and mode changes into Shortcuts that fit your workflow.</p></article>
     <article><span>05</span><h3>Test without changing tools</h3><p>Check route speed, DNS, web access, and where a path stalls—all inside Clash.</p></article>
@@ -54,6 +73,6 @@ pageClass: clash-platform-page
 
 <section class="platform-privacy-callout">
   <p class="section-kicker">Security and privacy</p><h2>Your traffic never passes through our servers.</h2>
-  <p>No account, analytics, or automatic log and diagnostics upload. Both the client and core are open source, so anyone can inspect what they actually do instead of relying on promises.</p>
+  <p>No account, analytics, or automatic log and diagnostics upload. The native client is open source, and Hako publishes source and SDK releases anyone can inspect instead of relying on promises.</p>
   <a href="/guide/privacy-model">Read the privacy model →</a>
 </section>

@@ -1,7 +1,7 @@
 ---
 layout: doc
-title: Hako
-description: Hako is the Apple proxy core that powers Clash. The current product core is based on mihomo 1.19.30, with open-source SDK releases and explicit version status.
+title: Hako Apple Proxy Core
+description: Hako is the mihomo-based Apple proxy core that powers Clash, with public source, SDK releases, build details, and measurements on real Apple hardware.
 keywords:
   - Hako core
   - mihomo Apple core
@@ -10,19 +10,43 @@ keywords:
   - Hako xcframework
 jsonLd:
   "@context": https://schema.org
-  "@type": SoftwareSourceCode
-  name: Hako
-  description: The mihomo fork that powers Clash, tuned for Apple NetworkExtension and published through open-source SDK releases.
-  codeRepository: https://github.com/TokenPLS/Hako
-  license: https://www.gnu.org/licenses/gpl-3.0.html
-  programmingLanguage: Go
-  runtimePlatform:
-    - iOS
-    - iPadOS
-    - macOS
-    - tvOS
-  isBasedOn: https://github.com/MetaCubeX/mihomo
-  inLanguage: en-US
+  "@graph":
+    - "@type": WebPage
+      "@id": https://clash.md/hako#webpage
+      url: https://clash.md/hako
+      name: Hako Apple Proxy Core
+      description: Hako is the mihomo-based Apple proxy core that powers Clash, with public source, SDK releases, build details, and measurements on real Apple hardware.
+      inLanguage: en-US
+      isPartOf:
+        "@id": https://clash.md/#website
+      mainEntity:
+        "@id": https://clash.md/#hako
+      publisher:
+        "@id": https://clash.md/#organization
+      primaryImageOfPage:
+        "@type": ImageObject
+        contentUrl: https://clash.md/brand/hako-logo.png
+    - "@type": SoftwareSourceCode
+      "@id": https://clash.md/#hako
+      name: Hako
+      description: The mihomo-based Apple proxy core that powers Clash, tuned for Apple NetworkExtension and published through public source and SDK releases.
+      url: https://clash.md/hako
+      image: https://clash.md/brand/hako-logo.png
+      codeRepository: https://github.com/TokenPLS/Hako
+      sameAs: https://github.com/TokenPLS/Hako
+      license: https://www.gnu.org/licenses/gpl-3.0.html
+      programmingLanguage: Go
+      runtimePlatform:
+        - iOS
+        - iPadOS
+        - macOS
+        - tvOS
+      isBasedOn: https://github.com/MetaCubeX/mihomo
+      isPartOf:
+        "@id": https://clash.md/#app
+      publisher:
+        "@id": https://clash.md/#organization
+      inLanguage: en-US
 sidebar: false
 aside: false
 outline: false

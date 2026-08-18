@@ -2,9 +2,6 @@
 title: Clash 与 mihomo、Clash Verge Rev、FlClash、Clash Nyanpasu、ClashMi、OpenClash 的兼容性
 description: 从 Clash Verge Rev、FlClash、Clash Nyanpasu、ClashMi、OpenClash、ShellCrash 等 mihomo 客户端迁移到 Clash iOS 的完整兼容说明。
 head:
-  - - meta
-    - name: keywords
-      content: mihomo iOS,Clash Verge Rev iOS,FlClash订阅,Clash Nyanpasu配置,ClashMi配置,OpenClash订阅,ShellCrash配置
   - - link
     - rel: canonical
       href: https://clash.md/zh/guide/compatibility/mihomo

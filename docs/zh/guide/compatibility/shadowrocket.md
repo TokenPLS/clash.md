@@ -2,9 +2,6 @@
 title: Clash 与 Shadowrocket（小火箭）兼容吗？
 description: 说明如何把 Shadowrocket 小火箭的订阅、二维码、节点参数、规则与模块需求迁移到 Clash iOS。
 head:
-  - - meta
-    - name: keywords
-      content: Shadowrocket转Clash,小火箭转Clash,小火箭订阅,Shadowrocket订阅,Shadowrocket节点,Clash iOS
   - - link
     - rel: canonical
       href: https://clash.md/zh/guide/compatibility/shadowrocket

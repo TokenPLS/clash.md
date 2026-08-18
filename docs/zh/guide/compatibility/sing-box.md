@@ -2,9 +2,6 @@
 title: Clash 与 sing-box 兼容吗？
 description: 说明如何把 sing-box JSON 配置、订阅、VLESS、Trojan、Hysteria2、TUIC、AnyTLS 节点迁移到 Clash iOS。
 head:
-  - - meta
-    - name: keywords
-      content: sing-box iOS,sing-box转Clash,sing-box JSON,mihomo YAML,Hysteria2 iOS,TUIC iOS,AnyTLS iOS
   - - link
     - rel: canonical
       href: https://clash.md/zh/guide/compatibility/sing-box

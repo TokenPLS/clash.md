@@ -2,9 +2,6 @@
 title: Is Clash compatible with Stash?
 description: How to move Stash Clash YAML, subscriptions, nodes, overrides, scripts and rules to Clash for iOS.
 head:
-  - - meta
-    - name: keywords
-      content: Stash to Clash,Stash subscription,Stash config,Stash YAML,Clash iOS,mihomo iOS
   - - link
     - rel: canonical
       href: https://clash.md/guide/compatibility/stash

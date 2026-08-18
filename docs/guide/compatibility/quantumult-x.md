@@ -2,9 +2,6 @@
 title: Is Clash compatible with Quantumult X?
 description: How to move Quantumult X subscriptions, nodes, policies, rewrites and filtering needs to Clash for iOS.
 head:
-  - - meta
-    - name: keywords
-      content: Quantumult X to Clash,QuanX subscription,Quantumult X config,Clash iOS
   - - link
     - rel: canonical
       href: https://clash.md/guide/compatibility/quantumult-x

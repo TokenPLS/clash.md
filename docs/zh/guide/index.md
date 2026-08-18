@@ -112,7 +112,8 @@ iPhone、iPad 与 Mac 可以直接读取 mihomo YAML，也可以添加返回 mih
 
 Clash 当前支持 23 类出站协议，包括 HTTP、SOCKS、Shadowsocks、VMess、
 VLESS、Trojan、Hysteria2、TUIC、WireGuard、MASQUE、TrustTunnel 与
-OpenVPN。完整范围及配置方式请参阅[支持的协议](/zh/guide/protocols)。
+OpenVPN。完整范围、协议与控制出站的区别及配置方式请参阅
+[支持的协议](/zh/guide/protocols)。
 
 ## 隐私与支持
 

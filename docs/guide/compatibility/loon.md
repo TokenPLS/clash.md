@@ -2,9 +2,6 @@
 title: Is Clash compatible with Loon?
 description: How to move Loon subscriptions, nodes, configuration, plugin, rewrite and script needs to Clash for iOS.
 head:
-  - - meta
-    - name: keywords
-      content: Loon to Clash,Loon subscription,Loon nodes,Loon configuration,Clash iOS
   - - link
     - rel: canonical
       href: https://clash.md/guide/compatibility/loon

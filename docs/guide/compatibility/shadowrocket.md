@@ -2,9 +2,6 @@
 title: Is Clash compatible with Shadowrocket?
 description: How to move Shadowrocket subscriptions, QR codes, node parameters, rules and module needs to Clash for iOS.
 head:
-  - - meta
-    - name: keywords
-      content: Shadowrocket to Clash,Shadowrocket subscription,Shadowrocket nodes,Clash iOS
   - - link
     - rel: canonical
       href: https://clash.md/guide/compatibility/shadowrocket

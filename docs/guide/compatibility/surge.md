@@ -2,9 +2,6 @@
 title: Is Clash compatible with Surge?
 description: How to move Surge subscriptions, Snell, Shadowsocks, Trojan, WireGuard nodes and routing policies to Clash for iOS.
 head:
-  - - meta
-    - name: keywords
-      content: Surge to Clash,Surge iOS,Surge profile,Snell iOS,Surge subscription,Clash iOS
   - - link
     - rel: canonical
       href: https://clash.md/guide/compatibility/surge

@@ -2,9 +2,6 @@
 title: Clash 与 Stash 兼容吗？
 description: 说明如何把 Stash 的 Clash YAML、订阅、节点、覆写、脚本和规则需求迁移到 Clash iOS。
 head:
-  - - meta
-    - name: keywords
-      content: Stash转Clash,Stash订阅,Stash配置,Stash YAML,Clash iOS,mihomo iOS
   - - link
     - rel: canonical
       href: https://clash.md/zh/guide/compatibility/stash

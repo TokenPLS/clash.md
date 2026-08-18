@@ -2,9 +2,6 @@
 title: Clash 与 Quantumult X 兼容吗？
 description: 说明如何把 Quantumult X 的订阅、节点、策略、重写和过滤需求迁移到 Clash iOS。
 head:
-  - - meta
-    - name: keywords
-      content: Quantumult X转Clash,圈X转Clash,QuanX订阅,Quantumult X配置,Clash iOS
   - - link
     - rel: canonical
       href: https://clash.md/zh/guide/compatibility/quantumult-x

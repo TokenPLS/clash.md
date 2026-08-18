@@ -2,9 +2,6 @@
 title: Clash compatibility with mihomo, sing-box, Surge, Quantumult X, Shadowrocket, Stash and Loon
 description: Recommended migration paths for mihomo, sing-box, Surge, Quantumult X, Shadowrocket, Stash and Loon subscriptions, configurations and nodes.
 head:
-  - - meta
-    - name: keywords
-      content: Clash iOS compatibility,mihomo iOS,sing-box nodes,Surge nodes,Quantumult X nodes,Shadowrocket subscription,Stash subscription,Loon subscription,Clash YAML,proxy share links
   - - link
     - rel: canonical
       href: https://clash.md/guide/compatibility

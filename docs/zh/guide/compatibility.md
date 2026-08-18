@@ -2,9 +2,6 @@
 title: Clash 与 mihomo、sing-box、Surge、Quantumult X、Shadowrocket、Stash、Loon 的兼容性
 description: 汇总 Clash 与 mihomo、sing-box、Surge、Quantumult X、Shadowrocket 小火箭、Stash 和 Loon 的配置、订阅、节点迁移方式与协议兼容性。
 head:
-  - - meta
-    - name: keywords
-      content: Clash iOS兼容,mihomo iOS,sing-box节点,Surge节点,Quantumult X节点,Shadowrocket小火箭订阅,Stash订阅,Loon订阅,Clash YAML,代理分享链接
   - - link
     - rel: canonical
       href: https://clash.md/zh/guide/compatibility

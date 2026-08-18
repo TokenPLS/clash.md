@@ -7,6 +7,25 @@ keywords:
   - Clash iPad
   - Clash iOS
   - mihomo iOS客户端
+jsonLd:
+  "@context": https://schema.org
+  "@type": WebPage
+  "@id": https://clash.md/zh/platforms/ios#webpage
+  url: https://clash.md/zh/platforms/ios
+  name: Clash iPhone 与 iPad 版
+  description: 从家里到路上，让 Clash 在 iPhone 与 iPad 上替你管好连接；控制中心快速启停，换网络自动响应，出问题也能看清原因。
+  inLanguage: zh-CN
+  isPartOf:
+    "@id": https://clash.md/#website
+  about:
+    "@id": https://clash.md/#app
+  mainEntity:
+    "@id": https://clash.md/#app
+  publisher:
+    "@id": https://clash.md/#organization
+  primaryImageOfPage:
+    "@type": ImageObject
+    contentUrl: https://clash.md/screenshots/platforms/ios/device-ipad.webp
 sidebar: false
 aside: false
 outline: false
@@ -60,4 +79,4 @@ pageClass: clash-platform-page
   </fieldset>
 </section>
 
-<section class="platform-privacy-callout"><p class="section-kicker">安全与隐私</p><h2>你的配置，不是我们的生意。</h2><p>无需账户，不收集分析数据，不投放广告，也不会自动上传诊断信息。客户端与内核全部开源，不必只听我们保证，任何人都能检查它实际做了什么。</p><a href="/zh/guide/privacy-model">了解隐私模型 →</a></section>
+<section class="platform-privacy-callout"><p class="section-kicker">安全与隐私</p><h2>你的配置，不是我们的生意。</h2><p>无需账户，不收集分析数据，不投放广告，也不会自动上传诊断信息。原生客户端开源，Hako 也提供任何人都能检查的源码与 SDK 发行版，不必只听我们保证。</p><a href="/zh/guide/privacy-model">了解隐私模型 →</a></section>

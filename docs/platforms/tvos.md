@@ -7,6 +7,25 @@ keywords:
   - Clash tvOS
   - proxy Apple TV
   - rule-based routing tvOS
+jsonLd:
+  "@context": https://schema.org
+  "@type": WebPage
+  "@id": https://clash.md/platforms/tvos#webpage
+  url: https://clash.md/platforms/tvos
+  name: Clash for Apple TV
+  description: Put Clash directly on Apple TV, choose your own profile and route, and leave the router alone—with a native interface built for the big screen and Siri Remote.
+  inLanguage: en-US
+  isPartOf:
+    "@id": https://clash.md/#website
+  about:
+    "@id": https://clash.md/#app
+  mainEntity:
+    "@id": https://clash.md/#app
+  publisher:
+    "@id": https://clash.md/#organization
+  primaryImageOfPage:
+    "@type": ImageObject
+    contentUrl: https://clash.md/screenshots/platforms/tvos/device-apple-tv.webp
 sidebar: false
 aside: false
 outline: false
@@ -51,6 +70,6 @@ pageClass: clash-platform-page
 
 <section class="platform-privacy-callout">
   <p class="section-kicker">Security and privacy</p><h2>Your viewing habits are not ours to see.</h2>
-  <p>Clash has no account, analytics, advertising, tracking, or automatic diagnostics upload. Both the client and core are open source, so anyone can inspect what they actually do instead of relying on promises.</p>
+  <p>Clash has no account, analytics, advertising, tracking, or automatic diagnostics upload. The native client is open source, and Hako publishes source and SDK releases anyone can inspect instead of relying on promises.</p>
   <a href="/guide/privacy-model">Read the privacy model →</a>
 </section>

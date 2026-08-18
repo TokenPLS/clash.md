@@ -2,9 +2,6 @@
 title: Supported proxy protocols in Clash
 description: The complete list of 23 outbound protocol families supported by Clash on Apple platforms, including Shadowsocks, VMess, VLESS, Trojan, Hysteria2, TUIC, WireGuard and OpenVPN.
 head:
-  - - meta
-    - name: keywords
-      content: Clash supported protocols,Clash iOS Shadowsocks,VMess,VLESS,Trojan,Hysteria2,TUIC,WireGuard,OpenVPN,AnyTLS,Snell
   - - link
     - rel: canonical
       href: https://clash.md/guide/protocols
@@ -14,7 +11,7 @@ head:
       href: https://clash.md/zh/guide/protocols
   - - script
     - type: application/ld+json
-    - '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which proxy protocols does Clash support?","acceptedAnswer":{"@type":"Answer","text":"Clash supports 23 outbound protocol families: HTTP, SOCKS, Shadowsocks, ShadowsocksR, Snell, VMess, VLESS, Trojan, AnyTLS, Mieru, Sudoku, Hysteria, Hysteria2, TUIC, ShadowQUIC, GOST Relay, WireGuard, Tailscale, ZeroTier, SSH, MASQUE, TrustTunnel and OpenVPN."}},{"@type":"Question","name":"How do I use ss:// and other share links with Clash?","acceptedAnswer":{"@type":"Answer","text":"Convert standalone share links or Base64 node lists to mihomo YAML, or enter the server, port, credentials and protocol parameters in the node editor. The Profile importer accepts HTTPS subscription URLs and complete mihomo YAML."}},{"@type":"Question","name":"How do I move a configuration from another app?","acceptedAnswer":{"@type":"Answer","text":"Prefer a provider-supplied mihomo YAML subscription. Nodes from sing-box, Surge, or Quantumult X can also be recreated in Clash from their protocol parameters."}},{"@type":"Question","name":"What do I need to start using Clash?","acceptedAnswer":{"@type":"Answer","text":"Bring a server configuration or HTTPS subscription that you choose and trust, then import it into Clash."}}]}'
+    - '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which proxy protocols does Clash support?","acceptedAnswer":{"@type":"Answer","text":"Clash supports 23 configurable proxy protocol families: HTTP, SOCKS, Shadowsocks, ShadowsocksR, Snell, VMess, VLESS, Trojan, AnyTLS, Mieru, Sudoku, Hysteria, Hysteria2, TUIC, ShadowQUIC, GOST Relay, WireGuard, Tailscale, ZeroTier, SSH, MASQUE, TrustTunnel and OpenVPN. Hako 1.19.30 recognizes 27 outbound types in total; DIRECT, DNS, REJECT and REMATCH are routing or control outbounds rather than server protocols."}},{"@type":"Question","name":"How do I use ss:// and other share links with Clash?","acceptedAnswer":{"@type":"Answer","text":"Convert standalone share links or Base64 node lists to mihomo YAML, or enter the server, port, credentials and protocol parameters in the node editor. The Profile importer accepts HTTPS subscription URLs and complete mihomo YAML."}},{"@type":"Question","name":"How do I move a configuration from another app?","acceptedAnswer":{"@type":"Answer","text":"Prefer a provider-supplied mihomo YAML subscription. Nodes from sing-box, Surge, or Quantumult X can also be recreated in Clash from their protocol parameters."}},{"@type":"Question","name":"What do I need to start using Clash?","acceptedAnswer":{"@type":"Answer","text":"Bring a server configuration or HTTPS subscription that you choose and trust, then import it into Clash."}}]}'
 ---
 
 # Supported proxy protocols in Clash
@@ -22,6 +19,10 @@ head:
 Clash supports **23 outbound protocol families** across Apple platforms. Configure
 them through mihomo YAML, an HTTPS subscription that returns mihomo YAML, or the
 node editor.
+
+Hako 1.19.30 recognizes 27 outbound types in total. This page lists the 23
+configurable proxy protocol families; `DIRECT`, `DNS`, `REJECT`, and `REMATCH`
+are routing or control outbounds rather than server protocols.
 
 ## Complete protocol list
 

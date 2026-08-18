@@ -6,6 +6,25 @@ keywords:
   - Clash Apple TV
   - Clash tvOS
   - Apple TV代理
+jsonLd:
+  "@context": https://schema.org
+  "@type": WebPage
+  "@id": https://clash.md/zh/platforms/tvos#webpage
+  url: https://clash.md/zh/platforms/tvos
+  name: Clash Apple TV 版
+  description: 把 Clash 直接装进 Apple TV，选择自己的配置和线路，不改路由器；为大屏幕、Siri Remote 与客厅距离原生设计。
+  inLanguage: zh-CN
+  isPartOf:
+    "@id": https://clash.md/#website
+  about:
+    "@id": https://clash.md/#app
+  mainEntity:
+    "@id": https://clash.md/#app
+  publisher:
+    "@id": https://clash.md/#organization
+  primaryImageOfPage:
+    "@type": ImageObject
+    contentUrl: https://clash.md/screenshots/platforms/tvos/device-apple-tv.webp
 sidebar: false
 aside: false
 outline: false
@@ -25,4 +44,4 @@ pageClass: clash-platform-page
 
 <section class="platform-gallery-section"><div class="platform-detail-heading"><p class="section-kicker">近一点看</p><h2>不是放大手机版，而是从客厅重新设计。</h2></div><div class="platform-screenshot-rail platform-screenshot-rail--wide" aria-label="Clash Apple TV 版截图"><img src="/screenshots/platforms/tvos/gallery/01.webp" alt="规则模式连接状态" loading="lazy"><img src="/screenshots/platforms/tvos/gallery/02.webp" alt="Apple TV 配置列表" loading="lazy"><img src="/screenshots/platforms/tvos/gallery/03.webp" alt="Apple TV 策略组与节点" loading="lazy"><img src="/screenshots/platforms/tvos/gallery/04.webp" alt="Apple TV 规则覆盖" loading="lazy"><img src="/screenshots/platforms/tvos/gallery/05.webp" alt="由 Hako 驱动的 Clash" loading="lazy"></div></section>
 
-<section class="platform-privacy-callout"><p class="section-kicker">安全与隐私</p><h2>你的观看习惯，不该被我们看见。</h2><p>Clash 无需账户，不收集分析数据，不投放广告，也不会自动上传诊断信息。客户端与内核全部开源，不必只听我们保证，任何人都能检查它实际做了什么。</p><a href="/zh/guide/privacy-model">了解隐私模型 →</a></section>
+<section class="platform-privacy-callout"><p class="section-kicker">安全与隐私</p><h2>你的观看习惯，不该被我们看见。</h2><p>Clash 无需账户，不收集分析数据，不投放广告，也不会自动上传诊断信息。原生客户端开源，Hako 也提供任何人都能检查的源码与 SDK 发行版，不必只听我们保证。</p><a href="/zh/guide/privacy-model">了解隐私模型 →</a></section>
