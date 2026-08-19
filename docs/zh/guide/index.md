@@ -61,6 +61,11 @@ Clash 不附带服务器或线路。准备一份你自己选择并信任的 Clas
 回到首页连接。首次连接时，按照系统提示允许 Clash 添加 VPN 配置。规则模式
 会按照当前配置决定每条连接直连、使用代理或拒绝；也可临时切换到全局或直连。
 
+::: info 需要一份配置起点？
+大多数人只需要[配置最佳实践与最小模板](/zh/guide/config/best-practice)。需要
+查询具体字段或三平台差异时，再看[完整 Hako 配置参考](/zh/guide/config/)。
+:::
+
 ## 按设备查看
 
 <nav class="guide-platform-grid" aria-label="按设备查看开始步骤">

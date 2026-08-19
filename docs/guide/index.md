@@ -65,6 +65,12 @@ VPN configuration. Rule mode applies the active profile to decide whether each
 connection goes direct, uses a proxy, or is rejected. Global and Direct remain
 available when you need them.
 
+::: info Need a configuration starting point?
+Most people only need the [configuration best practices and minimal template](/guide/config/best-practice).
+The [complete Hako reference](/guide/config/) is available when you need to
+check a specific field or platform difference.
+:::
+
 ## Choose your device
 
 <nav class="guide-platform-grid" aria-label="Getting-started steps by device">

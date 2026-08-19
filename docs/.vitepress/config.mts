@@ -69,6 +69,12 @@ export default defineConfig({
     }
   },
   transformPageData(pageData) {
+    if (/^(zh\/)?guide\/config\//.test(pageData.relativePath)) {
+      pageData.frontmatter.pageClass = 'clash-config-page'
+      if (!pageData.relativePath.endsWith('/best-practice.md')) {
+        pageData.frontmatter.aside = false
+      }
+    }
     if (Array.isArray(pageData.frontmatter.head)) {
       pageData.frontmatter.head = pageData.frontmatter.head.filter(
         ([tag, attrs]: HeadConfig) =>
@@ -318,7 +324,7 @@ export default defineConfig({
           { text: 'iOS', link: '/platforms/ios' },
           { text: 'macOS', link: '/platforms/macos' },
           { text: 'tvOS', link: '/platforms/tvos' },
-          { text: 'Guide', link: '/guide/' },
+          { text: 'Guide', link: '/guide/', activeMatch: '^/guide/' },
           { text: 'Privacy', link: '/privacy' },
           { text: 'Terms', link: '/terms' },
           {
@@ -345,6 +351,25 @@ export default defineConfig({
               text: 'Guide',
               items: [
                 { text: 'Getting started', link: '/guide/' },
+                {
+                  text: 'Configuration best practices',
+                  link: '/guide/config/best-practice'
+                },
+                {
+                  text: 'Configuration reference',
+                  link: '/guide/config/',
+                  collapsed: true,
+                  items: [
+                    { text: 'General', link: '/guide/config/general' },
+                    { text: 'DNS', link: '/guide/config/dns' },
+                    { text: 'Inbound and TUN', link: '/guide/config/inbound' },
+                    { text: 'Proxies and providers', link: '/guide/config/proxies' },
+                    { text: 'Rules and sniffer', link: '/guide/config/rules' },
+                    { text: 'State and advanced', link: '/guide/config/profile' },
+                    { text: 'Apple platforms', link: '/guide/config/apple-platforms' },
+                    { text: 'Security boundary', link: '/guide/config/security' }
+                  ]
+                },
                 {
                   text: 'Compatibility',
                   link: '/guide/compatibility',
@@ -406,7 +431,11 @@ export default defineConfig({
           { text: 'iOS', link: '/zh/platforms/ios' },
           { text: 'macOS', link: '/zh/platforms/macos' },
           { text: 'tvOS', link: '/zh/platforms/tvos' },
-          { text: '使用指南', link: '/zh/guide/' },
+          {
+            text: '使用指南',
+            link: '/zh/guide/',
+            activeMatch: '^/zh/guide/'
+          },
           { text: '隐私政策', link: '/zh/privacy' },
           { text: '使用条款', link: '/zh/terms' },
           {
@@ -433,6 +462,25 @@ export default defineConfig({
               text: '使用指南',
               items: [
                 { text: '开始使用', link: '/zh/guide/' },
+                {
+                  text: '配置最佳实践',
+                  link: '/zh/guide/config/best-practice'
+                },
+                {
+                  text: '配置参考',
+                  link: '/zh/guide/config/',
+                  collapsed: true,
+                  items: [
+                    { text: '常规设置', link: '/zh/guide/config/general' },
+                    { text: 'DNS', link: '/zh/guide/config/dns' },
+                    { text: '入站与 TUN', link: '/zh/guide/config/inbound' },
+                    { text: '代理与 Provider', link: '/zh/guide/config/proxies' },
+                    { text: '规则与嗅探', link: '/zh/guide/config/rules' },
+                    { text: '状态与高级项', link: '/zh/guide/config/profile' },
+                    { text: '三平台差异', link: '/zh/guide/config/apple-platforms' },
+                    { text: '安全边界', link: '/zh/guide/config/security' }
+                  ]
+                },
                 {
                   text: '兼容性说明',
                   link: '/zh/guide/compatibility',

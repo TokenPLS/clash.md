@@ -1,0 +1,3170 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-19",
+  "product": {
+    "hakoCoreRevision": "77ff54009fce5c8b2f89f4b081c563c7855133df",
+    "mihomoVersion": "1.19.30",
+    "deploymentTargets": {
+      "ios": "15.0",
+      "macos": "13.0",
+      "tvos": "17.0"
+    }
+  },
+  "upstream": {
+    "metaDocsRevision": "e848aefb77e0cddbf3f0dde1016ec4904924fcbd",
+    "url": "https://github.com/MetaCubeX/Meta-Docs/tree/e848aefb77e0cddbf3f0dde1016ec4904924fcbd/docs/config"
+  },
+  "source": {
+    "scope": "ios",
+    "schemaVersion": 1,
+    "fieldCount": 185,
+    "note": "Public, sanitized capability snapshot. Internal evidence and implementation notes are intentionally excluded."
+  },
+  "fields": [
+    {
+      "path": "dns.cache-algorithm",
+      "type": "string",
+      "category": "dns",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "dns.cache-max-size",
+      "type": "int",
+      "category": "dns",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "dns.default-nameserver",
+      "type": "[]string",
+      "category": "dns",
+      "ios": {
+        "status": "limited",
+        "note": "hako-managed-value"
+      },
+      "macos": {
+        "status": "limited",
+        "note": "hako-managed-value"
+      },
+      "tvos": {
+        "status": "limited",
+        "note": "hako-managed-value"
+      }
+    },
+    {
+      "path": "dns.direct-nameserver",
+      "type": "[]string",
+      "category": "dns",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "dns.direct-nameserver-follow-policy",
+      "type": "bool",
+      "category": "dns",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "dns.enable",
+      "type": "bool",
+      "category": "dns",
+      "ios": {
+        "status": "limited",
+        "note": "hako-managed-value"
+      },
+      "macos": {
+        "status": "limited",
+        "note": "hako-managed-value"
+      },
+      "tvos": {
+        "status": "limited",
+        "note": "hako-managed-value"
+      }
+    },
+    {
+      "path": "dns.enhanced-mode",
+      "type": "C.DNSMode",
+      "category": "dns",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "dns.fake-ip-filter",
+      "type": "[]string",
+      "category": "dns",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "dns.fake-ip-filter-mode",
+      "type": "C.FilterMode",
+      "category": "dns",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "dns.fake-ip-range",
+      "type": "string",
+      "category": "dns",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "dns.fake-ip-range6",
+      "type": "string",
+      "category": "dns",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "dns.fake-ip-ttl",
+      "type": "int",
+      "category": "dns",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "dns.fallback",
+      "type": "[]string",
+      "category": "dns",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "dns.fallback-filter.domain",
+      "type": "[]string",
+      "category": "dns",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "dns.fallback-filter.geoip",
+      "type": "bool",
+      "category": "dns",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "dns.fallback-filter.geoip-code",
+      "type": "string",
+      "category": "dns",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "dns.fallback-filter.geosite",
+      "type": "[]string",
+      "category": "dns",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "dns.fallback-filter.ipcidr",
+      "type": "[]string",
+      "category": "dns",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "dns.fallback-lazy-query",
+      "type": "bool",
+      "category": "dns",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "dns.ipv6",
+      "type": "bool",
+      "category": "dns",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "dns.ipv6-timeout",
+      "type": "uint",
+      "category": "dns",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "dns.listen",
+      "type": "string",
+      "category": "dns",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      }
+    },
+    {
+      "path": "dns.listen-routing-mark",
+      "type": "int",
+      "category": "dns",
+      "ios": {
+        "status": "unsupported",
+        "note": "not-consumed-on-apple"
+      },
+      "macos": {
+        "status": "unsupported",
+        "note": "not-consumed-on-apple"
+      },
+      "tvos": {
+        "status": "unsupported",
+        "note": "not-consumed-on-apple"
+      }
+    },
+    {
+      "path": "dns.nameserver",
+      "type": "[]string",
+      "category": "dns",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "dns.nameserver-policy",
+      "type": "*orderedmap.OrderedMap[string, any]",
+      "category": "dns",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "dns.prefer-h3",
+      "type": "bool",
+      "category": "dns",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "dns.proxy-server-nameserver",
+      "type": "[]string",
+      "category": "dns",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "dns.proxy-server-nameserver-policy",
+      "type": "*orderedmap.OrderedMap[string, any]",
+      "category": "dns",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "dns.respect-rules",
+      "type": "bool",
+      "category": "dns",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "dns.use-hosts",
+      "type": "bool",
+      "category": "dns",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "dns.use-system-hosts",
+      "type": "bool",
+      "category": "dns",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "experimental.dialer-ip4p-convert",
+      "type": "bool",
+      "category": "experimental",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-no-product-promise"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-no-product-promise"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-no-product-promise"
+      }
+    },
+    {
+      "path": "experimental.fingerprints",
+      "type": "[]string",
+      "category": "experimental",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-no-product-promise"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-no-product-promise"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-no-product-promise"
+      }
+    },
+    {
+      "path": "experimental.quic-go-disable-ecn",
+      "type": "bool",
+      "category": "experimental",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-no-product-promise"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-no-product-promise"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-no-product-promise"
+      }
+    },
+    {
+      "path": "experimental.quic-go-disable-gso",
+      "type": "bool",
+      "category": "experimental",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-no-product-promise"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-no-product-promise"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-no-product-promise"
+      }
+    },
+    {
+      "path": "clash-for-android.append-system-dns",
+      "type": "bool",
+      "category": "general",
+      "ios": {
+        "status": "na",
+        "note": "other-platform-only"
+      },
+      "macos": {
+        "status": "na",
+        "note": "other-platform-only"
+      },
+      "tvos": {
+        "status": "na",
+        "note": "other-platform-only"
+      }
+    },
+    {
+      "path": "clash-for-android.ui-subtitle-pattern",
+      "type": "string",
+      "category": "general",
+      "ios": {
+        "status": "na",
+        "note": "other-platform-only"
+      },
+      "macos": {
+        "status": "na",
+        "note": "other-platform-only"
+      },
+      "tvos": {
+        "status": "na",
+        "note": "other-platform-only"
+      }
+    },
+    {
+      "path": "disable-keep-alive",
+      "type": "bool",
+      "category": "general",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "etag-support",
+      "type": "bool",
+      "category": "general",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "external-controller",
+      "type": "string",
+      "category": "general",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      }
+    },
+    {
+      "path": "external-controller-cors.allow-origins",
+      "type": "[]string",
+      "category": "general",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      }
+    },
+    {
+      "path": "external-controller-cors.allow-private-network",
+      "type": "bool",
+      "category": "general",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      }
+    },
+    {
+      "path": "external-controller-pipe",
+      "type": "string",
+      "category": "general",
+      "ios": {
+        "status": "na",
+        "note": "other-platform-only"
+      },
+      "macos": {
+        "status": "na",
+        "note": "other-platform-only"
+      },
+      "tvos": {
+        "status": "na",
+        "note": "other-platform-only"
+      }
+    },
+    {
+      "path": "external-controller-routing-mark",
+      "type": "int",
+      "category": "general",
+      "ios": {
+        "status": "na",
+        "note": "other-platform-only"
+      },
+      "macos": {
+        "status": "na",
+        "note": "other-platform-only"
+      },
+      "tvos": {
+        "status": "na",
+        "note": "other-platform-only"
+      }
+    },
+    {
+      "path": "external-controller-tls",
+      "type": "string",
+      "category": "general",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      }
+    },
+    {
+      "path": "external-controller-unix",
+      "type": "string",
+      "category": "general",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "tvos": {
+        "status": "unsupported",
+        "note": "no-unix-socket-tvos"
+      }
+    },
+    {
+      "path": "external-doh-server",
+      "type": "string",
+      "category": "general",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      }
+    },
+    {
+      "path": "external-ui",
+      "type": "string",
+      "category": "general",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      }
+    },
+    {
+      "path": "external-ui-name",
+      "type": "string",
+      "category": "general",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      }
+    },
+    {
+      "path": "external-ui-url",
+      "type": "string",
+      "category": "general",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      }
+    },
+    {
+      "path": "find-process-mode",
+      "type": "process.FindProcessMode",
+      "category": "general",
+      "ios": {
+        "status": "unsupported",
+        "note": "not-consumed-on-apple"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "unsupported",
+        "note": "not-consumed-on-apple"
+      }
+    },
+    {
+      "path": "geo-auto-update",
+      "type": "bool",
+      "category": "general",
+      "ios": {
+        "status": "limited",
+        "note": "managed-geodata"
+      },
+      "macos": {
+        "status": "limited",
+        "note": "managed-geodata"
+      },
+      "tvos": {
+        "status": "limited",
+        "note": "clearable-geodata"
+      }
+    },
+    {
+      "path": "geo-update-interval",
+      "type": "int",
+      "category": "general",
+      "ios": {
+        "status": "na",
+        "note": "other-platform-only"
+      },
+      "macos": {
+        "status": "na",
+        "note": "other-platform-only"
+      },
+      "tvos": {
+        "status": "na",
+        "note": "other-platform-only"
+      }
+    },
+    {
+      "path": "geodata-loader",
+      "type": "string",
+      "category": "general",
+      "ios": {
+        "status": "limited",
+        "note": "managed-geodata"
+      },
+      "macos": {
+        "status": "limited",
+        "note": "managed-geodata"
+      },
+      "tvos": {
+        "status": "limited",
+        "note": "clearable-geodata"
+      }
+    },
+    {
+      "path": "geodata-mode",
+      "type": "bool",
+      "category": "general",
+      "ios": {
+        "status": "limited",
+        "note": "managed-geodata"
+      },
+      "macos": {
+        "status": "limited",
+        "note": "managed-geodata"
+      },
+      "tvos": {
+        "status": "limited",
+        "note": "clearable-geodata"
+      }
+    },
+    {
+      "path": "geosite-matcher",
+      "type": "string",
+      "category": "general",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "geox-url.asn",
+      "type": "string",
+      "category": "general",
+      "ios": {
+        "status": "limited",
+        "note": "managed-geodata"
+      },
+      "macos": {
+        "status": "limited",
+        "note": "managed-geodata"
+      },
+      "tvos": {
+        "status": "limited",
+        "note": "clearable-geodata"
+      }
+    },
+    {
+      "path": "geox-url.geoip",
+      "type": "string",
+      "category": "general",
+      "ios": {
+        "status": "limited",
+        "note": "managed-geodata"
+      },
+      "macos": {
+        "status": "limited",
+        "note": "managed-geodata"
+      },
+      "tvos": {
+        "status": "limited",
+        "note": "clearable-geodata"
+      }
+    },
+    {
+      "path": "geox-url.geosite",
+      "type": "string",
+      "category": "general",
+      "ios": {
+        "status": "limited",
+        "note": "managed-geodata"
+      },
+      "macos": {
+        "status": "limited",
+        "note": "managed-geodata"
+      },
+      "tvos": {
+        "status": "limited",
+        "note": "clearable-geodata"
+      }
+    },
+    {
+      "path": "geox-url.mmdb",
+      "type": "string",
+      "category": "general",
+      "ios": {
+        "status": "limited",
+        "note": "managed-geodata"
+      },
+      "macos": {
+        "status": "limited",
+        "note": "managed-geodata"
+      },
+      "tvos": {
+        "status": "limited",
+        "note": "clearable-geodata"
+      }
+    },
+    {
+      "path": "global-client-fingerprint",
+      "type": "string",
+      "category": "general",
+      "ios": {
+        "status": "na",
+        "note": "other-platform-only"
+      },
+      "macos": {
+        "status": "na",
+        "note": "other-platform-only"
+      },
+      "tvos": {
+        "status": "na",
+        "note": "other-platform-only"
+      }
+    },
+    {
+      "path": "global-ua",
+      "type": "string",
+      "category": "general",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "hosts",
+      "type": "map[string]any",
+      "category": "general",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "ipv6",
+      "type": "bool",
+      "category": "general",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "keep-alive-idle",
+      "type": "int",
+      "category": "general",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "keep-alive-interval",
+      "type": "int",
+      "category": "general",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "log-level",
+      "type": "log.LogLevel",
+      "category": "general",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "mode",
+      "type": "T.TunnelMode",
+      "category": "general",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "secret",
+      "type": "string",
+      "category": "general",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      }
+    },
+    {
+      "path": "tcp-concurrent",
+      "type": "bool",
+      "category": "general",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "unified-delay",
+      "type": "bool",
+      "category": "general",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "allow-lan",
+      "type": "bool",
+      "category": "inbound",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      }
+    },
+    {
+      "path": "authentication",
+      "type": "[]string",
+      "category": "inbound",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      }
+    },
+    {
+      "path": "bind-address",
+      "type": "string",
+      "category": "inbound",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      }
+    },
+    {
+      "path": "inbound-mptcp",
+      "type": "bool",
+      "category": "inbound",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      }
+    },
+    {
+      "path": "inbound-tfo",
+      "type": "bool",
+      "category": "inbound",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      }
+    },
+    {
+      "path": "interface-name",
+      "type": "string",
+      "category": "inbound",
+      "ios": {
+        "status": "unsupported",
+        "note": "not-apple-routing"
+      },
+      "macos": {
+        "status": "unsupported",
+        "note": "not-apple-routing"
+      },
+      "tvos": {
+        "status": "unsupported",
+        "note": "not-apple-routing"
+      }
+    },
+    {
+      "path": "iptables.bypass",
+      "type": "[]string",
+      "category": "inbound",
+      "ios": {
+        "status": "na",
+        "note": "other-platform-only"
+      },
+      "macos": {
+        "status": "na",
+        "note": "other-platform-only"
+      },
+      "tvos": {
+        "status": "na",
+        "note": "other-platform-only"
+      }
+    },
+    {
+      "path": "iptables.dns-redirect",
+      "type": "bool",
+      "category": "inbound",
+      "ios": {
+        "status": "na",
+        "note": "other-platform-only"
+      },
+      "macos": {
+        "status": "na",
+        "note": "other-platform-only"
+      },
+      "tvos": {
+        "status": "na",
+        "note": "other-platform-only"
+      }
+    },
+    {
+      "path": "iptables.enable",
+      "type": "bool",
+      "category": "inbound",
+      "ios": {
+        "status": "na",
+        "note": "other-platform-only"
+      },
+      "macos": {
+        "status": "na",
+        "note": "other-platform-only"
+      },
+      "tvos": {
+        "status": "na",
+        "note": "other-platform-only"
+      }
+    },
+    {
+      "path": "iptables.inbound-interface",
+      "type": "string",
+      "category": "inbound",
+      "ios": {
+        "status": "na",
+        "note": "other-platform-only"
+      },
+      "macos": {
+        "status": "na",
+        "note": "other-platform-only"
+      },
+      "tvos": {
+        "status": "na",
+        "note": "other-platform-only"
+      }
+    },
+    {
+      "path": "lan-allowed-ips",
+      "type": "[]netip.Prefix",
+      "category": "inbound",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      }
+    },
+    {
+      "path": "lan-disallowed-ips",
+      "type": "[]netip.Prefix",
+      "category": "inbound",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      }
+    },
+    {
+      "path": "listeners",
+      "type": "[]map[string]any",
+      "category": "inbound",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      }
+    },
+    {
+      "path": "mixed-port",
+      "type": "int",
+      "category": "inbound",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      }
+    },
+    {
+      "path": "port",
+      "type": "int",
+      "category": "inbound",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      }
+    },
+    {
+      "path": "redir-port",
+      "type": "int",
+      "category": "inbound",
+      "ios": {
+        "status": "unsupported",
+        "note": "not-consumed-on-apple"
+      },
+      "macos": {
+        "status": "unsupported",
+        "note": "not-consumed-on-apple"
+      },
+      "tvos": {
+        "status": "unsupported",
+        "note": "not-consumed-on-apple"
+      }
+    },
+    {
+      "path": "routing-mark",
+      "type": "int",
+      "category": "inbound",
+      "ios": {
+        "status": "unsupported",
+        "note": "not-apple-routing"
+      },
+      "macos": {
+        "status": "unsupported",
+        "note": "not-apple-routing"
+      },
+      "tvos": {
+        "status": "unsupported",
+        "note": "not-apple-routing"
+      }
+    },
+    {
+      "path": "skip-auth-prefixes",
+      "type": "[]netip.Prefix",
+      "category": "inbound",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      }
+    },
+    {
+      "path": "socks-port",
+      "type": "int",
+      "category": "inbound",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      }
+    },
+    {
+      "path": "ss-config",
+      "type": "string",
+      "category": "inbound",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      }
+    },
+    {
+      "path": "tproxy-port",
+      "type": "int",
+      "category": "inbound",
+      "ios": {
+        "status": "unsupported",
+        "note": "not-consumed-on-apple"
+      },
+      "macos": {
+        "status": "unsupported",
+        "note": "not-consumed-on-apple"
+      },
+      "tvos": {
+        "status": "unsupported",
+        "note": "not-consumed-on-apple"
+      }
+    },
+    {
+      "path": "tuic-server.alpn",
+      "type": "[]string",
+      "category": "inbound",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      }
+    },
+    {
+      "path": "tuic-server.authentication-timeout",
+      "type": "int",
+      "category": "inbound",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      }
+    },
+    {
+      "path": "tuic-server.certificate",
+      "type": "string",
+      "category": "inbound",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      }
+    },
+    {
+      "path": "tuic-server.congestion-controller",
+      "type": "string",
+      "category": "inbound",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      }
+    },
+    {
+      "path": "tuic-server.cwnd",
+      "type": "int",
+      "category": "inbound",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      }
+    },
+    {
+      "path": "tuic-server.enable",
+      "type": "bool",
+      "category": "inbound",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      }
+    },
+    {
+      "path": "tuic-server.listen",
+      "type": "string",
+      "category": "inbound",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      }
+    },
+    {
+      "path": "tuic-server.max-idle-time",
+      "type": "int",
+      "category": "inbound",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      }
+    },
+    {
+      "path": "tuic-server.max-udp-relay-packet-size",
+      "type": "int",
+      "category": "inbound",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      }
+    },
+    {
+      "path": "tuic-server.private-key",
+      "type": "string",
+      "category": "inbound",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      }
+    },
+    {
+      "path": "tuic-server.token",
+      "type": "[]string",
+      "category": "inbound",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      }
+    },
+    {
+      "path": "tuic-server.users",
+      "type": "map[string]string",
+      "category": "inbound",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      }
+    },
+    {
+      "path": "tun.auto-detect-interface",
+      "type": "bool",
+      "category": "inbound",
+      "ios": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "macos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "tvos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      }
+    },
+    {
+      "path": "tun.auto-redirect",
+      "type": "bool",
+      "category": "inbound",
+      "ios": {
+        "status": "na",
+        "note": "other-platform-only"
+      },
+      "macos": {
+        "status": "na",
+        "note": "other-platform-only"
+      },
+      "tvos": {
+        "status": "na",
+        "note": "other-platform-only"
+      }
+    },
+    {
+      "path": "tun.auto-redirect-input-mark",
+      "type": "uint32",
+      "category": "inbound",
+      "ios": {
+        "status": "na",
+        "note": "other-platform-only"
+      },
+      "macos": {
+        "status": "na",
+        "note": "other-platform-only"
+      },
+      "tvos": {
+        "status": "na",
+        "note": "other-platform-only"
+      }
+    },
+    {
+      "path": "tun.auto-redirect-iproute2-fallback-rule-index",
+      "type": "int",
+      "category": "inbound",
+      "ios": {
+        "status": "na",
+        "note": "other-platform-only"
+      },
+      "macos": {
+        "status": "na",
+        "note": "other-platform-only"
+      },
+      "tvos": {
+        "status": "na",
+        "note": "other-platform-only"
+      }
+    },
+    {
+      "path": "tun.auto-redirect-output-mark",
+      "type": "uint32",
+      "category": "inbound",
+      "ios": {
+        "status": "na",
+        "note": "other-platform-only"
+      },
+      "macos": {
+        "status": "na",
+        "note": "other-platform-only"
+      },
+      "tvos": {
+        "status": "na",
+        "note": "other-platform-only"
+      }
+    },
+    {
+      "path": "tun.auto-route",
+      "type": "bool",
+      "category": "inbound",
+      "ios": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "macos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "tvos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      }
+    },
+    {
+      "path": "tun.device",
+      "type": "string",
+      "category": "inbound",
+      "ios": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "macos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "tvos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      }
+    },
+    {
+      "path": "tun.disable-icmp-forwarding",
+      "type": "bool",
+      "category": "inbound",
+      "ios": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "macos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "tvos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      }
+    },
+    {
+      "path": "tun.dns-hijack",
+      "type": "[]string",
+      "category": "inbound",
+      "ios": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "macos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "tvos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      }
+    },
+    {
+      "path": "tun.enable",
+      "type": "bool",
+      "category": "inbound",
+      "ios": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "macos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "tvos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      }
+    },
+    {
+      "path": "tun.endpoint-independent-nat",
+      "type": "bool",
+      "category": "inbound",
+      "ios": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "macos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "tvos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      }
+    },
+    {
+      "path": "tun.exclude-dst-port",
+      "type": "[]uint16",
+      "category": "inbound",
+      "ios": {
+        "status": "unsupported",
+        "note": "apple-network-extension"
+      },
+      "macos": {
+        "status": "unsupported",
+        "note": "apple-network-extension"
+      },
+      "tvos": {
+        "status": "unsupported",
+        "note": "apple-network-extension"
+      }
+    },
+    {
+      "path": "tun.exclude-dst-port-range",
+      "type": "[]string",
+      "category": "inbound",
+      "ios": {
+        "status": "unsupported",
+        "note": "apple-network-extension"
+      },
+      "macos": {
+        "status": "unsupported",
+        "note": "apple-network-extension"
+      },
+      "tvos": {
+        "status": "unsupported",
+        "note": "apple-network-extension"
+      }
+    },
+    {
+      "path": "tun.exclude-interface",
+      "type": "[]string",
+      "category": "inbound",
+      "ios": {
+        "status": "unsupported",
+        "note": "apple-network-extension"
+      },
+      "macos": {
+        "status": "unsupported",
+        "note": "apple-network-extension"
+      },
+      "tvos": {
+        "status": "unsupported",
+        "note": "apple-network-extension"
+      }
+    },
+    {
+      "path": "tun.exclude-mac-address",
+      "type": "[]string",
+      "category": "inbound",
+      "ios": {
+        "status": "unsupported",
+        "note": "apple-network-extension"
+      },
+      "macos": {
+        "status": "unsupported",
+        "note": "apple-network-extension"
+      },
+      "tvos": {
+        "status": "unsupported",
+        "note": "apple-network-extension"
+      }
+    },
+    {
+      "path": "tun.exclude-package",
+      "type": "[]string",
+      "category": "inbound",
+      "ios": {
+        "status": "na",
+        "note": "other-platform-only"
+      },
+      "macos": {
+        "status": "na",
+        "note": "other-platform-only"
+      },
+      "tvos": {
+        "status": "na",
+        "note": "other-platform-only"
+      }
+    },
+    {
+      "path": "tun.exclude-src-port",
+      "type": "[]uint16",
+      "category": "inbound",
+      "ios": {
+        "status": "unsupported",
+        "note": "apple-network-extension"
+      },
+      "macos": {
+        "status": "unsupported",
+        "note": "apple-network-extension"
+      },
+      "tvos": {
+        "status": "unsupported",
+        "note": "apple-network-extension"
+      }
+    },
+    {
+      "path": "tun.exclude-src-port-range",
+      "type": "[]string",
+      "category": "inbound",
+      "ios": {
+        "status": "unsupported",
+        "note": "apple-network-extension"
+      },
+      "macos": {
+        "status": "unsupported",
+        "note": "apple-network-extension"
+      },
+      "tvos": {
+        "status": "unsupported",
+        "note": "apple-network-extension"
+      }
+    },
+    {
+      "path": "tun.exclude-uid",
+      "type": "[]uint32",
+      "category": "inbound",
+      "ios": {
+        "status": "unsupported",
+        "note": "apple-network-extension"
+      },
+      "macos": {
+        "status": "unsupported",
+        "note": "apple-network-extension"
+      },
+      "tvos": {
+        "status": "unsupported",
+        "note": "apple-network-extension"
+      }
+    },
+    {
+      "path": "tun.exclude-uid-range",
+      "type": "[]string",
+      "category": "inbound",
+      "ios": {
+        "status": "unsupported",
+        "note": "apple-network-extension"
+      },
+      "macos": {
+        "status": "unsupported",
+        "note": "apple-network-extension"
+      },
+      "tvos": {
+        "status": "unsupported",
+        "note": "apple-network-extension"
+      }
+    },
+    {
+      "path": "tun.file-descriptor",
+      "type": "int",
+      "category": "inbound",
+      "ios": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "macos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "tvos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      }
+    },
+    {
+      "path": "tun.gso",
+      "type": "bool",
+      "category": "inbound",
+      "ios": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "macos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "tvos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      }
+    },
+    {
+      "path": "tun.gso-max-size",
+      "type": "uint32",
+      "category": "inbound",
+      "ios": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "macos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "tvos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      }
+    },
+    {
+      "path": "tun.icmp-timeout",
+      "type": "int64",
+      "category": "inbound",
+      "ios": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "macos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "tvos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      }
+    },
+    {
+      "path": "tun.include-android-user",
+      "type": "[]int",
+      "category": "inbound",
+      "ios": {
+        "status": "na",
+        "note": "other-platform-only"
+      },
+      "macos": {
+        "status": "na",
+        "note": "other-platform-only"
+      },
+      "tvos": {
+        "status": "na",
+        "note": "other-platform-only"
+      }
+    },
+    {
+      "path": "tun.include-interface",
+      "type": "[]string",
+      "category": "inbound",
+      "ios": {
+        "status": "unsupported",
+        "note": "apple-network-extension"
+      },
+      "macos": {
+        "status": "unsupported",
+        "note": "apple-network-extension"
+      },
+      "tvos": {
+        "status": "unsupported",
+        "note": "apple-network-extension"
+      }
+    },
+    {
+      "path": "tun.include-mac-address",
+      "type": "[]string",
+      "category": "inbound",
+      "ios": {
+        "status": "unsupported",
+        "note": "apple-network-extension"
+      },
+      "macos": {
+        "status": "unsupported",
+        "note": "apple-network-extension"
+      },
+      "tvos": {
+        "status": "unsupported",
+        "note": "apple-network-extension"
+      }
+    },
+    {
+      "path": "tun.include-package",
+      "type": "[]string",
+      "category": "inbound",
+      "ios": {
+        "status": "na",
+        "note": "other-platform-only"
+      },
+      "macos": {
+        "status": "na",
+        "note": "other-platform-only"
+      },
+      "tvos": {
+        "status": "na",
+        "note": "other-platform-only"
+      }
+    },
+    {
+      "path": "tun.include-uid",
+      "type": "[]uint32",
+      "category": "inbound",
+      "ios": {
+        "status": "unsupported",
+        "note": "apple-network-extension"
+      },
+      "macos": {
+        "status": "unsupported",
+        "note": "apple-network-extension"
+      },
+      "tvos": {
+        "status": "unsupported",
+        "note": "apple-network-extension"
+      }
+    },
+    {
+      "path": "tun.include-uid-range",
+      "type": "[]string",
+      "category": "inbound",
+      "ios": {
+        "status": "unsupported",
+        "note": "apple-network-extension"
+      },
+      "macos": {
+        "status": "unsupported",
+        "note": "apple-network-extension"
+      },
+      "tvos": {
+        "status": "unsupported",
+        "note": "apple-network-extension"
+      }
+    },
+    {
+      "path": "tun.inet4-route-address",
+      "type": "[]netip.Prefix",
+      "category": "inbound",
+      "ios": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "macos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "tvos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      }
+    },
+    {
+      "path": "tun.inet4-route-exclude-address",
+      "type": "[]netip.Prefix",
+      "category": "inbound",
+      "ios": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "macos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "tvos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      }
+    },
+    {
+      "path": "tun.inet6-address",
+      "type": "[]netip.Prefix",
+      "category": "inbound",
+      "ios": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "macos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "tvos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      }
+    },
+    {
+      "path": "tun.inet6-route-address",
+      "type": "[]netip.Prefix",
+      "category": "inbound",
+      "ios": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "macos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "tvos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      }
+    },
+    {
+      "path": "tun.inet6-route-exclude-address",
+      "type": "[]netip.Prefix",
+      "category": "inbound",
+      "ios": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "macos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "tvos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      }
+    },
+    {
+      "path": "tun.iproute2-rule-index",
+      "type": "int",
+      "category": "inbound",
+      "ios": {
+        "status": "na",
+        "note": "other-platform-only"
+      },
+      "macos": {
+        "status": "na",
+        "note": "other-platform-only"
+      },
+      "tvos": {
+        "status": "na",
+        "note": "other-platform-only"
+      }
+    },
+    {
+      "path": "tun.iproute2-table-index",
+      "type": "int",
+      "category": "inbound",
+      "ios": {
+        "status": "na",
+        "note": "other-platform-only"
+      },
+      "macos": {
+        "status": "na",
+        "note": "other-platform-only"
+      },
+      "tvos": {
+        "status": "na",
+        "note": "other-platform-only"
+      }
+    },
+    {
+      "path": "tun.loopback-address",
+      "type": "[]netip.Addr",
+      "category": "inbound",
+      "ios": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "macos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "tvos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      }
+    },
+    {
+      "path": "tun.mtu",
+      "type": "uint32",
+      "category": "inbound",
+      "ios": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "macos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "tvos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      }
+    },
+    {
+      "path": "tun.recvmsgx",
+      "type": "bool",
+      "category": "inbound",
+      "ios": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "macos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "tvos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      }
+    },
+    {
+      "path": "tun.route-address",
+      "type": "[]netip.Prefix",
+      "category": "inbound",
+      "ios": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "macos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "tvos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      }
+    },
+    {
+      "path": "tun.route-address-set",
+      "type": "[]string",
+      "category": "inbound",
+      "ios": {
+        "status": "na",
+        "note": "other-platform-only"
+      },
+      "macos": {
+        "status": "na",
+        "note": "other-platform-only"
+      },
+      "tvos": {
+        "status": "na",
+        "note": "other-platform-only"
+      }
+    },
+    {
+      "path": "tun.route-exclude-address",
+      "type": "[]netip.Prefix",
+      "category": "inbound",
+      "ios": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "macos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "tvos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      }
+    },
+    {
+      "path": "tun.route-exclude-address-set",
+      "type": "[]string",
+      "category": "inbound",
+      "ios": {
+        "status": "na",
+        "note": "other-platform-only"
+      },
+      "macos": {
+        "status": "na",
+        "note": "other-platform-only"
+      },
+      "tvos": {
+        "status": "na",
+        "note": "other-platform-only"
+      }
+    },
+    {
+      "path": "tun.sendmsgx",
+      "type": "bool",
+      "category": "inbound",
+      "ios": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "macos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "tvos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      }
+    },
+    {
+      "path": "tun.stack",
+      "type": "C.TUNStack",
+      "category": "inbound",
+      "ios": {
+        "status": "supported",
+        "note": "apple-network-extension"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "apple-network-extension"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "apple-network-extension"
+      }
+    },
+    {
+      "path": "tun.strict-route",
+      "type": "bool",
+      "category": "inbound",
+      "ios": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "macos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "tvos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      }
+    },
+    {
+      "path": "tun.udp-timeout",
+      "type": "int64",
+      "category": "inbound",
+      "ios": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "macos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      },
+      "tvos": {
+        "status": "limited",
+        "note": "apple-network-extension"
+      }
+    },
+    {
+      "path": "tunnels",
+      "type": "[]LC.Tunnel",
+      "category": "inbound",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      }
+    },
+    {
+      "path": "vmess-config",
+      "type": "string",
+      "category": "inbound",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      }
+    },
+    {
+      "path": "ntp.dialer-proxy",
+      "type": "string",
+      "category": "ntp",
+      "ios": {
+        "status": "limited",
+        "note": "clock-offset-only"
+      },
+      "macos": {
+        "status": "limited",
+        "note": "clock-offset-only"
+      },
+      "tvos": {
+        "status": "limited",
+        "note": "clock-offset-only"
+      }
+    },
+    {
+      "path": "ntp.enable",
+      "type": "bool",
+      "category": "ntp",
+      "ios": {
+        "status": "limited",
+        "note": "clock-offset-only"
+      },
+      "macos": {
+        "status": "limited",
+        "note": "clock-offset-only"
+      },
+      "tvos": {
+        "status": "limited",
+        "note": "clock-offset-only"
+      }
+    },
+    {
+      "path": "ntp.interval",
+      "type": "int",
+      "category": "ntp",
+      "ios": {
+        "status": "limited",
+        "note": "clock-offset-only"
+      },
+      "macos": {
+        "status": "limited",
+        "note": "clock-offset-only"
+      },
+      "tvos": {
+        "status": "limited",
+        "note": "clock-offset-only"
+      }
+    },
+    {
+      "path": "ntp.port",
+      "type": "int",
+      "category": "ntp",
+      "ios": {
+        "status": "limited",
+        "note": "clock-offset-only"
+      },
+      "macos": {
+        "status": "limited",
+        "note": "clock-offset-only"
+      },
+      "tvos": {
+        "status": "limited",
+        "note": "clock-offset-only"
+      }
+    },
+    {
+      "path": "ntp.server",
+      "type": "string",
+      "category": "ntp",
+      "ios": {
+        "status": "limited",
+        "note": "clock-offset-only"
+      },
+      "macos": {
+        "status": "limited",
+        "note": "clock-offset-only"
+      },
+      "tvos": {
+        "status": "limited",
+        "note": "clock-offset-only"
+      }
+    },
+    {
+      "path": "ntp.write-to-system",
+      "type": "bool",
+      "category": "ntp",
+      "ios": {
+        "status": "unsupported",
+        "note": "cannot-write-system-clock"
+      },
+      "macos": {
+        "status": "unsupported",
+        "note": "cannot-write-system-clock"
+      },
+      "tvos": {
+        "status": "unsupported",
+        "note": "cannot-write-system-clock"
+      }
+    },
+    {
+      "path": "profile.store-fake-ip",
+      "type": "bool",
+      "category": "profile",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "limited",
+        "note": "clearable-storage"
+      }
+    },
+    {
+      "path": "profile.store-selected",
+      "type": "bool",
+      "category": "profile",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "limited",
+        "note": "clearable-storage"
+      }
+    },
+    {
+      "path": "proxy-providers",
+      "type": "map[string]map[string]any",
+      "category": "providers",
+      "ios": {
+        "status": "limited",
+        "note": "client-managed-provider"
+      },
+      "macos": {
+        "status": "limited",
+        "note": "client-managed-provider"
+      },
+      "tvos": {
+        "status": "limited",
+        "note": "provider-clearable-cache"
+      }
+    },
+    {
+      "path": "rule-providers",
+      "type": "map[string]map[string]any",
+      "category": "providers",
+      "ios": {
+        "status": "limited",
+        "note": "client-managed-provider"
+      },
+      "macos": {
+        "status": "limited",
+        "note": "client-managed-provider"
+      },
+      "tvos": {
+        "status": "limited",
+        "note": "provider-clearable-cache"
+      }
+    },
+    {
+      "path": "proxies",
+      "type": "[]map[string]any",
+      "category": "proxies",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "proxy-groups",
+      "type": "[]map[string]any",
+      "category": "proxy-groups",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "rules",
+      "type": "[]string",
+      "category": "rules",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "sub-rules",
+      "type": "map[string][]string",
+      "category": "rules",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "tls.certificate",
+      "type": "string",
+      "category": "security",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      }
+    },
+    {
+      "path": "tls.client-auth-cert",
+      "type": "string",
+      "category": "security",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      }
+    },
+    {
+      "path": "tls.client-auth-type",
+      "type": "string",
+      "category": "security",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      }
+    },
+    {
+      "path": "tls.custom-certifactes",
+      "type": "[]string",
+      "category": "security",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      }
+    },
+    {
+      "path": "tls.ech-key",
+      "type": "string",
+      "category": "security",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      }
+    },
+    {
+      "path": "tls.private-key",
+      "type": "string",
+      "category": "security",
+      "ios": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "macos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      },
+      "tvos": {
+        "status": "advanced",
+        "note": "advanced-local-service"
+      }
+    },
+    {
+      "path": "sniffer.enable",
+      "type": "bool",
+      "category": "sniffer",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "sniffer.force-dns-mapping",
+      "type": "bool",
+      "category": "sniffer",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "sniffer.force-domain",
+      "type": "[]string",
+      "category": "sniffer",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "sniffer.override-destination",
+      "type": "bool",
+      "category": "sniffer",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "sniffer.parse-pure-ip",
+      "type": "bool",
+      "category": "sniffer",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "sniffer.port-whitelist",
+      "type": "[]string",
+      "category": "sniffer",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "sniffer.skip-domain",
+      "type": "[]string",
+      "category": "sniffer",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "sniffer.skip-dst-address",
+      "type": "[]string",
+      "category": "sniffer",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "sniffer.skip-src-address",
+      "type": "[]string",
+      "category": "sniffer",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "sniffer.sniff",
+      "type": "map[string]RawSniffingConfig",
+      "category": "sniffer",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    },
+    {
+      "path": "sniffer.sniffing",
+      "type": "[]string",
+      "category": "sniffer",
+      "ios": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "macos": {
+        "status": "supported",
+        "note": "core-supported"
+      },
+      "tvos": {
+        "status": "supported",
+        "note": "core-supported"
+      }
+    }
+  ]
+}

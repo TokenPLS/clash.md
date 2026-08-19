@@ -5,6 +5,7 @@
   "type": "module",
   "description": "The public documentation and legal-policy site for Clash.",
   "scripts": {
+    "docs:config-sync": "node scripts/generate-config-reference.mjs",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"

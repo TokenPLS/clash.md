@@ -72,7 +72,26 @@ button:focus-visible {
 }
 
 .VPNavBar {
-  border-bottom: 1px solid var(--vp-c-divider);
+  border-bottom: 0;
+}
+
+/* Draw one divider above VitePress's sidebar/content stacking contexts. */
+.VPNav::after {
+  position: absolute;
+  z-index: 100;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background: var(--vp-c-divider);
+  content: "";
+  pointer-events: none;
+}
+
+/* VitePress adds a second, content-offset divider on sidebar pages. It sits
+   over the full-width navbar border and makes the border look sidebar-only. */
+.VPNavBar > .divider {
+  display: none;
 }
 
 .VPNavBarTitle .logo {
@@ -1090,6 +1109,194 @@ a[href="https://testflight.apple.com/join/QJWrVrxT"]::before {
 
   .platform-preview-media {
     padding: 0 14px 18px;
+  }
+}
+
+/* Configuration reference */
+.clash-config-page .VPDoc .container {
+  max-width: 1580px;
+}
+
+.clash-config-page .VPDoc .content {
+  max-width: 1120px;
+}
+
+.clash-config-page .VPDoc.has-aside .content-container {
+  max-width: 960px;
+}
+
+.config-topic-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 24px 0 40px;
+}
+
+.config-topic-grid a {
+  padding: 20px 22px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 18px;
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-1);
+  text-decoration: none !important;
+  transition: border-color 160ms ease, transform 160ms ease;
+}
+
+.config-topic-grid a:hover {
+  border-color: var(--vp-c-brand-1);
+  transform: translateY(-2px);
+}
+
+.config-topic-grid strong,
+.config-topic-grid span {
+  display: block;
+}
+
+.config-topic-grid strong {
+  font-size: 18px;
+}
+
+.config-topic-grid span {
+  margin-top: 6px;
+  color: var(--vp-c-text-2);
+  font-size: 14px;
+}
+
+.config-matrix {
+  margin: 28px 0 42px;
+}
+
+.config-matrix__controls {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) minmax(150px, 0.42fr) minmax(170px, 0.48fr);
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 18px;
+  background: var(--vp-c-bg-soft);
+}
+
+.config-matrix__controls label,
+.config-matrix__controls label > span {
+  display: block;
+}
+
+.config-matrix__controls label > span {
+  margin: 0 0 7px 2px;
+  color: var(--vp-c-text-2);
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.config-matrix__controls input,
+.config-matrix__controls select {
+  box-sizing: border-box;
+  width: 100%;
+  height: 42px;
+  padding: 0 12px;
+  border: 1px solid var(--vp-c-border);
+  border-radius: 11px;
+  background: var(--vp-c-bg-elv);
+  color: var(--vp-c-text-1);
+  font: inherit;
+}
+
+.config-matrix__controls input:focus,
+.config-matrix__controls select:focus {
+  border-color: var(--vp-c-brand-1);
+  outline: 3px solid var(--vp-c-brand-soft);
+}
+
+.config-matrix__count {
+  margin: 10px 2px !important;
+  color: var(--vp-c-text-3);
+  font-size: 13px;
+}
+
+.config-matrix__table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 16px;
+}
+
+.config-matrix__table {
+  display: table !important;
+  width: 100%;
+  min-width: 940px;
+  margin: 0 !important;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.config-matrix__table th,
+.config-matrix__table td {
+  padding: 12px 13px;
+  border: 0;
+  border-bottom: 1px solid var(--vp-c-divider);
+  text-align: left;
+  vertical-align: top;
+}
+
+.config-matrix__table th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-2);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.config-matrix__table tr:last-child td {
+  border-bottom: 0;
+}
+
+.config-matrix__table td:first-child {
+  min-width: 210px;
+}
+
+.config-matrix__table td:last-child {
+  min-width: 270px;
+  color: var(--vp-c-text-2);
+  line-height: 1.55;
+}
+
+.config-status {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.config-status--supported { background: rgba(52, 199, 89, 0.14); color: #18833a; }
+.config-status--limited { background: var(--vp-c-brand-soft); color: var(--vp-c-brand-1); }
+.config-status--advanced { background: rgba(255, 149, 0, 0.16); color: #a85a00; }
+.config-status--unsupported { background: rgba(255, 59, 48, 0.14); color: #c62f27; }
+.config-status--na { background: var(--vp-c-bg-alt); color: var(--vp-c-text-3); }
+
+.dark .config-status--supported { color: #65d87c; }
+.dark .config-status--advanced { color: #ffb84d; }
+.dark .config-status--unsupported { color: #ff716a; }
+
+.config-matrix__empty {
+  margin: 0 !important;
+  padding: 32px;
+  color: var(--vp-c-text-2);
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .config-topic-grid,
+  .config-matrix__controls {
+    grid-template-columns: 1fr;
+  }
+
+  .config-topic-grid a {
+    padding: 17px 18px;
   }
 }
 
