@@ -12,13 +12,17 @@ description: 对比 Hako 配置在 iPhone、iPad、Mac 与 Apple TV 上的进程
 | --- | --- | --- | --- |
 | mihomo YAML 核心语义 | 支持 | 支持 | 支持 |
 | Packet Tunnel | 支持 | 支持 | 支持 |
+| `tun.stack` | gVisor / System / Mixed | gVisor / System / Mixed | gVisor / System / Mixed |
 | 进程名 / 路径 / UID 规则 | 不匹配 | 支持 | 不匹配 |
 | App signing / team ID 规则 | 不支持 | 不支持 | 不支持 |
 | 添加配置 | Profile 地址或本地 YAML | Profile 地址或本地 YAML | Profile 地址 |
 | 远程 Profile | 支持 | 支持 | 支持 |
-| HTTP Provider | 客户端管理 | 客户端管理 | 客户端管理，可重建缓存 |
-| 文件状态与缓存 | App 容器 | App 容器 | 可能被清理 |
+| HTTP Provider | Hako 管理 | Hako 管理 | Hako 管理 |
+| 策略选择与 Fake IP 状态 | 持久化 | 持久化 | 按需重建 |
 | Linux iptables / mark / TPROXY | 不适用 | 不适用 | 不适用 |
+
+三种协议栈的使用说明与 Mixed 限定见
+[入站、监听器与 TUN](/zh/guide/config/inbound#三平台-tun-协议栈)。
 
 ## 产品支持下限
 

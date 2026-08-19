@@ -13,13 +13,17 @@ does not make every operating-system capability identical.
 | --- | --- | --- | --- |
 | Core mihomo YAML semantics | Supported | Supported | Supported |
 | Packet Tunnel | Supported | Supported | Supported |
+| `tun.stack` | gVisor / System / Mixed | gVisor / System / Mixed | gVisor / System / Mixed |
 | Process name, path, and UID rules | No match | Supported | No match |
 | App signing or team-ID rules | Unsupported | Unsupported | Unsupported |
 | Add configuration | Profile URL or local YAML | Profile URL or local YAML | Profile URL |
 | Remote Profile | Supported | Supported | Supported |
-| HTTP providers | Client-managed | Client-managed | Client-managed, rebuildable cache |
-| File state and caches | App container | App container | May be cleared |
+| HTTP providers | Hako-managed | Hako-managed | Hako-managed |
+| Route selection and Fake IP state | Persistent | Persistent | Rebuilt as needed |
 | Linux iptables / mark / TPROXY | Not applicable | Not applicable | Not applicable |
+
+See [Inbound, listeners, and TUN](/guide/config/inbound#three-tun-stacks-on-apple-platforms)
+for usage notes and the Mixed qualification.
 
 ## Product deployment targets
 

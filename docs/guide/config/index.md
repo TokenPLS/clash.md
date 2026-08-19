@@ -32,7 +32,7 @@ and less likely to produce surprising behavior after an update.
   <a href="/guide/config/inbound"><strong>Inbound and TUN</strong><span>The real Network Extension boundary</span></a>
   <a href="/guide/config/proxies"><strong>Proxies and providers</strong><span>Outbounds, groups, and remote resources</span></a>
   <a href="/guide/config/rules"><strong>Rules and sniffer</strong><span>Routing, identity fields, and sniffing</span></a>
-  <a href="/guide/config/profile"><strong>State and advanced</strong><span>Profile, NTP, and experimental fields</span></a>
+  <a href="/guide/config/profile"><strong>State and advanced</strong><span>Runtime state, NTP, and experimental fields</span></a>
   <a href="/guide/config/apple-platforms"><strong>Apple platforms</strong><span>iOS, macOS, and tvOS differences</span></a>
   <a href="/guide/config/security"><strong>Security boundary</strong><span>Credentials, listeners, and control surfaces</span></a>
 </nav>
@@ -55,5 +55,5 @@ comes from Hako's current configuration pipeline and is informed by the pinned
 Upstream documentation defines mihomo semantics; Hako's adaptation and tests
 determine the Apple-platform status shown here.
 
-The table is a sanitized public snapshot. It excludes internal code paths,
-audit notes, and test-infrastructure details.
+The field reference is updated alongside stable Hako releases and Apple-platform
+adaptation.

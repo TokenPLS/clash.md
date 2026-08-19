@@ -49,6 +49,7 @@ const isAdvanced = (key) => /^(allow-lan|authentication|bind-address|port|socks-
 
 const noteFor = (key, category, status, platform) => {
   if (status === 'na') return 'other-platform-only'
+  if (key === 'tun.stack') return 'tun-stacks'
   if (key === 'interface-name' || key === 'routing-mark' || key.startsWith('iptables.')) return 'not-apple-routing'
   if (key === 'external-controller-unix' && platform === 'tvos') return 'no-unix-socket-tvos'
   if (category === 'providers') return platform === 'tvos' ? 'provider-clearable-cache' : 'client-managed-provider'
@@ -112,11 +113,11 @@ const snapshot = {
     scope: inventory.scope,
     schemaVersion: inventory.schemaVersion,
     fieldCount: inventory.fields.length,
-    note: 'Public, sanitized capability snapshot. Internal evidence and implementation notes are intentionally excluded.'
+    note: 'Generated from the current Hako configuration inventory.'
   },
   fields
 }
 
 await mkdir(path.dirname(target), { recursive: true })
 await writeFile(target, `${JSON.stringify(snapshot, null, 2)}\n`)
-console.log(`Wrote ${fields.length} sanitized fields to ${target}`)
+console.log(`Wrote ${fields.length} fields to ${target}`)

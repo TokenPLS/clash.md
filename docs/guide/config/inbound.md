@@ -18,6 +18,16 @@ not map literally to iOS, macOS, and tvOS.
 - macOS can expose process name, path, and UID routing metadata. iOS and tvOS
   cannot.
 
+## Three TUN stacks on Apple platforms
+
+On iOS, macOS, and tvOS, Hako supports the gVisor, System, and Mixed TUN stacks
+across startup, TCP/UDP/DNS traffic, routing, reconnection, cross-stack
+switching, and clean shutdown.
+
+Mixed runtime state is currently confirmed through configuration readback,
+switch state, and data-plane behavior; a dedicated runtime stack identifier
+will follow in a later Core delivery.
+
 ## Not a default product surface
 
 Local ports, `allow-lan`, custom listeners, tunnels, server configurations, and

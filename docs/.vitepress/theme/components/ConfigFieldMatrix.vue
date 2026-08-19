@@ -43,6 +43,7 @@ const notes: Record<Locale, Record<string, string>> = {
     'clock-offset-only': 'Used as protocol time offset; it does not change the Apple system clock.',
     'advanced-no-product-promise': 'Parsed by the core, but not a stable product-level promise.',
     'apple-network-extension': 'Apple Network Extension owns routes and interfaces; Hako may force or ignore desktop TUN fields.',
+    'tun-stacks': 'iOS, macOS, and tvOS support gVisor, System, and Mixed. A dedicated Mixed runtime stack identifier will follow in a later Core delivery.',
     'advanced-local-service': 'Can expose a listener or control surface. Use only with explicit access control and strong credentials.',
     'managed-geodata': 'Available through Hako-managed resources; manual paths and update behavior are platform-dependent.',
     'clearable-geodata': 'Uses Hako-managed, memory-conscious resources; tvOS caches may be cleared.'
@@ -61,6 +62,7 @@ const notes: Record<Locale, Record<string, string>> = {
     'clock-offset-only': '仅用于协议时间偏移，不会修改 Apple 设备的系统时间。',
     'advanced-no-product-promise': '内核可以解析，但不作为稳定的产品能力承诺。',
     'apple-network-extension': '路由和接口由 Apple Network Extension 管理；Hako 可能强制或忽略桌面 TUN 字段。',
+    'tun-stacks': 'iOS、macOS 与 tvOS 均支持 gVisor、System 与 Mixed。Mixed 的独立运行时栈标识将在后续内核交付中补齐。',
     'advanced-local-service': '可能开放监听或控制面；仅在明确控制访问并设置强凭据时使用。',
     'managed-geodata': '通过 Hako 管理的资源使用；手动路径和更新行为依平台而定。',
     'clearable-geodata': '使用 Hako 管理、针对内存优化的资源；tvOS 缓存可能被清理。'

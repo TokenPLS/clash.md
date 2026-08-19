@@ -1,13 +1,13 @@
 ---
-title: Profile 状态、NTP 与实验配置
-description: Hako 的 Profile 状态保存、NTP 与 experimental mihomo 配置在 iOS、macOS、tvOS 上的支持边界。
+title: 内核运行状态、NTP 与实验配置
+description: Hako 的策略选择、Fake IP 状态、NTP 与 experimental mihomo 配置在 iOS、macOS、tvOS 上的行为。
 ---
 
-# Profile 状态、NTP 与实验配置
+# 内核运行状态、NTP 与实验配置
 
-`profile.store-selected` 与 `profile.store-fake-ip` 用于保存选择和 Fake IP 状态。
-iOS 与 macOS 支持文件状态；tvOS 的文件数据应按“可能被系统清理并重新生成”
-设计。
+`profile.store-selected` 与 `profile.store-fake-ip` 保存策略选择和 Fake IP 映射，
+不用于保存 Clash 中的 Profile 本身。iOS 与 macOS 会保留这些运行状态；tvOS
+会在需要时重新生成。
 
 ## NTP
 

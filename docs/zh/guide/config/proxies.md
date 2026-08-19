@@ -5,8 +5,9 @@ description: Hako 的代理节点、策略组、Proxy Provider 与 Rule Provider
 
 # 代理、策略组与 Provider
 
-Hako 1.19.30 识别 23 类代理或网络出站，以及 `DIRECT`、`DNS`、`REJECT`、
-`REMATCH` 四类路由或控制出站。协议与验证范围见[支持的协议](/zh/guide/protocols)。
+Hako 1.19.30 支持 23 类代理或网络出站，以及 `DIRECT`、`DNS`、`REJECT`、
+`REMATCH` 四类路由或控制出站。完整清单与配置方式见
+[支持的协议](/zh/guide/protocols)。
 
 ## 策略组
 

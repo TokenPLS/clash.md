@@ -114,7 +114,8 @@ backups when needed.
 
 The Apple TV app is designed for the Siri Remote and across-the-room use.
 Connections, rules, DNS, and diagnostics remain visible on the television. It
-does not promise local YAML import or iCloud Drive backup.
+adds configurations through Profile URLs; local YAML import and iCloud Drive
+backup are not currently available.
 
 ## Profile compatibility
 

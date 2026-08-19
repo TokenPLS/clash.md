@@ -5,9 +5,10 @@ description: Hako proxy outbound, policy-group, Proxy Provider, and Rule Provide
 
 # Proxies, policy groups, and providers
 
-Hako 1.19.30 recognizes 23 proxy or network outbounds plus the `DIRECT`, `DNS`,
+Hako 1.19.30 supports 23 proxy or network outbounds plus the `DIRECT`, `DNS`,
 `REJECT`, and `REMATCH` routing or control outbounds. See the
-[protocol reference](/guide/protocols) for validation scope.
+[protocol reference](/guide/protocols) for the complete list and configuration
+paths.
 
 ## Policy groups
 

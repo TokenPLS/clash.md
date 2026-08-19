@@ -31,7 +31,7 @@ head:
   <a href="/zh/guide/config/inbound"><strong>入站与 TUN</strong><span>Network Extension 的真实边界</span></a>
   <a href="/zh/guide/config/proxies"><strong>代理与 Provider</strong><span>节点、策略组与远程资源</span></a>
   <a href="/zh/guide/config/rules"><strong>规则与嗅探</strong><span>路由、身份字段与 Sniffer</span></a>
-  <a href="/zh/guide/config/profile"><strong>状态与高级项</strong><span>Profile、NTP 与实验功能</span></a>
+  <a href="/zh/guide/config/profile"><strong>状态与高级项</strong><span>运行状态、NTP 与实验功能</span></a>
   <a href="/zh/guide/config/apple-platforms"><strong>三平台差异</strong><span>iOS、macOS 与 tvOS</span></a>
   <a href="/zh/guide/config/security"><strong>安全边界</strong><span>凭据、监听器与控制面</span></a>
 </nav>
@@ -53,4 +53,4 @@ head:
 [MetaCubeX 配置文档](https://github.com/MetaCubeX/Meta-Docs/tree/e848aefb77e0cddbf3f0dde1016ec4904924fcbd/docs/config)。
 上游文档用于理解 mihomo 语义；本页的平台状态以 Hako 的实际适配与验证为准。
 
-字段表是公开的脱敏快照，不包含内部代码路径、审计备注或测试基础设施信息。
+字段范围会随 Hako 稳定版本与 Apple 平台适配持续更新。

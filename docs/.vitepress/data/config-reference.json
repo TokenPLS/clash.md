@@ -18,7 +18,7 @@
     "scope": "ios",
     "schemaVersion": 1,
     "fieldCount": 185,
-    "note": "Public, sanitized capability snapshot. Internal evidence and implementation notes are intentionally excluded."
+    "note": "Generated from the current Hako configuration inventory."
   },
   "fields": [
     {
@@ -2560,15 +2560,15 @@
       "category": "inbound",
       "ios": {
         "status": "supported",
-        "note": "apple-network-extension"
+        "note": "tun-stacks"
       },
       "macos": {
         "status": "supported",
-        "note": "apple-network-extension"
+        "note": "tun-stacks"
       },
       "tvos": {
         "status": "supported",
-        "note": "apple-network-extension"
+        "note": "tun-stacks"
       }
     },
     {
