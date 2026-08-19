@@ -327,6 +327,46 @@ func drawScaled(_ image: NSImage, width: CGFloat, x: CGFloat, y: CGFloat) {
     )
 }
 
+func visiblePixelBounds(of image: NSImage) -> PixelRect? {
+    guard let bitmap = image.representations.compactMap({ $0 as? NSBitmapImageRep }).first,
+          bitmap.bitsPerSample == 8,
+          bitmap.samplesPerPixel == 4,
+          !bitmap.isPlanar,
+          let bytes = bitmap.bitmapData else { return nil }
+
+    let width = bitmap.pixelsWide
+    let height = bitmap.pixelsHigh
+    let rowBytes = bitmap.bytesPerRow
+    let alphaOffset = bitmap.bitmapFormat.contains(.alphaFirst) ? 0 : 3
+    var minX = width
+    var minY = height
+    var maxX = -1
+    var maxY = -1
+
+    for y in 0..<height {
+        for x in 0..<width where bytes[y * rowBytes + x * 4 + alphaOffset] > 3 {
+            minX = min(minX, x)
+            minY = min(minY, y)
+            maxX = max(maxX, x)
+            maxY = max(maxY, y)
+        }
+    }
+
+    guard maxX >= minX, maxY >= minY else { return nil }
+    return PixelRect(minX: minX, minY: minY, maxX: maxX, maxY: maxY)
+}
+
+func drawScaledGrounded(_ image: NSImage, width: CGFloat, x: CGFloat, groundY: CGFloat) {
+    let scale = width / image.size.width
+    let bottomPadding: CGFloat
+    if let visible = visiblePixelBounds(of: image) {
+        bottomPadding = CGFloat(image.size.height - CGFloat(visible.maxY + 1)) * scale
+    } else {
+        bottomPadding = 0
+    }
+    drawScaled(image, width: width, x: x, y: groundY - bottomPadding)
+}
+
 func composeLockup(mac: NSImage, ipad: NSImage, iphone: NSImage, television: NSImage) throws -> NSImage {
     let width = 2800
     let height = 1200
@@ -338,6 +378,157 @@ func composeLockup(mac: NSImage, ipad: NSImage, iphone: NSImage, television: NSI
         drawScaled(mac, width: 1720, x: 555, y: baseline)
         drawScaled(ipad, width: 630, x: 1850, y: baseline)
         drawScaled(iphone, width: 315, x: 2415, y: baseline)
+    }
+
+    let image = NSImage(size: NSSize(width: width, height: height))
+    image.addRepresentation(output)
+    return image
+}
+
+func drawRadialGlow(
+    in context: CGContext,
+    center: CGPoint,
+    radius: CGFloat,
+    verticalScale: CGFloat,
+    color: NSColor,
+    peakAlpha: CGFloat
+) {
+    guard let gradient = CGGradient(
+        colorsSpace: CGColorSpaceCreateDeviceRGB(),
+        colors: [
+            color.withAlphaComponent(peakAlpha).cgColor,
+            color.withAlphaComponent(peakAlpha * 0.36).cgColor,
+            color.withAlphaComponent(0).cgColor
+        ] as CFArray,
+        locations: [0, 0.48, 1]
+    ) else { return }
+
+    context.saveGState()
+    context.translateBy(x: center.x, y: center.y)
+    context.scaleBy(x: 1, y: verticalScale)
+    context.drawRadialGradient(
+        gradient,
+        startCenter: .zero,
+        startRadius: 0,
+        endCenter: .zero,
+        endRadius: radius,
+        options: [.drawsAfterEndLocation]
+    )
+    context.restoreGState()
+}
+
+func drawGroundLine(in context: CGContext, dark: Bool) {
+    let y: CGFloat = 140
+    let color = dark
+        ? NSColor(calibratedRed: 0.02, green: 0.43, blue: 1, alpha: 1)
+        : NSColor(calibratedRed: 0.30, green: 0.55, blue: 0.93, alpha: 1)
+
+    context.saveGState()
+    context.setShadow(
+        offset: .zero,
+        blur: dark ? 58 : 30,
+        color: color.withAlphaComponent(dark ? 0.68 : 0.22).cgColor
+    )
+    context.setStrokeColor(color.withAlphaComponent(dark ? 0.42 : 0.17).cgColor)
+    context.setLineWidth(dark ? 2.5 : 4)
+    context.move(to: CGPoint(x: 420, y: y))
+    context.addLine(to: CGPoint(x: 3040, y: y))
+    context.strokePath()
+    context.restoreGState()
+}
+
+func drawTrustedReferenceLeft(_ reference: NSImage) {
+    // Apple TV and Siri Remote keep the exact silhouette and placement from
+    // the approved composition. The first 480 source pixels contain the full
+    // hardware pair; the following 40 pixels are feathered into the rebuilt
+    // high-resolution background so no rectangular seam or old Mac edge is
+    // carried forward.
+    let scale: CGFloat = 2
+    let opaqueWidth: CGFloat = 480
+    let fadeWidth = 40
+    reference.draw(
+        in: NSRect(x: 0, y: 0, width: opaqueWidth * scale, height: 1300),
+        from: NSRect(x: 0, y: 0, width: opaqueWidth, height: 650),
+        operation: .sourceOver,
+        fraction: 1,
+        respectFlipped: true,
+        hints: [.interpolation: NSImageInterpolation.high]
+    )
+    for offset in 0..<fadeWidth {
+        let alpha = 1 - CGFloat(offset + 1) / CGFloat(fadeWidth)
+        reference.draw(
+            in: NSRect(
+                x: (opaqueWidth + CGFloat(offset)) * scale,
+                y: 0,
+                width: scale,
+                height: 1300
+            ),
+            from: NSRect(x: opaqueWidth + CGFloat(offset), y: 0, width: 1, height: 650),
+            operation: .sourceOver,
+            fraction: alpha,
+            respectFlipped: true,
+            hints: [.interpolation: NSImageInterpolation.high]
+        )
+    }
+}
+
+func composeHomepageHero(
+    mac: NSImage,
+    ipad: NSImage,
+    iphone: NSImage,
+    trustedReference: NSImage,
+    dark: Bool
+) throws -> NSImage {
+    // Exactly 2x the 1730x650 CSS canvas used on the homepage.
+    let width = 3460
+    let height = 1300
+    let output = try makeBitmap(width: width, height: height)
+    let groundY: CGFloat = 142
+
+    withBitmapContext(output) { context in
+        context.setFillColor((dark ? NSColor.black : NSColor.white).cgColor)
+        context.fill(CGRect(x: 0, y: 0, width: width, height: height))
+
+        if dark {
+            // The approved artwork has a broad, soft blue aura behind the
+            // devices and a brighter pool of light at the shared baseline.
+            drawRadialGlow(
+                in: context,
+                center: CGPoint(x: 1710, y: 570),
+                radius: 1350,
+                verticalScale: 0.46,
+                color: NSColor(calibratedRed: 0.01, green: 0.24, blue: 0.86, alpha: 1),
+                peakAlpha: 0.34
+            )
+            drawRadialGlow(
+                in: context,
+                center: CGPoint(x: 1760, y: 160),
+                radius: 1180,
+                verticalScale: 0.08,
+                color: NSColor(calibratedRed: 0.00, green: 0.38, blue: 1, alpha: 1),
+                peakAlpha: 0.50
+            )
+        } else {
+            drawRadialGlow(
+                in: context,
+                center: CGPoint(x: 1770, y: 145),
+                radius: 1260,
+                verticalScale: 0.13,
+                color: NSColor(calibratedWhite: 0.42, alpha: 1),
+                peakAlpha: 0.15
+            )
+        }
+
+        drawGroundLine(in: context, dark: dark)
+
+        // One shared baseline and one explicit depth order:
+        // approved Apple TV / Remote -> MacBook -> iPad -> iPhone.
+        // The three screen-bearing devices use complete official bezels and
+        // each mobile device physically sits in front of the larger one.
+        drawTrustedReferenceLeft(trustedReference)
+        drawScaledGrounded(mac, width: 1705, x: 898, groundY: groundY)
+        drawScaledGrounded(ipad, width: 620, x: 2195, groundY: groundY)
+        drawScaledGrounded(iphone, width: 320, x: 2745, groundY: groundY)
     }
 
     let image = NSImage(size: NSSize(width: width, height: height))
@@ -364,6 +555,8 @@ let macChinese = "\(screenshotRoot)/macOS/zh-Hans-2880x1800/01-home-connected-ru
 let ipadScreenshot = "\(screenshotRoot)/iPad/en-US-12.9-or-13-inch/01-home-profile-a-rule-932mbps.png"
 let iphoneScreenshot = "\(screenshotRoot)/iPhone/en-US-1284x2778/01-home-profile-a-rule-932mbps.png"
 let tvScreenshot = "\(screenshotRoot)/tvOS/en-US-3840x2160/01-connected-rule-mode.png"
+let trustedHeroDark = "\(outputRoot)/apple-product-lockup-dark.png"
+let trustedHeroLight = "\(outputRoot)/apple-product-lockup-light.png"
 
 do {
     try FileManager.default.createDirectory(atPath: outputRoot, withIntermediateDirectories: true)
@@ -380,6 +573,22 @@ do {
     try savePNG(macEN.image, to: "\(standaloneRoot)/device-mac-en.png")
     let english = try composeLockup(mac: macEN.image, ipad: ipad.image, iphone: iphone.image, television: television)
     try savePNG(english, to: "\(outputRoot)/apple-device-lockup-en.png")
+    let homepageLight = try composeHomepageHero(
+        mac: macEN.image,
+        ipad: ipad.image,
+        iphone: iphone.image,
+        trustedReference: NSImage(contentsOfFile: trustedHeroLight)!,
+        dark: false
+    )
+    try savePNG(homepageLight, to: "\(standaloneRoot)/apple-product-lockup-official-light.png")
+    let homepageDark = try composeHomepageHero(
+        mac: macEN.image,
+        ipad: ipad.image,
+        iphone: iphone.image,
+        trustedReference: NSImage(contentsOfFile: trustedHeroDark)!,
+        dark: true
+    )
+    try savePNG(homepageDark, to: "\(standaloneRoot)/apple-product-lockup-official-dark.png")
 
     let macZH = try renderDevice(bezelPath: macBezel, screenshotPath: macChinese)
     try savePNG(macZH.image, to: "\(standaloneRoot)/device-mac-zh.png")

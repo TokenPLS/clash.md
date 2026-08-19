@@ -74,8 +74,8 @@ pageClass: clash-home
     <p class="product-platform-line">iPhone <span>·</span> iPad <span>·</span> Mac <span>·</span> Apple TV</p>
   </div>
   <div class="product-hero-visual" role="img" aria-label="Clash running on Apple TV, Mac, iPad, and iPhone">
-    <img class="product-device-lockup product-device-lockup--light" src="/screenshots/hero/apple-product-lockup-light.webp" alt="" width="1730" height="650" fetchpriority="high" aria-hidden="true">
-    <img class="product-device-lockup product-device-lockup--dark" src="/screenshots/hero/apple-product-lockup-dark.webp" alt="" width="1731" height="650" fetchpriority="high" aria-hidden="true">
+    <img class="product-device-lockup product-device-lockup--light" src="/screenshots/hero/apple-product-lockup-official-light.webp" alt="" width="3460" height="1300" fetchpriority="high" aria-hidden="true">
+    <img class="product-device-lockup product-device-lockup--dark" src="/screenshots/hero/apple-product-lockup-official-dark.webp" alt="" width="3460" height="1300" fetchpriority="high" aria-hidden="true">
   </div>
 </section>
 
