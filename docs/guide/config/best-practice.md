@@ -193,8 +193,8 @@ current platform. The template therefore does not preconfigure mixed ports,
 `allow-lan`, an external controller, a TUN device name, strict process mode, or
 custom geodata download URLs.
 
-macOS can expose process name, path, and UID for process routing. iOS and tvOS
-do not pretend that identity metadata unavailable from the system exists.
+Use macOS when routing by process name, path, or UID. On iOS and tvOS, use
+domain, IP, port, or network-type rules instead.
 
 ## Check before saving
 

@@ -12,8 +12,9 @@ handled by the shared Hako core on all three platforms.
 
 ## Apple-platform notes
 
-- Only macOS Packet Tunnel exposes usable process name, path, and UID metadata.
-  iOS and tvOS do not pretend that missing process identity is available.
+- `find-process-mode` depends on process metadata supplied by the system.
+  macOS Packet Tunnel supports process name, path, and UID; use domain, IP,
+  port, and network-type rules on iOS and tvOS.
 - Geodata works through Hako-managed resources. iOS and tvOS prioritize memory
   use, and tvOS caches must be treated as rebuildable.
 - Upstream removed `global-client-fingerprint`; use per-outbound

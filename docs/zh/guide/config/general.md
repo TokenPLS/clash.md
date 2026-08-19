@@ -11,8 +11,8 @@ description: Hako 常规 mihomo YAML 字段参考，包括运行模式、日志�
 
 ## Apple 平台注意事项
 
-- `find-process-mode` 只有 macOS Packet Tunnel 能提供可用的进程名、路径与 UID；
-  iOS 与 tvOS 不会把不存在的进程身份伪装成支持。
+- `find-process-mode` 依赖系统提供的进程元数据。macOS Packet Tunnel 支持进程
+  名、路径与 UID；iOS 与 tvOS 请使用域名、IP、端口和网络类型规则。
 - geodata 可用，但资源由 Hako 管理。iOS / tvOS 会优先控制内存；tvOS 缓存应
   被视为可以重新生成。
 - `global-client-fingerprint` 已从当前上游移除。需要时在具体代理节点使用

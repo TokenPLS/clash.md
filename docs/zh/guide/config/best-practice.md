@@ -183,8 +183,8 @@ Hako 运行在 Apple Network Extension 中。虚拟接口、路由、DNS 劫持�
 `allow-lan`、`external-controller`、TUN 设备名、严格进程模式或自定义 geodata
 下载地址。
 
-需要按进程路由时，macOS 可以提供进程名、路径和 UID；iOS 与 tvOS 不会把
-系统没有提供的身份信息伪装成支持。
+需要按进程路由时使用 macOS；iOS 与 tvOS 请使用域名、IP、端口或网络类型
+规则。
 
 ## 保存前检查
 
