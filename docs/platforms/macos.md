@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Clash for Mac
-description: Clash for Mac keeps browsers, downloads, and development tools on the routes you choose, with menu bar controls and clear diagnostics when a connection goes wrong.
+description: Clash for Mac keeps browsers, downloads, and development tools on the right routes, with connection, mode, and speed controls in the menu bar.
 keywords:
   - Clash for Mac
   - Clash macOS
@@ -13,7 +13,7 @@ jsonLd:
   "@id": https://clash.md/platforms/macos#webpage
   url: https://clash.md/platforms/macos
   name: Clash for Mac
-  description: Clash for Mac keeps browsers, downloads, and development tools on the routes you choose, with menu bar controls and clear diagnostics when a connection goes wrong.
+  description: Clash for Mac keeps browsers, downloads, and development tools on the right routes, with connection, mode, and speed controls in the menu bar.
   inLanguage: en-US
   isPartOf:
     "@id": https://clash.md/#website
@@ -35,7 +35,7 @@ pageClass: clash-platform-page
 <section class="platform-detail-hero">
   <p class="product-eyebrow">Clash for Mac</p>
   <h1><span class="platform-detail-title-main">Keep working.</span><span class="platform-detail-title-sub">Stop fighting the network.</span></h1>
-  <p class="platform-detail-lede">A site will not load, a download slows down, or one app loses its connection. Clash handles your rules in the background, stays close in the menu bar, and shows the cause when you need it.</p>
+  <p class="platform-detail-lede">Clash handles connections by your rules in the background. Connection, mode, and speed stay close in the menu bar, with active connections, rules, and logs ready when you want a closer look.</p>
   <div class="product-actions">
     <a class="product-action product-action--primary" href="https://apps.apple.com/app/id6794257189" target="_blank" rel="noopener noreferrer">View on the App Store</a>
     <a class="product-action product-action--secondary" href="https://testflight.apple.com/join/QJWrVrxT" target="_blank" rel="noopener noreferrer">Join TestFlight</a>
@@ -51,11 +51,11 @@ pageClass: clash-platform-page
     <h2>A proxy should solve problems, not become one.</h2>
   </div>
   <div class="platform-feature-grid">
-    <article><span>01</span><h3>At hand in the menu bar</h3><p>Connect, disconnect, switch modes, and check speed without interrupting your work.</p></article>
+    <article><span>01</span><h3>At hand in the menu bar</h3><p>Connect, disconnect, switch modes, and see live speed without interrupting your work.</p></article>
     <article><span>02</span><h3>Different tools, different routes</h3><p>Route browsers, download tools, and development environments by process name, executable path, or UID.</p></article>
-    <article><span>03</span><h3>See the problem immediately</h3><p>Connections, requests, and matched rules stay together, so there is less guesswork and retrying.</p></article>
-    <article><span>04</span><h3>Make routine actions automatic</h3><p>Put connect, disconnect, and mode changes into Shortcuts that fit your workflow.</p></article>
-    <article><span>05</span><h3>Test without changing tools</h3><p>Check route speed, DNS, web access, and where a path stalls—all inside Clash.</p></article>
+    <article><span>03</span><h3>Every connection, in view</h3><p>Active connections, recent history, matched rules, and logs stay together—with less guesswork.</p></article>
+    <article><span>04</span><h3>Make routine actions effortless</h3><p>Use Shortcuts to start, stop, and change modes in a workflow that is yours.</p></article>
+    <article><span>05</span><h3>Your network, in one view</h3><p>Check node latency, DNS queries, network quality, and NAT status inside Clash.</p></article>
     <article><span>06</span><h3>Feels like a Mac app</h3><p>A native window, keyboard, pointer, and menu bar—not a mobile interface stretched onto the desktop.</p></article>
   </div>
 </section>
@@ -72,7 +72,7 @@ pageClass: clash-platform-page
 </section>
 
 <section class="platform-privacy-callout">
-  <p class="section-kicker">Security and privacy</p><h2>Your traffic never passes through our servers.</h2>
-  <p>No account, analytics, or automatic log and diagnostics upload. The native client is open source, and Hako publishes source and SDK releases anyone can inspect instead of relying on promises.</p>
+  <p class="section-kicker">Security and privacy</p><h2>Your profile. Your nodes. Your traffic.</h2>
+  <p>No account, analytics, or automatic log and diagnostics upload. Hako kernel source and SDK releases are public, keeping the network foundation open to inspection.</p>
   <a href="/guide/privacy-model">Read the privacy model →</a>
 </section>

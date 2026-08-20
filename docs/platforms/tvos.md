@@ -49,9 +49,9 @@ pageClass: clash-platform-page
   <div class="platform-detail-heading"><p class="section-kicker">Made for the living room</p><h2>Pick up the remote. That is all you need.</h2></div>
   <div class="platform-feature-grid">
     <article><span>01</span><h3>Apple TV connects for itself</h3><p>No router changes and no effect on other devices. Manage the screen in front of you.</p></article>
-    <article><span>02</span><h3>Keep direct traffic direct</h3><p>Streaming services, home services, and other connections each follow the route in your profile.</p></article>
-    <article><span>03</span><h3>Change routes from the sofa</h3><p>Browse nodes, compare latency, and make a choice with the Siri Remote.</p></article>
-    <article><span>04</span><h3>Typing is less painful</h3><p>Paste a profile address with the system keyboard that appears on a nearby iPhone.</p></article>
+    <article><span>02</span><h3>Your profile. Your rules.</h3><p>Connections handled by Clash follow the routes defined by your profile.</p></article>
+    <article><span>03</span><h3>Change routes from the sofa</h3><p>Browse policy groups and nodes, view latency history, and choose with the Siri Remote.</p></article>
+    <article><span>04</span><h3>Typing, made easier</h3><p>Enter or paste a profile address from a nearby iPhone or iPad.</p></article>
     <article><span>05</span><h3>Clear from across the room</h3><p>Status, profiles, and important actions are laid out for TV distance—not enlarged from mobile.</p></article>
     <article><span>06</span><h3>Switch profiles anytime</h3><p>Keep multiple profiles together and change services or situations without rebuilding your network.</p></article>
   </div>
@@ -70,6 +70,6 @@ pageClass: clash-platform-page
 
 <section class="platform-privacy-callout">
   <p class="section-kicker">Security and privacy</p><h2>Your viewing habits are not ours to see.</h2>
-  <p>Clash has no account, analytics, advertising, tracking, or automatic diagnostics upload. The native client is open source, and Hako publishes source and SDK releases anyone can inspect instead of relying on promises.</p>
+  <p>Clash has no account, analytics, advertising, tracking, or automatic diagnostics upload. Hako kernel source and SDK releases are public, keeping the network foundation open to inspection.</p>
   <a href="/guide/privacy-model">Read the privacy model →</a>
 </section>

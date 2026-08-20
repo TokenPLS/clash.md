@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Clash for iPhone and iPad
-description: From home to the road, Clash keeps connections under control on iPhone and iPad—with quick access, automatic network changes, and clear answers when something goes wrong.
+description: Clash for iPhone and iPad responds as networks change, with system shortcuts close at hand and profiles, routes, and connections easy to see.
 keywords:
   - Clash for iPhone
   - Clash for iPad
@@ -14,7 +14,7 @@ jsonLd:
   "@id": https://clash.md/platforms/ios#webpage
   url: https://clash.md/platforms/ios
   name: Clash for iPhone and iPad
-  description: From home to the road, Clash keeps connections under control on iPhone and iPad—with quick access, automatic network changes, and clear answers when something goes wrong.
+  description: Clash for iPhone and iPad responds as networks change, with system shortcuts close at hand and profiles, routes, and connections easy to see.
   inLanguage: en-US
   isPartOf:
     "@id": https://clash.md/#website
@@ -36,7 +36,7 @@ pageClass: clash-platform-page
 <section class="platform-detail-hero">
   <p class="product-eyebrow">Clash for iPhone + iPad</p>
   <h1><span class="platform-detail-title-main">Wi-Fi to cellular.</span><span class="platform-detail-title-sub">Without constant toggling.</span></h1>
-  <p class="platform-detail-lede">Start Clash from Control Center and let your own conditions handle network changes. When you need another route or want to check a connection, the answer is right in the app.</p>
+  <p class="platform-detail-lede">Start a connection from Control Center, Shortcuts, or Siri. Clash responds to Wi-Fi and cellular changes on your terms, while routes and connections stay clear in the app.</p>
   <div class="product-actions">
     <a class="product-action product-action--primary" href="https://apps.apple.com/app/id6794257189" target="_blank" rel="noopener noreferrer">View on the App Store</a>
     <a class="product-action product-action--secondary" href="https://testflight.apple.com/join/QJWrVrxT" target="_blank" rel="noopener noreferrer">Join TestFlight</a>
@@ -55,8 +55,8 @@ pageClass: clash-platform-page
   <div class="platform-feature-grid">
     <article>
       <span>01</span>
-      <h3>One swipe to connect</h3>
-      <p>Start Clash from Control Center, Shortcuts, or Siri without opening the app first.</p>
+      <h3>Connect your way</h3>
+      <p>Control Center, Shortcuts, and Siri are all ready when you are.</p>
     </article>
     <article>
       <span>02</span>
@@ -70,13 +70,13 @@ pageClass: clash-platform-page
     </article>
     <article>
       <span>04</span>
-      <h3>See what went wrong</h3>
-      <p>Find where a request went and why, without guessing or repeatedly switching nodes.</p>
+      <h3>Every connection, made clear</h3>
+      <p>See the destination, matched rule, and proxy chain together—the actual route at a glance.</p>
     </article>
     <article>
       <span>05</span>
-      <h3>Test and troubleshoot here</h3>
-      <p>Check node latency, DNS, web access, and routing without bouncing between utilities.</p>
+      <h3>Your network, in one view</h3>
+      <p>Check node latency, DNS queries, network quality, and NAT status inside Clash.</p>
     </article>
     <article>
       <span>06</span>
@@ -125,6 +125,6 @@ pageClass: clash-platform-page
 <section class="platform-privacy-callout">
   <p class="section-kicker">Security and privacy</p>
   <h2>Your configuration is not our business.</h2>
-  <p>No account, analytics, advertising, tracking, or automatic diagnostics upload. The native client is open source, and Hako publishes source and SDK releases anyone can inspect instead of relying on promises.</p>
+  <p>No account, analytics, advertising, tracking, or automatic diagnostics upload. Hako kernel source and SDK releases are public, keeping the network foundation open to inspection.</p>
   <a href="/guide/privacy-model">Read the privacy model →</a>
 </section>
