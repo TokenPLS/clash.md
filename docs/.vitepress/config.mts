@@ -351,6 +351,16 @@ export default defineConfig({
               text: 'Guide',
               items: [
                 { text: 'Getting started', link: '/guide/' },
+                { text: 'Everyday use', link: '/guide/everyday-use' },
+                {
+                  text: 'Device guides',
+                  collapsed: true,
+                  items: [
+                    { text: 'iPhone and iPad', link: '/guide/ios' },
+                    { text: 'Mac', link: '/guide/macos' },
+                    { text: 'Apple TV', link: '/guide/tvos' }
+                  ]
+                },
                 {
                   text: 'Configuration best practices',
                   link: '/guide/config/best-practice'
@@ -462,6 +472,16 @@ export default defineConfig({
               text: '使用指南',
               items: [
                 { text: '开始使用', link: '/zh/guide/' },
+                { text: '日常使用', link: '/zh/guide/everyday-use' },
+                {
+                  text: '按设备查看',
+                  collapsed: true,
+                  items: [
+                    { text: 'iPhone 与 iPad', link: '/zh/guide/ios' },
+                    { text: 'Mac', link: '/zh/guide/macos' },
+                    { text: 'Apple TV', link: '/zh/guide/tvos' }
+                  ]
+                },
                 {
                   text: '配置最佳实践',
                   link: '/zh/guide/config/best-practice'

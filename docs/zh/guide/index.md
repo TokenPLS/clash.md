@@ -1,26 +1,26 @@
 ---
 title: 开始使用
-description: 在 iPhone、iPad、Mac 或 Apple TV 上添加自己的 Clash 或 mihomo 配置，选择线路并开始连接。
+description: 在 iPhone、iPad、Mac 或 Apple TV 上添加自己的 Clash 或 mihomo 配置，选择线路并完成第一次连接。
 keywords:
   - Clash使用教程
-  - Clash iPhone导入配置
+  - Clash iPhone添加配置
   - mihomo YAML导入
   - Clash节点测速
   - Clash规则模式
 jsonLd:
   "@context": https://schema.org
   "@type": HowTo
-  name: 如何在 Apple 平台上使用 Clash
-  description: 添加自己的 Clash 或 mihomo 配置，选择线路并开始连接。
+  name: 如何在 Apple 平台上开始使用 Clash
+  description: 添加自己的 Clash 或 mihomo 配置，选择线路并完成第一次连接。
   inLanguage: zh-CN
   supply:
     - "@type": HowToSupply
-      name: 可用的 Clash 或 mihomo 配置，或配置地址
+      name: 可用的 Clash 或 mihomo 配置，或 Profile 地址
   step:
     - "@type": HowToStep
       position: 1
       name: 添加配置
-      text: 在 iPhone、iPad 或 Mac 上添加配置地址或导入 YAML；在 Apple TV 上输入配置地址。
+      text: 在 iPhone、iPad 或 Mac 上添加 Profile 地址或导入 YAML；在 Apple TV 上输入 Profile 地址。
       url: https://clash.md/zh/guide/#_1-添加配置
     - "@type": HowToStep
       position: 2
@@ -37,95 +37,60 @@ jsonLd:
 # 开始使用
 
 Clash 不附带服务器或线路。准备一份你自己选择并信任的 Clash / mihomo
-配置，之后只需要添加配置、选择线路并连接。
+配置，接下来只需要添加配置、选择线路并连接。
 
 ::: tip 配置可能包含凭据
-请把配置文件、配置地址与备份视为敏感信息。公开求助时，不要贴出真实地址、
-用户名、密码或未脱敏日志。
+请把配置文件、Profile 地址与备份视为敏感信息。公开求助时，不要贴出真实地址、
+用户名、密码、密钥或未脱敏日志。
 :::
 
-## 三步开始
+## 三步连接
 
 ### 1. 添加配置
 
-进入“配置（Profiles）”添加远程配置地址，或使用当前设备支持的文件、共享、
-二维码及剪贴板入口。Apple TV 使用配置地址，不从本地导入 YAML 文件。
+进入“配置（Profiles）”并选择“添加配置（Add Profile）”。iPhone、iPad 与 Mac
+可以使用 Profile 地址、配置文件、粘贴内容或空白配置；iPhone 与 iPad 还可以
+扫描二维码。Apple TV 使用 HTTP 或 HTTPS Profile 地址。
 
 ### 2. 选择线路
 
-进入“代理（Proxies）”或“节点（Nodes）”，打开需要的策略组，查看延迟并
-选择线路。自动选择类策略组会按照配置中的健康检查决定结果。
+进入“代理（Proxies）”或“节点（Nodes）”，找到负责这类流量的策略组，查看
+延迟并选择线路。自动选择类策略组会按照配置中的健康检查自行决定结果。
 
 ### 3. 连接
 
-回到首页连接。首次连接时，按照系统提示允许 Clash 添加 VPN 配置。规则模式
-会按照当前配置决定每条连接直连、使用代理或拒绝；也可临时切换到全局或直连。
+回到首页连接。首次连接时，按照系统提示允许 Clash 添加 VPN 配置。日常使用
+推荐“规则（Rule）”模式：每条连接按照当前配置决定直连、使用代理或拒绝。
 
 ::: info 需要一份配置起点？
-大多数人只需要[配置最佳实践与最小模板](/zh/guide/config/best-practice)。需要
-查询具体字段或三平台差异时，再看[完整 Hako 配置参考](/zh/guide/config/)。
+可以从[配置最佳实践与最小模板](/zh/guide/config/best-practice)开始。需要查询
+具体字段或平台差异时，再进入[完整配置参考](/zh/guide/config/)。
 :::
 
-## 按设备查看
+## 已经连接，接下来呢？
 
-<nav class="guide-platform-grid" aria-label="按设备查看开始步骤">
-  <a href="#iphone-与-ipad"><strong>iOS</strong><span>iPhone 与 iPad</span></a>
-  <a href="#macos"><strong>macOS</strong><span>窗口与菜单栏</span></a>
-  <a href="#tvos"><strong>tvOS</strong><span>Apple TV 与遥控器</span></a>
+<section class="guide-next-card" aria-labelledby="everyday-use-title-zh">
+  <span>日常使用</span>
+  <h3 id="everyday-use-title-zh">从会连接，到真正用顺手。</h3>
+  <p>管理配置、选择节点、切换出站模式、查看活动连接，并确认新的设置什么时候真正生效。</p>
+  <a href="/zh/guide/everyday-use">查看日常使用 →</a>
+</section>
+
+## 按设备继续
+
+<nav class="guide-platform-grid" aria-label="按设备查看使用方法">
+  <a href="/zh/guide/ios"><strong>iOS</strong><span>iPhone 与 iPad 完整指南</span></a>
+  <a href="/zh/guide/macos"><strong>macOS</strong><span>Mac 完整指南</span></a>
+  <a href="/zh/guide/tvos"><strong>tvOS</strong><span>Apple TV 完整指南</span></a>
 </nav>
 
-## iPhone 与 iPad
+## 继续了解
 
-1. 在“配置（Profiles）”中粘贴配置地址、扫描二维码、打开 YAML 文件、粘贴
-   YAML，或从其他 App 通过系统共享发送配置。
-2. 在“代理（Proxies）”中测试延迟并选择线路。
-3. 从首页连接；之后也可以通过控制中心、快捷指令或 Siri 操作。
-
-需要自动处理网络变化时，可以按 Wi-Fi 或蜂窝网络设置按需连接条件。配置可
-导出到本地文件；在支持 iCloud Drive 的设备上，也可以主动创建与恢复备份。
-
-## macOS
-
-1. 在“配置（Profiles）”中添加配置地址、打开 YAML 文件、从剪贴板导入，
-   或从空白配置开始。
-2. 在“代理（Proxies）”中刷新策略组、查看延迟并选择线路。
-3. 从首页或菜单栏连接；菜单栏也可切换模式、选择线路并查看实时速度。
-
-主窗口适合查看连接、规则、DNS 与诊断。需要长期使用时，可设置按需连接，
-并在本机或自己的 iCloud Drive 中创建配置备份。
-
-## tvOS
-
-1. 在欢迎页或“配置（Profiles）”中添加配置地址。可以使用 Apple TV 键盘，
-   也可以在系统键盘出现在附近 iPhone 上时用手机输入。
-2. 打开“节点（Nodes）”，浏览策略组并选择支持手动切换的成员。
-3. 回到首页选择规则、全局或直连模式，然后连接。
-
-Apple TV 版以遥控器操作和客厅距离为前提。连接、规则、DNS 与诊断可以直接
-在电视上查看。Apple TV 通过 Profile 地址添加配置，目前不提供本地 YAML
-导入或 iCloud Drive 备份。
-
-## 配置兼容性
-
-iPhone、iPad 与 Mac 可以直接读取 mihomo YAML，也可以添加返回 mihomo YAML
-的 HTTPS 配置地址。Apple TV 通过配置地址获取配置。
-
-来自其他客户端的配置是否能直接使用，取决于配置格式、协议及参数。请参阅
-[完整兼容性说明](/zh/guide/compatibility)。配置由用户自行提供；Clash 不提供
-服务器、线路或网络服务。
-
-## 支持的协议
-
-Clash 当前支持 23 类出站协议，包括 HTTP、SOCKS、Shadowsocks、VMess、
-VLESS、Trojan、Hysteria2、TUIC、WireGuard、MASQUE、TrustTunnel 与
-OpenVPN。完整范围、协议与控制出站的区别及配置方式请参阅
-[支持的协议](/zh/guide/protocols)。
-
-## 隐私与支持
-
-Clash 无需账户，配置与运行信息留在设备上；外部请求只服务于你配置或主动
-启动的功能。详细说明请参阅[隐私模型](/zh/guide/privacy-model)与
-[隐私政策](/zh/privacy)。
-
-非保密问题可以提交到
-[Clash 客户端 Issue](https://github.com/TokenPLS/Hako-Client/issues)。
+<nav class="config-topic-grid" aria-label="继续了解 Clash">
+  <a href="/zh/guide/everyday-use"><strong>日常使用</strong><span>配置、节点、模式与活动连接</span></a>
+  <a href="/zh/guide/config/best-practice"><strong>配置最佳实践</strong><span>从可信、最小的配置开始</span></a>
+  <a href="/zh/guide/config/"><strong>配置参考</strong><span>字段、平台差异与安全边界</span></a>
+  <a href="/zh/guide/compatibility"><strong>兼容性说明</strong><span>迁移已有配置与节点</span></a>
+  <a href="/zh/guide/protocols"><strong>支持的协议</strong><span>查看完整出站协议范围</span></a>
+  <a href="/zh/guide/privacy-model"><strong>隐私模型</strong><span>了解哪些数据留在设备上</span></a>
+</nav>

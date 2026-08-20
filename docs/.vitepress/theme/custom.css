@@ -1303,9 +1303,107 @@ a[href="https://testflight.apple.com/join/QJWrVrxT"]::before {
 @media (prefers-reduced-motion: reduce) {
   .product-action,
   .platform-preview a,
-  .guide-platform-grid a {
+  .guide-platform-grid a,
+  .everyday-task-grid a,
+  .guide-next-card a {
     transition: none;
   }
+}
+
+.guide-next-card {
+  position: relative;
+  margin: 24px 0 44px;
+  padding: 34px 36px;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--vp-c-brand-1) 24%, var(--vp-c-divider));
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 88% 12%, var(--vp-c-brand-soft), transparent 42%),
+    var(--vp-c-bg-soft);
+}
+
+.guide-next-card > span {
+  color: var(--vp-c-brand-1);
+  font-size: 13px;
+  font-weight: 760;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.guide-next-card h3 {
+  margin: 20px 0 0;
+  font-size: clamp(27px, 4vw, 38px);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.guide-next-card p {
+  max-width: 620px;
+  margin: 15px 0 0 !important;
+  color: var(--vp-c-text-2);
+  font-size: 16px;
+}
+
+.guide-next-card a {
+  display: inline-block;
+  margin-top: 22px;
+  color: var(--vp-c-brand-1);
+  font-weight: 700;
+  text-decoration: none !important;
+  transition: transform 160ms ease;
+}
+
+.guide-next-card a:hover {
+  transform: translateX(3px);
+}
+
+.clash-everyday-page .VPDoc .content {
+  max-width: 940px;
+}
+
+.clash-everyday-page .VPDoc h2 {
+  margin-top: 64px;
+}
+
+.everyday-task-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 28px 0 48px;
+}
+
+.everyday-task-grid a {
+  min-height: 106px;
+  padding: 20px 22px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 18px;
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-1);
+  text-decoration: none !important;
+  transition: border-color 160ms ease, background-color 160ms ease, transform 160ms ease;
+}
+
+.everyday-task-grid a:hover {
+  border-color: var(--vp-c-brand-1);
+  background: var(--vp-c-bg-alt);
+  transform: translateY(-2px);
+}
+
+.everyday-task-grid strong,
+.everyday-task-grid span {
+  display: block;
+}
+
+.everyday-task-grid strong {
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.everyday-task-grid span {
+  margin-top: 8px;
+  color: var(--vp-c-text-2);
+  font-size: 14px;
+  line-height: 1.45;
 }
 
 .guide-platform-grid {
@@ -1348,12 +1446,23 @@ a[href="https://testflight.apple.com/join/QJWrVrxT"]::before {
 }
 
 @media (max-width: 640px) {
+  .guide-next-card {
+    padding: 28px 24px;
+    border-radius: 20px;
+  }
+
+  .everyday-task-grid,
   .guide-platform-grid {
     grid-template-columns: 1fr;
   }
 
+  .everyday-task-grid a,
   .guide-platform-grid a {
     padding: 17px 18px;
+  }
+
+  .everyday-task-grid a {
+    min-height: 0;
   }
 }
 
