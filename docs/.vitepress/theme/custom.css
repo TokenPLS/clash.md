@@ -142,7 +142,10 @@ a[href="https://testflight.apple.com/join/QJWrVrxT"]::before {
 .community-link-list a[data-community="github"]::before,
 .VPMenu a[href="https://t.me/clashbyhako"]::before,
 .VPNavScreen a[href="https://t.me/clashbyhako"]::before,
-.community-link-list a[data-community="telegram"]::before {
+.community-link-list a[data-community="telegram"]::before,
+.VPMenu a[href="https://x.com/ClashbyHako"]::before,
+.VPNavScreen a[href="https://x.com/ClashbyHako"]::before,
+.community-link-list a[data-community="x"]::before {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -167,10 +170,18 @@ a[href="https://testflight.apple.com/join/QJWrVrxT"]::before {
   mask-image: url("/brand/telegram.svg");
 }
 
+.VPMenu a[href="https://x.com/ClashbyHako"]::before,
+.VPNavScreen a[href="https://x.com/ClashbyHako"]::before,
+.community-link-list a[data-community="x"]::before {
+  mask-image: url("/brand/x.svg");
+}
+
 .VPMenu a[href^="https://github.com/TokenPLS/"],
 .VPNavScreen a[href^="https://github.com/TokenPLS/"],
 .VPMenu a[href="https://t.me/clashbyhako"],
-.VPNavScreen a[href="https://t.me/clashbyhako"] {
+.VPNavScreen a[href="https://t.me/clashbyhako"],
+.VPMenu a[href="https://x.com/ClashbyHako"],
+.VPNavScreen a[href="https://x.com/ClashbyHako"] {
   display: flex;
   align-items: center;
   gap: 9px;

@@ -335,6 +335,10 @@ export default defineConfig({
                 link: 'https://t.me/clashbyhako'
               },
               {
+                text: 'X · @ClashbyHako',
+                link: 'https://x.com/ClashbyHako'
+              },
+              {
                 text: 'Clash client',
                 link: 'https://github.com/TokenPLS/Hako-Client'
               },
@@ -454,6 +458,10 @@ export default defineConfig({
               {
                 text: '官方频道',
                 link: 'https://t.me/clashbyhako'
+              },
+              {
+                text: 'X · @ClashbyHako',
+                link: 'https://x.com/ClashbyHako'
               },
               {
                 text: 'Clash 客户端',
