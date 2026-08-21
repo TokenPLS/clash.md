@@ -49,12 +49,6 @@ Those services receive the network information needed to perform the operation,
 such as your IP address. Data travels directly to the services you choose, with
 the developer outside that path.
 
-## Under your control
-
-You can disconnect, remove profiles, disable configured updates, delete local
-data, remove iCloud backups where supported, and decide whether to export any
-diagnostic information.
-
 ## Verifiable by design
 
 The [Clash client](https://github.com/TokenPLS/Hako-Client) and

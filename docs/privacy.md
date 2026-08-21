@@ -27,7 +27,7 @@ jsonLd:
 
 # Privacy Policy
 
-**Last updated: 18 August 2026**
+**Last updated: 21 August 2026**
 
 This policy explains how Clash handles information on iPhone, iPad, Mac, and
 Apple TV, with a separate section for visits to this website. Clash is an
@@ -68,12 +68,9 @@ recipients selected by us.
 - **App settings** are stored locally in the app container. Sensitive local
   proxy-sharing credentials are stored in the device Keychain.
 - **Connection and request activity** is bounded operational information shown
-  in the app. Live and recent connection data is capped, held locally, and is
-  not uploaded by Clash. Clash does not record the contents of your traffic.
-- **Logs and diagnostics** remain local. On platforms that support MetricKit,
-  Clash can receive privacy-filtered Apple diagnostics on the device, but it
-  has no automatic uploader. Data leaves the device only when you explicitly
-  use an export or share action, in which case you choose the destination.
+  in the app. Live and recent connection data is held locally and is not
+  uploaded by Clash. Clash does not record the contents of your traffic.
+- **Logs and diagnostics** remain local. Clash has no automatic uploader.
 
 ## User-directed network connections
 
@@ -116,8 +113,6 @@ profile or developer-held personal data to retain or delete.
   profiles, settings, and Keychain credentials. It does not delete iCloud
   backups.
 - Current iCloud backups can be deleted from Clash's **Backup & Restore** page.
-- You can stop user-directed processing by disconnecting, removing a profile,
-  disabling configured updates, or choosing not to run or export diagnostics.
 
 ## Website visits
 
