@@ -730,12 +730,13 @@ button:focus-visible {
 .product-action--testflight {
   min-height: 44px;
   padding-inline: 8px;
-  color: var(--vp-c-brand-1) !important;
+  color: var(--vp-c-text-2) !important;
   font-size: 14px;
   font-weight: 650;
 }
 
 .product-action--testflight:hover {
+  color: var(--vp-c-text-1) !important;
   text-decoration: underline !important;
   text-underline-offset: 4px;
 }
