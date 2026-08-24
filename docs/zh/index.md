@@ -69,8 +69,8 @@ pageClass: clash-home
     <h1><span class="product-hero-title-main"><span class="product-hero-title-brand">Clash</span><span class="product-hero-title-rest">，经典回归</span></span><span class="product-hero-title-sub">这次是 Apple 原生</span></h1>
     <p class="product-lede"><span class="product-lede-hook">还是原来的配置，还是熟悉的规则。</span><span class="product-lede-proof">基于 mihomo，原生客户端开源，Hako 发行版公开可查。</span></p>
     <div class="product-actions">
-      <a class="product-action product-action--primary" href="https://apps.apple.com/app/id6794257189" target="_blank" rel="noopener noreferrer">前往 App Store</a>
-      <a class="product-action product-action--secondary" href="https://testflight.apple.com/join/QJWrVrxT" target="_blank" rel="noopener noreferrer">加入 TestFlight</a>
+      <AppStoreBadge locale="zh" />
+      <a class="product-action product-action--testflight" href="https://testflight.apple.com/join/QJWrVrxT" target="_blank" rel="noopener noreferrer">加入 TestFlight 测试 →</a>
     </div>
     <p class="product-platform-line">iPhone <span>·</span> iPad <span>·</span> Mac <span>·</span> Apple TV</p>
   </div>

@@ -37,8 +37,8 @@ pageClass: clash-platform-page
   <h1><span class="platform-detail-title-main">Keep working.</span><span class="platform-detail-title-sub">Stop fighting the network.</span></h1>
   <p class="platform-detail-lede">Clash handles connections by your rules in the background. Connection, mode, and speed stay close in the menu bar, with active connections, rules, and logs ready when you want a closer look.</p>
   <div class="product-actions">
-    <a class="product-action product-action--primary" href="https://apps.apple.com/app/id6794257189" target="_blank" rel="noopener noreferrer">View on the App Store</a>
-    <a class="product-action product-action--secondary" href="https://testflight.apple.com/join/QJWrVrxT" target="_blank" rel="noopener noreferrer">Join TestFlight</a>
+    <AppStoreBadge platform="mac-app-store" destination="mac" />
+    <a class="product-action product-action--testflight" href="https://testflight.apple.com/join/QJWrVrxT" target="_blank" rel="noopener noreferrer">Join the TestFlight beta →</a>
   </div>
   <div class="platform-detail-stage platform-detail-stage--mac">
     <img src="/screenshots/platforms/macos/device-mac-en.webp" alt="Clash for Mac in the official MacBook Pro device bezel" width="2400" height="1600" fetchpriority="high">

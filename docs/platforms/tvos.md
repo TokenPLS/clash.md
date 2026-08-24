@@ -37,8 +37,8 @@ pageClass: clash-platform-page
   <h1><span class="platform-detail-title-main">What you want to watch</span><span class="platform-detail-title-sub">should just play.</span></h1>
   <p class="platform-detail-lede">Put your own profile on Apple TV, choose a route, and start watching. Leave the router alone and do not make every device in the house follow along—manage the screen in front of you.</p>
   <div class="product-actions">
-    <a class="product-action product-action--primary" href="https://apps.apple.com/app/id6794257189" target="_blank" rel="noopener noreferrer">View on the App Store</a>
-    <a class="product-action product-action--secondary" href="https://testflight.apple.com/join/QJWrVrxT" target="_blank" rel="noopener noreferrer">Join TestFlight</a>
+    <AppStoreBadge platform="apple-tv" destination="tv" />
+    <a class="product-action product-action--testflight" href="https://testflight.apple.com/join/QJWrVrxT" target="_blank" rel="noopener noreferrer">Join the TestFlight beta →</a>
   </div>
   <div class="platform-detail-stage platform-detail-stage--tv">
     <img src="/screenshots/platforms/tvos/device-apple-tv.webp" alt="Clash for Apple TV with the official display, Apple TV, and Siri Remote bezels" width="2400" height="1552" fetchpriority="high">

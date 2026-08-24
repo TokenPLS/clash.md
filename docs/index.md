@@ -69,8 +69,8 @@ pageClass: clash-home
     <h1><span class="product-hero-title-main"><span class="product-hero-title-brand">Clash</span><span class="product-hero-title-rest"> is back.</span></span><span class="product-hero-title-sub">This time, it’s native.</span></h1>
     <p class="product-lede"><span class="product-lede-hook">Same profiles. Same rules. Clash, the way you remember it.</span><span class="product-lede-proof">Built on mihomo, with the native client open source and Hako releases open to inspection.</span></p>
     <div class="product-actions">
-      <a class="product-action product-action--primary" href="https://apps.apple.com/app/id6794257189" target="_blank" rel="noopener noreferrer">View on the App Store</a>
-      <a class="product-action product-action--secondary" href="https://testflight.apple.com/join/QJWrVrxT" target="_blank" rel="noopener noreferrer">Join TestFlight</a>
+      <AppStoreBadge />
+      <a class="product-action product-action--testflight" href="https://testflight.apple.com/join/QJWrVrxT" target="_blank" rel="noopener noreferrer">Join the TestFlight beta →</a>
     </div>
     <p class="product-platform-line">iPhone <span>·</span> iPad <span>·</span> Mac <span>·</span> Apple TV</p>
   </div>

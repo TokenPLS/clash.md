@@ -38,8 +38,8 @@ pageClass: clash-platform-page
   <h1><span class="platform-detail-title-main">Wi-Fi to cellular.</span><span class="platform-detail-title-sub">Without constant toggling.</span></h1>
   <p class="platform-detail-lede">Start a connection from Control Center, Shortcuts, or Siri. Clash responds to Wi-Fi and cellular changes on your terms, while routes and connections stay clear in the app.</p>
   <div class="product-actions">
-    <a class="product-action product-action--primary" href="https://apps.apple.com/app/id6794257189" target="_blank" rel="noopener noreferrer">View on the App Store</a>
-    <a class="product-action product-action--secondary" href="https://testflight.apple.com/join/QJWrVrxT" target="_blank" rel="noopener noreferrer">Join TestFlight</a>
+    <AppStoreBadge destination="iphone" />
+    <a class="product-action product-action--testflight" href="https://testflight.apple.com/join/QJWrVrxT" target="_blank" rel="noopener noreferrer">Join the TestFlight beta →</a>
   </div>
   <div class="platform-detail-stage platform-detail-stage--ios">
     <img class="platform-detail-ipad" src="/screenshots/platforms/ios/device-ipad.webp" alt="Clash for iPad in the official device bezel" width="1200" height="1566" fetchpriority="high">

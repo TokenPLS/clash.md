@@ -97,10 +97,10 @@ Clash [客户端源码](https://github.com/TokenPLS/Hako-Client)与
 
 ## 第三方名称
 
-Apple、iPhone、iPad、Mac、macOS、Apple TV、tvOS 与 iCloud 是 Apple Inc.
-的商标。mihomo 及兼容性文档中提及的第三方客户端或服务名称属于各自权利人。
-这些名称仅用于说明平台、配置或协议兼容性；除非另有明确说明，不代表赞助、
-关联或背书。
+Apple、Apple 标志、iPhone、iPad、Mac、macOS、Apple TV、tvOS 与 iCloud 是
+Apple Inc. 的商标。mihomo 及兼容性文档中提及的第三方客户端或服务名称属于
+各自权利人。这些名称仅用于说明平台、配置或协议兼容性；除非另有明确说明，
+不代表赞助、关联或背书。
 
 ## 条款变更
 

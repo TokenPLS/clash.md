@@ -114,29 +114,6 @@ button:focus-visible {
   line-height: 1.72;
 }
 
-a[href="https://apps.apple.com/app/id6794257189"]::before,
-a[href="https://testflight.apple.com/join/QJWrVrxT"]::before {
-  display: inline-block;
-  width: 19px;
-  height: 19px;
-  margin-right: 7px;
-  background: url("/brand/app-store.svg") center / contain no-repeat;
-  content: "";
-  vertical-align: -4px;
-}
-
-.VPNavBarMenuLink[href="https://apps.apple.com/app/id6794257189"] {
-  display: inline-flex;
-  align-items: center;
-}
-
-.VPNavBarMenuLink[href="https://apps.apple.com/app/id6794257189"]::before {
-  width: 18px;
-  height: 18px;
-  margin-right: 6px;
-  vertical-align: 0;
-}
-
 .VPMenu a[href^="https://github.com/TokenPLS/"]::before,
 .VPNavScreen a[href^="https://github.com/TokenPLS/"]::before,
 .community-link-list a[data-community="github"]::before,
@@ -700,6 +677,36 @@ a[href="https://testflight.apple.com/join/QJWrVrxT"]::before {
   transform: translateY(-1px);
 }
 
+.app-store-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  line-height: 0;
+  text-decoration: none !important;
+  transition: transform 160ms ease;
+}
+
+.app-store-badge:hover {
+  transform: translateY(-1px);
+}
+
+.app-store-badge__image {
+  display: block;
+  width: auto;
+  height: 48px;
+  margin: 0 !important;
+}
+
+.app-store-badge__image--white,
+.dark .app-store-badge__image--black {
+  display: none;
+}
+
+.dark .app-store-badge__image--white {
+  display: block;
+}
+
 .product-action--primary {
   background: var(--vp-c-brand-1);
   color: #ffffff !important;
@@ -718,6 +725,19 @@ a[href="https://testflight.apple.com/join/QJWrVrxT"]::before {
 .product-action--secondary:hover {
   border-color: var(--vp-c-brand-1);
   color: var(--vp-c-brand-1) !important;
+}
+
+.product-action--testflight {
+  min-height: 44px;
+  padding-inline: 8px;
+  color: var(--vp-c-brand-1) !important;
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.product-action--testflight:hover {
+  text-decoration: underline !important;
+  text-underline-offset: 4px;
 }
 
 .product-action::before {
@@ -1037,6 +1057,15 @@ a[href="https://testflight.apple.com/join/QJWrVrxT"]::before {
     width: 100%;
   }
 
+  .app-store-badge {
+    justify-self: center;
+  }
+
+  .product-action--testflight {
+    width: auto;
+    justify-self: center;
+  }
+
   .product-platform-line {
     line-height: 1.8 !important;
   }
@@ -1312,6 +1341,7 @@ a[href="https://testflight.apple.com/join/QJWrVrxT"]::before {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .app-store-badge,
   .product-action,
   .platform-preview a,
   .guide-platform-grid a,

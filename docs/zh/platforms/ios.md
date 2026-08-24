@@ -36,7 +36,7 @@ pageClass: clash-platform-page
   <p class="product-eyebrow">Clash iPhone + iPad 版</p>
   <h1><span class="platform-detail-title-main">出门、回家、换网络。</span><span class="platform-detail-title-sub">不用反复开关。</span></h1>
   <p class="platform-detail-lede">从控制中心、快捷指令或 Siri 发起连接。Wi-Fi 与移动网络变化时，Clash 按你的设定自动响应；想换线路、看连接，打开 App 一目了然。</p>
-  <div class="product-actions"><a class="product-action product-action--primary" href="https://apps.apple.com/app/id6794257189" target="_blank" rel="noopener noreferrer">前往 App Store</a><a class="product-action product-action--secondary" href="https://testflight.apple.com/join/QJWrVrxT" target="_blank" rel="noopener noreferrer">加入 TestFlight</a></div>
+  <div class="product-actions"><AppStoreBadge locale="zh" destination="iphone" /><a class="product-action product-action--testflight" href="https://testflight.apple.com/join/QJWrVrxT" target="_blank" rel="noopener noreferrer">加入 TestFlight 测试 →</a></div>
   <div class="platform-detail-stage platform-detail-stage--ios"><img class="platform-detail-ipad" src="/screenshots/platforms/ios/device-ipad.webp" alt="官方设备框中的 Clash iPad 版" width="1200" height="1566" fetchpriority="high"><img class="platform-detail-iphone" src="/screenshots/platforms/ios/device-iphone.webp" alt="官方设备框中的 Clash iPhone 版" width="700" height="1432" fetchpriority="high"></div>
 </section>
 

@@ -108,11 +108,12 @@ these Terms overrides or limits rights granted by an open-source license.
 
 ## Third-party names
 
-Apple, iPhone, iPad, Mac, macOS, Apple TV, tvOS, and iCloud are trademarks of
-Apple Inc. mihomo and the names of third-party clients or services mentioned in
-compatibility documentation belong to their respective owners. Those names
-identify platforms, configuration formats, or protocol compatibility and do
-not imply sponsorship, affiliation, or endorsement unless expressly stated.
+Apple, the Apple logo, iPhone, iPad, Mac, macOS, Apple TV, tvOS, and iCloud are
+trademarks of Apple Inc. mihomo and the names of third-party clients or services
+mentioned in compatibility documentation belong to their respective owners.
+Those names identify platforms, configuration formats, or protocol
+compatibility and do not imply sponsorship, affiliation, or endorsement unless
+expressly stated.
 
 ## Changes to these Terms
 
