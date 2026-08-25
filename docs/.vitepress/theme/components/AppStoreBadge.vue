@@ -36,36 +36,48 @@ const badgeWidths = {
 } as const
 const accessibleLabel = accessibleLabels[badgeLanguage][props.platform]
 const badgeWidth = badgeWidths[badgeLanguage][props.platform]
+const availabilityNotice =
+  props.locale === 'zh'
+    ? '如 Apple ID 地区为中国大陆或俄罗斯，请切换至其他 App Store 地区后安装。'
+    : 'If your Apple ID region is mainland China or Russia, switch to another App Store region to install.'
 
 const badgeUrl = (style: 'black' | 'white') =>
   `/brand/${props.platform}-badge-${style}-${badgeLanguage}.svg`
 </script>
 
 <template>
-  <a
-    class="app-store-badge"
-    :href="appStoreUrl"
-    :aria-label="accessibleLabel"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <img
-      class="app-store-badge__image app-store-badge__image--black"
-      :src="badgeUrl('black')"
-      alt=""
-      :width="badgeWidth"
-      height="40"
-      decoding="async"
-      aria-hidden="true"
+  <div class="app-store-download">
+    <a
+      class="app-store-badge"
+      :href="appStoreUrl"
+      :aria-label="accessibleLabel"
+      target="_blank"
+      rel="noopener noreferrer"
     >
-    <img
-      class="app-store-badge__image app-store-badge__image--white"
-      :src="badgeUrl('white')"
-      alt=""
-      :width="badgeWidth"
-      height="40"
-      decoding="async"
-      aria-hidden="true"
-    >
-  </a>
+      <img
+        class="app-store-badge__image app-store-badge__image--black"
+        :src="badgeUrl('black')"
+        alt=""
+        :width="badgeWidth"
+        height="40"
+        decoding="async"
+        aria-hidden="true"
+      >
+      <img
+        class="app-store-badge__image app-store-badge__image--white"
+        :src="badgeUrl('white')"
+        alt=""
+        :width="badgeWidth"
+        height="40"
+        decoding="async"
+        aria-hidden="true"
+      >
+    </a>
+    <div class="app-store-availability-row">
+      <p class="app-store-availability" role="note">
+        <span class="app-store-availability__icon" aria-hidden="true">!</span>
+        <span>{{ availabilityNotice }}</span>
+      </p>
+    </div>
+  </div>
 </template>

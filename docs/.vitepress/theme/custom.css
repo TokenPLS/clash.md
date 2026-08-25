@@ -650,6 +650,7 @@ button:focus-visible {
 
 .product-actions {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   gap: 11px;
   justify-content: center;
@@ -690,6 +691,61 @@ button:focus-visible {
 
 .app-store-badge:hover {
   transform: translateY(-1px);
+}
+
+.app-store-download {
+  display: contents;
+}
+
+.app-store-availability-row {
+  display: flex;
+  flex: 0 0 100%;
+  grid-column: 1;
+  justify-content: center;
+  order: 1;
+}
+
+.app-store-availability {
+  display: inline-flex;
+  box-sizing: border-box;
+  align-items: flex-start;
+  gap: 7px;
+  max-width: min(100%, 660px);
+  margin: 0 !important;
+  padding: 6px 11px;
+  border: 1px solid #fed7aa;
+  border-radius: 10px;
+  background: #fff7ed;
+  color: #9a3412;
+  font-size: 12px;
+  font-weight: 620;
+  line-height: 1.45;
+  text-align: left;
+}
+
+.app-store-availability__icon {
+  display: inline-grid;
+  flex: 0 0 16px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #c2410c;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1;
+  place-items: center;
+}
+
+.dark .app-store-availability {
+  border-color: rgb(251 146 60 / 36%);
+  background: rgb(154 52 18 / 20%);
+  color: #fdba74;
+}
+
+.dark .app-store-availability__icon {
+  background: #fb923c;
+  color: #431407;
 }
 
 .app-store-badge__image {
