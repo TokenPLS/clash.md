@@ -713,10 +713,10 @@ button:focus-visible {
   max-width: min(100%, 660px);
   margin: 0 !important;
   padding: 6px 11px;
-  border: 1px solid #fed7aa;
+  border: 1px solid var(--vp-c-divider);
   border-radius: 10px;
-  background: #fff7ed;
-  color: #9a3412;
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-2);
   font-size: 12px;
   font-weight: 620;
   line-height: 1.45;
@@ -725,27 +725,18 @@ button:focus-visible {
 
 .app-store-availability__icon {
   display: inline-grid;
+  box-sizing: border-box;
   flex: 0 0 16px;
   width: 16px;
   height: 16px;
+  border: 1px solid var(--vp-c-text-3);
   border-radius: 50%;
-  background: #c2410c;
-  color: #ffffff;
+  background: transparent;
+  color: var(--vp-c-text-2);
   font-size: 11px;
   font-weight: 800;
   line-height: 1;
   place-items: center;
-}
-
-.dark .app-store-availability {
-  border-color: rgb(251 146 60 / 36%);
-  background: rgb(154 52 18 / 20%);
-  color: #fdba74;
-}
-
-.dark .app-store-availability__icon {
-  background: #fb923c;
-  color: #431407;
 }
 
 .app-store-badge__image {

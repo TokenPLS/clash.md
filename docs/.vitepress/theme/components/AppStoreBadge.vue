@@ -75,7 +75,7 @@ const badgeUrl = (style: 'black' | 'white') =>
     </a>
     <div class="app-store-availability-row">
       <p class="app-store-availability" role="note">
-        <span class="app-store-availability__icon" aria-hidden="true">!</span>
+        <span class="app-store-availability__icon" aria-hidden="true">i</span>
         <span>{{ availabilityNotice }}</span>
       </p>
     </div>
