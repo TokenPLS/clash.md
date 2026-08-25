@@ -708,7 +708,7 @@ button:focus-visible {
 .app-store-availability {
   display: inline-flex;
   box-sizing: border-box;
-  align-items: flex-start;
+  align-items: center;
   gap: 7px;
   max-width: min(100%, 660px);
   margin: 0 !important;
