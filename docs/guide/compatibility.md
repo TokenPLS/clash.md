@@ -52,6 +52,40 @@ the corresponding features.
 
 See the [complete protocol list](/guide/protocols).
 
+## How remote requests identify Clash
+
+When the Clash client retrieves a remote Profile or an HTTP Proxy Provider or
+Rule Provider, it sends this `User-Agent` by default:
+
+```http
+User-Agent: clash.meta/<core> Hako/v<app>.<build> Darwin/<release> <model>
+```
+
+- `<core>` is the bundled Hako / mihomo core version.
+- `<app>` and `<build>` are the Clash app version and internal build number.
+- `<release>` is the Darwin kernel release, not a product version such as
+  “macOS 26” or “iOS 26.”
+- `<model>` is the Apple hardware model identifier, not the device name chosen
+  by its user.
+
+The current clients produce values in this form:
+
+```text
+macOS  clash.meta/1.19.30 Hako/v1.0.2.33 Darwin/25.6.0 Mac16,5
+iOS    clash.meta/1.19.30 Hako/v1.0.1.1 Darwin/25.6.0 iPhone18,2
+tvOS   clash.meta/1.19.30 Hako/v1.0.3.1 Darwin/25.6.0 AppleTV6,2
+```
+
+The Profile or Provider server receiving the request can see these version and
+device details. The header does not contain an account, a user-assigned device
+name, or an advertising identifier, but it does expose the exact app build,
+Darwin release, and hardware model.
+
+A custom or compatibility User-Agent selected for the Profile replaces the
+default form. When a Provider explicitly configures a `User-Agent` request
+header, the Provider value takes precedence. The value seen in server logs can
+therefore differ from the default above.
+
 ## Frequently asked questions
 
 ### Can I reuse my Shadowrocket remote profile?

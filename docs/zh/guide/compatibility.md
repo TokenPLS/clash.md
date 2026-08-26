@@ -51,6 +51,36 @@ Clash 规则与对应功能重新建立。
 
 完整范围请参阅[支持的协议](/zh/guide/protocols)。
 
+## 远程请求如何标识 Clash
+
+Clash 客户端获取远程 Profile，以及 HTTP Proxy Provider 或 Rule Provider 时，
+默认发送以下 `User-Agent`：
+
+```http
+User-Agent: clash.meta/<core> Hako/v<app>.<build> Darwin/<release> <model>
+```
+
+- `<core>` 是客户端内置的 Hako / mihomo 内核版本。
+- `<app>` 与 `<build>` 分别是 Clash App 版本和内部构建号。
+- `<release>` 是 Darwin 内核版本，不是“macOS 26”或“iOS 26”这样的产品版本。
+- `<model>` 是 Apple 硬件型号标识，不是用户设置的设备名称。
+
+当前三个客户端发出的格式示例如下：
+
+```text
+macOS  clash.meta/1.19.30 Hako/v1.0.2.33 Darwin/25.6.0 Mac16,5
+iOS    clash.meta/1.19.30 Hako/v1.0.1.1 Darwin/25.6.0 iPhone18,2
+tvOS   clash.meta/1.19.30 Hako/v1.0.3.1 Darwin/25.6.0 AppleTV6,2
+```
+
+接收请求的配置或 Provider 服务器可以看到上述版本与设备信息。该请求头不包含
+账户、用户设置的设备名称或广告标识符，但会公开具体 App 构建、Darwin 版本与
+硬件型号。
+
+如果所选 Profile 使用自定义或兼容 User-Agent，该值会替代默认格式；Provider
+配置显式指定 `User-Agent` 请求头时，Provider 自己的值优先。因此服务器日志中
+看到的实际值可能不同。
+
 ## 常见问答
 
 ### Shadowrocket 小火箭的远程配置可以继续使用吗？
