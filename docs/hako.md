@@ -59,7 +59,7 @@ pageClass: hako-product-page
     <h1><span>Speed, measured.</span><span>Trust, open source.</span></h1>
     <p class="hako-hero-lede">Hako is the proxy core that powers Clash. Built on proven mihomo and retuned for Apple NetworkExtension constraints, it handles traffic on your device—with performance measured on real hardware and publicly released source and artifacts anyone can inspect.</p>
     <div class="product-actions">
-      <a class="product-action product-action--primary" href="https://github.com/TokenPLS/Hako/releases/tag/v1.19.29-hako.3" target="_blank" rel="noopener noreferrer">Download latest open-source SDK</a>
+      <a class="product-action product-action--primary" href="https://github.com/TokenPLS/Hako/releases/tag/v1.19.30-hako.1" target="_blank" rel="noopener noreferrer">Download latest open-source SDK</a>
       <a class="product-action product-action--secondary" href="https://github.com/TokenPLS/Hako" target="_blank" rel="noopener noreferrer">View public source</a>
     </div>
   </div>
@@ -67,7 +67,7 @@ pageClass: hako-product-page
     <img class="hako-logo" src="/brand/hako-logo.png" alt="Hako cube logo" width="256" height="256">
     <p>Current product core</p>
     <strong>mihomo 1.19.30</strong>
-    <div class="hako-public-release"><span>Latest open-source SDK</span><a href="https://github.com/TokenPLS/Hako/releases/tag/v1.19.29-hako.3" target="_blank" rel="noopener noreferrer">Hako v1.19.29-hako.3 ↗</a></div>
+    <div class="hako-public-release"><span>Latest open-source SDK</span><a href="https://github.com/TokenPLS/Hako/releases/tag/v1.19.30-hako.1" target="_blank" rel="noopener noreferrer">Hako v1.19.30-hako.1 ↗</a></div>
     <div class="hako-platform-chips"><span>iOS</span><span>iPadOS</span><span>macOS</span><span>tvOS</span></div>
   </div>
 </section>
@@ -118,8 +118,8 @@ pageClass: hako-product-page
     <p>Hako follows stable mihomo releases only, and Clash currently runs 1.19.30. Public Hako SDK releases are published under GPL-3.0, with source, version, and build artifact tied to the same tagged snapshot.</p>
   </div>
   <div class="hako-release-facts">
-    <article><span>Current product core</span><strong>mihomo 1.19.30</strong><p>Internally delivered across all five Apple slices</p></article>
-    <article><span>Latest open-source SDK</span><strong>v1.19.29-hako.3</strong><p>Source and build artifact are public on GitHub</p></article>
+    <article><span>Current product core</span><strong>mihomo 1.19.30</strong><p>Open-source release across all five Apple slices</p></article>
+    <article><span>Latest open-source SDK</span><strong>v1.19.30-hako.1</strong><p>Source and build artifact are public on GitHub</p></article>
     <article><span>Apple architectures</span><strong>5 slices</strong><p>iOS device and simulator, macOS, tvOS device and simulator</p></article>
   </div>
 </section>
@@ -145,7 +145,7 @@ pageClass: hako-product-page
   <p>Inspect the implementation, pin a release, or report a security issue privately. Verifying Hako requires no one’s permission.</p>
   <div class="hako-cta-links">
     <a href="https://github.com/TokenPLS/Hako" target="_blank" rel="noopener noreferrer">View public source ↗</a>
-    <a href="https://github.com/TokenPLS/Hako/releases/tag/v1.19.29-hako.3" target="_blank" rel="noopener noreferrer">Download latest open-source SDK ↗</a>
+    <a href="https://github.com/TokenPLS/Hako/releases/tag/v1.19.30-hako.1" target="_blank" rel="noopener noreferrer">Download latest open-source SDK ↗</a>
     <a href="https://github.com/TokenPLS/Hako/blob/main/SECURITY.md" target="_blank" rel="noopener noreferrer">Report a security issue ↗</a>
   </div>
 </section>
