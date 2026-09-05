@@ -97,6 +97,18 @@ self-hosted node, network, and operating system. Back up your current Profile
 and add only a subscription URL you chose and trust.
 :::
 
+::: tip If a DNS test looks wrong after changing configurations
+First make sure Clash is **connected and running**. Then open
+**More → DNS → DNS Query** and select **Clear DNS Cache**, followed by
+**Clear Fake-IP Cache**. Keep the current configuration running and repeat the
+DNS leak test.
+
+This is especially important after switching from an older or different
+configuration: cached DNS and Fake-IP results from the previous configuration
+can affect the test. These cache controls are available only while Clash is
+running the proxy.
+:::
+
 The files target general mihomo clients, so they retain cross-platform fields
 such as `mixed-port`, `tun`, and `external-controller`. In Clash, the system
 tunnel, provider paths, and control channel remain constrained by the App and
