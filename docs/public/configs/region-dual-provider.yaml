@@ -224,6 +224,15 @@ proxy-groups:
       - 🇹🇼 TW-Fallback
       - DIRECT
 
+  - name: Apple Push
+    type: fallback
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Apple.png
+    proxies:
+      - APNs-Fallback
+      - DIRECT
+    url: http://captive.apple.com/hotspot-detect.html
+    interval: 300
+
   - name: 🔘 Primary-Manual
     type: select
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Server.png
@@ -334,6 +343,14 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 900
     timeout: 15
+
+  - name: APNs-Fallback
+    type: fallback
+    include-all: true
+    exclude-filter: (?i)^(Apple Push|APNs-Fallback)$
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Apple.png
+    url: http://captive.apple.com/hotspot-detect.html
+    interval: 300
 
   - name: ⚙️ 🇺🇸 Primary-US-Auto
     type: url-test
@@ -548,21 +565,21 @@ rules:
 
 
   # ② Apple APNs
-  - DOMAIN-SUFFIX,push.apple.com,PROXY-Gate
-  - DOMAIN-SUFFIX,push-apple.com.akadns.net,PROXY-Gate
+  - DOMAIN-SUFFIX,push.apple.com,Apple Push
+  - DOMAIN-SUFFIX,push-apple.com.akadns.net,Apple Push
 
-  - DOMAIN-KEYWORD,apple.com.edgekey.net,PROXY-Gate
+  - DOMAIN-KEYWORD,apple.com.edgekey.net,Apple Push
 
-  - IP-CIDR,17.249.0.0/16,PROXY-Gate,no-resolve
-  - IP-CIDR,17.252.0.0/16,PROXY-Gate,no-resolve
-  - IP-CIDR,17.57.144.0/22,PROXY-Gate,no-resolve
-  - IP-CIDR,17.188.128.0/18,PROXY-Gate,no-resolve
-  - IP-CIDR,17.188.20.0/23,PROXY-Gate,no-resolve
+  - IP-CIDR,17.249.0.0/16,Apple Push,no-resolve
+  - IP-CIDR,17.252.0.0/16,Apple Push,no-resolve
+  - IP-CIDR,17.57.144.0/22,Apple Push,no-resolve
+  - IP-CIDR,17.188.128.0/18,Apple Push,no-resolve
+  - IP-CIDR,17.188.20.0/23,Apple Push,no-resolve
 
-  - IP-CIDR6,2620:149:a44::/48,PROXY-Gate,no-resolve
-  - IP-CIDR6,2403:300:a42::/48,PROXY-Gate,no-resolve
-  - IP-CIDR6,2403:300:a51::/48,PROXY-Gate,no-resolve
-  - IP-CIDR6,2a01:b740:a42::/48,PROXY-Gate,no-resolve
+  - IP-CIDR6,2620:149:a44::/48,Apple Push,no-resolve
+  - IP-CIDR6,2403:300:a42::/48,Apple Push,no-resolve
+  - IP-CIDR6,2403:300:a51::/48,Apple Push,no-resolve
+  - IP-CIDR6,2a01:b740:a42::/48,Apple Push,no-resolve
 
   # ③ GitHub
   - DOMAIN-SUFFIX,github.com,PROXY-Gate

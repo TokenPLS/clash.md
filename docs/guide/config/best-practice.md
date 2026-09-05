@@ -141,8 +141,8 @@ posting to a group, filing an issue, or sending the configuration to anyone.
 Rules match once, from top to bottom. In simplified form:
 
 1. Local and private-network addresses go direct.
-2. Apple Push, GitHub, and explicitly listed overseas services follow their
-   template policies.
+2. Apple Push uses its dedicated failover path, while GitHub and explicitly
+   listed overseas services follow their template policies.
 3. Advertising and privacy-list matches are rejected.
 4. Mainland-China traffic matched by `ChinaMax`, `GEOSITE,CN`, or `GEOIP,CN`
    goes direct.
@@ -164,6 +164,10 @@ use Clash's actual match records as the source of truth.
 - `PROXY-Gate` is the default exit for traffic without a dedicated service
   group. Selecting `DIRECT` makes that unmatched traffic direct; beginners
   should not use it as a generic “fix the network” switch.
+- `Apple Push` is independent from `PROXY-Gate`. It first sends APNs traffic to
+  `APNs-Fallback`, which checks every provider node every 300 seconds and
+  automatically switches to an available route. If no proxy route is
+  available, `Apple Push` falls back to `DIRECT`.
 - Regional Auto groups such as `US-Auto` and `SG-Auto` regularly test nodes
   whose names match that region and choose one automatically. They do not pin a
   specific server. A node whose name lacks a recognized region keyword will not
