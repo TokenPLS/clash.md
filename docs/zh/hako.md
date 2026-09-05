@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Hako Apple 代理内核
-description: Hako 是驱动 Clash、面向 Apple NetworkExtension 调校的 mihomo 代理内核，公开提供源码、SDK 发行版、构建信息与真机实测。
+description: Hako 是驱动 Clash、面向 Apple NetworkExtension 调校的完整开源 mihomo 代理内核，提供 SDK 发行版、构建信息与真机实测。
 keywords:
   - Hako内核
   - mihomo Apple内核
@@ -15,7 +15,7 @@ jsonLd:
       "@id": https://clash.md/zh/hako#webpage
       url: https://clash.md/zh/hako
       name: Hako Apple 代理内核
-      description: Hako 是驱动 Clash、面向 Apple NetworkExtension 调校的 mihomo 代理内核，公开提供源码、SDK 发行版、构建信息与真机实测。
+      description: Hako 是驱动 Clash、面向 Apple NetworkExtension 调校的完整开源 mihomo 代理内核，提供 SDK 发行版、构建信息与真机实测。
       inLanguage: zh-CN
       isPartOf:
         "@id": https://clash.md/#website
@@ -29,7 +29,7 @@ jsonLd:
     - "@type": SoftwareSourceCode
       "@id": https://clash.md/#hako
       name: Hako
-      description: 驱动 Clash、面向 Apple NetworkExtension 调校的 mihomo 代理内核，公开提供源码与 SDK 发行版。
+      description: 驱动 Clash、面向 Apple NetworkExtension 调校的完整开源 mihomo 代理内核，提供带版本的 SDK 发行版。
       url: https://clash.md/zh/hako
       image: https://clash.md/brand/hako-logo.png
       codeRepository: https://github.com/TokenPLS/Hako
@@ -55,12 +55,12 @@ pageClass: hako-product-page
 
 <section class="hako-hero">
   <div class="hako-hero-copy">
-    <p class="product-eyebrow">High-performance Adaptive Kernel · Open-source releases</p>
+    <p class="product-eyebrow">High-performance Adaptive Kernel · Fully open source</p>
     <h1><span>快，是实测。</span><span>信任，是开源。</span></h1>
-    <p class="hako-hero-lede">Hako 是驱动 Clash 的代理内核。它基于成熟的 mihomo，为 Apple NetworkExtension 的内存、能效与系统边界重新调校——流量在设备上处理，性能有真机数据，已公开版本的源码与构建产物可以直接核对。</p>
+    <p class="hako-hero-lede">Hako 是驱动 Clash 的代理内核。它基于成熟的 mihomo，为 Apple NetworkExtension 的内存、能效与系统边界重新调校——流量在设备上处理，性能有真机数据，完整源码也已开源，任何人都能直接检查。</p>
     <div class="product-actions">
       <a class="product-action product-action--primary" href="https://github.com/TokenPLS/Hako/releases/tag/v1.19.30-hako.1" target="_blank" rel="noopener noreferrer">下载最新开源 SDK</a>
-      <a class="product-action product-action--secondary" href="https://github.com/TokenPLS/Hako" target="_blank" rel="noopener noreferrer">查看已公开源码</a>
+      <a class="product-action product-action--secondary" href="https://github.com/TokenPLS/Hako" target="_blank" rel="noopener noreferrer">查看完整源码</a>
     </div>
   </div>
   <div class="hako-release-panel" aria-label="Hako 当前产品内核与最新开源 SDK">
@@ -76,7 +76,7 @@ pageClass: hako-product-page
   <div class="hako-section-heading">
     <p class="section-kicker">Clash 的心脏</p>
     <h2 id="hako-story-title">流量经过哪里，<br>信任就该落在哪里。</h2>
-    <p>Clash 的界面负责让网络变得简单，真正处理连接、DNS 与规则的是 Hako。它不要求你只相信一句承诺：运行边界写进实现，已发布版本的代码和构建产物都可以核对。</p>
+    <p>Clash 的界面负责让网络变得简单，真正处理连接、DNS 与规则的是 Hako。它不要求你只相信一句承诺：运行边界写进完整开源的实现，任何人都能检查。</p>
   </div>
   <div class="hako-principle-grid">
     <article>
@@ -113,13 +113,13 @@ pageClass: hako-product-page
 
 <section class="hako-section hako-trust" aria-labelledby="hako-trust-title">
   <div class="hako-section-heading">
-    <p class="section-kicker">公开发行 · 可独立审阅</p>
+    <p class="section-kicker">完整开源 · 可独立审阅</p>
     <h2 id="hako-trust-title">性能可以测，<br>安全也应该能查。</h2>
-    <p>Hako 只跟随 mihomo 的稳定版本，Clash 当前搭载 1.19.30。公开发行的 Hako SDK 以 GPL-3.0 发布，源码、版本与构建产物都对应同一份带标签的快照。</p>
+    <p>Hako 只跟随 mihomo 的稳定版本，Clash 当前搭载 1.19.30。Hako 内核已基于 GPL-3.0 完整开源，每个 SDK 发行版、源码版本与构建产物都对应同一份带标签的快照。</p>
   </div>
   <div class="hako-release-facts">
     <article><span>当前产品内核</span><strong>mihomo 1.19.30</strong><p>五个 Apple slice 现已开源发布</p></article>
-    <article><span>最新开源 SDK</span><strong>v1.19.30-hako.1</strong><p>源码与构建产物已在 GitHub 公开</p></article>
+    <article><span>最新开源 SDK</span><strong>v1.19.30-hako.1</strong><p>完整源码与构建产物均在 GitHub</p></article>
     <article><span>Apple 架构</span><strong>5 个 Slice</strong><p>iOS 真机与模拟器、macOS、tvOS 真机与模拟器</p></article>
   </div>
 </section>
@@ -144,7 +144,7 @@ pageClass: hako-product-page
   <h2 id="hako-cta-title">想看代码，直接看。</h2>
   <p>检查实现、锁定发行版本，或私下报告安全问题。验证 Hako 不需要任何人的许可。</p>
   <div class="hako-cta-links">
-    <a href="https://github.com/TokenPLS/Hako" target="_blank" rel="noopener noreferrer">查看已公开源码 ↗</a>
+    <a href="https://github.com/TokenPLS/Hako" target="_blank" rel="noopener noreferrer">查看完整源码 ↗</a>
     <a href="https://github.com/TokenPLS/Hako/releases/tag/v1.19.30-hako.1" target="_blank" rel="noopener noreferrer">下载最新开源 SDK ↗</a>
     <a href="https://github.com/TokenPLS/Hako/blob/main/SECURITY.md" target="_blank" rel="noopener noreferrer">报告安全问题 ↗</a>
   </div>

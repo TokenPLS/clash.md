@@ -90,8 +90,8 @@ Clash 可以访问你选择的服务与网站。你需要自行承担使用这�
 
 ## 开源软件
 
-Clash [客户端源码](https://github.com/TokenPLS/Hako-Client)与
-[Hako 内核源码](https://github.com/TokenPLS/Hako)公开提供，并分别适用其
+Clash [客户端](https://github.com/TokenPLS/Hako-Client)与
+[Hako 内核](https://github.com/TokenPLS/Hako)均已开源，并分别适用其
 仓库中列明的许可证。App 内的“致谢”页面列出其他开源组件及其许可证。
 本条款不会取代或限制任何开源许可证授予的权利。
 

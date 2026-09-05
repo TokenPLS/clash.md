@@ -128,7 +128,7 @@ website visit with profiles, traffic, or device activity in the app.
 ## Open source and verifiability
 
 The [Clash client](https://github.com/TokenPLS/Hako-Client) and
-[Hako core](https://github.com/TokenPLS/Hako) source are public for inspection.
+[Hako core](https://github.com/TokenPLS/Hako) are both fully open source.
 Anyone can examine the data-handling logic the client and core actually execute
 instead of relying only on the promises in this policy.
 

@@ -101,7 +101,7 @@ cannot legally be limited.
 ## Open-source software
 
 The [Clash client](https://github.com/TokenPLS/Hako-Client) and
-[Hako core](https://github.com/TokenPLS/Hako) source are publicly available
+[Hako core](https://github.com/TokenPLS/Hako) are both open source
 under the licenses identified in their repositories. The Acknowledgements page
 in the app lists other open-source components and their licenses. Nothing in
 these Terms overrides or limits rights granted by an open-source license.

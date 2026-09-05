@@ -38,7 +38,6 @@ pageClass: clash-platform-page
   <p class="platform-detail-lede">Clash handles connections by your rules in the background. Connection, mode, and speed stay close in the menu bar, with active connections, rules, and logs ready when you want a closer look.</p>
   <div class="product-actions">
     <AppStoreBadge platform="mac-app-store" destination="mac" />
-    <a class="product-action product-action--testflight" href="https://testflight.apple.com/join/QJWrVrxT" target="_blank" rel="noopener noreferrer">Join the TestFlight beta →</a>
   </div>
   <div class="platform-detail-stage platform-detail-stage--mac">
     <img src="/screenshots/platforms/macos/device-mac-en.webp" alt="Clash for Mac in the official MacBook Pro device bezel" width="2400" height="1600" fetchpriority="high">
@@ -73,6 +72,6 @@ pageClass: clash-platform-page
 
 <section class="platform-privacy-callout">
   <p class="section-kicker">Security and privacy</p><h2>Your profile. Your nodes. Your traffic.</h2>
-  <p>No account, analytics, or automatic log and diagnostics upload. Hako kernel source and SDK releases are public, keeping the network foundation open to inspection.</p>
+  <p>No account, analytics, or automatic log and diagnostics upload. Both the Clash client and Hako core are open source, keeping the whole product open to inspection.</p>
   <a href="/guide/privacy-model">Read the privacy model →</a>
 </section>

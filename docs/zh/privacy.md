@@ -115,8 +115,8 @@ App 中的配置、流量或设备活动关联。
 
 ## 开源与可验证性
 
-Clash [客户端源码](https://github.com/TokenPLS/Hako-Client)与
-[Hako 内核源码](https://github.com/TokenPLS/Hako)公开可审查。任何人都可
+Clash [客户端](https://github.com/TokenPLS/Hako-Client)与
+[Hako 内核](https://github.com/TokenPLS/Hako)均已完整开源。任何人都可
 检查客户端与内核实际执行的数据处理逻辑，而不必只依赖本政策中的承诺。
 
 ## 儿童

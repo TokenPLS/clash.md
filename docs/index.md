@@ -2,7 +2,7 @@
 layout: doc
 title: Clash for Apple Platforms
 titleTemplate: Clash for Apple Platforms
-description: Clash is a native, rule-based proxy utility for iPhone, iPad, Mac, and Apple TV, built on mihomo with an open-source client and public Hako releases.
+description: Clash is a native, rule-based proxy utility for iPhone, iPad, Mac, and Apple TV, built on mihomo with both its client and Hako core open source.
 keywords:
   - Clash for Apple platforms
   - Clash iOS
@@ -37,7 +37,7 @@ jsonLd:
     - "@type": SoftwareApplication
       "@id": https://clash.md/#app
       name: Clash
-      description: Clash is a native, rule-based proxy utility for iPhone, iPad, Mac, and Apple TV, built on mihomo with an open-source client and public Hako releases.
+      description: Clash is a native, rule-based proxy utility for iPhone, iPad, Mac, and Apple TV, built on mihomo with both its client and Hako core open source.
       applicationCategory: UtilitiesApplication
       operatingSystem:
         - iOS
@@ -67,10 +67,9 @@ pageClass: clash-home
   <div class="product-hero-copy">
     <p class="product-eyebrow">Rule-based proxy utility · powered by Hako</p>
     <h1><span class="product-hero-title-main"><span class="product-hero-title-brand">Clash</span><span class="product-hero-title-rest"> is back.</span></span><span class="product-hero-title-sub">This time, it’s native.</span></h1>
-    <p class="product-lede"><span class="product-lede-hook">Same profiles. Same rules. Clash, the way you remember it.</span><span class="product-lede-proof">Built on mihomo, with the native client open source and Hako releases open to inspection.</span></p>
+    <p class="product-lede"><span class="product-lede-hook">Same profiles. Same rules. Clash, the way you remember it.</span><span class="product-lede-proof">Built on mihomo, with both the native client and Hako core open source.</span></p>
     <div class="product-actions">
       <AppStoreBadge />
-      <a class="product-action product-action--testflight" href="https://testflight.apple.com/join/QJWrVrxT" target="_blank" rel="noopener noreferrer">Join the TestFlight beta →</a>
     </div>
     <p class="product-platform-line">iPhone <span>·</span> iPad <span>·</span> Mac <span>·</span> Apple TV</p>
   </div>
@@ -84,7 +83,7 @@ pageClass: clash-home
   <div class="open-source-proof-copy">
     <p class="section-kicker">A tribute to the classic · A commitment to open source</p>
     <h2 id="open-source-proof-title"><span>A privacy tool</span><span>should never ask for blind trust.</span></h2>
-    <p>A proxy client can access your profiles, DNS lookups, and every connection it handles. That should never be a black box. You do not have to take our word for what Clash does: the native client is open source, and Hako publishes source and SDK releases anyone can inspect.</p>
+    <p>A proxy client can access your profiles, DNS lookups, and every connection it handles. That should never be a black box. You do not have to take our word for what Clash does: the native client and Hako core are both fully open source, so anyone can inspect the complete implementation.</p>
   </div>
   <div class="open-source-proof-links">
     <a href="https://github.com/TokenPLS/Hako-Client" target="_blank" rel="noopener noreferrer"><span>Native client</span><strong>TokenPLS/Hako-Client ↗</strong></a>

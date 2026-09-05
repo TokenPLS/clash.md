@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: Hako Apple Proxy Core
-description: Hako is the mihomo-based Apple proxy core that powers Clash, with public source, SDK releases, build details, and measurements on real Apple hardware.
+description: Hako is the fully open-source, mihomo-based Apple proxy core that powers Clash, with SDK releases, build details, and measurements on real Apple hardware.
 keywords:
   - Hako core
   - mihomo Apple core
@@ -15,7 +15,7 @@ jsonLd:
       "@id": https://clash.md/hako#webpage
       url: https://clash.md/hako
       name: Hako Apple Proxy Core
-      description: Hako is the mihomo-based Apple proxy core that powers Clash, with public source, SDK releases, build details, and measurements on real Apple hardware.
+      description: Hako is the fully open-source, mihomo-based Apple proxy core that powers Clash, with SDK releases, build details, and measurements on real Apple hardware.
       inLanguage: en-US
       isPartOf:
         "@id": https://clash.md/#website
@@ -29,7 +29,7 @@ jsonLd:
     - "@type": SoftwareSourceCode
       "@id": https://clash.md/#hako
       name: Hako
-      description: The mihomo-based Apple proxy core that powers Clash, tuned for Apple NetworkExtension and published through public source and SDK releases.
+      description: The fully open-source, mihomo-based Apple proxy core that powers Clash, tuned for Apple NetworkExtension and published with versioned SDK releases.
       url: https://clash.md/hako
       image: https://clash.md/brand/hako-logo.png
       codeRepository: https://github.com/TokenPLS/Hako
@@ -55,12 +55,12 @@ pageClass: hako-product-page
 
 <section class="hako-hero">
   <div class="hako-hero-copy">
-    <p class="product-eyebrow">High-performance Adaptive Kernel · Open-source releases</p>
+    <p class="product-eyebrow">High-performance Adaptive Kernel · Fully open source</p>
     <h1><span>Speed, measured.</span><span>Trust, open source.</span></h1>
-    <p class="hako-hero-lede">Hako is the proxy core that powers Clash. Built on proven mihomo and retuned for Apple NetworkExtension constraints, it handles traffic on your device—with performance measured on real hardware and publicly released source and artifacts anyone can inspect.</p>
+    <p class="hako-hero-lede">Hako is the proxy core that powers Clash. Built on proven mihomo and retuned for Apple NetworkExtension constraints, it handles traffic on your device—with performance measured on real hardware and its complete source code open for anyone to inspect.</p>
     <div class="product-actions">
       <a class="product-action product-action--primary" href="https://github.com/TokenPLS/Hako/releases/tag/v1.19.30-hako.1" target="_blank" rel="noopener noreferrer">Download latest open-source SDK</a>
-      <a class="product-action product-action--secondary" href="https://github.com/TokenPLS/Hako" target="_blank" rel="noopener noreferrer">View public source</a>
+      <a class="product-action product-action--secondary" href="https://github.com/TokenPLS/Hako" target="_blank" rel="noopener noreferrer">View source code</a>
     </div>
   </div>
   <div class="hako-release-panel" aria-label="Current Hako product core and latest open-source SDK">
@@ -76,7 +76,7 @@ pageClass: hako-product-page
   <div class="hako-section-heading">
     <p class="section-kicker">The heart of Clash</p>
     <h2 id="hako-story-title">Trust belongs<br>where your traffic flows.</h2>
-    <p>Clash makes the network feel simple. Hako is the part that actually handles connections, DNS, and rules. It does not ask you to trust a promise: its runtime boundaries are built into the implementation, and released code and artifacts are open for inspection.</p>
+    <p>Clash makes the network feel simple. Hako is the part that actually handles connections, DNS, and rules. It does not ask you to trust a promise: its runtime boundaries are built into a fully open-source implementation anyone can inspect.</p>
   </div>
   <div class="hako-principle-grid">
     <article>
@@ -113,13 +113,13 @@ pageClass: hako-product-page
 
 <section class="hako-section hako-trust" aria-labelledby="hako-trust-title">
   <div class="hako-section-heading">
-    <p class="section-kicker">Public releases · independently reviewable</p>
+    <p class="section-kicker">Open source · independently reviewable</p>
     <h2 id="hako-trust-title">Performance can be measured.<br>Security should be inspectable.</h2>
-    <p>Hako follows stable mihomo releases only, and Clash currently runs 1.19.30. Public Hako SDK releases are published under GPL-3.0, with source, version, and build artifact tied to the same tagged snapshot.</p>
+    <p>Hako follows stable mihomo releases only, and Clash currently runs 1.19.30. The complete Hako core is open source under GPL-3.0, with each SDK release, source version, and build artifact tied to the same tagged snapshot.</p>
   </div>
   <div class="hako-release-facts">
     <article><span>Current product core</span><strong>mihomo 1.19.30</strong><p>Open-source release across all five Apple slices</p></article>
-    <article><span>Latest open-source SDK</span><strong>v1.19.30-hako.1</strong><p>Source and build artifact are public on GitHub</p></article>
+    <article><span>Latest open-source SDK</span><strong>v1.19.30-hako.1</strong><p>Complete source and build artifact are on GitHub</p></article>
     <article><span>Apple architectures</span><strong>5 slices</strong><p>iOS device and simulator, macOS, tvOS device and simulator</p></article>
   </div>
 </section>
@@ -144,7 +144,7 @@ pageClass: hako-product-page
   <h2 id="hako-cta-title">Want the code? Read it.</h2>
   <p>Inspect the implementation, pin a release, or report a security issue privately. Verifying Hako requires no one’s permission.</p>
   <div class="hako-cta-links">
-    <a href="https://github.com/TokenPLS/Hako" target="_blank" rel="noopener noreferrer">View public source ↗</a>
+    <a href="https://github.com/TokenPLS/Hako" target="_blank" rel="noopener noreferrer">View source code ↗</a>
     <a href="https://github.com/TokenPLS/Hako/releases/tag/v1.19.30-hako.1" target="_blank" rel="noopener noreferrer">Download latest open-source SDK ↗</a>
     <a href="https://github.com/TokenPLS/Hako/blob/main/SECURITY.md" target="_blank" rel="noopener noreferrer">Report a security issue ↗</a>
   </div>

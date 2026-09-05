@@ -38,7 +38,6 @@ pageClass: clash-platform-page
   <p class="platform-detail-lede">Put your own profile on Apple TV, choose a route, and start watching. Leave the router alone and do not make every device in the house follow along—manage the screen in front of you.</p>
   <div class="product-actions">
     <AppStoreBadge platform="apple-tv" destination="tv" />
-    <a class="product-action product-action--testflight" href="https://testflight.apple.com/join/QJWrVrxT" target="_blank" rel="noopener noreferrer">Join the TestFlight beta →</a>
   </div>
   <div class="platform-detail-stage platform-detail-stage--tv">
     <img src="/screenshots/platforms/tvos/device-apple-tv.webp" alt="Clash for Apple TV with the official display, Apple TV, and Siri Remote bezels" width="2400" height="1552" fetchpriority="high">
@@ -70,6 +69,6 @@ pageClass: clash-platform-page
 
 <section class="platform-privacy-callout">
   <p class="section-kicker">Security and privacy</p><h2>Your viewing habits are not ours to see.</h2>
-  <p>Clash has no account, analytics, advertising, tracking, or automatic diagnostics upload. Hako kernel source and SDK releases are public, keeping the network foundation open to inspection.</p>
+  <p>Clash has no account, analytics, advertising, tracking, or automatic diagnostics upload. Both the Clash client and Hako core are open source, keeping the whole product open to inspection.</p>
   <a href="/guide/privacy-model">Read the privacy model →</a>
 </section>

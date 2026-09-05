@@ -2,7 +2,7 @@
 layout: doc
 title: Clash Apple 原生客户端
 titleTemplate: Clash Apple 原生客户端
-description: Clash 是面向 iPhone、iPad、Mac 与 Apple TV 的原生规则分流工具，基于 mihomo，客户端开源，Hako 源码与 SDK 发行版公开可查。
+description: Clash 是面向 iPhone、iPad、Mac 与 Apple TV 的原生规则分流工具，基于 mihomo，客户端与 Hako 内核均已完整开源。
 keywords:
   - Clash Apple全平台
   - Clash iOS
@@ -37,7 +37,7 @@ jsonLd:
     - "@type": SoftwareApplication
       "@id": https://clash.md/#app
       name: Clash
-      description: Clash 是面向 iPhone、iPad、Mac 与 Apple TV 的原生规则分流工具，基于 mihomo，客户端开源，Hako 源码与 SDK 发行版公开可查。
+      description: Clash 是面向 iPhone、iPad、Mac 与 Apple TV 的原生规则分流工具，基于 mihomo，客户端与 Hako 内核均已完整开源。
       applicationCategory: UtilitiesApplication
       operatingSystem:
         - iOS
@@ -67,10 +67,9 @@ pageClass: clash-home
   <div class="product-hero-copy">
     <p class="product-eyebrow">基于规则的网络代理工具 · 由 Hako 驱动</p>
     <h1><span class="product-hero-title-main"><span class="product-hero-title-brand">Clash</span><span class="product-hero-title-rest">，经典回归</span></span><span class="product-hero-title-sub">这次是 Apple 原生</span></h1>
-    <p class="product-lede"><span class="product-lede-hook">还是原来的配置，还是熟悉的规则。</span><span class="product-lede-proof">基于 mihomo，原生客户端开源，Hako 发行版公开可查。</span></p>
+    <p class="product-lede"><span class="product-lede-hook">还是原来的配置，还是熟悉的规则。</span><span class="product-lede-proof">基于 mihomo，原生客户端与 Hako 内核均已完整开源。</span></p>
     <div class="product-actions">
       <AppStoreBadge locale="zh" />
-      <a class="product-action product-action--testflight" href="https://testflight.apple.com/join/QJWrVrxT" target="_blank" rel="noopener noreferrer">加入 TestFlight 测试 →</a>
     </div>
     <p class="product-platform-line">iPhone <span>·</span> iPad <span>·</span> Mac <span>·</span> Apple TV</p>
   </div>
@@ -84,7 +83,7 @@ pageClass: clash-home
   <div class="open-source-proof-copy">
     <p class="section-kicker">向经典致敬 · 向开源致敬</p>
     <h2 id="open-source-proof-title"><span>保护隐私的工具，</span><span>不该要求你盲目信任。</span></h2>
-    <p>代理客户端能接触你的配置、DNS 与每一次经过它的连接，它最不应该是一个黑盒。你不必只听我们保证“什么都没做”：Clash 原生客户端开源，Hako 也持续发布可供检查的源码与 SDK 发行版。</p>
+    <p>代理客户端能接触你的配置、DNS 与每一次经过它的连接，它最不应该是一个黑盒。你不必只听我们保证“什么都没做”：Clash 原生客户端与 Hako 内核均已完整开源，任何人都能检查完整实现。</p>
   </div>
   <div class="open-source-proof-links">
     <a href="https://github.com/TokenPLS/Hako-Client" target="_blank" rel="noopener noreferrer"><span>原生客户端</span><strong>TokenPLS/Hako-Client ↗</strong></a>

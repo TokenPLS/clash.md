@@ -44,8 +44,8 @@ Clash 只会为你配置或主动启动的功能发出外部请求，包括：
 
 ## 可以验证
 
-Clash [客户端源码](https://github.com/TokenPLS/Hako-Client)与
-[Hako 内核源码](https://github.com/TokenPLS/Hako)公开可审查。隐私模型不只
+Clash [客户端](https://github.com/TokenPLS/Hako-Client)与
+[Hako 内核](https://github.com/TokenPLS/Hako)均已完整开源。隐私模型不只
 是一份承诺，也可以通过客户端与内核实际执行的代码进行核对。
 
 [隐私政策](/zh/privacy)是完整且具约束力的数据处理说明。

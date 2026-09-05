@@ -52,7 +52,7 @@ the developer outside that path.
 ## Verifiable by design
 
 The [Clash client](https://github.com/TokenPLS/Hako-Client) and
-[Hako core](https://github.com/TokenPLS/Hako) source are public for inspection.
+[Hako core](https://github.com/TokenPLS/Hako) are both fully open source.
 The privacy model can be checked against the code the client and core actually
 execute instead of treated only as a promise.
 

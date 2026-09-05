@@ -39,7 +39,6 @@ pageClass: clash-platform-page
   <p class="platform-detail-lede">Start a connection from Control Center, Shortcuts, or Siri. Clash responds to Wi-Fi and cellular changes on your terms, while routes and connections stay clear in the app.</p>
   <div class="product-actions">
     <AppStoreBadge destination="iphone" />
-    <a class="product-action product-action--testflight" href="https://testflight.apple.com/join/QJWrVrxT" target="_blank" rel="noopener noreferrer">Join the TestFlight beta →</a>
   </div>
   <div class="platform-detail-stage platform-detail-stage--ios">
     <img class="platform-detail-ipad" src="/screenshots/platforms/ios/device-ipad.webp" alt="Clash for iPad in the official device bezel" width="1200" height="1566" fetchpriority="high">
@@ -125,6 +124,6 @@ pageClass: clash-platform-page
 <section class="platform-privacy-callout">
   <p class="section-kicker">Security and privacy</p>
   <h2>Your configuration is not our business.</h2>
-  <p>No account, analytics, advertising, tracking, or automatic diagnostics upload. Hako kernel source and SDK releases are public, keeping the network foundation open to inspection.</p>
+  <p>No account, analytics, advertising, tracking, or automatic diagnostics upload. Both the Clash client and Hako core are open source, keeping the whole product open to inspection.</p>
   <a href="/guide/privacy-model">Read the privacy model →</a>
 </section>
