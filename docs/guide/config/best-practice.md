@@ -50,9 +50,18 @@ head:
 startup failures, or system termination of the proxy extension on iOS.**
 
 Clash's proxy core runs inside a Network Extension with a strict system memory
-budget. Large YAML or text rule sets must be parsed entry by entry at startup
-and expanded into in-memory matching structures. Loading several large sets at
-once can therefore use far more memory than their download sizes suggest.
+budget. Apple does not promise a single fixed limit in its public documentation
+for every iOS version and device. However, long-running community reports and
+our repeated testing on physical devices indicate that this kind of iOS tunnel
+extension commonly has only **about 50 MiB** of usable memory. This is an
+observed range, not an Apple guarantee, and can vary by device, OS release, and
+runtime conditions.
+
+Large YAML or text rule sets must be parsed entry by entry at startup and
+expanded into in-memory matching structures. Loading several large sets at
+once can therefore use far more memory than their download sizes suggest. When
+total use approaches or exceeds the system budget, iOS may terminate the proxy
+extension outright.
 
 MRS is mihomo's precompiled binary rule-set format. For `domain` and `ipcidr`
 rules, it reduces text parsing, temporary startup allocations, and sustained
