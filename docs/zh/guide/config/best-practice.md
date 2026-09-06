@@ -1,7 +1,7 @@
 ---
 title: Clash 配置最佳实践
-description: 面向普通用户的 Clash 配置指南：选择单机场、双机场或服务分类社区模板，正确填写订阅地址，并尽量让中国大陆流量直连。
-keywords: [Clash 最佳配置, mihomo YAML 模板, Hako Profile, Clash 配置模板]
+description: 面向普通用户的 Clash 配置指南：说明 iOS 为什么应优先使用 MRS 规则集，并介绍官网三份社区模板的选择、导入与验证。
+keywords: [Clash 最佳配置, MRS 规则集, iOS 内存不足, mihomo YAML 模板, Hako Profile, Clash 配置模板]
 jsonLd:
   "@context": https://schema.org
   "@type": HowTo
@@ -44,6 +44,29 @@ head:
 ---
 
 # 配置最佳实践
+
+::: danger iOS 用户请优先使用 MRS 规则集
+**大型文本规则集是 iOS 出现内存不足、配置启动失败或代理扩展被系统终止的
+常见原因之一。**
+
+Clash 的代理内核运行在受系统严格限制的 Network Extension 中。大型
+YAML 或 text 规则集在启动时需要逐条解析，并建立用于匹配的内存结构；
+同时加载多个大型规则集时，实际内存占用可能远高于文件本身的大小。
+
+MRS 是 mihomo 的预编译二进制规则集格式。对于 `domain` 和 `ipcidr` 类型的规则，
+MRS 可以减少文本解析、启动时临时分配和长期内存压力。因此，在 iOS 上优先使用
+MRS **首先是稳定性要求，其次才是加载速度优化**。
+
+官网提供的三份配置已在适合的规则集中优先使用 MRS。自定义配置时，不建议
+把这些 MRS 换回大型 YAML/text 文件，也不要无目的叠加多个内容相近的大型规则集。
+
+请注意：MRS 目前只适用于 `domain` 和 `ipcidr`，不能把 `classical` 规则直接改个
+扩展名使用；`behavior`、`format` 和文件内容必须匹配。MRS 能显著降低风险，但不代表
+iOS 的可用内存没有上限。详见 [mihomo 的 MRS 格式说明](https://wiki.metacubex.one/config/rule-providers/#format)。
+
+macOS 的内存限制通常没有 iOS Network Extension 那么严格，但 MRS 仍能减少规则解析和
+内存占用；大型规则集同样建议优先使用 MRS。
+:::
 
 你不必先弄懂全部配置项，才能安心使用 Clash。先让一份来源可信的配置稳定
 运行，再按自己的需要逐步调整；每一项改动都清楚为什么存在，就已经是一份好

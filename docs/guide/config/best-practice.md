@@ -1,7 +1,7 @@
 ---
 title: Clash configuration best practices
-description: "A beginner-friendly Clash guide to choosing, importing, and checking the single-provider, dual-provider, and per-service community templates."
-keywords: [Clash best configuration, mihomo YAML template, Hako Profile, Clash configuration template]
+description: "Why iOS users should prefer memory-efficient MRS rule sets, plus a beginner-friendly guide to choosing, importing, and checking Clash community templates."
+keywords: [Clash best configuration, MRS rule set, iOS memory pressure, mihomo YAML template, Hako Profile, Clash configuration template]
 jsonLd:
   "@context": https://schema.org
   "@type": HowTo
@@ -44,6 +44,36 @@ head:
 ---
 
 # Configuration best practices
+
+::: danger iOS users should prefer MRS rule sets
+**Large text rule sets are a common cause of memory pressure, configuration
+startup failures, or system termination of the proxy extension on iOS.**
+
+Clash's proxy core runs inside a Network Extension with a strict system memory
+budget. Large YAML or text rule sets must be parsed entry by entry at startup
+and expanded into in-memory matching structures. Loading several large sets at
+once can therefore use far more memory than their download sizes suggest.
+
+MRS is mihomo's precompiled binary rule-set format. For `domain` and `ipcidr`
+rules, it reduces text parsing, temporary startup allocations, and sustained
+memory pressure. On iOS, preferring MRS is **first a stability requirement and
+only secondarily a loading-speed optimization**.
+
+The three configurations provided on this site already prefer MRS for suitable
+rule sets. When customizing them, avoid replacing those MRS files with large
+YAML/text sources or stacking multiple large rule sets with substantially
+overlapping content.
+
+MRS currently supports only `domain` and `ipcidr`; a `classical` rule set cannot
+be converted by merely changing its filename. Its `behavior`, `format`, and
+actual file content must agree. MRS significantly reduces the risk, but it does
+not remove the iOS memory limit. See the
+[mihomo MRS format reference](https://wiki.metacubex.one/en/config/rule-providers/#format).
+
+macOS generally has a less restrictive memory budget than an iOS Network
+Extension, but MRS still reduces parsing work and memory use. Prefer MRS for
+large rule sets on macOS as well.
+:::
 
 You do not need to master every configuration field before using Clash with
 confidence. Begin with a trusted configuration that works, then adjust it as
