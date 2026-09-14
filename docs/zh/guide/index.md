@@ -62,6 +62,12 @@ Clash 不附带服务器或线路。准备一份你自己选择并信任的 Clas
 回到首页连接。首次连接时，按照系统提示允许 Clash 添加 VPN 配置。日常使用
 推荐“规则（Rule）”模式：每条连接按照当前配置决定直连、使用代理或拒绝。
 
+::: tip 需要另外开启 TUN 模式吗？
+Clash 通过 Apple NE 的 Packet Tunnel 接入网络，连接后无需再开启桌面式 TUN 模式。
+当前 NE 模式中，`tun.enable: false` 不会切换为仅代理端口模式。
+查看 [NE 与 TUN 的关系、字段处理及版本范围](/zh/guide/config/inbound#tun-mode)。
+:::
+
 ::: info 需要一份配置起点？
 可以从[配置最佳实践与最小模板](/zh/guide/config/best-practice)开始。需要查询
 具体字段或平台差异时，再进入[完整配置参考](/zh/guide/config/)。

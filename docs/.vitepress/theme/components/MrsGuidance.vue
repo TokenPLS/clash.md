@@ -34,11 +34,11 @@ const preferExample = `rule-providers:
 
     <div class="mrs-guidance__body">
       <p class="mrs-guidance__lead" v-if="isZh">
-          iOS 上加载大型文本规则集，很容易顶到 Network Extension 的内存限制。常见表现是配置启动失败、
+          iOS 上直接加载未经预编译的大型文本规则集，可能达到 Network Extension 的内存限制。常见表现是配置启动失败、
           连接突然断开，或者代理进程被系统结束。
       </p>
       <p class="mrs-guidance__lead" v-else>
-          On iOS, large text rule sets can exhaust the Network Extension's memory. Common symptoms include
+          On iOS, large text rule sets loaded without precompilation can exhaust the Network Extension's memory. Common symptoms include
           startup failures, dropped connections, or iOS terminating the proxy process.
       </p>
 
@@ -67,10 +67,10 @@ const preferExample = `rule-providers:
           </div>
           <pre><code>{{ avoidExample }}</code></pre>
           <p v-if="isZh">
-            大型 <code>format: yaml</code> / <code>format: text</code> 文件会在启动时逐条解析并展开到内存。
+            大型 <code>format: yaml</code> / <code>format: text</code> 文件未经预编译时，需要解析并构建内存匹配结构。
           </p>
           <p v-else>
-            Large <code>format: yaml</code> or <code>format: text</code> files are parsed and expanded in memory at startup.
+            Large <code>format: yaml</code> or <code>format: text</code> files need parsing and in-memory matching structures when not precompiled.
           </p>
         </section>
 
@@ -102,7 +102,7 @@ const preferExample = `rule-providers:
           内存上限。按社区长期反馈和我们的多轮真机测试，可以把可用空间理解为<strong>约 50 MiB</strong>。
           这不是 Apple 的官方数字；机型、系统版本和当时的运行状态都会影响结果。
           <br />
-          YAML/text 规则在启动时要逐条解析，再展开成匹配结构。文件看起来不大，加载后的内存占用也可能高出
+          未经预编译的 YAML/text 规则需要解析并构建匹配结构。Clash 也可能提前编译并复用资源，因此不能仅凭文件后缀判断隧道内存占用。文件看起来不大，加载后的内存占用也可能高出
           很多；同时叠加几份，就容易把代理扩展挤爆。MRS 是 mihomo 的预编译二进制格式，省掉不少解析和临时
           内存。iOS 上用 MRS，主要是为了少占内存、运行更稳，不只是启动快一点。
           <br />
@@ -118,7 +118,7 @@ const preferExample = `rule-providers:
           figure is <strong>about 50 MiB</strong> of usable memory. This is not an official Apple number; it varies with
           the device, OS release, and runtime conditions.
           <br />
-          YAML/text rules are parsed entry by entry and expanded into matching structures at startup. Their memory use
+          YAML/text rules need parsing and matching structures when not precompiled. Clash may precompile and reuse resources, so file extensions alone do not determine tunnel memory use. Their memory use
           can be much larger than the downloaded files, and several large sets can quickly exhaust the extension's
           budget. MRS is mihomo's precompiled binary format, so it needs less parsing and temporary memory. On iOS, the
           main benefit is lower memory use and better stability, not merely faster loading.

@@ -1,0 +1,1894 @@
+{
+  "date": "2026-09-14",
+  "sourceAuditRevision": "5bca0bcb73cd6dcb2d276be31f3a149211388c6d",
+  "sdkLockRevision": "869ba8f5eccc205f2a69f52f91aecff68562a6e2",
+  "shippedBuildVerification": "not-verified",
+  "fields": [
+    {
+      "path": "dns.cache-algorithm",
+      "type": "string",
+      "category": "dns",
+      "platforms": {
+        "ios": "supported",
+        "macos": "supported",
+        "tvos": "supported"
+      },
+      "zh": "设置 DNS 缓存算法或容量，请使用有效的算法名和数值。",
+      "en": "Sets the DNS cache algorithm or size; use a valid algorithm name and value."
+    },
+    {
+      "path": "dns.cache-max-size",
+      "type": "int",
+      "category": "dns",
+      "platforms": {
+        "ios": "supported",
+        "macos": "supported",
+        "tvos": "supported"
+      },
+      "zh": "设置 DNS 缓存算法或容量，请使用有效的算法名和数值。",
+      "en": "Sets the DNS cache algorithm or size; use a valid algorithm name and value."
+    },
+    {
+      "path": "dns.default-nameserver",
+      "type": "[]string",
+      "category": "dns",
+      "platforms": {
+        "ios": "limited",
+        "macos": "limited",
+        "tvos": "limited"
+      },
+      "zh": "设置 DNS 服务器。system/dhcp 来源会使用连接前的系统 DNS 地址；无可用地址时会过滤或补齐。",
+      "en": "Sets DNS servers. system/dhcp sources use pre-connection system DNS addresses; unavailable entries are filtered or repaired."
+    },
+    {
+      "path": "dns.direct-nameserver",
+      "type": "[]string",
+      "category": "dns",
+      "platforms": {
+        "ios": "limited",
+        "macos": "limited",
+        "tvos": "limited"
+      },
+      "zh": "设置直连或回退解析器；system/dhcp 地址会替换或过滤。fallback 仅按回退条件使用。",
+      "en": "Sets direct or fallback resolvers; system/dhcp entries are replaced or filtered. Fallback is used according to its conditions."
+    },
+    {
+      "path": "dns.direct-nameserver-follow-policy",
+      "type": "bool",
+      "category": "dns",
+      "platforms": {
+        "ios": "supported",
+        "macos": "supported",
+        "tvos": "supported"
+      },
+      "zh": "控制直连 DNS 是否跟随解析策略。",
+      "en": "Controls whether direct DNS follows resolver policies."
+    },
+    {
+      "path": "dns.enable",
+      "type": "bool",
+      "category": "dns",
+      "platforms": {
+        "ios": "limited",
+        "macos": "limited",
+        "tvos": "limited"
+      },
+      "zh": "Clash 连接期间保持 DNS 开启，填写 false 不会关闭。",
+      "en": "DNS stays enabled while Clash is connected; false does not disable it."
+    },
+    {
+      "path": "dns.enhanced-mode",
+      "type": "C.DNSMode",
+      "category": "dns",
+      "platforms": {
+        "ios": "supported",
+        "macos": "supported",
+        "tvos": "supported"
+      },
+      "zh": "选择 DNS 增强模式；Fake IP 相关字段在使用对应模式时生效。",
+      "en": "Selects the DNS enhancement mode; Fake IP settings apply when that mode is used."
+    },
+    {
+      "path": "dns.fake-ip-filter",
+      "type": "[]string",
+      "category": "dns",
+      "platforms": {
+        "ios": "supported",
+        "macos": "supported",
+        "tvos": "supported"
+      },
+      "zh": "控制哪些目标使用或跳过 Fake IP，需配合 Fake IP 模式。",
+      "en": "Controls which destinations use or bypass Fake IP; requires Fake IP mode."
+    },
+    {
+      "path": "dns.fake-ip-filter-mode",
+      "type": "C.FilterMode",
+      "category": "dns",
+      "platforms": {
+        "ios": "supported",
+        "macos": "supported",
+        "tvos": "supported"
+      },
+      "zh": "控制哪些目标使用或跳过 Fake IP，需配合 Fake IP 模式。",
+      "en": "Controls which destinations use or bypass Fake IP; requires Fake IP mode."
+    },
+    {
+      "path": "dns.fake-ip-range",
+      "type": "string",
+      "category": "dns",
+      "platforms": {
+        "ios": "supported",
+        "macos": "supported",
+        "tvos": "supported"
+      },
+      "zh": "设置有效的 IPv4 Fake IP 网段，也可能用作默认隧道 IPv4 地址来源。",
+      "en": "Sets a valid IPv4 Fake IP range; it may also supply the default tunnel IPv4 address."
+    },
+    {
+      "path": "dns.fake-ip-range6",
+      "type": "string",
+      "category": "dns",
+      "platforms": {
+        "ios": "limited",
+        "macos": "limited",
+        "tvos": "limited"
+      },
+      "zh": "设置 IPv6 Fake IP 网段，还需启用有效的 IPv6 设置。",
+      "en": "Sets the IPv6 Fake IP range; effective IPv6 settings must also enable it."
+    },
+    {
+      "path": "dns.fake-ip-ttl",
+      "type": "int",
+      "category": "dns",
+      "platforms": {
+        "ios": "supported",
+        "macos": "supported",
+        "tvos": "supported"
+      },
+      "zh": "设置 Fake IP 响应的 TTL，在 Fake IP 模式下使用。",
+      "en": "Sets the response TTL for Fake IP mode."
+    },
+    {
+      "path": "dns.fallback",
+      "type": "[]string",
+      "category": "dns",
+      "platforms": {
+        "ios": "limited",
+        "macos": "limited",
+        "tvos": "limited"
+      },
+      "zh": "设置直连或回退解析器；system/dhcp 地址会替换或过滤。fallback 仅按回退条件使用。",
+      "en": "Sets direct or fallback resolvers; system/dhcp entries are replaced or filtered. Fallback is used according to its conditions."
+    },
+    {
+      "path": "dns.fallback-filter.domain",
+      "type": "[]string",
+      "category": "dns",
+      "platforms": {
+        "ios": "supported",
+        "macos": "supported",
+        "tvos": "supported"
+      },
+      "zh": "设置 fallback 的使用条件；GeoIP/GeoSite 条件需要相应规则资源。",
+      "en": "Sets fallback conditions; GeoIP/GeoSite conditions require their data resources."
+    },
+    {
+      "path": "dns.fallback-filter.geoip",
+      "type": "bool",
+      "category": "dns",
+      "platforms": {
+        "ios": "supported",
+        "macos": "supported",
+        "tvos": "supported"
+      },
+      "zh": "设置 fallback 的使用条件；GeoIP/GeoSite 条件需要相应规则资源。",
+      "en": "Sets fallback conditions; GeoIP/GeoSite conditions require their data resources."
+    },
+    {
+      "path": "dns.fallback-filter.geoip-code",
+      "type": "string",
+      "category": "dns",
+      "platforms": {
+        "ios": "supported",
+        "macos": "supported",
+        "tvos": "supported"
+      },
+      "zh": "设置 fallback 的使用条件；GeoIP/GeoSite 条件需要相应规则资源。",
+      "en": "Sets fallback conditions; GeoIP/GeoSite conditions require their data resources."
+    },
+    {
+      "path": "dns.fallback-filter.geosite",
+      "type": "[]string",
+      "category": "dns",
+      "platforms": {
+        "ios": "supported",
+        "macos": "supported",
+        "tvos": "supported"
+      },
+      "zh": "设置 fallback 的使用条件；GeoIP/GeoSite 条件需要相应规则资源。",
+      "en": "Sets fallback conditions; GeoIP/GeoSite conditions require their data resources."
+    },
+    {
+      "path": "dns.fallback-filter.ipcidr",
+      "type": "[]string",
+      "category": "dns",
+      "platforms": {
+        "ios": "supported",
+        "macos": "supported",
+        "tvos": "supported"
+      },
+      "zh": "设置 fallback 的使用条件；GeoIP/GeoSite 条件需要相应规则资源。",
+      "en": "Sets fallback conditions; GeoIP/GeoSite conditions require their data resources."
+    },
+    {
+      "path": "dns.fallback-lazy-query",
+      "type": "bool",
+      "category": "dns",
+      "platforms": {
+        "ios": "supported",
+        "macos": "supported",
+        "tvos": "supported"
+      },
+      "zh": "控制回退 DNS 查询的调度，与节点健康检查的 lazy 不同。",
+      "en": "Controls fallback DNS query scheduling; separate from lazy node health checks."
+    },
+    {
+      "path": "dns.ipv6",
+      "type": "bool",
+      "category": "dns",
+      "platforms": {
+        "ios": "limited",
+        "macos": "limited",
+        "tvos": "limited"
+      },
+      "zh": "会受 App 的 IP Stack 设置影响；DNS IPv6 还需全局 IPv6 开启。隧道 IPv6 接管是另一项设置。",
+      "en": "Affected by the app’s IP Stack settings; DNS IPv6 also requires global IPv6. Tunnel IPv6 capture is a separate setting."
+    },
+    {
+      "path": "dns.ipv6-timeout",
+      "type": "uint",
+      "category": "dns",
+      "platforms": {
+        "ios": "supported",
+        "macos": "supported",
+        "tvos": "supported"
+      },
+      "zh": "控制相关 DNS 查询的 IPv6 等待时间，不是 VPN 总连接超时。",
+      "en": "Controls IPv6 waiting in relevant DNS queries, not the overall VPN connection timeout."
+    },
+    {
+      "path": "dns.listen",
+      "type": "string",
+      "category": "dns",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "创建 TCP/UDP DNS 监听。代理 authentication、allow-lan 和控制器 secret 不为它提供统一访问保护。",
+      "en": "Creates a TCP/UDP DNS listener. Proxy authentication, allow-lan, and controller secret do not provide shared access protection for it."
+    },
+    {
+      "path": "dns.listen-routing-mark",
+      "type": "int",
+      "category": "dns",
+      "platforms": {
+        "ios": "unsupported",
+        "macos": "unsupported",
+        "tvos": "unsupported"
+      },
+      "zh": "不生效，Apple 版本不使用此路由标记。",
+      "en": "No effect; this routing mark is not used on Apple platforms."
+    },
+    {
+      "path": "dns.nameserver",
+      "type": "[]string",
+      "category": "dns",
+      "platforms": {
+        "ios": "limited",
+        "macos": "limited",
+        "tvos": "limited"
+      },
+      "zh": "设置 DNS 服务器。system/dhcp 来源会使用连接前的系统 DNS 地址；无可用地址时会过滤或补齐。",
+      "en": "Sets DNS servers. system/dhcp sources use pre-connection system DNS addresses; unavailable entries are filtered or repaired."
+    },
+    {
+      "path": "dns.nameserver-policy",
+      "type": "*orderedmap.OrderedMap[string, any]",
+      "category": "dns",
+      "platforms": {
+        "ios": "limited",
+        "macos": "limited",
+        "tvos": "limited"
+      },
+      "zh": "按域名选择解析器。策略中的地址也会过滤；若全部不可用，该策略可能返回名称不存在。",
+      "en": "Selects resolvers by domain. Addresses are also filtered; if none remain, that policy may return name-not-found."
+    },
+    {
+      "path": "dns.prefer-h3",
+      "type": "bool",
+      "category": "dns",
+      "platforms": {
+        "ios": "supported",
+        "macos": "supported",
+        "tvos": "supported"
+      },
+      "zh": "对支持的 DNS 连接优先使用 HTTP/3。",
+      "en": "Prefers HTTP/3 for DNS connections that support it."
+    },
+    {
+      "path": "dns.proxy-server-nameserver",
+      "type": "[]string",
+      "category": "dns",
+      "platforms": {
+        "ios": "limited",
+        "macos": "limited",
+        "tvos": "limited"
+      },
+      "zh": "设置 DNS 服务器。system/dhcp 来源会使用连接前的系统 DNS 地址；无可用地址时会过滤或补齐。",
+      "en": "Sets DNS servers. system/dhcp sources use pre-connection system DNS addresses; unavailable entries are filtered or repaired."
+    },
+    {
+      "path": "dns.proxy-server-nameserver-policy",
+      "type": "*orderedmap.OrderedMap[string, any]",
+      "category": "dns",
+      "platforms": {
+        "ios": "limited",
+        "macos": "limited",
+        "tvos": "limited"
+      },
+      "zh": "按域名选择解析器。策略中的地址也会过滤；若全部不可用，该策略可能返回名称不存在。",
+      "en": "Selects resolvers by domain. Addresses are also filtered; if none remain, that policy may return name-not-found."
+    },
+    {
+      "path": "dns.respect-rules",
+      "type": "bool",
+      "category": "dns",
+      "platforms": {
+        "ios": "supported",
+        "macos": "supported",
+        "tvos": "supported"
+      },
+      "zh": "让相关 DNS 请求遵循分流规则；解析节点域名的 proxy-server-nameserver 不递归应用此设置。",
+      "en": "Routes relevant DNS requests by rules; proxy-server-nameserver does not recursively apply this setting."
+    },
+    {
+      "path": "dns.use-hosts",
+      "type": "bool",
+      "category": "dns",
+      "platforms": {
+        "ios": "supported",
+        "macos": "supported",
+        "tvos": "supported"
+      },
+      "zh": "DNS 查询使用顶层 hosts 中的映射。",
+      "en": "Uses mappings from top-level hosts for DNS queries."
+    },
+    {
+      "path": "dns.use-system-hosts",
+      "type": "bool",
+      "category": "dns",
+      "platforms": {
+        "ios": "supported",
+        "macos": "supported",
+        "tvos": "supported"
+      },
+      "zh": "使用 Clash 进程可读取的系统 hosts；不代表可以编辑 iOS/tvOS 的系统 hosts。",
+      "en": "Uses system hosts readable by Clash; does not enable editing system hosts on iOS/tvOS."
+    },
+    {
+      "path": "experimental.dialer-ip4p-convert",
+      "type": "bool",
+      "category": "experimental",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "启用 IP4P 地址转换，按需使用。",
+      "en": "Enables IP4P address conversion when needed."
+    },
+    {
+      "path": "experimental.fingerprints",
+      "type": "[]string",
+      "category": "experimental",
+      "platforms": {
+        "ios": "unsupported",
+        "macos": "unsupported",
+        "tvos": "unsupported"
+      },
+      "zh": "旧字段可以读取，但当前不产生指纹效果。",
+      "en": "The legacy field is accepted but has no fingerprint effect."
+    },
+    {
+      "path": "experimental.quic-go-disable-ecn",
+      "type": "bool",
+      "category": "experimental",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "关闭相关 quic-go 功能。改回 false 不会清除当前进程已设置的开关，热重载或断开重连均不保证立即恢复。与 TUN GSO 不同。",
+      "en": "Disables the relevant quic-go feature. Setting false does not clear a flag already set in the current process; neither hot reload nor reconnect guarantees immediate restoration. Separate from TUN GSO."
+    },
+    {
+      "path": "experimental.quic-go-disable-gso",
+      "type": "bool",
+      "category": "experimental",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "关闭相关 quic-go 功能。改回 false 不会清除当前进程已设置的开关，热重载或断开重连均不保证立即恢复。与 TUN GSO 不同。",
+      "en": "Disables the relevant quic-go feature. Setting false does not clear a flag already set in the current process; neither hot reload nor reconnect guarantees immediate restoration. Separate from TUN GSO."
+    },
+    {
+      "path": "clash-for-android.append-system-dns",
+      "type": "bool",
+      "category": "general",
+      "platforms": {
+        "ios": "na",
+        "macos": "na",
+        "tvos": "na"
+      },
+      "zh": "Android 专用设置，Apple 版本不使用。",
+      "en": "Android-specific; not used on Apple platforms."
+    },
+    {
+      "path": "clash-for-android.ui-subtitle-pattern",
+      "type": "string",
+      "category": "general",
+      "platforms": {
+        "ios": "na",
+        "macos": "na",
+        "tvos": "na"
+      },
+      "zh": "Android 专用设置，Apple 版本不使用。",
+      "en": "Android-specific; not used on Apple platforms."
+    },
+    {
+      "path": "disable-keep-alive",
+      "type": "bool",
+      "category": "general",
+      "platforms": {
+        "ios": "supported",
+        "macos": "supported",
+        "tvos": "supported"
+      },
+      "zh": "控制相应连接的保活行为；修改后请用新连接验证。",
+      "en": "Controls connection keep-alive behavior; verify changes with new connections."
+    },
+    {
+      "path": "etag-support",
+      "type": "bool",
+      "category": "general",
+      "platforms": {
+        "ios": "supported",
+        "macos": "supported",
+        "tvos": "supported"
+      },
+      "zh": "控制相关 HTTP 资源请求的 ETag 使用。",
+      "en": "Controls ETag use for relevant HTTP resource requests."
+    },
+    {
+      "path": "external-controller",
+      "type": "string",
+      "category": "general",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "创建 HTTP/HTTPS 控制器。建议绑定回环地址并设置 secret；部分桌面控制 API 不提供。",
+      "en": "Creates an HTTP/HTTPS controller. Prefer loopback binding and a secret; some desktop control APIs are unavailable."
+    },
+    {
+      "path": "external-controller-cors.allow-origins",
+      "type": "[]string",
+      "category": "general",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "控制浏览器跨域访问，不代替密码认证。",
+      "en": "Controls browser cross-origin access; does not replace authentication."
+    },
+    {
+      "path": "external-controller-cors.allow-private-network",
+      "type": "bool",
+      "category": "general",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "控制浏览器跨域访问，不代替密码认证。",
+      "en": "Controls browser cross-origin access; does not replace authentication."
+    },
+    {
+      "path": "external-controller-pipe",
+      "type": "string",
+      "category": "general",
+      "platforms": {
+        "ios": "na",
+        "macos": "na",
+        "tvos": "na"
+      },
+      "zh": "Windows 专用管道设置，Apple 版本不使用。",
+      "en": "Windows named-pipe setting; not used on Apple platforms."
+    },
+    {
+      "path": "external-controller-routing-mark",
+      "type": "int",
+      "category": "general",
+      "platforms": {
+        "ios": "na",
+        "macos": "na",
+        "tvos": "na"
+      },
+      "zh": "Linux 路由标记，Apple 版本不使用。",
+      "en": "Linux routing mark; not used on Apple platforms."
+    },
+    {
+      "path": "external-controller-tls",
+      "type": "string",
+      "category": "general",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "创建 HTTP/HTTPS 控制器。建议绑定回环地址并设置 secret；部分桌面控制 API 不提供。",
+      "en": "Creates an HTTP/HTTPS controller. Prefer loopback binding and a secret; some desktop control APIs are unavailable."
+    },
+    {
+      "path": "external-controller-unix",
+      "type": "string",
+      "category": "general",
+      "platforms": {
+        "ios": "unsupported",
+        "macos": "unsupported",
+        "tvos": "unsupported"
+      },
+      "zh": "三端都不使用用户填写的 Unix 控制器路径。",
+      "en": "The user-supplied Unix controller path is not used on any of the three platforms."
+    },
+    {
+      "path": "external-doh-server",
+      "type": "string",
+      "category": "general",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "设置控制器上的 DoH 路径；控制器 secret 不保护此路径。",
+      "en": "Sets a DoH path on the controller; controller secret does not protect this path."
+    },
+    {
+      "path": "external-ui",
+      "type": "string",
+      "category": "general",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "设置控制面板目录、名称或下载地址。名称需为本地相对路径；静态页面不受 secret 保护，API 另行认证。",
+      "en": "Sets the dashboard directory, name, or download URL. The name must be a local relative path; static pages are outside secret authentication, while APIs authenticate separately."
+    },
+    {
+      "path": "external-ui-name",
+      "type": "string",
+      "category": "general",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "设置控制面板目录、名称或下载地址。名称需为本地相对路径；静态页面不受 secret 保护，API 另行认证。",
+      "en": "Sets the dashboard directory, name, or download URL. The name must be a local relative path; static pages are outside secret authentication, while APIs authenticate separately."
+    },
+    {
+      "path": "external-ui-url",
+      "type": "string",
+      "category": "general",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "设置控制面板目录、名称或下载地址。名称需为本地相对路径；静态页面不受 secret 保护，API 另行认证。",
+      "en": "Sets the dashboard directory, name, or download URL. The name must be a local relative path; static pages are outside secret authentication, while APIs authenticate separately."
+    },
+    {
+      "path": "find-process-mode",
+      "type": "process.FindProcessMode",
+      "category": "general",
+      "platforms": {
+        "ios": "unsupported",
+        "macos": "supported",
+        "tvos": "unsupported"
+      },
+      "zh": "macOS 可按连接查询进程名、路径和 UID；iOS/tvOS 固定关闭。无法保证每条连接都能取得进程信息。",
+      "en": "macOS can query process name, path, and UID per connection; always off on iOS/tvOS. Some connections may lack process information."
+    },
+    {
+      "path": "geo-auto-update",
+      "type": "bool",
+      "category": "general",
+      "platforms": {
+        "ios": "limited",
+        "macos": "limited",
+        "tvos": "limited"
+      },
+      "zh": "运行时固定关闭；资源准备由 Clash 管理。",
+      "en": "Always off at runtime; Clash manages resource preparation."
+    },
+    {
+      "path": "geo-update-interval",
+      "type": "int",
+      "category": "general",
+      "platforms": {
+        "ios": "unsupported",
+        "macos": "unsupported",
+        "tvos": "unsupported"
+      },
+      "zh": "自动更新已关闭，填写此间隔不会启用定时更新。",
+      "en": "Automatic updates are off; this interval does not enable scheduled updates."
+    },
+    {
+      "path": "geodata-loader",
+      "type": "string",
+      "category": "general",
+      "platforms": {
+        "ios": "limited",
+        "macos": "supported",
+        "tvos": "limited"
+      },
+      "zh": "iOS/tvOS 使用 memconservative；macOS 保留选择。已有预编译资源时不再加载源数据。",
+      "en": "iOS/tvOS use memconservative; macOS keeps the selection. Precompiled resources bypass source-data loading."
+    },
+    {
+      "path": "geodata-mode",
+      "type": "bool",
+      "category": "general",
+      "platforms": {
+        "ios": "limited",
+        "macos": "limited",
+        "tvos": "limited"
+      },
+      "zh": "选择 GeoIP 数据模式，需要对应资源；不会绕过平台的预编译资源要求。",
+      "en": "Selects the GeoIP data mode and requires matching resources; does not bypass platform precompilation requirements."
+    },
+    {
+      "path": "geosite-matcher",
+      "type": "string",
+      "category": "general",
+      "platforms": {
+        "ios": "limited",
+        "macos": "limited",
+        "tvos": "limited"
+      },
+      "zh": "预编译 GeoSite 使用固定匹配器。iOS/tvOS 使用预编译资源；macOS 回退到源数据时才可能使用此选择。",
+      "en": "Precompiled GeoSite uses a fixed matcher. iOS/tvOS use precompiled resources; macOS may apply this choice when falling back to source data."
+    },
+    {
+      "path": "geox-url.asn",
+      "type": "string",
+      "category": "general",
+      "platforms": {
+        "ios": "limited",
+        "macos": "limited",
+        "tvos": "limited"
+      },
+      "zh": "不会让隧道按此地址自动下载；请通过 Clash 的资源管理准备所需数据。",
+      "en": "Does not trigger automatic downloads in the tunnel; prepare data through Clash resource management."
+    },
+    {
+      "path": "geox-url.geoip",
+      "type": "string",
+      "category": "general",
+      "platforms": {
+        "ios": "limited",
+        "macos": "limited",
+        "tvos": "limited"
+      },
+      "zh": "不会让隧道按此地址自动下载；请通过 Clash 的资源管理准备所需数据。",
+      "en": "Does not trigger automatic downloads in the tunnel; prepare data through Clash resource management."
+    },
+    {
+      "path": "geox-url.geosite",
+      "type": "string",
+      "category": "general",
+      "platforms": {
+        "ios": "limited",
+        "macos": "limited",
+        "tvos": "limited"
+      },
+      "zh": "不会让隧道按此地址自动下载；请通过 Clash 的资源管理准备所需数据。",
+      "en": "Does not trigger automatic downloads in the tunnel; prepare data through Clash resource management."
+    },
+    {
+      "path": "geox-url.mmdb",
+      "type": "string",
+      "category": "general",
+      "platforms": {
+        "ios": "limited",
+        "macos": "limited",
+        "tvos": "limited"
+      },
+      "zh": "不会让隧道按此地址自动下载；请通过 Clash 的资源管理准备所需数据。",
+      "en": "Does not trigger automatic downloads in the tunnel; prepare data through Clash resource management."
+    },
+    {
+      "path": "global-client-fingerprint",
+      "type": "string",
+      "category": "general",
+      "platforms": {
+        "ios": "unsupported",
+        "macos": "unsupported",
+        "tvos": "unsupported"
+      },
+      "zh": "已失去全局指纹作用；请在支持的节点协议中设置 client-fingerprint。",
+      "en": "No longer sets a global fingerprint; use client-fingerprint on a supported outbound protocol."
+    },
+    {
+      "path": "global-ua",
+      "type": "string",
+      "category": "general",
+      "platforms": {
+        "ios": "supported",
+        "macos": "supported",
+        "tvos": "supported"
+      },
+      "zh": "设置相关 HTTP 请求的默认 User-Agent。",
+      "en": "Sets the default User-Agent for relevant HTTP requests."
+    },
+    {
+      "path": "hosts",
+      "type": "map[string]any",
+      "category": "general",
+      "platforms": {
+        "ios": "supported",
+        "macos": "supported",
+        "tvos": "supported"
+      },
+      "zh": "设置静态域名与地址映射。",
+      "en": "Sets static domain-to-address mappings."
+    },
+    {
+      "path": "ipv6",
+      "type": "bool",
+      "category": "general",
+      "platforms": {
+        "ios": "limited",
+        "macos": "limited",
+        "tvos": "limited"
+      },
+      "zh": "会受 App 的 IP Stack 设置影响；DNS IPv6 还需全局 IPv6 开启。隧道 IPv6 接管是另一项设置。",
+      "en": "Affected by the app’s IP Stack settings; DNS IPv6 also requires global IPv6. Tunnel IPv6 capture is a separate setting."
+    },
+    {
+      "path": "keep-alive-idle",
+      "type": "int",
+      "category": "general",
+      "platforms": {
+        "ios": "supported",
+        "macos": "supported",
+        "tvos": "supported"
+      },
+      "zh": "控制相应连接的保活行为；修改后请用新连接验证。",
+      "en": "Controls connection keep-alive behavior; verify changes with new connections."
+    },
+    {
+      "path": "keep-alive-interval",
+      "type": "int",
+      "category": "general",
+      "platforms": {
+        "ios": "supported",
+        "macos": "supported",
+        "tvos": "supported"
+      },
+      "zh": "控制相应连接的保活行为；修改后请用新连接验证。",
+      "en": "Controls connection keep-alive behavior; verify changes with new connections."
+    },
+    {
+      "path": "log-level",
+      "type": "log.LogLevel",
+      "category": "general",
+      "platforms": {
+        "ios": "supported",
+        "macos": "supported",
+        "tvos": "supported"
+      },
+      "zh": "设置日志级别。debug 还会在控制器中开启调试接口；排查后可恢复常用级别。",
+      "en": "Sets logging level. debug also enables controller debugging endpoints; restore a normal level after troubleshooting."
+    },
+    {
+      "path": "mode",
+      "type": "T.TunnelMode",
+      "category": "general",
+      "platforms": {
+        "ios": "supported",
+        "macos": "supported",
+        "tvos": "supported"
+      },
+      "zh": "选择 rule、global 或 direct 出站模式。",
+      "en": "Selects rule, global, or direct outbound mode."
+    },
+    {
+      "path": "secret",
+      "type": "string",
+      "category": "general",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "保护控制器的认证 API；为空时不要求密码。不会保护静态 UI、External DoH 或其他独立服务。",
+      "en": "Protects authenticated controller APIs; an empty value requires no password. Does not protect static UI, External DoH, or independent services."
+    },
+    {
+      "path": "tcp-concurrent",
+      "type": "bool",
+      "category": "general",
+      "platforms": {
+        "ios": "supported",
+        "macos": "supported",
+        "tvos": "supported"
+      },
+      "zh": "控制并发 TCP 拨号；修改后请用新连接验证。",
+      "en": "Controls concurrent TCP dialing; verify changes with new connections."
+    },
+    {
+      "path": "unified-delay",
+      "type": "bool",
+      "category": "general",
+      "platforms": {
+        "ios": "limited",
+        "macos": "limited",
+        "tvos": "limited"
+      },
+      "zh": "未填写时默认 true；明确填写 false 会保留。",
+      "en": "Defaults to true when omitted; an explicit false is preserved."
+    },
+    {
+      "path": "allow-lan",
+      "type": "bool",
+      "category": "inbound",
+      "platforms": {
+        "ios": "limited",
+        "macos": "limited",
+        "tvos": "limited"
+      },
+      "zh": "只有 App 允许局域网共享时，YAML 的 true 才会保留；不统一控制 DNS 或控制器访问。",
+      "en": "YAML true is kept only when the app permits LAN sharing; this does not control DNS or controller access globally."
+    },
+    {
+      "path": "authentication",
+      "type": "[]string",
+      "category": "inbound",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "设置相应本地代理入口的用户名和密码，不是 DNS 或控制器的密码。",
+      "en": "Sets credentials for applicable local proxy listeners, not DNS or controller credentials."
+    },
+    {
+      "path": "bind-address",
+      "type": "string",
+      "category": "inbound",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "设置相应本地代理入口的绑定或来源限制，不统一约束其他监听服务。",
+      "en": "Sets binding or source restrictions for applicable local proxy listeners, not all other services."
+    },
+    {
+      "path": "inbound-mptcp",
+      "type": "bool",
+      "category": "inbound",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "请求在监听连接中使用相应功能；是否实际启用取决于系统和连接协商。",
+      "en": "Requests the feature for inbound connections; actual use depends on the system and connection negotiation."
+    },
+    {
+      "path": "inbound-tfo",
+      "type": "bool",
+      "category": "inbound",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "请求在监听连接中使用相应功能；是否实际启用取决于系统和连接协商。",
+      "en": "Requests the feature for inbound connections; actual use depends on the system and connection negotiation."
+    },
+    {
+      "path": "interface-name",
+      "type": "string",
+      "category": "inbound",
+      "platforms": {
+        "ios": "unsupported",
+        "macos": "unsupported",
+        "tvos": "unsupported"
+      },
+      "zh": "不采用用户指定的出口接口，Clash 自动管理物理出口。",
+      "en": "The requested interface is not used; Clash manages the physical outbound interface."
+    },
+    {
+      "path": "iptables.bypass",
+      "type": "[]string",
+      "category": "inbound",
+      "platforms": {
+        "ios": "na",
+        "macos": "na",
+        "tvos": "na"
+      },
+      "zh": "Linux iptables 设置，在 Apple 版本中不生效。",
+      "en": "Linux iptables setting; no effect on Apple platforms."
+    },
+    {
+      "path": "iptables.dns-redirect",
+      "type": "bool",
+      "category": "inbound",
+      "platforms": {
+        "ios": "na",
+        "macos": "na",
+        "tvos": "na"
+      },
+      "zh": "Linux iptables 设置，在 Apple 版本中不生效。",
+      "en": "Linux iptables setting; no effect on Apple platforms."
+    },
+    {
+      "path": "iptables.enable",
+      "type": "bool",
+      "category": "inbound",
+      "platforms": {
+        "ios": "na",
+        "macos": "na",
+        "tvos": "na"
+      },
+      "zh": "Linux iptables 设置，在 Apple 版本中不生效。",
+      "en": "Linux iptables setting; no effect on Apple platforms."
+    },
+    {
+      "path": "iptables.inbound-interface",
+      "type": "string",
+      "category": "inbound",
+      "platforms": {
+        "ios": "na",
+        "macos": "na",
+        "tvos": "na"
+      },
+      "zh": "Linux iptables 设置，在 Apple 版本中不生效。",
+      "en": "Linux iptables setting; no effect on Apple platforms."
+    },
+    {
+      "path": "lan-allowed-ips",
+      "type": "[]netip.Prefix",
+      "category": "inbound",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "设置相应本地代理入口的绑定或来源限制，不统一约束其他监听服务。",
+      "en": "Sets binding or source restrictions for applicable local proxy listeners, not all other services."
+    },
+    {
+      "path": "lan-disallowed-ips",
+      "type": "[]netip.Prefix",
+      "category": "inbound",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "设置相应本地代理入口的绑定或来源限制，不统一约束其他监听服务。",
+      "en": "Sets binding or source restrictions for applicable local proxy listeners, not all other services."
+    },
+    {
+      "path": "listeners",
+      "type": "[]map[string]any",
+      "category": "inbound",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "用于自定义监听或转发；请按具体协议设置地址与认证，实际可用性还受系统限制。",
+      "en": "Configures custom listeners or forwarding; use protocol-specific binding and authentication. Availability also depends on system constraints."
+    },
+    {
+      "path": "mixed-port",
+      "type": "int",
+      "category": "inbound",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "设置本地代理监听端口；实际访问范围取决于绑定地址、共享许可和该入口的认证。",
+      "en": "Sets a local proxy port; access depends on binding, sharing permission, and listener authentication."
+    },
+    {
+      "path": "port",
+      "type": "int",
+      "category": "inbound",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "设置本地代理监听端口；实际访问范围取决于绑定地址、共享许可和该入口的认证。",
+      "en": "Sets a local proxy port; access depends on binding, sharing permission, and listener authentication."
+    },
+    {
+      "path": "redir-port",
+      "type": "int",
+      "category": "inbound",
+      "platforms": {
+        "ios": "unsupported",
+        "macos": "unsupported",
+        "tvos": "unsupported"
+      },
+      "zh": "不生效，不会创建这个顶层监听端口。",
+      "en": "No effect; this top-level listening port is not created."
+    },
+    {
+      "path": "routing-mark",
+      "type": "int",
+      "category": "inbound",
+      "platforms": {
+        "ios": "unsupported",
+        "macos": "unsupported",
+        "tvos": "unsupported"
+      },
+      "zh": "不生效，Apple 版本不使用此路由标记。",
+      "en": "No effect; this routing mark is not used on Apple platforms."
+    },
+    {
+      "path": "skip-auth-prefixes",
+      "type": "[]netip.Prefix",
+      "category": "inbound",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "让指定来源网段跳过相应代理入口的认证，按需设置。",
+      "en": "Skips authentication for the specified source ranges on applicable proxy listeners."
+    },
+    {
+      "path": "socks-port",
+      "type": "int",
+      "category": "inbound",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "设置本地代理监听端口；实际访问范围取决于绑定地址、共享许可和该入口的认证。",
+      "en": "Sets a local proxy port; access depends on binding, sharing permission, and listener authentication."
+    },
+    {
+      "path": "ss-config",
+      "type": "string",
+      "category": "inbound",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "用于自定义监听或转发；请按具体协议设置地址与认证，实际可用性还受系统限制。",
+      "en": "Configures custom listeners or forwarding; use protocol-specific binding and authentication. Availability also depends on system constraints."
+    },
+    {
+      "path": "tproxy-port",
+      "type": "int",
+      "category": "inbound",
+      "platforms": {
+        "ios": "unsupported",
+        "macos": "unsupported",
+        "tvos": "unsupported"
+      },
+      "zh": "不生效，不会创建这个顶层监听端口。",
+      "en": "No effect; this top-level listening port is not created."
+    },
+    {
+      "path": "tuic-server.alpn",
+      "type": "[]string",
+      "category": "inbound",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "设置 TUIC 服务端 TLS；证书/私钥可用有效内容或进程可读的文件，不是出站节点设置。",
+      "en": "Sets TUIC server TLS; certificates/keys may be valid content or readable files. These are not outbound-node settings."
+    },
+    {
+      "path": "tuic-server.authentication-timeout",
+      "type": "int",
+      "category": "inbound",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "设置 TUIC 服务的相应超时，单位为毫秒；零值使用默认处理。",
+      "en": "Sets the relevant TUIC server timeout in milliseconds; zero uses default handling."
+    },
+    {
+      "path": "tuic-server.certificate",
+      "type": "string",
+      "category": "inbound",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "设置 TUIC 服务端 TLS；证书/私钥可用有效内容或进程可读的文件，不是出站节点设置。",
+      "en": "Sets TUIC server TLS; certificates/keys may be valid content or readable files. These are not outbound-node settings."
+    },
+    {
+      "path": "tuic-server.congestion-controller",
+      "type": "string",
+      "category": "inbound",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "设置 TUIC 服务参数；实际数值会受默认值、范围和协商限制。",
+      "en": "Sets TUIC server parameters; effective values depend on defaults, bounds, and negotiation."
+    },
+    {
+      "path": "tuic-server.cwnd",
+      "type": "int",
+      "category": "inbound",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "设置 TUIC 服务参数；实际数值会受默认值、范围和协商限制。",
+      "en": "Sets TUIC server parameters; effective values depend on defaults, bounds, and negotiation."
+    },
+    {
+      "path": "tuic-server.enable",
+      "type": "bool",
+      "category": "inbound",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "开启 TUIC 服务或设置 UDP 监听地址，需满足系统的端口与权限条件。",
+      "en": "Enables the TUIC server or sets its UDP address, subject to system port and permission constraints."
+    },
+    {
+      "path": "tuic-server.listen",
+      "type": "string",
+      "category": "inbound",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "开启 TUIC 服务或设置 UDP 监听地址，需满足系统的端口与权限条件。",
+      "en": "Enables the TUIC server or sets its UDP address, subject to system port and permission constraints."
+    },
+    {
+      "path": "tuic-server.max-idle-time",
+      "type": "int",
+      "category": "inbound",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "设置 TUIC 服务的相应超时，单位为毫秒；零值使用默认处理。",
+      "en": "Sets the relevant TUIC server timeout in milliseconds; zero uses default handling."
+    },
+    {
+      "path": "tuic-server.max-udp-relay-packet-size",
+      "type": "int",
+      "category": "inbound",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "设置 TUIC 服务参数；实际数值会受默认值、范围和协商限制。",
+      "en": "Sets TUIC server parameters; effective values depend on defaults, bounds, and negotiation."
+    },
+    {
+      "path": "tuic-server.private-key",
+      "type": "string",
+      "category": "inbound",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "设置 TUIC 服务端 TLS；证书/私钥可用有效内容或进程可读的文件，不是出站节点设置。",
+      "en": "Sets TUIC server TLS; certificates/keys may be valid content or readable files. These are not outbound-node settings."
+    },
+    {
+      "path": "tuic-server.token",
+      "type": "[]string",
+      "category": "inbound",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "设置 TUIC 服务自己的认证信息，与顶层 authentication 分开。",
+      "en": "Sets TUIC server credentials separately from top-level authentication."
+    },
+    {
+      "path": "tuic-server.users",
+      "type": "map[string]string",
+      "category": "inbound",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "设置 TUIC 服务自己的认证信息，与顶层 authentication 分开。",
+      "en": "Sets TUIC server credentials separately from top-level authentication."
+    },
+    {
+      "path": "tunnels",
+      "type": "[]LC.Tunnel",
+      "category": "tunnels",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "用于自定义监听或转发；请按具体协议设置地址与认证，实际可用性还受系统限制。",
+      "en": "Configures custom listeners or forwarding; use protocol-specific binding and authentication. Availability also depends on system constraints."
+    },
+    {
+      "path": "vmess-config",
+      "type": "string",
+      "category": "inbound",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "用于自定义监听或转发；请按具体协议设置地址与认证，实际可用性还受系统限制。",
+      "en": "Configures custom listeners or forwarding; use protocol-specific binding and authentication. Availability also depends on system constraints."
+    },
+    {
+      "path": "ntp.dialer-proxy",
+      "type": "string",
+      "category": "ntp",
+      "platforms": {
+        "ios": "limited",
+        "macos": "limited",
+        "tvos": "limited"
+      },
+      "zh": "启用并配置时间同步，为相关协议提供时间偏移；不修改设备时钟。",
+      "en": "Configures time synchronization for protocol time offsets; does not change the device clock."
+    },
+    {
+      "path": "ntp.enable",
+      "type": "bool",
+      "category": "ntp",
+      "platforms": {
+        "ios": "limited",
+        "macos": "limited",
+        "tvos": "limited"
+      },
+      "zh": "启用并配置时间同步，为相关协议提供时间偏移；不修改设备时钟。",
+      "en": "Configures time synchronization for protocol time offsets; does not change the device clock."
+    },
+    {
+      "path": "ntp.interval",
+      "type": "int",
+      "category": "ntp",
+      "platforms": {
+        "ios": "limited",
+        "macos": "limited",
+        "tvos": "limited"
+      },
+      "zh": "时间同步间隔，单位为分钟。",
+      "en": "Time synchronization interval in minutes."
+    },
+    {
+      "path": "ntp.port",
+      "type": "int",
+      "category": "ntp",
+      "platforms": {
+        "ios": "limited",
+        "macos": "limited",
+        "tvos": "limited"
+      },
+      "zh": "启用并配置时间同步，为相关协议提供时间偏移；不修改设备时钟。",
+      "en": "Configures time synchronization for protocol time offsets; does not change the device clock."
+    },
+    {
+      "path": "ntp.server",
+      "type": "string",
+      "category": "ntp",
+      "platforms": {
+        "ios": "limited",
+        "macos": "limited",
+        "tvos": "limited"
+      },
+      "zh": "启用并配置时间同步，为相关协议提供时间偏移；不修改设备时钟。",
+      "en": "Configures time synchronization for protocol time offsets; does not change the device clock."
+    },
+    {
+      "path": "ntp.write-to-system",
+      "type": "bool",
+      "category": "ntp",
+      "platforms": {
+        "ios": "unsupported",
+        "macos": "unsupported",
+        "tvos": "unsupported"
+      },
+      "zh": "固定 false，不修改设备时钟。",
+      "en": "Always false; does not change the device clock."
+    },
+    {
+      "path": "profile.store-fake-ip",
+      "type": "bool",
+      "category": "profile",
+      "platforms": {
+        "ios": "supported",
+        "macos": "supported",
+        "tvos": "limited"
+      },
+      "zh": "控制 Fake IP 映射缓存，未填写默认 true；false 关闭。需要可用持久缓存，tvOS 缓存丢失后不保证恢复原映射。",
+      "en": "Controls Fake IP cache persistence; defaults to true, false disables it. Requires persistent storage; tvOS cache loss may discard previous mappings."
+    },
+    {
+      "path": "profile.store-selected",
+      "type": "bool",
+      "category": "profile",
+      "platforms": {
+        "ios": "supported",
+        "macos": "supported",
+        "tvos": "limited"
+      },
+      "zh": "控制内核策略选择缓存，默认 true；false 关闭。不是保存配置文件的开关；tvOS 缓存丢失后不保证恢复原选择。",
+      "en": "Controls core policy-selection persistence; defaults to true, false disables it. Does not save Profiles; tvOS cache loss may discard previous selections."
+    },
+    {
+      "path": "proxy-providers",
+      "type": "map[string]map[string]any",
+      "category": "proxy-providers",
+      "platforms": {
+        "ios": "limited",
+        "macos": "limited",
+        "tvos": "limited"
+      },
+      "zh": "inline 直接读取；远程资源可由 App 预先准备，也可在启动后由内核加载。预编译规则更新可能在下次激活时生效。",
+      "en": "Inline content loads directly; remote resources may be prepared by the app or loaded by the core after startup. Precompiled rule updates may take effect at the next activation."
+    },
+    {
+      "path": "rule-providers",
+      "type": "map[string]map[string]any",
+      "category": "rule-providers",
+      "platforms": {
+        "ios": "limited",
+        "macos": "limited",
+        "tvos": "limited"
+      },
+      "zh": "inline 直接读取；远程资源可由 App 预先准备，也可在启动后由内核加载。预编译规则更新可能在下次激活时生效。",
+      "en": "Inline content loads directly; remote resources may be prepared by the app or loaded by the core after startup. Precompiled rule updates may take effect at the next activation."
+    },
+    {
+      "path": "proxies",
+      "type": "[]map[string]any",
+      "category": "proxies",
+      "platforms": {
+        "ios": "supported",
+        "macos": "supported",
+        "tvos": "supported"
+      },
+      "zh": "定义出站节点；具体参数请查对应协议。节点中的接口名和路由标记受 Apple 平台处理限制。",
+      "en": "Defines outbounds; consult each protocol for its parameters. Interface names and routing marks are subject to Apple-platform handling."
+    },
+    {
+      "path": "proxy-groups",
+      "type": "[]map[string]any",
+      "category": "proxy-groups",
+      "platforms": {
+        "ios": "supported",
+        "macos": "supported",
+        "tvos": "supported"
+      },
+      "zh": "支持 select、url-test、fallback、load-balance。fallback 按顺序选择健康项；检查频率受 lazy 和系统运行状态影响。",
+      "en": "Supports select, url-test, fallback, and load-balance. Fallback chooses healthy entries in order; checks depend on lazy settings and system runtime conditions."
+    },
+    {
+      "path": "rules",
+      "type": "[]string",
+      "category": "rules",
+      "platforms": {
+        "ios": "limited",
+        "macos": "limited",
+        "tvos": "limited"
+      },
+      "zh": "按顺序分流。macOS 支持进程/UID；iOS/tvOS 不能可靠按应用匹配，进程通配/正则可能匹配空身份，UID 规则另有移除处理。",
+      "en": "Routes traffic by rules. macOS supports process/UID matching; iOS/tvOS cannot reliably identify apps, process patterns may match empty identities, and UID rules have separate removal handling."
+    },
+    {
+      "path": "sub-rules",
+      "type": "map[string][]string",
+      "category": "sub-rules",
+      "platforms": {
+        "ios": "limited",
+        "macos": "limited",
+        "tvos": "limited"
+      },
+      "zh": "按顺序分流。macOS 支持进程/UID；iOS/tvOS 不能可靠按应用匹配，进程通配/正则可能匹配空身份，UID 规则另有移除处理。",
+      "en": "Routes traffic by rules. macOS supports process/UID matching; iOS/tvOS cannot reliably identify apps, process patterns may match empty identities, and UID rules have separate removal handling."
+    },
+    {
+      "path": "tls.certificate",
+      "type": "string",
+      "category": "security",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "用于外部 TLS 控制器的服务端证书、客户端认证或 ECH；在启用相应服务时使用。",
+      "en": "Configures external TLS controller certificates, client authentication, or ECH; used when that service is enabled."
+    },
+    {
+      "path": "tls.client-auth-cert",
+      "type": "string",
+      "category": "security",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "用于外部 TLS 控制器的服务端证书、客户端认证或 ECH；在启用相应服务时使用。",
+      "en": "Configures external TLS controller certificates, client authentication, or ECH; used when that service is enabled."
+    },
+    {
+      "path": "tls.client-auth-type",
+      "type": "string",
+      "category": "security",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "用于外部 TLS 控制器的服务端证书、客户端认证或 ECH；在启用相应服务时使用。",
+      "en": "Configures external TLS controller certificates, client authentication, or ECH; used when that service is enabled."
+    },
+    {
+      "path": "tls.custom-certifactes",
+      "type": "[]string",
+      "category": "security",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "填写要加入出站信任库的证书内容，不是文件路径。只添加你信任的证书；字段拼写需保持原样。",
+      "en": "Adds certificate content to outbound trust, not a file path. Add only trusted certificates and keep this field’s spelling."
+    },
+    {
+      "path": "tls.ech-key",
+      "type": "string",
+      "category": "security",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "用于外部 TLS 控制器的服务端证书、客户端认证或 ECH；在启用相应服务时使用。",
+      "en": "Configures external TLS controller certificates, client authentication, or ECH; used when that service is enabled."
+    },
+    {
+      "path": "tls.private-key",
+      "type": "string",
+      "category": "security",
+      "platforms": {
+        "ios": "advanced",
+        "macos": "advanced",
+        "tvos": "advanced"
+      },
+      "zh": "用于外部 TLS 控制器的服务端证书、客户端认证或 ECH；在启用相应服务时使用。",
+      "en": "Configures external TLS controller certificates, client authentication, or ECH; used when that service is enabled."
+    },
+    {
+      "path": "sniffer.enable",
+      "type": "bool",
+      "category": "sniffer",
+      "platforms": {
+        "ios": "supported",
+        "macos": "supported",
+        "tvos": "supported"
+      },
+      "zh": "控制嗅探开关及适用/跳过条件；实际嗅探取决于协议、端口和域名条件，不会解密所有加密流量。",
+      "en": "Controls sniffing and inclusion/exclusion conditions; use depends on protocol, port, and domain conditions. Does not decrypt all encrypted traffic."
+    },
+    {
+      "path": "sniffer.force-dns-mapping",
+      "type": "bool",
+      "category": "sniffer",
+      "platforms": {
+        "ios": "supported",
+        "macos": "supported",
+        "tvos": "supported"
+      },
+      "zh": "控制嗅探开关及适用/跳过条件；实际嗅探取决于协议、端口和域名条件，不会解密所有加密流量。",
+      "en": "Controls sniffing and inclusion/exclusion conditions; use depends on protocol, port, and domain conditions. Does not decrypt all encrypted traffic."
+    },
+    {
+      "path": "sniffer.force-domain",
+      "type": "[]string",
+      "category": "sniffer",
+      "platforms": {
+        "ios": "supported",
+        "macos": "supported",
+        "tvos": "supported"
+      },
+      "zh": "控制嗅探开关及适用/跳过条件；实际嗅探取决于协议、端口和域名条件，不会解密所有加密流量。",
+      "en": "Controls sniffing and inclusion/exclusion conditions; use depends on protocol, port, and domain conditions. Does not decrypt all encrypted traffic."
+    },
+    {
+      "path": "sniffer.override-destination",
+      "type": "bool",
+      "category": "sniffer",
+      "platforms": {
+        "ios": "supported",
+        "macos": "supported",
+        "tvos": "supported"
+      },
+      "zh": "设置默认目标覆盖行为；sniff 中单个协议的显式设置可覆盖它。",
+      "en": "Sets default destination overriding; an explicit per-protocol value in sniff takes precedence."
+    },
+    {
+      "path": "sniffer.parse-pure-ip",
+      "type": "bool",
+      "category": "sniffer",
+      "platforms": {
+        "ios": "supported",
+        "macos": "supported",
+        "tvos": "supported"
+      },
+      "zh": "控制嗅探开关及适用/跳过条件；实际嗅探取决于协议、端口和域名条件，不会解密所有加密流量。",
+      "en": "Controls sniffing and inclusion/exclusion conditions; use depends on protocol, port, and domain conditions. Does not decrypt all encrypted traffic."
+    },
+    {
+      "path": "sniffer.port-whitelist",
+      "type": "[]string",
+      "category": "sniffer",
+      "platforms": {
+        "ios": "limited",
+        "macos": "limited",
+        "tvos": "limited"
+      },
+      "zh": "兼容旧写法，仅在 sniff 为空时使用；新配置优先用 sniff。",
+      "en": "Legacy syntax, used only when sniff is empty; prefer sniff in new configurations."
+    },
+    {
+      "path": "sniffer.skip-domain",
+      "type": "[]string",
+      "category": "sniffer",
+      "platforms": {
+        "ios": "supported",
+        "macos": "supported",
+        "tvos": "supported"
+      },
+      "zh": "控制嗅探开关及适用/跳过条件；实际嗅探取决于协议、端口和域名条件，不会解密所有加密流量。",
+      "en": "Controls sniffing and inclusion/exclusion conditions; use depends on protocol, port, and domain conditions. Does not decrypt all encrypted traffic."
+    },
+    {
+      "path": "sniffer.skip-dst-address",
+      "type": "[]string",
+      "category": "sniffer",
+      "platforms": {
+        "ios": "supported",
+        "macos": "supported",
+        "tvos": "supported"
+      },
+      "zh": "控制嗅探开关及适用/跳过条件；实际嗅探取决于协议、端口和域名条件，不会解密所有加密流量。",
+      "en": "Controls sniffing and inclusion/exclusion conditions; use depends on protocol, port, and domain conditions. Does not decrypt all encrypted traffic."
+    },
+    {
+      "path": "sniffer.skip-src-address",
+      "type": "[]string",
+      "category": "sniffer",
+      "platforms": {
+        "ios": "supported",
+        "macos": "supported",
+        "tvos": "supported"
+      },
+      "zh": "控制嗅探开关及适用/跳过条件；实际嗅探取决于协议、端口和域名条件，不会解密所有加密流量。",
+      "en": "Controls sniffing and inclusion/exclusion conditions; use depends on protocol, port, and domain conditions. Does not decrypt all encrypted traffic."
+    },
+    {
+      "path": "sniffer.sniff",
+      "type": "map[string]RawSniffingConfig",
+      "category": "sniffer",
+      "platforms": {
+        "ios": "supported",
+        "macos": "supported",
+        "tvos": "supported"
+      },
+      "zh": "按协议配置端口和目标覆盖行为；填写后优先于旧 sniffing/port-whitelist。",
+      "en": "Configures ports and destination overriding per protocol; takes precedence over legacy sniffing/port-whitelist."
+    },
+    {
+      "path": "sniffer.sniffing",
+      "type": "[]string",
+      "category": "sniffer",
+      "platforms": {
+        "ios": "limited",
+        "macos": "limited",
+        "tvos": "limited"
+      },
+      "zh": "兼容旧写法，仅在 sniff 为空时使用；新配置优先用 sniff。",
+      "en": "Legacy syntax, used only when sniff is empty; prefer sniff in new configurations."
+    }
+  ],
+  "tunInventory": [
+    {
+      "path": "tun.auto-detect-interface",
+      "type": "bool",
+      "category": "tun"
+    },
+    {
+      "path": "tun.auto-redirect",
+      "type": "bool",
+      "category": "tun"
+    },
+    {
+      "path": "tun.auto-redirect-input-mark",
+      "type": "uint32",
+      "category": "tun"
+    },
+    {
+      "path": "tun.auto-redirect-iproute2-fallback-rule-index",
+      "type": "int",
+      "category": "tun"
+    },
+    {
+      "path": "tun.auto-redirect-output-mark",
+      "type": "uint32",
+      "category": "tun"
+    },
+    {
+      "path": "tun.auto-route",
+      "type": "bool",
+      "category": "tun"
+    },
+    {
+      "path": "tun.device",
+      "type": "string",
+      "category": "tun"
+    },
+    {
+      "path": "tun.disable-icmp-forwarding",
+      "type": "bool",
+      "category": "tun"
+    },
+    {
+      "path": "tun.dns-hijack",
+      "type": "[]string",
+      "category": "tun"
+    },
+    {
+      "path": "tun.enable",
+      "type": "bool",
+      "category": "tun"
+    },
+    {
+      "path": "tun.endpoint-independent-nat",
+      "type": "bool",
+      "category": "tun"
+    },
+    {
+      "path": "tun.exclude-dst-port",
+      "type": "[]uint16",
+      "category": "tun"
+    },
+    {
+      "path": "tun.exclude-dst-port-range",
+      "type": "[]string",
+      "category": "tun"
+    },
+    {
+      "path": "tun.exclude-interface",
+      "type": "[]string",
+      "category": "tun"
+    },
+    {
+      "path": "tun.exclude-mac-address",
+      "type": "[]string",
+      "category": "tun"
+    },
+    {
+      "path": "tun.exclude-package",
+      "type": "[]string",
+      "category": "tun"
+    },
+    {
+      "path": "tun.exclude-src-port",
+      "type": "[]uint16",
+      "category": "tun"
+    },
+    {
+      "path": "tun.exclude-src-port-range",
+      "type": "[]string",
+      "category": "tun"
+    },
+    {
+      "path": "tun.exclude-uid",
+      "type": "[]uint32",
+      "category": "tun"
+    },
+    {
+      "path": "tun.exclude-uid-range",
+      "type": "[]string",
+      "category": "tun"
+    },
+    {
+      "path": "tun.file-descriptor",
+      "type": "int",
+      "category": "tun"
+    },
+    {
+      "path": "tun.gso",
+      "type": "bool",
+      "category": "tun"
+    },
+    {
+      "path": "tun.gso-max-size",
+      "type": "uint32",
+      "category": "tun"
+    },
+    {
+      "path": "tun.icmp-timeout",
+      "type": "int64",
+      "category": "tun"
+    },
+    {
+      "path": "tun.include-android-user",
+      "type": "[]int",
+      "category": "tun"
+    },
+    {
+      "path": "tun.include-interface",
+      "type": "[]string",
+      "category": "tun"
+    },
+    {
+      "path": "tun.include-mac-address",
+      "type": "[]string",
+      "category": "tun"
+    },
+    {
+      "path": "tun.include-package",
+      "type": "[]string",
+      "category": "tun"
+    },
+    {
+      "path": "tun.include-uid",
+      "type": "[]uint32",
+      "category": "tun"
+    },
+    {
+      "path": "tun.include-uid-range",
+      "type": "[]string",
+      "category": "tun"
+    },
+    {
+      "path": "tun.inet4-route-address",
+      "type": "[]netip.Prefix",
+      "category": "tun"
+    },
+    {
+      "path": "tun.inet4-route-exclude-address",
+      "type": "[]netip.Prefix",
+      "category": "tun"
+    },
+    {
+      "path": "tun.inet6-address",
+      "type": "[]netip.Prefix",
+      "category": "tun"
+    },
+    {
+      "path": "tun.inet6-route-address",
+      "type": "[]netip.Prefix",
+      "category": "tun"
+    },
+    {
+      "path": "tun.inet6-route-exclude-address",
+      "type": "[]netip.Prefix",
+      "category": "tun"
+    },
+    {
+      "path": "tun.iproute2-rule-index",
+      "type": "int",
+      "category": "tun"
+    },
+    {
+      "path": "tun.iproute2-table-index",
+      "type": "int",
+      "category": "tun"
+    },
+    {
+      "path": "tun.loopback-address",
+      "type": "[]netip.Addr",
+      "category": "tun"
+    },
+    {
+      "path": "tun.mtu",
+      "type": "uint32",
+      "category": "tun"
+    },
+    {
+      "path": "tun.recvmsgx",
+      "type": "bool",
+      "category": "tun"
+    },
+    {
+      "path": "tun.route-address",
+      "type": "[]netip.Prefix",
+      "category": "tun"
+    },
+    {
+      "path": "tun.route-address-set",
+      "type": "[]string",
+      "category": "tun"
+    },
+    {
+      "path": "tun.route-exclude-address",
+      "type": "[]netip.Prefix",
+      "category": "tun"
+    },
+    {
+      "path": "tun.route-exclude-address-set",
+      "type": "[]string",
+      "category": "tun"
+    },
+    {
+      "path": "tun.sendmsgx",
+      "type": "bool",
+      "category": "tun"
+    },
+    {
+      "path": "tun.stack",
+      "type": "C.TUNStack",
+      "category": "tun"
+    },
+    {
+      "path": "tun.strict-route",
+      "type": "bool",
+      "category": "tun"
+    },
+    {
+      "path": "tun.udp-timeout",
+      "type": "int64",
+      "category": "tun"
+    }
+  ]
+}

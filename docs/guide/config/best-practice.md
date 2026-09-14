@@ -179,16 +179,13 @@ use Clash's actual match records as the source of truth.
   group. Selecting `DIRECT` makes that unmatched traffic direct; beginners
   should not use it as a generic “fix the network” switch.
 - `Apple Push` is independent from `PROXY-Gate`. It first sends APNs traffic to
-  `APNs-Fallback`, which checks every provider node every 300 seconds and
-  automatically switches to an available route. If no proxy route is
-  available, `Apple Push` falls back to `DIRECT`.
+  `APNs-Fallback`, configured with a 300-second check interval. Actual checks depend on lazy settings, system suspension, and resource limits. `Apple Push` chooses between the fallback group and `DIRECT` by health status; a test URL cannot detect every push-service failure.
 - Regional Auto groups such as `US-Auto` and `SG-Auto` regularly test nodes
   whose names match that region and choose one automatically. They do not pin a
   specific server. A node whose name lacks a recognized region keyword will not
   appear in that Auto group.
 - `Global-Manual`, or `Primary-Manual` and `Backup-Manual`, pins a node manually.
-  The dual-provider regional Fallback groups compare each provider's regional
-  Auto result and fail over between the two sources.
+  The dual-provider regional Fallback groups choose healthy regional Auto entries in order for failover.
 - YouTube, Netflix, GPT, Telegram, and the other groups in the per-service
   template are independent. Choosing `GPT → US-Auto` and
   `Netflix → SG-Auto` means changing `PROXY-Gate` does not override them. To pin
@@ -254,8 +251,8 @@ dns:
     - "+.local"
 
 # Hako accepts a standard Proxy Provider or a complete mihomo Profile with
-# top-level proxies. It validates and extracts the proxy collection, then
-# atomically materializes it inside the App's private directory.
+# top-level proxies. Resources may be prepared before activation or loaded
+# by the core in the background after startup.
 proxy-providers:
   provider-a:
     type: http
@@ -333,13 +330,12 @@ rules:
 - Replace the three examples with Provider or complete mihomo Profile URLs you
   chose and trust. If you need fewer sources, remove the extra Providers and
   their names from both `use` lists.
-- Give every Provider a unique name, `path`, and prefix. Prefixes keep identical
+- Use distinct Provider names and paths that do not overwrite other resources. Optional prefixes keep identical
   node names distinguishable. During activation, Hako rewrites each relative
   `path` to an absolute file path inside the App's private directory.
 - `lazy: true` triggers Provider health checks on demand; it does not mean every
   node is tested immediately after import. Keep the source type as `http`.
-  The `file` form is Hako's internal result after download, validation, and
-  atomic materialization.
+  Clash uses a local file when prepared, or HTTP background loading when it is not.
 - Health checks create real requests. Replace the example with a small file or
   `generate_204` endpoint that is reliably reachable through your nodes.
 - Add custom DNS only when you need it. A resolver can observe DNS queries, so

@@ -26,11 +26,11 @@ are routing or control outbounds rather than server protocols.
 
 ## Complete protocol list
 
-- HTTP · SOCKS · Shadowsocks · ShadowsocksR · Snell
-- VMess · VLESS · Trojan · AnyTLS · Mieru
-- Sudoku · Hysteria · Hysteria2 · TUIC · ShadowQUIC
-- GOST Relay · WireGuard · Tailscale · ZeroTier · SSH
-- MASQUE · TrustTunnel · OpenVPN
+- [HTTP](/guide/config/outbound/http) · [SOCKS](/guide/config/outbound/socks5) · [Shadowsocks](/guide/config/outbound/ss) · [ShadowsocksR](/guide/config/outbound/ssr) · [Snell](/guide/config/outbound/snell)
+- [VMess](/guide/config/outbound/vmess) · [VLESS](/guide/config/outbound/vless) · [Trojan](/guide/config/outbound/trojan) · [AnyTLS](/guide/config/outbound/anytls) · [Mieru](/guide/config/outbound/mieru)
+- [Sudoku](/guide/config/outbound/sudoku) · [Hysteria](/guide/config/outbound/hysteria) · [Hysteria2](/guide/config/outbound/hysteria2) · [TUIC](/guide/config/outbound/tuic) · [ShadowQUIC](/guide/config/outbound/shadowquic)
+- [GOST Relay](/guide/config/outbound/gost-relay) · [WireGuard](/guide/config/outbound/wireguard) · [Tailscale](/guide/config/outbound/tailscale) · [ZeroTier](/guide/config/outbound/zerotier) · [SSH](/guide/config/outbound/ssh)
+- [MASQUE](/guide/config/outbound/masque) · [TrustTunnel](/guide/config/outbound/trusttunnel) · [OpenVPN](/guide/config/outbound/openvpn)
 
 ## Configuration paths
 

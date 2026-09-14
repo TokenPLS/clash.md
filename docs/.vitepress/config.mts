@@ -374,14 +374,55 @@ export default defineConfig({
                   link: '/guide/config/',
                   collapsed: true,
                   items: [
-                    { text: 'General', link: '/guide/config/general' },
+                    { text: 'General configuration', link: '/guide/config/general' },
                     { text: 'DNS', link: '/guide/config/dns' },
-                    { text: 'Inbound and TUN', link: '/guide/config/inbound' },
-                    { text: 'Proxies and providers', link: '/guide/config/proxies' },
-                    { text: 'Rules and sniffer', link: '/guide/config/rules' },
-                    { text: 'State and advanced', link: '/guide/config/profile' },
+                    { text: 'Domain sniffing', link: '/guide/config/sniffer' },
+                    { text: 'Inbound', link: '/guide/config/inbounds', collapsed: true, items: [{ text: 'TUN', link: '/guide/config/inbound' }] },
+                    { text: 'Outbound proxies', link: '/guide/config/proxies', collapsed: true, items: [
+                      { text: 'TLS and certificates', link: '/guide/config/outbound/tls' },
+                      { text: 'Transports', link: '/guide/config/outbound/transport' },
+                      { text: 'dialer-proxy', link: '/guide/config/outbound/dialer-proxy' },
+                      { text: 'Built-in outbounds', link: '/guide/config/outbound/built-in' },
+                      { text: 'HTTP / HTTPS', link: '/guide/config/outbound/http' },
+                      { text: 'SOCKS5', link: '/guide/config/outbound/socks5' },
+                      { text: 'Shadowsocks', link: '/guide/config/outbound/ss' },
+                      { text: 'ShadowsocksR', link: '/guide/config/outbound/ssr' },
+                      { text: 'Snell', link: '/guide/config/outbound/snell' },
+                      { text: 'VMess', link: '/guide/config/outbound/vmess' },
+                      { text: 'VLESS', link: '/guide/config/outbound/vless' },
+                      { text: 'Trojan', link: '/guide/config/outbound/trojan' },
+                      { text: 'AnyTLS', link: '/guide/config/outbound/anytls' },
+                      { text: 'Mieru', link: '/guide/config/outbound/mieru' },
+                      { text: 'Sudoku', link: '/guide/config/outbound/sudoku' },
+                      { text: 'Hysteria', link: '/guide/config/outbound/hysteria' },
+                      { text: 'Hysteria2', link: '/guide/config/outbound/hysteria2' },
+                      { text: 'TUIC', link: '/guide/config/outbound/tuic' },
+                      { text: 'ShadowQUIC', link: '/guide/config/outbound/shadowquic' },
+                      { text: 'GOST Relay', link: '/guide/config/outbound/gost-relay' },
+                      { text: 'WireGuard', link: '/guide/config/outbound/wireguard' },
+                      { text: 'Tailscale', link: '/guide/config/outbound/tailscale' },
+                      { text: 'ZeroTier', link: '/guide/config/outbound/zerotier' },
+                      { text: 'SSH', link: '/guide/config/outbound/ssh' },
+                      { text: 'MASQUE', link: '/guide/config/outbound/masque' },
+                      { text: 'TrustTunnel', link: '/guide/config/outbound/trusttunnel' },
+                      { text: 'OpenVPN', link: '/guide/config/outbound/openvpn' }
+                    ] },
+                    { text: 'Proxy providers', link: '/guide/config/proxy-providers' },
+                    { text: 'Proxy groups', link: '/guide/config/proxy-groups' },
+                    { text: 'Routing rules', link: '/guide/config/rules' },
+                    { text: 'Rule providers', link: '/guide/config/rule-providers' },
+                    { text: 'Sub-rules', link: '/guide/config/sub-rules' },
+                    { text: 'Tunnels', link: '/guide/config/tunnels' },
+                    { text: 'NTP', link: '/guide/config/ntp' },
+                    { text: 'Experimental configuration', link: '/guide/config/experimental' }
+                  ]
+                },
+                {
+                  text: 'Configuration notes',
+                  collapsed: true,
+                  items: [
                     { text: 'Apple platforms', link: '/guide/config/apple-platforms' },
-                    { text: 'Security boundary', link: '/guide/config/security' }
+                    { text: 'Security', link: '/guide/config/security' }
                   ]
                 },
                 {
@@ -499,14 +540,55 @@ export default defineConfig({
                   link: '/zh/guide/config/',
                   collapsed: true,
                   items: [
-                    { text: '常规设置', link: '/zh/guide/config/general' },
+                    { text: '全局配置', link: '/zh/guide/config/general' },
                     { text: 'DNS', link: '/zh/guide/config/dns' },
-                    { text: '入站与 TUN', link: '/zh/guide/config/inbound' },
-                    { text: '代理与 Provider', link: '/zh/guide/config/proxies' },
-                    { text: '规则与嗅探', link: '/zh/guide/config/rules' },
-                    { text: '状态与高级项', link: '/zh/guide/config/profile' },
+                    { text: '域名嗅探', link: '/zh/guide/config/sniffer' },
+                    { text: '入站', link: '/zh/guide/config/inbounds', collapsed: true, items: [{ text: 'TUN', link: '/zh/guide/config/inbound' }] },
+                    { text: '出站代理', link: '/zh/guide/config/proxies', collapsed: true, items: [
+                      { text: 'TLS 与证书', link: '/zh/guide/config/outbound/tls' },
+                      { text: '传输层配置', link: '/zh/guide/config/outbound/transport' },
+                      { text: 'dialer-proxy', link: '/zh/guide/config/outbound/dialer-proxy' },
+                      { text: '内置出站', link: '/zh/guide/config/outbound/built-in' },
+                      { text: 'HTTP / HTTPS', link: '/zh/guide/config/outbound/http' },
+                      { text: 'SOCKS5', link: '/zh/guide/config/outbound/socks5' },
+                      { text: 'Shadowsocks', link: '/zh/guide/config/outbound/ss' },
+                      { text: 'ShadowsocksR', link: '/zh/guide/config/outbound/ssr' },
+                      { text: 'Snell', link: '/zh/guide/config/outbound/snell' },
+                      { text: 'VMess', link: '/zh/guide/config/outbound/vmess' },
+                      { text: 'VLESS', link: '/zh/guide/config/outbound/vless' },
+                      { text: 'Trojan', link: '/zh/guide/config/outbound/trojan' },
+                      { text: 'AnyTLS', link: '/zh/guide/config/outbound/anytls' },
+                      { text: 'Mieru', link: '/zh/guide/config/outbound/mieru' },
+                      { text: 'Sudoku', link: '/zh/guide/config/outbound/sudoku' },
+                      { text: 'Hysteria', link: '/zh/guide/config/outbound/hysteria' },
+                      { text: 'Hysteria2', link: '/zh/guide/config/outbound/hysteria2' },
+                      { text: 'TUIC', link: '/zh/guide/config/outbound/tuic' },
+                      { text: 'ShadowQUIC', link: '/zh/guide/config/outbound/shadowquic' },
+                      { text: 'GOST Relay', link: '/zh/guide/config/outbound/gost-relay' },
+                      { text: 'WireGuard', link: '/zh/guide/config/outbound/wireguard' },
+                      { text: 'Tailscale', link: '/zh/guide/config/outbound/tailscale' },
+                      { text: 'ZeroTier', link: '/zh/guide/config/outbound/zerotier' },
+                      { text: 'SSH', link: '/zh/guide/config/outbound/ssh' },
+                      { text: 'MASQUE', link: '/zh/guide/config/outbound/masque' },
+                      { text: 'TrustTunnel', link: '/zh/guide/config/outbound/trusttunnel' },
+                      { text: 'OpenVPN', link: '/zh/guide/config/outbound/openvpn' }
+                    ] },
+                    { text: '代理集合', link: '/zh/guide/config/proxy-providers' },
+                    { text: '代理组', link: '/zh/guide/config/proxy-groups' },
+                    { text: '路由规则', link: '/zh/guide/config/rules' },
+                    { text: '规则集合', link: '/zh/guide/config/rule-providers' },
+                    { text: '子规则', link: '/zh/guide/config/sub-rules' },
+                    { text: '流量隧道', link: '/zh/guide/config/tunnels' },
+                    { text: 'NTP', link: '/zh/guide/config/ntp' },
+                    { text: '实验性配置', link: '/zh/guide/config/experimental' }
+                  ]
+                },
+                {
+                  text: '配置补充说明',
+                  collapsed: true,
+                  items: [
                     { text: '三平台差异', link: '/zh/guide/config/apple-platforms' },
-                    { text: '安全边界', link: '/zh/guide/config/security' }
+                    { text: '安全说明', link: '/zh/guide/config/security' }
                   ]
                 },
                 {

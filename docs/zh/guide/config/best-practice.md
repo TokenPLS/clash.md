@@ -153,14 +153,13 @@ Rule Provider。社区发布者估算展开后总量约 20 万条；实际数量
 - `PROXY-Gate` 是没有独立指定服务时的总出口。选择 `DIRECT` 会让其负责的
   未匹配流量直连，不建议新手把它当作“修复网络”的开关。
 - `Apple Push` 与 `PROXY-Gate` 相互独立。APNs 流量会先进入
-  `APNs-Fallback`；该组每 300 秒检查全部机场节点，并在当前线路
-  不可用时自动切换。若所有代理线路均不可用，`Apple Push` 最终
-  回退到 `DIRECT`。
+  `APNs-Fallback`；该组配置的检查间隔为 300 秒，实际检查受懒检查、系统暂停与资源限制影响。
+  `Apple Push` 按健康状态在代理回退组与 `DIRECT` 之间选择；测速结果不保证识别所有推送故障。
 - `US-Auto`、`SG-Auto` 等地区 Auto 会在名称匹配该地区的节点中定期测速并
   自动选择，不是固定某一台节点。节点命名不含模板识别的国家或地区关键词时，
   不会进入相应 Auto 组。
 - `Global-Manual` 或 `Primary-Manual`、`Backup-Manual` 用于手动固定节点。
-  双机场版的地区 Fallback 会先比较两个机场各自的地区 Auto 组，再做故障切换。
+  双机场版的地区 Fallback 按顺序选择健康的地区 Auto 组，用于故障切换。
 - 服务分类版的 YouTube、Netflix、GPT、Telegram 等组彼此独立。例如把 GPT
   设为 `US-Auto`、Netflix 设为 `SG-Auto` 后，切换 `PROXY-Gate` 不会覆盖它们。
   要把某个服务固定到单一节点，可先在 `PROXY-Gate → Global-Manual` 选中节点，
@@ -217,7 +216,7 @@ dns:
     - "+.local"
 
 # Hako 同时接受标准 Proxy Provider，以及含顶层 proxies 的完整 mihomo Profile。
-# 激活时会校验并提取代理集合，再原子写入 App 私有目录。
+# 资源可以在激活前准备，也可以在启动后由内核后台加载。
 proxy-providers:
   provider-a:
     type: http
@@ -294,11 +293,10 @@ rules:
 
 - 把三个示例地址替换成自己选择并信任的 Provider 或完整 mihomo Profile 地址；
   不需要三个来源时，删除多余 Provider 及两个 `use` 列表中的对应名称。
-- 每个 Provider 必须使用唯一的名称、`path` 和前缀。前缀可以避免同名节点混在
+- Provider 名称应避免冲突，`path` 不应让不同资源互相覆盖。前缀是可选项，可以避免同名节点混在
   一起；Hako 激活时会把相对 `path` 改写为 App 私有目录中的绝对文件路径。
 - `lazy: true` 表示按需触发 Provider 健康检查，并不代表导入后会立即探测全部
-  节点。不要把模板里的 `type: http` 改成 `file`；本地文件是 Hako 下载、校验和
-  原子写入后的内部运行形态。
+  节点。不要把模板里的 `type: http` 改成 `file`；Clash 会根据资源是否已准备，选择本地文件或后台 HTTP 加载。
 - 健康检查会产生真实网络请求。示例地址不可用时，请换成当前网络与节点都能
   稳定访问的小文件或 `generate_204` 地址。
 - 只在确实需要时添加自定义 DNS。解析器会看到你的 DNS 查询，应选择你信任

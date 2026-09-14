@@ -67,6 +67,12 @@ VPN configuration. **Rule** is the recommended everyday mode: the active
 Profile decides whether each connection goes direct, uses a proxy, or is
 rejected.
 
+::: tip Do I need a separate TUN mode?
+Clash uses Apple NE Packet Tunnel; there is no extra desktop-style TUN mode to enable after connecting.
+In the current NE mode, `tun.enable: false` does not switch to a proxy-port-only mode.
+See [NE, TUN fields, and version scope](/guide/config/inbound#tun-mode).
+:::
+
 ::: info Need a configuration starting point?
 Start with the [configuration best practices and minimal template](/guide/config/best-practice).
 When you need a specific field or platform difference, continue to the

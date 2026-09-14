@@ -14,18 +14,21 @@ does not make every operating-system capability identical.
 | Core mihomo YAML semantics | Supported | Supported | Supported |
 | Packet Tunnel | Supported | Supported | Supported |
 | `tun.stack` | gVisor / System / Mixed | gVisor / System / Mixed | gVisor / System / Mixed |
-| Process name, path, and UID rules | No match | Supported | No match |
+| Process name, path, and UID routing | No reliable process identification | Supported where connection information is available | No reliable process identification |
 | App signing or team-ID rules | Unsupported | Unsupported | Unsupported |
 | Add configuration | Profile URL or local YAML | Profile URL or local YAML | Profile URL |
 | Remote Profile | Supported | Supported | Supported |
 | HTTP providers | Hako-managed | Hako-managed | Hako-managed |
-| Route selection and Fake IP state | Persistent | Persistent | Rebuilt as needed |
+| Policy selection and Fake IP state | Saved subject to settings and storage | Saved subject to settings and storage | Caches may be lost |
 | Linux iptables / mark / TPROXY | Not applicable | Not applicable | Not applicable |
 
-See [Inbound, listeners, and TUN](/guide/config/inbound#three-tun-stacks-on-apple-platforms)
-for usage notes and the Mixed qualification.
+Active Include All Networks on iOS/macOS changes System/Mixed to gVisor; tvOS keeps that option off.
+TUN UID, package, and source-interface filters do not operate on any of the three platforms. macOS process/UID rules use a separate mechanism.
+See [NE/TUN platform differences and source version scope](/guide/config/inbound#platforms).
 
-## Product deployment targets
+On iOS/tvOS, process patterns may match empty identities; UID rules have separate removal handling. See [process routing](/guide/config/rules).
+
+## System versions
 
 - iOS and iPadOS 15 or later
 - macOS 13 or later

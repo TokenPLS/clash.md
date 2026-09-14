@@ -69,6 +69,9 @@ Rule 是日常使用最常见的模式。不同连接可能命中不同策略组
 代表全部流量的“唯一当前节点”。Direct 不使用代理，节点页面不显示策略组和节点
 是正常状态。
 
+出站模式与 TUN 协议栈是两层设置：Rule / Global / Direct 决定选路，NE Packet Tunnel 负责网络接入。
+`DIRECT` 不保证流量绕过 Hako。参见 [TUN 模式与按应用代理的区别](/zh/guide/config/inbound#per-app-proxy)。
+
 ### 策略组与节点决定具体线路
 
 规则可以把不同连接交给不同策略组，再由策略组决定使用哪个节点。延迟测试适合

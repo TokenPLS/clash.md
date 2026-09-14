@@ -1,6 +1,6 @@
 ---
 title: Hako 配置参考
-description: Hako 1.19.30 的 mihomo YAML 配置参考，覆盖 185 个字段及 iOS、macOS、tvOS 的支持状态与 Apple 平台限制。
+description: Hako 1.19.30 的 mihomo YAML 配置参考，提供 185 项配置索引及 iOS、macOS、tvOS 的支持状态与 Apple 平台限制。
 keywords: [Hako 配置, mihomo YAML, Clash 配置, iOS Clash, macOS Clash, tvOS Clash]
 head:
   - - link
@@ -14,7 +14,7 @@ head:
 
 # Hako 配置参考
 
-这份参考适合在需要时查询 mihomo YAML。第一次配置时，不必从 185 个字段
+这份参考适合在需要时查询 mihomo YAML。第一次配置时，不必从字段清单
 开始；可以先看[最佳实践模板](/zh/guide/config/best-practice)，遇到明确需求时
 再回来查对应字段。
 
@@ -25,32 +25,44 @@ head:
 
 ## 按主题阅读
 
+以下分类与 [mihomo 上游配置文档](https://wiki.metacubex.one/config/) 的主要章节一一对应。每页说明相关配置在 Hako 中的使用方式和平台限制。
+
 <nav class="config-topic-grid" aria-label="配置参考分类">
-  <a href="/zh/guide/config/general"><strong>常规设置</strong><span>模式、日志、连接与 geodata</span></a>
-  <a href="/zh/guide/config/dns"><strong>DNS</strong><span>Fake IP、解析器与策略</span></a>
-  <a href="/zh/guide/config/inbound"><strong>入站与 TUN</strong><span>Network Extension 的真实边界</span></a>
-  <a href="/zh/guide/config/proxies"><strong>代理与 Provider</strong><span>节点、策略组与远程资源</span></a>
-  <a href="/zh/guide/config/rules"><strong>规则与嗅探</strong><span>路由、身份字段与 Sniffer</span></a>
-  <a href="/zh/guide/config/profile"><strong>状态与高级项</strong><span>运行状态、NTP 与实验功能</span></a>
-  <a href="/zh/guide/config/apple-platforms"><strong>三平台差异</strong><span>iOS、macOS 与 tvOS</span></a>
-  <a href="/zh/guide/config/security"><strong>安全边界</strong><span>凭据、监听器与控制面</span></a>
+  <a href="/zh/guide/config/general"><strong>全局配置</strong><span>模式、日志与连接</span></a>
+  <a href="/zh/guide/config/dns"><strong>DNS</strong><span>域名解析与策略</span></a>
+  <a href="/zh/guide/config/sniffer"><strong>域名嗅探</strong><span>协议识别与域名获取</span></a>
+  <a href="/zh/guide/config/inbounds"><strong>入站</strong><span>代理端口、TUN 与 listeners</span></a>
+  <a href="/zh/guide/config/proxies"><strong>出站代理</strong><span>节点类型与协议参数</span></a>
+  <a href="/zh/guide/config/proxy-providers"><strong>代理集合</strong><span>加载和更新节点资源</span></a>
+  <a href="/zh/guide/config/proxy-groups"><strong>代理组</strong><span>手动选择与自动切换</span></a>
+  <a href="/zh/guide/config/rules"><strong>路由规则</strong><span>按条件选择流量出口</span></a>
+  <a href="/zh/guide/config/rule-providers"><strong>规则集合</strong><span>加载和更新规则资源</span></a>
+  <a href="/zh/guide/config/sub-rules"><strong>子规则</strong><span>组织可引用的规则</span></a>
+  <a href="/zh/guide/config/tunnels"><strong>流量隧道</strong><span>端口转发</span></a>
+  <a href="/zh/guide/config/ntp"><strong>NTP</strong><span>协议时间同步</span></a>
+  <a href="/zh/guide/config/experimental"><strong>实验性配置</strong><span>按需使用的实验选项</span></a>
 </nav>
+
+补充说明：[三平台差异](./apple-platforms) · [安全说明](./security)
 
 ## 字段支持状态
 
-- **支持**：Hako 内核直接处理。
-- **受管理 / 有限制**：字段可读取，但会因 Apple 网络模型被修复、强制或替换。
-- **高级功能**：内核可以识别，但可能开放本地服务或控制面，不作为默认产品能力。
+- **支持**：可以使用，具体条件见字段说明。
+- **受管理 / 有限制**：会受客户端设置、平台能力或兼容处理影响。
+- **高级功能**：用于进阶用途，如本地服务或自定义证书，按需设置。
 - **不支持**：在 Apple Packet Tunnel 中被移除或不会生效。
 - **不适用**：属于 Android、Linux 或其他环境。
 
 <ConfigFieldMatrix lang="zh" />
 
-## 版本与依据
+## 版本说明
 
-本页对应产品内核 **Hako / mihomo 1.19.30**，字段清单来自当前 Hako 配置
-流水线，并参考固定版本的
-[MetaCubeX 配置文档](https://github.com/MetaCubeX/Meta-Docs/tree/e848aefb77e0cddbf3f0dde1016ec4904924fcbd/docs/config)。
-上游文档用于理解 mihomo 语义；本页的平台状态以 Hako 的实际适配与验证为准。
+本页提供 185 项配置索引；`proxies`、`listeners` 等项目下的协议参数，请查对应专题。
+部分行为随版本变化，以已安装版本提供的功能为准。
 
-字段范围会随 Hako 稳定版本与 Apple 平台适配持续更新。
+::: details 文档参考版本
+
+2026-09-14 按 Hako `5bca0bcb73cd6dcb2d276be31f3a149211388c6d` 整理。
+此参考版本不代表所有商店版本均已包含相同功能。
+
+:::

@@ -18,7 +18,7 @@ head:
 
 A **standard mihomo YAML configuration**, or a remote profile URL that returns mihomo YAML, can be imported directly into Clash. Nodes, policy groups, rules, providers and supported configuration fields continue to work, saving the step of recreating every node.
 
-“Full compatibility” here means the mihomo configuration itself can be reused. Interface preferences, system proxy, TUN and backup settings can be configured for your preferred workflow in Clash for iOS.
+“Full compatibility” means supported mihomo content such as nodes, groups, and rules can be reused. Desktop system proxy settings, TUN switches, and system routing parameters do not necessarily have direct equivalents. Clash uses Apple NE Packet Tunnel; see [Apple NE and TUN configuration](/guide/config/inbound) for field handling.
 
 ## Popular mihomo clients
 
@@ -46,7 +46,9 @@ See the mihomo documentation for the broader [third-party tools and clients list
 
 ## Connect platform settings
 
-Nodes, policy groups and rules move with mihomo YAML. Platform settings such as themes, window layouts, keyboard shortcuts, system proxy, TUN, launch at login, WebDAV backups and router plugins stay managed by their platform, with matching preferences available in Clash for iOS.
+Nodes, policy groups, and rules move with mihomo YAML. Themes, window layouts, shortcuts, launch at login, backups, and router plugins remain managed by their clients and platforms. Available Clash controls depend on the platform.
+
+In the current Apple NE mode, `tun.enable: false` does not stop the tunnel or switch to a proxy-port-only mode. Linux/Android-specific fields do not become equivalent Apple capabilities. See the [TUN field reference](/guide/config/inbound#fields) for version scope and platform differences.
 
 If the original client uses Merge, Mixin, overrides or scripts to generate its final configuration, export the generated standard mihomo YAML or use the original profile URL.
 

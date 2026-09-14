@@ -3,34 +3,44 @@ title: Configuration security boundary
 description: Identify sensitive credentials, remote resources, local listeners, controllers, certificates, and high-risk fields in Clash and Hako configurations.
 ---
 
-# Configuration security boundary
+# Configuration and access protection
 
-A proxy should solve a problem, not become a new one. Configuration decides
-who receives traffic and can contain enough credentials to take over a route or
-control surface. Treat it as a password file, not ordinary text.
+## What should I hide before sharing?
 
-## Never publish
+Remove credentials in subscription URLs, passwords, tokens, UUIDs, private keys,
+controller secrets, and personal details in logs. Public keys and public CA
+certificates are normally distributed openly, though they may still reveal
+services or identities you use.
 
-- Profile and provider URLs, query parameters, request headers, and Bearer tokens
-- Usernames, passwords, UUIDs, private keys, Reality keys, and Age secrets
-- WireGuard, Tailscale, and ZeroTier identities
-- Controller secrets, TLS private keys, client certificates, and custom CAs
-- Unredacted connection logs, DNS credentials, and authenticated health checks
+## Services have separate access controls
 
-## Fields that expand attack surface
+Normal connections do not require local listeners or an external controller.
+When needed, start with a loopback address and expose only the required scope.
 
-`allow-lan`, local ports, `dns.listen`, listeners, tunnels, server
-configurations, external controllers, CORS, External UI, and External DoH can
-all open a new access path. Keep them disabled unless needed. If enabled, bind
-to loopback, use strong authentication, and verify firewall and LAN boundaries.
+| Setting | Protection scope |
+| --- | --- |
+| `authentication` | Applicable local proxy listeners, not a universal service password |
+| `allow-lan` | Requires app sharing permission; does not control DNS or controllers globally |
+| Controller `secret` | Authenticated controller APIs; an empty value requires no password |
+| CORS | Browser-origin restrictions, not authentication |
+| `dns.listen` | Independent DNS listener; does not use the proxy password above |
+| `external-doh-server` | Not protected by controller `secret` |
 
-`skip-cert-verify: true` gives up server-certificate verification. It is not a
-routine connection fix.
+Static dashboard pages are also outside the controller authentication group;
+APIs authenticate separately. The controller supports some runtime changes and
+UI updates, but not desktop APIs for replacing the whole configuration, restarting,
+or replacing the core. Debug logging also enables controller-authenticated
+debugging endpoints.
 
-## Files and tvOS
+## Certificates and files
 
-Configuration can only reach Hako-managed container paths. tvOS may clear file
-caches, so providers, geodata, and other resources must be safely rebuildable.
-Never keep the only copy of a key in a cache.
+`skip-cert-verify: true` skips server certificate verification; keep verification
+on for normal use. `tls.custom-certifactes` adds outbound trust certificates as
+certificate content, not paths. Add only certificates you trust. Other top-level
+TLS settings primarily configure the external TLS controller.
+
+File access depends on the system sandbox and each feature's path checks. File
+providers have an additional directory check; other settings do not necessarily
+share it. tvOS may clear caches, so keep reliable copies of configurations and keys.
 
 <ConfigFieldMatrix category="security" />

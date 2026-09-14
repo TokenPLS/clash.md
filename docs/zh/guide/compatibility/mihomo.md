@@ -18,7 +18,7 @@ head:
 
 标准 mihomo YAML 配置，或能够返回 mihomo YAML 的远程配置地址，都可以直接导入 Clash。节点、策略组、规则、Provider 与受支持的配置字段会继续使用，免去逐个添加节点的步骤。
 
-这里的“全兼容”指 mihomo 配置内容本身可以复用。界面偏好、系统代理、TUN 与备份等平台设置，可以在 Clash iOS 中按自己的使用习惯重新配置。
+这里的“全兼容”指节点、策略组、规则等受支持的 mihomo 配置内容可以复用。桌面客户端的系统代理、TUN 开关与系统路由参数不保证逐项对应；Clash 在 Apple 上通过 NE Packet Tunnel 接入网络，具体字段按 [Apple NE 与 TUN 配置说明](/zh/guide/config/inbound)处理。
 
 ## 常见 mihomo 客户端
 
@@ -46,7 +46,9 @@ head:
 
 ## 平台设置如何衔接
 
-节点、策略组和规则跟随 mihomo YAML 一起迁移；界面主题、窗口布局、快捷键、系统代理、TUN、自动启动、WebDAV 备份和路由器插件等平台设置，则继续由各自平台管理，并可在 Clash iOS 中选择对应体验。
+节点、策略组和规则跟随 mihomo YAML 一起迁移；界面主题、窗口布局、快捷键、自动启动、备份和路由器插件等设置由各客户端与平台管理。Clash 中可用的入口以对应平台为准。
+
+当前 Apple NE 模式下，`tun.enable: false` 不会关闭隧道或切换为仅代理端口模式；Linux / Android 专用字段也不会转化成 Apple 的对应能力。具体版本范围与三端差异见 [TUN 字段参考](/zh/guide/config/inbound#fields)。
 
 如果原客户端使用 Merge、Mixin、覆写或脚本动态生成最终配置，请先导出生成后的标准 mihomo YAML，或直接使用原始配置地址。
 

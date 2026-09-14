@@ -1,6 +1,6 @@
 ---
 title: Hako configuration reference
-description: A mihomo YAML reference for Hako 1.19.30, covering 185 fields and their support status on iOS, macOS, and tvOS.
+description: A mihomo YAML reference for Hako 1.19.30, with 185 configuration entries and their support status on iOS, macOS, and tvOS.
 keywords: [Hako configuration, mihomo YAML, Clash configuration, iOS Clash, macOS Clash, tvOS Clash]
 head:
   - - link
@@ -26,34 +26,45 @@ and less likely to produce surprising behavior after an update.
 
 ## Browse by topic
 
+The sections below follow the [upstream mihomo configuration reference](https://wiki.metacubex.one/config/). Each page describes usage and platform limitations in Hako.
+
 <nav class="config-topic-grid" aria-label="Configuration reference topics">
-  <a href="/guide/config/general"><strong>General</strong><span>Mode, logs, connections, and geodata</span></a>
-  <a href="/guide/config/dns"><strong>DNS</strong><span>Fake IP, resolvers, and policy</span></a>
-  <a href="/guide/config/inbound"><strong>Inbound and TUN</strong><span>The real Network Extension boundary</span></a>
-  <a href="/guide/config/proxies"><strong>Proxies and providers</strong><span>Outbounds, groups, and remote resources</span></a>
-  <a href="/guide/config/rules"><strong>Rules and sniffer</strong><span>Routing, identity fields, and sniffing</span></a>
-  <a href="/guide/config/profile"><strong>State and advanced</strong><span>Runtime state, NTP, and experimental fields</span></a>
-  <a href="/guide/config/apple-platforms"><strong>Apple platforms</strong><span>iOS, macOS, and tvOS differences</span></a>
-  <a href="/guide/config/security"><strong>Security boundary</strong><span>Credentials, listeners, and control surfaces</span></a>
+  <a href="/guide/config/general"><strong>General configuration</strong><span>Mode, logs, and connections</span></a>
+  <a href="/guide/config/dns"><strong>DNS</strong><span>Resolution and policy</span></a>
+  <a href="/guide/config/sniffer"><strong>Domain sniffing</strong><span>Protocol and domain detection</span></a>
+  <a href="/guide/config/inbounds"><strong>Inbound</strong><span>Proxy ports, TUN, and listeners</span></a>
+  <a href="/guide/config/proxies"><strong>Outbound proxies</strong><span>Nodes and protocol options</span></a>
+  <a href="/guide/config/proxy-providers"><strong>Proxy providers</strong><span>Load and update nodes</span></a>
+  <a href="/guide/config/proxy-groups"><strong>Proxy groups</strong><span>Manual selection and automatic switching</span></a>
+  <a href="/guide/config/rules"><strong>Routing rules</strong><span>Route connections by condition</span></a>
+  <a href="/guide/config/rule-providers"><strong>Rule providers</strong><span>Load and update rules</span></a>
+  <a href="/guide/config/sub-rules"><strong>Sub-rules</strong><span>Organize reusable rules</span></a>
+  <a href="/guide/config/tunnels"><strong>Tunnels</strong><span>Port forwarding</span></a>
+  <a href="/guide/config/ntp"><strong>NTP</strong><span>Protocol time synchronization</span></a>
+  <a href="/guide/config/experimental"><strong>Experimental configuration</strong><span>Optional experimental settings</span></a>
 </nav>
+
+Additional notes: [Apple platforms](./apple-platforms) · [Security](./security)
 
 ## Field support status
 
-- **Supported**: consumed directly by the Hako core.
-- **Managed / limited**: accepted, but repaired, forced, or replaced for Apple networking.
-- **Advanced**: recognized by the core but may open a local service or control surface.
+- **Supported**: available subject to the conditions in the field description.
+- **Managed / limited**: affected by client settings, platform capabilities, or compatibility handling.
+- **Advanced**: for advanced uses such as local services or custom trust certificates.
 - **Unsupported**: removed or ineffective inside Apple Packet Tunnel.
 - **Not applicable**: belongs to Android, Linux, or another environment.
 
 <ConfigFieldMatrix />
 
-## Version and sources
+## Version notes
 
-This page describes the shipping **Hako / mihomo 1.19.30** core. The field list
-comes from Hako's current configuration pipeline and is informed by the pinned
-[MetaCubeX configuration documentation](https://github.com/MetaCubeX/Meta-Docs/tree/e848aefb77e0cddbf3f0dde1016ec4904924fcbd/docs/config).
-Upstream documentation defines mihomo semantics; Hako's adaptation and tests
-determine the Apple-platform status shown here.
+This index contains 185 entries. For nested protocol parameters under entries
+such as `proxies` and `listeners`, consult the relevant guide. Some behavior
+changes between versions; use the features available in your installed version.
 
-The field reference is updated alongside stable Hako releases and Apple-platform
-adaptation.
+::: details Documentation reference version
+
+Reviewed 2026-09-14 against Hako `5bca0bcb73cd6dcb2d276be31f3a149211388c6d`.
+Not every store version necessarily includes the same features.
+
+:::

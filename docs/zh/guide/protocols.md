@@ -25,11 +25,11 @@ Hako 1.19.30 共识别 27 类出站类型。本页列出其中 23 类可配置�
 
 ## 完整协议清单
 
-- HTTP · SOCKS · Shadowsocks · ShadowsocksR · Snell
-- VMess · VLESS · Trojan · AnyTLS · Mieru
-- Sudoku · Hysteria · Hysteria2 · TUIC · ShadowQUIC
-- GOST Relay · WireGuard · Tailscale · ZeroTier · SSH
-- MASQUE · TrustTunnel · OpenVPN
+- [HTTP](/zh/guide/config/outbound/http) · [SOCKS](/zh/guide/config/outbound/socks5) · [Shadowsocks](/zh/guide/config/outbound/ss) · [ShadowsocksR](/zh/guide/config/outbound/ssr) · [Snell](/zh/guide/config/outbound/snell)
+- [VMess](/zh/guide/config/outbound/vmess) · [VLESS](/zh/guide/config/outbound/vless) · [Trojan](/zh/guide/config/outbound/trojan) · [AnyTLS](/zh/guide/config/outbound/anytls) · [Mieru](/zh/guide/config/outbound/mieru)
+- [Sudoku](/zh/guide/config/outbound/sudoku) · [Hysteria](/zh/guide/config/outbound/hysteria) · [Hysteria2](/zh/guide/config/outbound/hysteria2) · [TUIC](/zh/guide/config/outbound/tuic) · [ShadowQUIC](/zh/guide/config/outbound/shadowquic)
+- [GOST Relay](/zh/guide/config/outbound/gost-relay) · [WireGuard](/zh/guide/config/outbound/wireguard) · [Tailscale](/zh/guide/config/outbound/tailscale) · [ZeroTier](/zh/guide/config/outbound/zerotier) · [SSH](/zh/guide/config/outbound/ssh)
+- [MASQUE](/zh/guide/config/outbound/masque) · [TrustTunnel](/zh/guide/config/outbound/trusttunnel) · [OpenVPN](/zh/guide/config/outbound/openvpn)
 
 ## 配置方式
 
