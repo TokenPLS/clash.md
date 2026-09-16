@@ -49,8 +49,8 @@ jsonLd:
       softwareHelp: https://clash.md/guide/
       image: https://clash.md/og-clash.png
       screenshot:
-        - https://clash.md/screenshots/hero/apple-product-lockup-light.webp
-        - https://clash.md/screenshots/hero/apple-product-lockup-dark.webp
+        - https://clash.md/screenshots/hero/apple-product-lockup-official-light.webp
+        - https://clash.md/screenshots/hero/apple-product-lockup-official-dark.webp
       codeRepository:
         - https://github.com/TokenPLS/Hako-Client
         - https://github.com/TokenPLS/Hako

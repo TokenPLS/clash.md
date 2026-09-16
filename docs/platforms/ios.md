@@ -100,20 +100,20 @@ pageClass: clash-platform-page
       <div class="platform-gallery-panels">
         <div class="platform-gallery-panel platform-gallery-panel--phone">
           <div class="platform-screenshot-rail platform-screenshot-rail--phone" aria-label="Clash for iPhone screenshots">
-            <img src="/screenshots/platforms/ios/gallery/iphone-01.webp" alt="Home with Profile A connected in Rule mode" loading="lazy">
-            <img src="/screenshots/platforms/ios/gallery/iphone-02.webp" alt="Home with Profile B connected in Rule mode" loading="lazy">
-            <img src="/screenshots/platforms/ios/gallery/iphone-03.webp" alt="Home with Profile C connected in Rule mode" loading="lazy">
-            <img src="/screenshots/platforms/ios/gallery/iphone-04.webp" alt="Profiles list on iPhone" loading="lazy">
-            <img src="/screenshots/platforms/ios/gallery/iphone-05.webp" alt="Profile rules on iPhone" loading="lazy">
+            <img src="/screenshots/platforms/ios/gallery/iphone-01.webp" alt="iPhone · Home" loading="lazy">
+            <img src="/screenshots/platforms/ios/gallery/iphone-02.webp" alt="iPhone · Profiles" loading="lazy">
+            <img src="/screenshots/platforms/ios/gallery/iphone-03.webp" alt="iPhone · Proxies and policy groups" loading="lazy">
+            <img src="/screenshots/platforms/ios/gallery/iphone-04.webp" alt="iPhone · Routing rules" loading="lazy">
+            <img src="/screenshots/platforms/ios/gallery/iphone-05.webp" alt="iPhone · Network utilities" loading="lazy">
           </div>
         </div>
         <div class="platform-gallery-panel platform-gallery-panel--tablet">
           <div class="platform-screenshot-rail platform-screenshot-rail--tablet" aria-label="Clash for iPad screenshots">
-            <img src="/screenshots/platforms/ios/gallery/ipad-01.webp" alt="Home connected in Rule mode on iPad" loading="lazy">
-            <img src="/screenshots/platforms/ios/gallery/ipad-02.webp" alt="Home with a second profile on iPad" loading="lazy">
-            <img src="/screenshots/platforms/ios/gallery/ipad-03.webp" alt="Home with a third profile on iPad" loading="lazy">
-            <img src="/screenshots/platforms/ios/gallery/ipad-04.webp" alt="Profiles on iPad" loading="lazy">
-            <img src="/screenshots/platforms/ios/gallery/ipad-05.webp" alt="Profile rules on iPad" loading="lazy">
+            <img src="/screenshots/platforms/ios/gallery/ipad-01.webp" alt="iPad · Home" loading="lazy">
+            <img src="/screenshots/platforms/ios/gallery/ipad-02.webp" alt="iPad · Profiles" loading="lazy">
+            <img src="/screenshots/platforms/ios/gallery/ipad-03.webp" alt="iPad · Proxies and policy groups" loading="lazy">
+            <img src="/screenshots/platforms/ios/gallery/ipad-04.webp" alt="iPad · Routing rules" loading="lazy">
+            <img src="/screenshots/platforms/ios/gallery/ipad-05.webp" alt="iPad · Network utilities" loading="lazy">
           </div>
         </div>
       </div>

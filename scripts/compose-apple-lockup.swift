@@ -550,50 +550,35 @@ let ipadBezel = "\(bezelRoot)/iPad-Pro-M5-13-Space-Black-Portrait.png"
 let iphoneBezel = "\(bezelRoot)/iPhone-17-Black-Portrait.png"
 let tvBezel = "\(bezelRoot)/Apple-TV-4K.png"
 
-let macEnglish = "\(screenshotRoot)/macOS/en-US-2880x1800/01-home-connected-rule-932mbps.png"
-let macChinese = "\(screenshotRoot)/macOS/zh-Hans-2880x1800/01-home-connected-rule-932mbps.png"
-let ipadScreenshot = "\(screenshotRoot)/iPad/en-US-12.9-or-13-inch/01-home-profile-a-rule-932mbps.png"
-let iphoneScreenshot = "\(screenshotRoot)/iPhone/en-US-1284x2778/01-home-profile-a-rule-932mbps.png"
+let releaseRoot = ProcessInfo.processInfo.environment["HAKO_RELEASE_CANDIDATES"]
+    ?? "/Users/ejan/SGP/Hako/ReleaseCandidates"
 let tvScreenshot = "\(screenshotRoot)/tvOS/en-US-3840x2160/01-connected-rule-mode.png"
 let trustedHeroDark = "\(outputRoot)/apple-product-lockup-dark.png"
 let trustedHeroLight = "\(outputRoot)/apple-product-lockup-light.png"
 
 do {
-    try FileManager.default.createDirectory(atPath: outputRoot, withIntermediateDirectories: true)
     try FileManager.default.createDirectory(atPath: standaloneRoot, withIntermediateDirectories: true)
-    let ipad = try renderDevice(bezelPath: ipadBezel, screenshotPath: ipadScreenshot)
-    let iphone = try renderDevice(bezelPath: iphoneBezel, screenshotPath: iphoneScreenshot)
     let tv = try renderDevice(bezelPath: tvBezel, screenshotPath: tvScreenshot)
     let television = try croppedTelevision(tv)
-    try savePNG(ipad.image, to: "\(standaloneRoot)/device-ipad.png")
-    try savePNG(iphone.image, to: "\(standaloneRoot)/device-iphone.png")
-    try savePNG(tv.image, to: "\(standaloneRoot)/device-apple-tv.png")
-
-    let macEN = try renderDevice(bezelPath: macBezel, screenshotPath: macEnglish)
-    try savePNG(macEN.image, to: "\(standaloneRoot)/device-mac-en.png")
-    let english = try composeLockup(mac: macEN.image, ipad: ipad.image, iphone: iphone.image, television: television)
-    try savePNG(english, to: "\(outputRoot)/apple-device-lockup-en.png")
-    let homepageLight = try composeHomepageHero(
-        mac: macEN.image,
-        ipad: ipad.image,
-        iphone: iphone.image,
-        trustedReference: NSImage(contentsOfFile: trustedHeroLight)!,
-        dark: false
-    )
-    try savePNG(homepageLight, to: "\(standaloneRoot)/apple-product-lockup-official-light.png")
-    let homepageDark = try composeHomepageHero(
-        mac: macEN.image,
-        ipad: ipad.image,
-        iphone: iphone.image,
-        trustedReference: NSImage(contentsOfFile: trustedHeroDark)!,
-        dark: true
-    )
-    try savePNG(homepageDark, to: "\(standaloneRoot)/apple-product-lockup-official-dark.png")
-
-    let macZH = try renderDevice(bezelPath: macBezel, screenshotPath: macChinese)
-    try savePNG(macZH.image, to: "\(standaloneRoot)/device-mac-zh.png")
-    let chinese = try composeLockup(mac: macZH.image, ipad: ipad.image, iphone: iphone.image, television: television)
-    try savePNG(chinese, to: "\(outputRoot)/apple-device-lockup-zh.png")
+    for (locale, suffix) in [("en-US", "en"), ("zh-Hans", "zh")] {
+        let ipad = try renderDevice(bezelPath: ipadBezel, screenshotPath: "\(releaseRoot)/store-shots-ipad-20260916/\(locale)/01-home.png")
+        let iphone = try renderDevice(bezelPath: iphoneBezel, screenshotPath: "\(releaseRoot)/store-shots-ios-20260916/\(locale)/01-home.png")
+        let mac = try renderDevice(bezelPath: macBezel, screenshotPath: "\(releaseRoot)/store-shots-macos-20260916/\(locale)/01-home-connected-rule-932mbps.png")
+        try savePNG(ipad.image, to: "\(standaloneRoot)/device-ipad-\(suffix).png")
+        try savePNG(iphone.image, to: "\(standaloneRoot)/device-iphone-\(suffix).png")
+        try savePNG(mac.image, to: "\(standaloneRoot)/device-mac-\(suffix).png")
+        let lockup = try composeLockup(mac: mac.image, ipad: ipad.image, iphone: iphone.image, television: television)
+        try savePNG(lockup, to: "\(standaloneRoot)/apple-device-lockup-\(suffix).png")
+        for dark in [false, true] {
+            let mode = dark ? "dark" : "light"
+            let referencePath = dark ? trustedHeroDark : trustedHeroLight
+            guard let reference = NSImage(contentsOfFile: referencePath) else {
+                throw ComposeError.invalidImage(referencePath)
+            }
+            let hero = try composeHomepageHero(mac: mac.image, ipad: ipad.image, iphone: iphone.image, trustedReference: reference, dark: dark)
+            try savePNG(hero, to: "\(standaloneRoot)/apple-product-lockup-official-\(mode)-\(suffix).png")
+        }
+    }
 } catch {
     fputs("compose-apple-lockup: \(error)\n", stderr)
     exit(1)

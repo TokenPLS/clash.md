@@ -33,6 +33,22 @@ available at `https://clash.md`.
 - `docs/privacy.md` — canonical Privacy Policy
 - `docs/terms.md` — canonical supplementary Terms of Use
 
+## Product screenshots
+
+Run `node scripts/refresh-store-screenshots.mjs` on macOS to rebuild the
+September 16, 2026 iPhone, iPad, and Mac screenshots, device frames, and homepage
+compositions. This requires Swift/AppKit and `cwebp`. Set
+`HAKO_RELEASE_CANDIDATES` to the directory containing `store-shots-ios-20260916`,
+`store-shots-ipad-20260916`, and `store-shots-macos-20260916`; the default is
+`/Users/ejan/SGP/Hako/ReleaseCandidates`. Set `HAKO_STORE_ASSETS` to the Apple
+bezel and original tvOS screenshot archive when it differs from
+`/Users/ejan/SGP/Hako-App-Store-Assets`.
+
+English pages use `en-US` screenshots and Chinese pages use `zh-Hans`.
+The five gallery images show Home, Profiles, Proxies, Rules, and Utilities.
+WebP outputs are generated at display-appropriate sizes; the original captures
+remain in the release archive.
+
 ## Source repositories
 
 - [Clash client](https://github.com/TokenPLS/Hako-Client)

@@ -49,8 +49,8 @@ jsonLd:
       softwareHelp: https://clash.md/zh/guide/
       image: https://clash.md/og-clash.png
       screenshot:
-        - https://clash.md/screenshots/hero/apple-product-lockup-light.webp
-        - https://clash.md/screenshots/hero/apple-product-lockup-dark.webp
+        - https://clash.md/screenshots/hero/apple-product-lockup-official-light-zh.webp
+        - https://clash.md/screenshots/hero/apple-product-lockup-official-dark-zh.webp
       codeRepository:
         - https://github.com/TokenPLS/Hako-Client
         - https://github.com/TokenPLS/Hako
@@ -74,8 +74,8 @@ pageClass: clash-home
     <p class="product-platform-line">iPhone <span>·</span> iPad <span>·</span> Mac <span>·</span> Apple TV</p>
   </div>
   <div class="product-hero-visual" role="img" aria-label="运行在 Apple TV、Mac、iPad 与 iPhone 上的 Clash 英文界面">
-    <img class="product-device-lockup product-device-lockup--light" src="/screenshots/hero/apple-product-lockup-official-light.webp" alt="" width="3460" height="1300" fetchpriority="high" aria-hidden="true">
-    <img class="product-device-lockup product-device-lockup--dark" src="/screenshots/hero/apple-product-lockup-official-dark.webp" alt="" width="3460" height="1300" fetchpriority="high" aria-hidden="true">
+    <img class="product-device-lockup product-device-lockup--light" src="/screenshots/hero/apple-product-lockup-official-light-zh.webp" alt="" width="3460" height="1300" fetchpriority="high" aria-hidden="true">
+    <img class="product-device-lockup product-device-lockup--dark" src="/screenshots/hero/apple-product-lockup-official-dark-zh.webp" alt="" width="3460" height="1300" fetchpriority="high" aria-hidden="true">
   </div>
 </section>
 
@@ -107,8 +107,8 @@ pageClass: clash-home
         <a class="platform-preview-link" href="/zh/platforms/ios">了解 iPhone + iPad →</a>
       </div>
       <div class="platform-preview-media platform-preview-media--mobile">
-        <img class="platform-ipad" src="/screenshots/platforms/ios/ipad-home.webp" alt="iPad 上的 Clash 首页" loading="lazy">
-        <img class="platform-iphone" src="/screenshots/platforms/ios/iphone-home.webp" alt="iPhone 上的 Clash 首页" loading="lazy">
+        <img class="platform-ipad" src="/screenshots/platforms/ios/ipad-home-zh.webp" alt="iPad 上的 Clash 首页" loading="lazy">
+        <img class="platform-iphone" src="/screenshots/platforms/ios/iphone-home-zh.webp" alt="iPhone 上的 Clash 首页" loading="lazy">
       </div>
     </article>
     <article class="platform-preview platform-preview--mac">

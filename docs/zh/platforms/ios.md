@@ -25,7 +25,7 @@ jsonLd:
     "@id": https://clash.md/#organization
   primaryImageOfPage:
     "@type": ImageObject
-    contentUrl: https://clash.md/screenshots/platforms/ios/device-ipad.webp
+    contentUrl: https://clash.md/screenshots/platforms/ios/device-ipad-zh.webp
 sidebar: false
 aside: false
 outline: false
@@ -37,7 +37,7 @@ pageClass: clash-platform-page
   <h1><span class="platform-detail-title-main">出门、回家、换网络。</span><span class="platform-detail-title-sub">不用反复开关。</span></h1>
   <p class="platform-detail-lede">从控制中心、快捷指令或 Siri 发起连接。Wi-Fi 与移动网络变化时，Clash 按你的设定自动响应；想换线路、看连接，打开 App 一目了然。</p>
   <div class="product-actions"><AppStoreBadge locale="zh" destination="iphone" /></div>
-  <div class="platform-detail-stage platform-detail-stage--ios"><img class="platform-detail-ipad" src="/screenshots/platforms/ios/device-ipad.webp" alt="官方设备框中的 Clash iPad 版" width="1200" height="1566" fetchpriority="high"><img class="platform-detail-iphone" src="/screenshots/platforms/ios/device-iphone.webp" alt="官方设备框中的 Clash iPhone 版" width="700" height="1432" fetchpriority="high"></div>
+  <div class="platform-detail-stage platform-detail-stage--ios"><img class="platform-detail-ipad" src="/screenshots/platforms/ios/device-ipad-zh.webp" alt="官方设备框中的 Clash iPad 版" width="1200" height="1566" fetchpriority="high"><img class="platform-detail-iphone" src="/screenshots/platforms/ios/device-iphone-zh.webp" alt="官方设备框中的 Clash iPhone 版" width="700" height="1432" fetchpriority="high"></div>
 </section>
 
 <section class="platform-detail-section">
@@ -63,15 +63,15 @@ pageClass: clash-platform-page
       <label for="ios-gallery-tablet-zh">iPad</label>
       <div class="platform-gallery-panels">
         <div class="platform-gallery-panel platform-gallery-panel--phone">
-          <div class="platform-screenshot-rail platform-screenshot-rail--phone" aria-label="Clash iPhone 版截图"><img src="/screenshots/platforms/ios/gallery/iphone-01.webp" alt="Profile A 以规则模式连接" loading="lazy"><img src="/screenshots/platforms/ios/gallery/iphone-02.webp" alt="Profile B 以规则模式连接" loading="lazy"><img src="/screenshots/platforms/ios/gallery/iphone-03.webp" alt="Profile C 以规则模式连接" loading="lazy"><img src="/screenshots/platforms/ios/gallery/iphone-04.webp" alt="iPhone 配置列表" loading="lazy"><img src="/screenshots/platforms/ios/gallery/iphone-05.webp" alt="iPhone 配置规则" loading="lazy"></div>
+          <div class="platform-screenshot-rail platform-screenshot-rail--phone" aria-label="Clash iPhone 版截图"><img src="/screenshots/platforms/ios/gallery/iphone-zh-01.webp" alt="iPhone · 首页" loading="lazy"><img src="/screenshots/platforms/ios/gallery/iphone-zh-02.webp" alt="iPhone · 配置列表" loading="lazy"><img src="/screenshots/platforms/ios/gallery/iphone-zh-03.webp" alt="iPhone · 代理与策略组" loading="lazy"><img src="/screenshots/platforms/ios/gallery/iphone-zh-04.webp" alt="iPhone · 分流规则" loading="lazy"><img src="/screenshots/platforms/ios/gallery/iphone-zh-05.webp" alt="iPhone · 网络工具" loading="lazy"></div>
         </div>
         <div class="platform-gallery-panel platform-gallery-panel--tablet">
           <div class="platform-screenshot-rail platform-screenshot-rail--tablet" aria-label="Clash iPad 版截图">
-            <img src="/screenshots/platforms/ios/gallery/ipad-01.webp" alt="iPad 上以规则模式连接中的首页" loading="lazy">
-            <img src="/screenshots/platforms/ios/gallery/ipad-02.webp" alt="iPad 上的第二套配置首页" loading="lazy">
-            <img src="/screenshots/platforms/ios/gallery/ipad-03.webp" alt="iPad 上的第三套配置首页" loading="lazy">
-            <img src="/screenshots/platforms/ios/gallery/ipad-04.webp" alt="iPad 配置列表" loading="lazy">
-            <img src="/screenshots/platforms/ios/gallery/ipad-05.webp" alt="iPad 配置规则" loading="lazy">
+            <img src="/screenshots/platforms/ios/gallery/ipad-zh-01.webp" alt="iPad · 首页" loading="lazy">
+            <img src="/screenshots/platforms/ios/gallery/ipad-zh-02.webp" alt="iPad · 配置列表" loading="lazy">
+            <img src="/screenshots/platforms/ios/gallery/ipad-zh-03.webp" alt="iPad · 代理与策略组" loading="lazy">
+            <img src="/screenshots/platforms/ios/gallery/ipad-zh-04.webp" alt="iPad · 分流规则" loading="lazy">
+            <img src="/screenshots/platforms/ios/gallery/ipad-zh-05.webp" alt="iPad · 网络工具" loading="lazy">
           </div>
         </div>
       </div>
