@@ -726,6 +726,14 @@ button:focus-visible {
   background: var(--vp-c-default-3);
 }
 
+.dark .telegram-beta-link {
+  background: #2c2c2e;
+}
+
+.dark .telegram-beta-link:hover {
+  background: #38383a;
+}
+
 .telegram-beta-link__icon {
   flex: 0 0 20px;
   width: 20px;
