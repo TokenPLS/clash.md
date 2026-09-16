@@ -36,6 +36,11 @@ const badgeWidths = {
 } as const
 const accessibleLabel = accessibleLabels[badgeLanguage][props.platform]
 const badgeWidth = badgeWidths[badgeLanguage][props.platform]
+const betaText = props.locale === 'zh' ? '申请 TestFlight 资格' : 'Request TestFlight access'
+const betaLabel =
+  props.locale === 'zh'
+    ? '通过 Telegram 申请 TestFlight 资格'
+    : 'Request TestFlight access via Telegram'
 const availabilityNotice =
   props.locale === 'zh'
     ? '如 Apple ID 地区为中国大陆或俄罗斯，请切换至其他 App Store 地区后安装。'
@@ -47,32 +52,45 @@ const badgeUrl = (style: 'black' | 'white') =>
 
 <template>
   <div class="app-store-download">
-    <a
-      class="app-store-badge"
-      :href="appStoreUrl"
-      :aria-label="accessibleLabel"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <img
-        class="app-store-badge__image app-store-badge__image--black"
-        :src="badgeUrl('black')"
-        alt=""
-        :width="badgeWidth"
-        height="40"
-        decoding="async"
-        aria-hidden="true"
+    <div class="app-store-download-actions">
+      <a
+        class="app-store-badge"
+        :href="appStoreUrl"
+        :aria-label="accessibleLabel"
+        target="_blank"
+        rel="noopener noreferrer"
       >
-      <img
-        class="app-store-badge__image app-store-badge__image--white"
-        :src="badgeUrl('white')"
-        alt=""
-        :width="badgeWidth"
-        height="40"
-        decoding="async"
-        aria-hidden="true"
+        <img
+          class="app-store-badge__image app-store-badge__image--black"
+          :src="badgeUrl('black')"
+          alt=""
+          :width="badgeWidth"
+          height="40"
+          decoding="async"
+          aria-hidden="true"
+        >
+        <img
+          class="app-store-badge__image app-store-badge__image--white"
+          :src="badgeUrl('white')"
+          alt=""
+          :width="badgeWidth"
+          height="40"
+          decoding="async"
+          aria-hidden="true"
+        >
+      </a>
+      <a
+        class="telegram-beta-link"
+        href="https://t.me/+t__WNRvjUbk3M2Nl"
+        :aria-label="betaLabel"
+        :title="betaLabel"
+        target="_blank"
+        rel="noopener noreferrer"
       >
-    </a>
+        <span class="telegram-beta-link__icon" aria-hidden="true" />
+        <span>{{ betaText }}</span>
+      </a>
+    </div>
     <div class="app-store-availability-row">
       <p class="app-store-availability" role="note">
         <span class="app-store-availability__icon" aria-hidden="true">i</span>

@@ -697,6 +697,43 @@ button:focus-visible {
   display: contents;
 }
 
+.app-store-download-actions {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+}
+
+.telegram-beta-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 48px;
+  padding-inline: 12px;
+  border-radius: 8px;
+  background: var(--vp-c-default-soft);
+  color: var(--vp-c-text-1) !important;
+  font-size: 14px;
+  font-weight: 650;
+  text-decoration: none !important;
+  transition: color 160ms ease, background-color 160ms ease;
+}
+
+.telegram-beta-link:hover {
+  color: var(--vp-c-brand-1) !important;
+  background: var(--vp-c-default-3);
+}
+
+.telegram-beta-link__icon {
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
+  background-color: currentColor;
+  mask: url('/brand/telegram.svg') center / contain no-repeat;
+}
+
 .app-store-availability-row {
   display: flex;
   flex: 0 0 100%;
