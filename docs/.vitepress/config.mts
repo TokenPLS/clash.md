@@ -335,6 +335,10 @@ export default defineConfig({
                 link: 'https://t.me/clashbyhako'
               },
               {
+                text: 'Official community group',
+                link: 'https://t.me/+t__WNRvjUbk3M2Nl'
+              },
+              {
                 text: 'X · @ClashbyHako',
                 link: 'https://x.com/ClashbyHako'
               },
@@ -499,6 +503,10 @@ export default defineConfig({
               {
                 text: '官方频道',
                 link: 'https://t.me/clashbyhako'
+              },
+              {
+                text: '官方交流群',
+                link: 'https://t.me/+t__WNRvjUbk3M2Nl'
               },
               {
                 text: 'X · @ClashbyHako',

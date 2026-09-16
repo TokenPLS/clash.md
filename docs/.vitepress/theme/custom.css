@@ -117,8 +117,8 @@ button:focus-visible {
 .VPMenu a[href^="https://github.com/TokenPLS/"]::before,
 .VPNavScreen a[href^="https://github.com/TokenPLS/"]::before,
 .community-link-list a[data-community="github"]::before,
-.VPMenu a[href="https://t.me/clashbyhako"]::before,
-.VPNavScreen a[href="https://t.me/clashbyhako"]::before,
+.VPMenu a[href^="https://t.me/"]::before,
+.VPNavScreen a[href^="https://t.me/"]::before,
 .community-link-list a[data-community="telegram"]::before,
 .VPMenu a[href="https://x.com/ClashbyHako"]::before,
 .VPNavScreen a[href="https://x.com/ClashbyHako"]::before,
@@ -140,8 +140,8 @@ button:focus-visible {
   mask-image: url("/brand/github.svg");
 }
 
-.VPMenu a[href="https://t.me/clashbyhako"]::before,
-.VPNavScreen a[href="https://t.me/clashbyhako"]::before,
+.VPMenu a[href^="https://t.me/"]::before,
+.VPNavScreen a[href^="https://t.me/"]::before,
 .community-link-list a[data-community="telegram"]::before {
   background: #229ed9;
   mask-image: url("/brand/telegram.svg");
@@ -155,8 +155,8 @@ button:focus-visible {
 
 .VPMenu a[href^="https://github.com/TokenPLS/"],
 .VPNavScreen a[href^="https://github.com/TokenPLS/"],
-.VPMenu a[href="https://t.me/clashbyhako"],
-.VPNavScreen a[href="https://t.me/clashbyhako"],
+.VPMenu a[href^="https://t.me/"],
+.VPNavScreen a[href^="https://t.me/"],
 .VPMenu a[href="https://x.com/ClashbyHako"],
 .VPNavScreen a[href="https://x.com/ClashbyHako"] {
   display: flex;
