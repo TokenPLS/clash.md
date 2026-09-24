@@ -52,6 +52,14 @@ dns:
 
 `enhanced-mode: fake-ip` 给应用返回映射地址；`redir-host` 使用真实解析结果。`fake-ip-filter-mode: blacklist` 时，过滤列表里的域名使用真实 IP；`whitelist` 则只有命中的域名使用 Fake IP。通常无需改动 `fake-ip-range` 和 `fake-ip-ttl`。
 
+## macOS 上的 EasyTier 虚拟网络 DNS
+
+Hako SDK v1.19.31-hako.1 新增 `easytier://<节点名>`，用于解析 EasyTier
+虚拟网络主机名，例如在 `nameserver-policy` 中填写 `easytier://Node`。
+节点名必须与 EasyTier 出站一致。它提供虚拟网络 IPv4 A 记录与 IPv4 PTR
+反向查询，不能作为通用公网 DNS。iOS、iPadOS 与 tvOS SDK 不包含 EasyTier
+实现。详见 [EasyTier DNS 与路由示例](./outbound/easytier#虚拟网络-dns-与路由)。
+
 ## 让 DNS 遵循路由规则
 
 在现有 `dns` 中加入 `respect-rules: true`，并保留可独立解析节点域名的 `proxy-server-nameserver`。规则引用的代理必须先能建立连接。不要同时随意开启 `prefer-h3`。

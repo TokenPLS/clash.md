@@ -40,6 +40,10 @@ After importing and connecting, select Node in the Proxy group. Append additiona
 
 Each protocol page includes a node example and field explanations. Examples share the name Node; assign unique names when combining them.
 
+The v1.19.31-hako.1 protocol list contains 24 types. EasyTier is available in
+the macOS SDK; on iOS, iPadOS, and tvOS it is a REJECT placeholder, so importing
+its YAML does not make it usable.
+
 | Protocol | YAML `type` |
 | --- | --- |
 | [HTTP / HTTPS](./outbound/http) | `http` |
@@ -61,6 +65,7 @@ Each protocol page includes a node example and field explanations. Examples shar
 | [WireGuard](./outbound/wireguard) | `wireguard` |
 | [Tailscale](./outbound/tailscale) | `tailscale` |
 | [ZeroTier](./outbound/zerotier) | `zerotier` |
+| [EasyTier (macOS)](./outbound/easytier) | `easytier` |
 | [SSH](./outbound/ssh) | `ssh` |
 | [MASQUE](./outbound/masque) | `masque` |
 | [TrustTunnel](./outbound/trusttunnel) | `trusttunnel` |
@@ -72,7 +77,7 @@ Each protocol page includes a node example and field explanations. Examples shar
 | --- | --- |
 | `name` | Unique node name, referenced exactly by groups and rules |
 | `type` | Lowercase value from the table, not the display name |
-| `server` / `port` | Remote endpoint; Tailscale and ZeroTier use network-specific settings and multi-peer WireGuard has a separate structure |
+| `server` / `port` | Remote endpoint; Tailscale, ZeroTier, and EasyTier use network-specific settings and multi-peer WireGuard has a separate structure |
 | `udp` | Enable UDP where supported; HTTP and SSH do not gain UDP support from this flag |
 | `ip-version` | dual, ipv4, ipv6, ipv4-prefer, or ipv6-prefer for resolved node addresses |
 | `dialer-proxy` | Node or group used to connect to this node; see [chaining](./outbound/dialer-proxy) |

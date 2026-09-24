@@ -78,3 +78,10 @@ its constructors, not just upstream documentation or option-struct names.
 The September 2026 expansion compares Meta-Docs revision
 `e52690240f2e4a70de75002c6cf87e2e7921d29c` with the source audit revision above.
 YAML or constructor validation does not establish server or device connectivity.
+
+The September 24 protocol update checks the outbound type list and EasyTier
+against public Hako SDK `v1.19.31-hako.1`, revision
+`7ea70d15bf8b67257928efe45c12f16d4ffc9f61`. It is separate from the 185-entry
+field audit above. Keep the EasyTier platform restriction, DNS notes, protocol
+count, sidebar links, and both language versions in sync; the mobile SDK accepts
+EasyTier only as a REJECT placeholder.

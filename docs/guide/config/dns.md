@@ -52,6 +52,15 @@ Merge this into your configuration: `hosts` is top-level; put `nameserver-policy
 
 `enhanced-mode: fake-ip` returns mapped addresses; `redir-host` uses real answers. With `fake-ip-filter-mode: blacklist`, matching domains receive real IPs. With `whitelist`, only matching domains receive Fake IPs. Usually leave the range and TTL unchanged.
 
+## EasyTier overlay DNS on macOS
+
+Hako SDK v1.19.31-hako.1 adds `easytier://<node-name>` for EasyTier overlay
+hostnames, for example `easytier://Node` in a `nameserver-policy` entry.
+The name must match an EasyTier outbound. This resolver is for overlay IPv4
+A records and IPv4 PTR lookups, not general public DNS. The iOS/iPadOS/tvOS
+SDKs do not include the EasyTier implementation. See the
+[EasyTier DNS and routing example](./outbound/easytier#overlay-dns-and-routing).
+
 ## Follow routing rules for DNS
 
 Add `respect-rules: true` inside the existing DNS section and retain an independently reachable `proxy-server-nameserver`. The selected proxy must be able to connect first. Avoid casually combining this with `prefer-h3`.

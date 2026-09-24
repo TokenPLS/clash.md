@@ -1,6 +1,6 @@
 ---
 title: Hako configuration reference
-description: A mihomo YAML reference for Hako 1.19.30, with 185 configuration entries and their support status on iOS, macOS, and tvOS.
+description: A mihomo YAML reference for Hako, with 185 configuration entries, protocol guides including EasyTier in v1.19.31-hako.1, and Apple platform support notes.
 keywords: [Hako configuration, mihomo YAML, Clash configuration, iOS Clash, macOS Clash, tvOS Clash]
 head:
   - - link
@@ -23,6 +23,14 @@ field when a specific need appears.
 A trusted configuration that contains only what you need is easier to verify
 and less likely to produce surprising behavior after an update.
 :::
+
+## New in v1.19.31-hako.1
+
+[EasyTier](./outbound/easytier) adds a virtual-network outbound to the macOS SDK.
+The protocol directory now lists **24 proxy and network outbound types**.
+iOS, iPadOS, and tvOS retain 23 implementations; EasyTier nodes on those platforms
+are REJECT placeholders that refuse connections. See the
+[protocol list](/guide/protocols) and [Apple platform differences](./apple-platforms).
 
 ## Browse by topic
 
@@ -64,7 +72,13 @@ changes between versions; use the features available in your installed version.
 
 ::: details Documentation reference version
 
-Reviewed 2026-09-14 against Hako `5bca0bcb73cd6dcb2d276be31f3a149211388c6d`.
-Not every store version necessarily includes the same features.
+The 185-entry field matrix was reviewed on 2026-09-14 against Hako
+`5bca0bcb73cd6dcb2d276be31f3a149211388c6d`.
+
+The outbound type list and EasyTier guide were checked on 2026-09-24 against
+[v1.19.31-hako.1](https://github.com/TokenPLS/Hako/releases/tag/v1.19.31-hako.1),
+revision `7ea70d15bf8b67257928efe45c12f16d4ffc9f61`. This protocol update does not
+re-audit every field in the matrix. Store app versions may include a different
+SDK; use the features available in your installed version.
 
 :::

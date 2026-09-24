@@ -40,6 +40,9 @@ rules:
 
 点击协议查看节点示例和字段说明。示例使用共同的 `Node` 名称，合并多个节点时请分别改名。
 
+v1.19.31-hako.1 的协议清单共 24 类。EasyTier 仅在 macOS SDK 中提供实现；
+在 iOS、iPadOS 与 tvOS 上只是 REJECT 占位节点，导入 YAML 不代表可以连接。
+
 | 协议 | YAML `type` |
 | --- | --- |
 | [HTTP / HTTPS](./outbound/http) | `http` |
@@ -61,6 +64,7 @@ rules:
 | [WireGuard](./outbound/wireguard) | `wireguard` |
 | [Tailscale](./outbound/tailscale) | `tailscale` |
 | [ZeroTier](./outbound/zerotier) | `zerotier` |
+| [EasyTier（macOS）](./outbound/easytier) | `easytier` |
 | [SSH](./outbound/ssh) | `ssh` |
 | [MASQUE](./outbound/masque) | `masque` |
 | [TrustTunnel](./outbound/trusttunnel) | `trusttunnel` |
@@ -72,7 +76,7 @@ rules:
 | --- | --- |
 | `name` | 唯一节点名；组与规则必须使用相同名字 |
 | `type` | 上表中的小写类型，不能写协议展示名称 |
-| `server` / `port` | 远程地址与端口；Tailscale、ZeroTier 使用自己的网络配置，WireGuard 多 peer 有独立结构 |
+| `server` / `port` | 远程地址与端口；Tailscale、ZeroTier、EasyTier 使用自己的网络配置，WireGuard 多 peer 有独立结构 |
 | `udp` | 支持该选项的协议用它允许 UDP；HTTP、SSH 不会因此获得 UDP 能力 |
 | `ip-version` | `dual`、`ipv4`、`ipv6`、`ipv4-prefer` 或 `ipv6-prefer`，控制节点域名解析后的地址选择 |
 | `dialer-proxy` | 建立此节点连接时先使用的节点或组，见[链式连接](./outbound/dialer-proxy) |

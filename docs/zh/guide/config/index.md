@@ -1,6 +1,6 @@
 ---
 title: Hako 配置参考
-description: Hako 1.19.30 的 mihomo YAML 配置参考，提供 185 项配置索引及 iOS、macOS、tvOS 的支持状态与 Apple 平台限制。
+description: Hako 的 mihomo YAML 配置参考，提供 185 项配置索引、含 v1.19.31-hako.1 新增 EasyTier 的协议指南及 Apple 平台支持说明。
 keywords: [Hako 配置, mihomo YAML, Clash 配置, iOS Clash, macOS Clash, tvOS Clash]
 head:
   - - link
@@ -22,6 +22,13 @@ head:
 一份来源可信、结构清楚、只包含实际需要内容的配置，比堆满“优化参数”更容易
 验证，也更不容易在系统升级后出现意外行为。
 :::
+
+## v1.19.31-hako.1 新增协议
+
+[EasyTier](./outbound/easytier) 为 macOS SDK 新增虚拟网络出站，协议目录由此增至
+**24 类代理与网络出站类型**。iOS、iPadOS 与 tvOS 仍提供 23 类实现；这些平台上的
+EasyTier 节点仅为 REJECT 占位节点，会拒绝连接。详见[协议清单](/zh/guide/protocols)
+与[三平台差异](./apple-platforms)。
 
 ## 按主题阅读
 
@@ -62,7 +69,13 @@ head:
 
 ::: details 文档参考版本
 
-2026-09-14 按 Hako `5bca0bcb73cd6dcb2d276be31f3a149211388c6d` 整理。
-此参考版本不代表所有商店版本均已包含相同功能。
+185 项字段表于 2026-09-14 按 Hako
+`5bca0bcb73cd6dcb2d276be31f3a149211388c6d` 核对。
+
+出站类型清单与 EasyTier 专题于 2026-09-24 按
+[v1.19.31-hako.1](https://github.com/TokenPLS/Hako/releases/tag/v1.19.31-hako.1)
+核对，源码 revision 为 `7ea70d15bf8b67257928efe45c12f16d4ffc9f61`。
+本次协议更新不代表已重新审查字段表中的所有项目。商店客户端可能使用不同 SDK，
+请以已安装版本提供的功能为准。
 
 :::

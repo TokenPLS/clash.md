@@ -12,6 +12,7 @@ description: 对比 Hako 配置在 iPhone、iPad、Mac 与 Apple TV 上的进程
 | --- | --- | --- | --- |
 | mihomo YAML 核心语义 | 支持 | 支持 | 支持 |
 | Packet Tunnel | 支持 | 支持 | 支持 |
+| SDK v1.19.31-hako.1 中的 [EasyTier](./outbound/easytier) | REJECT 占位，拒绝连接 | 包含实现，虚拟网络仅 IPv4 | REJECT 占位，拒绝连接 |
 | `tun.stack` | gVisor / System / Mixed | gVisor / System / Mixed | gVisor / System / Mixed |
 | 进程名 / 路径 / UID 分流 | 无法可靠按进程识别 | 支持，取决于连接信息 | 无法可靠按进程识别 |
 | App signing / team ID 规则 | 不支持 | 不支持 | 不支持 |

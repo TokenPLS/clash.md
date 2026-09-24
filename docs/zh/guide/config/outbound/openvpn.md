@@ -35,9 +35,14 @@ proxies:
 | `cert` / `key` | 服务端要求客户端证书时，分别填 `<cert>` 和 `<key>` 的完整内容。 |
 | `tls-auth` / `key-direction` | 使用静态 TLS 认证时填密钥内容与方向。 |
 | `tls-crypt` / `tls-crypt-v2` | 按原配置选择对应的控制通道密钥，不与其他模式混填。 |
-| `cipher` / `data-ciphers` / `auth` | 数据加密、协商列表和认证摘要算法，按服务端提供的值。 |
+| `cipher` / `data-ciphers` | 数据加密算法与协商列表，按服务端提供的值。 |
+| `auth` | 认证摘要算法，默认 `SHA256`。v1.19.31-hako.1 中也用于选择 `tls-auth` 控制通道的 HMAC 摘要；即使数据通道使用 AEAD 加密，也需与服务端的 `auth` 一致。 |
 | `ping` / `ping-restart` / `handshake-timeout` | 心跳、失联重启与握手超时，单位秒。 |
 
 [如何加入代理组与规则](../proxies#完整配置示例) · [通用字段](../proxies#通用字段) · [TLS 配置](./tls) · [传输层配置](./transport)
 
 参考：[mihomo](https://wiki.metacubex.one/config/proxies/openvpn/).
+
+`tls-auth` 摘要行为已按
+[Hako v1.19.31-hako.1](https://github.com/TokenPLS/Hako/blob/7ea70d15bf8b67257928efe45c12f16d4ffc9f61/transport/openvpn/tlsauth.go#L26)
+核对。

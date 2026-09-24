@@ -26,6 +26,7 @@ proxies:
 | --- | --- |
 | `network` | 16 位十六进制网络 ID；使用引号保留原字符串。 |
 | `state-dir` | 可选节点身份存储目录。 |
+| `identity-secret` | 可选的完整私有身份内容，不是文件路径。必须包含私钥并通过身份校验；省略时沿用 `state-dir` 管理的身份。不要让两台同时运行的节点共用同一份身份。 |
 | `planet` | 使用私有 Planet 时提供 App 可读的文件路径。 |
 | `mtu` / `physical-mtu` | 隧道和物理 UDP 负载的 MTU；没有明确需求时保留默认。 |
 | `remote-dns-resolve` / `dns` | 需要时使用虚拟网络内可达的 DNS 解析目标。 |
@@ -33,3 +34,7 @@ proxies:
 [如何加入代理组与规则](../proxies#完整配置示例) · [通用字段](../proxies#通用字段) · [TLS 配置](./tls) · [传输层配置](./transport)
 
 参考：[mihomo](https://wiki.metacubex.one/config/proxies/zerotier/).
+
+`identity-secret` 字段已按
+[Hako v1.19.31-hako.1](https://github.com/TokenPLS/Hako/blob/7ea70d15bf8b67257928efe45c12f16d4ffc9f61/adapter/outbound/zerotier.go#L201)
+核对。
